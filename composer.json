@@ -6,8 +6,10 @@
     "support": {
       "email": "konst@generdyn.com"
     },
+    "config": {
+      "vendor-dir": "packages"
+    },
     "require": {
         "php": ">=5.4.0"
-    },
-    "version": "1.0.0"
+    }
 }
