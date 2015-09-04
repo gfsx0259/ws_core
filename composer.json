@@ -1,7 +1,11 @@
 {
     "name": "generdyn/master",
-    "version": "1.0.0",
-    "description": "test package",
+    "description": "test composer package",
+    "homepage": "http://websemble.com",
+    "license": "MIT",
+    "support": {
+      "email": "konst@generdyn.com"
+    },
     "require": {
         "php": ">=5.4.0"
     }
