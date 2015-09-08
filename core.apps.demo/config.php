@@ -2,7 +2,7 @@
 
 $config['js_apps']['core.apps.demo'] = array(
 
-    'general' => array(
+    'general' => array(3
         'title' => 'Demo',
         'name' => 'demo',//should be like 3th part of folder
         'version' => '1.0.0',
