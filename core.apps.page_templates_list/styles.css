@@ -1,0 +1,66 @@
+.page_templates_list {
+    overflow: auto;
+}
+
+
+    .page_templates_list .page_tpl {
+        cursor: pointer;
+        float: left;
+        width: 240px;
+        height: 180px;
+
+        margin: 10px;
+
+        background: #fff;
+
+        box-shadow: 0 0 4px 2px #ccc;
+        border-radius: 5px;
+
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    .page_templates_list .page_tpl:hover {
+        box-shadow: 0 0 4px 4px #aaa;
+    }
+
+
+        .page_templates_list .page_tpl .title {
+            height: 15px;
+            left: 0;
+            top: 0;
+            right: 0;
+            padding: 5px 10px;
+            position: absolute;
+        }
+
+
+
+            .page_templates_list .page_tpl .title div {
+                z-index: 5;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                background: #fff;
+                opacity: 0.66; 
+                filter: alpha(opacity=66);
+            }
+
+            .page_templates_list .page_tpl .title span {
+                z-index: 10;
+                position: relative;
+                color: #000;
+                text-align: center;
+                height: 16px;
+            }
+
+
+
+        .page_templates_list img.thumb {
+            z-index: 5;
+            width: 240px;
+            height: 180px;
+        }

@@ -1,0 +1,10 @@
+.admin_slider .btn_create {
+    float: left;
+    border: 1px solid #becfe8;
+    border-radius: 5px;
+    height: 36px;
+    width: 60px;
+    background: #fff url("/static/admin_slider/plus.png") no-repeat center center;
+    margin: 39px 10px 0 10px;
+    cursor: pointer;
+}

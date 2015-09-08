@@ -1,0 +1,168 @@
+.desktop_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 30000;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+
+
+/* UI elements */
+
+.inp_color_preview {
+    width: 32px;
+    height: 16px;
+    border: 1px solid #000;
+    background: #FFF;
+    cursor: pointer;
+    float: left;
+    margin-right: 4px;
+}
+
+.btn_color_picker {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url(/static/icons/color_swatch.png) no-repeat;
+    cursor: pointer;
+}
+
+.panel {
+    padding: 8px;
+}
+
+button.calendar {
+    margin: 0 4px 4px 4px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: transparent url(/static/site.images/icons/calendar.gif) no-repeat;
+}
+
+
+button {
+    padding: 0;
+    margin: 0;
+}
+
+button img {
+    vertical-align: bottom;
+}
+
+img.icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: 0;
+}
+
+.site_header h1 {
+    cursor: pointer;
+}
+
+
+.list_box {
+    width: auto;
+    background: #FFFFFF;
+    overflow: auto;
+}
+
+.section_toggle {
+    width: auto;
+    padding: 4px 2px 16px 2px;
+    margin: 0;
+}
+
+        a.section_toggle_title,
+        a.section_toggle_title:hover {
+            color: blue;
+            padding-right: 28px;
+            background: url(/static/images/arrow_d.gif) no-repeat right 2px !important;
+            text-decoration: none;
+        }
+
+        a.section_toggle_title:hover {
+            text-decoration: underline;
+        }
+
+        .section_toggle_content {
+            width: auto;
+            margin: 8px 0 0 0;
+        }
+
+
+.obj_info {
+    margin: 8px 0 0 0;
+    border-top: 1px solid #999;
+}
+
+
+
+
+/* helpers */
+
+.float_container {
+    overflow: hidden;
+    zoom: 1;
+    width: auto;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+
+.nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("/static/moz-text-overflow.xml#ellipsis");    
+}
+
+
+/* messages blocks */
+/* messages */
+.message_error, .message_info, .message_success {
+    width: auto;
+    color: #000000;
+    padding: 4px 8px 4px 32px;
+    margin: 8px 0px 8px 0px;
+}
+
+.message_error {
+    background: #FFDDDD url(/static/images/icons/error.png) no-repeat 8px 4px ;
+    border: 1px solid #CC0000;
+}
+
+.message_info {
+    background: #DDDDFF url(/static/images/icons/info.png) no-repeat 8px 4px ;
+    border: 1px solid #0000CC;
+}
+
+.message_success {
+    background: #DDFFDD url(/static/images/icons/success.png) no-repeat 8px 4px ;
+    border: 1px solid #00CC00;
+}
+
+
+.nowrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url("/static/moz-text-overflow.xml#ellipsis");
+}

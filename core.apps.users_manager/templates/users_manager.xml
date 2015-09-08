@@ -1,0 +1,39 @@
+<tpl name="users_manager">
+
+    <div class="users_manager popup_panels" id="panels">
+        <div class="popup_left_panel_box">
+            <wsc_box>
+                <div class="popup_sidebar" id="left_menu">
+                    <a id="bar_settings" bar_name="settings" events="onclick=onBarClick">
+                        <img src="/static/folders/settings.png"/>Settings
+                    </a>
+                    <a id="bar_users" bar_name="users" href="void" events="onclick=onBarClick">
+                        <img src="/static/folders/users.png"/>Users
+                    </a>
+                    <a id="bar_moderation" bar_name="moderation" href="void" events="onclick=onBarClick">
+                        <img src="/static/folders/moderate.png"/>Moderate
+                    </a>
+                    <a id="bar_permissions" bar_name="permissions" href="void" events="onclick=onBarClick">
+                        <img src="/static/folders/permissions.png"/>Permissions
+                    </a>
+                </div>
+            </wsc_box>
+        </div>
+        <div class="popup_right_panel_box">
+            <wsc_box>
+                <div class="popup_right_panel" id="sections_content">
+                    <include tpl="users_manager_settings"/>
+                    <include tpl="users_manager_users"/>
+                    <include tpl="users_manager_moderation"/>
+                    <include tpl="users_manager_permissions"/>
+                </div>
+            </wsc_box>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_popup_ok" class="float_right" title=" Ok " events="onclick=onCloseClick"/>
+    </div></div>
+
+</tpl>

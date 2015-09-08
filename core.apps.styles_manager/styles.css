@@ -1,0 +1,98 @@
+.styles_manager {
+    padding: 10px;
+}
+
+
+    .styles_manager .lists_box {
+        overflow: auto;
+    }
+
+
+    .styles_manager .styles_list {
+        padding: 4px 4px 16px 4px;
+        overflow: auto;
+        zoom: 1;
+    }
+
+    .styles_manager .styles_header {
+        font-weight: bold;
+        border-bottom: 1px solid #ADC0E0;
+        padding: 4px 8px;
+    }
+
+
+
+    .styles_manager .item {
+        position: relative;
+
+        float: left;
+        width: 100px;
+        padding: 4px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        background: #FFF;
+        border: 1px solid #CCC;
+
+        border-radius: 4px;
+        -moz-box-shadow: 0 0 3px #aaa;
+         -webkit-box-shadow: 0 0 3px #aaa;
+         box-shadow: 0 0 3px #aaa;
+        margin: 4px;
+    }
+
+    .styles_manager .item:hover {
+        text-decoration: underline;
+    }
+
+
+    .styles_manager .active,
+    .styles_manager .active:hover {
+        background: #e8ecf4;
+        font-weight: bold;
+        cursor: default;
+        text-decoration: none;
+    }
+
+    .styles_manager .item img {
+        width: 100px;
+        height: 60px;
+    }
+
+
+    .styles_manager .item span {
+        display: block;
+        height: 18px;
+        overflow: hidden;
+    }
+
+
+
+
+    .styles_manager .item .controls {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 60px;
+        z-index: 10;
+    }
+
+        .styles_manager .item .controls div {
+            width: 16px;
+            height: 16px;
+            float: right;
+            cursor: pointer;
+            margin-left: 4px;
+        }
+
+        .styles_manager .styles_list .item .btn_edit {
+            background: transparent url(/static/icons/page_edit.png) no-repeat 0 0;
+        }
+
+        .styles_manager .styles_list .item .btn_delete {
+            background: transparent url(/static/icons/cross.png) no-repeat 0 0;
+        }
+
+        .styles_manager .styles_list .item .btn_clone {
+            background: transparent url(/static/icons/copy.png) no-repeat 0 0;
+        }

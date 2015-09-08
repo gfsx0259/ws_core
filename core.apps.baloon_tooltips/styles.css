@@ -1,0 +1,68 @@
+.baloon_tooltip {
+    position: absolute;
+    width: 150px;
+    z-index: 100000;
+    font: normal 11px Arial;
+}
+
+
+    .baloon_tooltip .pointer {
+        position: absolute;
+        z-index: 10;
+        width: 33px;
+        height: 23px;
+        background: transparent url("/static/baloon_tooltips/pointer.png") no-repeat 0 0;
+        display: none;
+    }
+
+    .baloon_tooltip .pointer_tl {
+        left: 20px;
+        top: 0;
+        background-position: 0 0;
+    }
+
+    .baloon_tooltip .pointer_tr {
+        right: 20px;
+        top: 0;
+        background-position: -33px 0;
+    }
+
+    .baloon_tooltip .pointer_bl {
+        left: 20px;
+        bottom: 0;
+        background-position: 0 -23px;
+    }
+
+    .baloon_tooltip .pointer_br {
+        right: 20px;
+        bottom: 0;
+        background-position: -33px -23px;
+    }
+
+
+    .baloon_tooltip .inner {
+        z-index: 1;
+        padding: 0;
+    }
+
+        .baloon_tooltip .content {
+            padding: 10px;
+            background: #f3f8fe;
+            border: 1px solid #c0cfe9;
+            border-radius: 8px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+        }
+
+
+            .baloon_tooltip .title {
+                font-weight: bold;
+                font-size: 14px;
+                color: #000;
+                margin-bottom: 4px;
+            }
+
+            .baloon_tooltip .description {
+                color: #666;
+                text-align: justify;
+            }

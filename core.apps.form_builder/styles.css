@@ -1,0 +1,120 @@
+/* window */
+
+
+.form_builder {
+    clear: both;
+}
+
+    .form_builder .popup_left_panel_box {
+        width: 350px;
+    }
+
+        .form_builder .popup_left_panel {
+            width: auto;
+        }
+
+    .form_builder .popup_right_panel_box {
+        margin-left: 360px;
+    }
+
+
+    .form_builder .form_row label {
+        width: 80px;
+    }
+
+    .form_builder .tabs_bar {
+        margin: 0 5px;
+        border: 0;
+    }
+
+
+
+
+
+
+
+
+    .form_builder .form_view {
+        padding: 0 10px;
+    }
+
+
+
+    .form_builder .form_properties {
+        overflow: auto;
+        margin: 1px;
+    }
+
+    .form_builder .field_properties {
+        overflow: auto;
+    }
+
+
+    .form_builder .field_properties_controls {
+        text-align: center;
+        height: 21px;
+        padding: 5px 10px;
+        width: auto;
+        background: #becee0;
+    }
+
+        .form_builder .field_properties_controls button {
+            width: 60px;
+        }
+
+
+
+    .form_builder .item_controls {
+        position: absolute;
+        right: 2px;
+        top: 4px;
+        width: 64px;
+        height: 16px;
+    }
+
+        .form_builder .mup,
+        .form_builder .mdown,
+        .form_builder .mclone,
+        .form_builder .mdelete {
+            float: left;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .form_builder .mup {
+            background: transparent url("/static/arrows/blue.png") 0 0 no-repeat;
+        }
+
+        .form_builder .mdown {
+            background: transparent url("/static/arrows/blue.png") -32px 0 no-repeat;
+        }
+
+        .form_builder .mclone  {
+            background: url(/static/icons/copy.png) no-repeat;
+        }
+
+        .form_builder .mdelete  {
+            background: url(/static/icons/cross.png) no-repeat;
+        }
+
+
+
+    .form_builder .page_break {
+        border-top: 1px dashed #666;
+        text-align: center;
+        font-size: 90%;
+        margin: 20px 0 8px 0;
+        cursor: default;
+    }
+
+    .form_builder .repeater {
+        border: 1px dashed #666;
+        margin: 20px 0 8px 0;
+        cursor: default;
+    }
+
+        .form_builder .repeater_title {
+            text-align: center;
+            font-size: 90%;
+        }

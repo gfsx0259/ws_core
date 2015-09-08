@@ -1,0 +1,14 @@
+.page_settings_wrapper {
+    position: relative;
+}
+
+
+.page_settings_wrapper .tabs_bar {
+    padding: 10px 10px 0 10px;
+}
+
+
+.page_settings {
+    overflow: auto;
+    padding: 10px;
+}

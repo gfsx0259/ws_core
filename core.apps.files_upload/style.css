@@ -1,0 +1,129 @@
+.files_upload {
+    width: 800px;
+    overflow: auto;
+    height: 300px;
+}
+
+
+    .files_upload .file {
+        cursor: default;
+        float: left;
+        position: relative;
+        margin: 1px 2px;
+        width: 31%;
+        height: 46px;
+        border: 1px solid #33F;
+        background: #EEF;
+    }
+
+    .files_upload .uploaded {
+        border: 1px solid #3A3;
+        background: #EFE;
+    }
+
+    .files_upload .error {
+        border: 1px solid #F33;
+        background: #FEE;
+    }
+
+        .files_upload .title {
+            margin: 2px 0 0 5px;
+            padding: 0 0 0 20px;
+            font-weight: bold;
+            height: 16px;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .files_upload .size {
+            margin: 0 0 0 25px;
+            width: auto;            
+            font-size: 11px;
+        }
+
+
+
+        /* file cancel btn */
+
+        .files_upload .cancel_file {
+            position: absolute;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            right: 2px;
+            background: url(/static/icons/cross.png) no-repeat;
+        }
+
+        .files_upload .uploaded .cancel_file,
+        .files_upload .error .cancel_file {
+            display: none;
+        }
+
+
+
+        /* file statuses */
+
+        .files_upload .status {
+            margin: 0 0 0 25px;
+            font-weight: bold;
+        }
+
+        .files_upload .uploaded .status {
+            color: #3A3;
+        }
+
+        .files_upload .error .status {
+            color: #F33;
+        }
+
+
+        .files_upload .uploaded .status_img,
+        .files_upload .error .status_img {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            right: 2px;
+        }
+
+        .files_upload .uploaded .status_img {
+            background: url(/static/icons/accept.png) no-repeat;
+        }
+
+        .files_upload .error .status_img {
+            background: url(/static/icons/error.png) no-repeat;
+        }
+
+
+.files_upload .pbar_box {
+    width: auto;
+    height: 11px;
+    background: #FFF;
+    position: relative;
+    margin: 0 auto;
+}
+
+    .files_upload .pbar_box .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 11px;
+        background: #9F9;
+        z-index: 1;
+    }
+
+    .files_upload .pbar_box .text {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        color: #000;
+        font-family: Arial;
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+

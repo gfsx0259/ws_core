@@ -1,0 +1,29 @@
+<tpl name="users_manager_moderation">
+    <div id="content_moderation" style="display: none">
+
+        <div class="pager_nav" id="moderation_pager_box" style="display: none"></div>
+
+        <div class="form_row" id="msg_moderation" style="display: none">
+            <div class="message_info" id="msg_moderation_content"></div>
+        </div>
+
+        <div class="form_row">
+            <table class="nice">
+                <tbody id="moderation_table">
+                    <tr class="head">
+                        <th class="w25pc">Name</th>
+                        <th class="w25pc">Email</th>
+                        <th class="w15pc">Password</th>
+                        <th class="ta_center last">Action</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+
+        <div class="form_row" id="moderation_controls">
+            <wsc_button id="btn_apply_moderation" events="onclick=onApplyModerationClick" title="Apply"/>
+        </div>
+
+    </div>
+</tpl>

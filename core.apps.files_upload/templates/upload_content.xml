@@ -1,0 +1,10 @@
+<tpl name="upload_content">
+    <div id="list" class="files_upload"></div>
+
+    <div class="popup_buttons" id="toolbar"><div class="popup_buttons_wrapper">
+<!--        <wsc_button title=" Clear list " id="btn_clear_list" class="float_left" events="onclick=onClearListClick" style="display: none"/> -->
+        <wsc_button class="float_right" title=" Close " events="onclick=onCloseClick" />
+<!--        <wsc_button title=" Cancel upload " id="btn_cancel_upload" class="float_right" events="onclick=onCancelUploadClick" style="display: none"/>-->
+    </div></div>
+
+</tpl>

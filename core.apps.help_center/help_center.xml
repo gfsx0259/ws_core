@@ -1,0 +1,22 @@
+<tpl name="help_center">
+    <div id="toolbar" class="toolbar_wrapper"></div>
+
+
+    <div class="help_center popup_panels" id="help_center">
+        <div class="popup_left_panel_box">
+            <wsc_box>
+                <div class="popup_left_panel" id="help_menu"></div>
+            </wsc_box>
+        </div>
+        <div class="popup_right_panel_box" id="sections_content">
+            <wsc_box>
+                <div class="popup_right_panel" id="help_body"></div>
+            </wsc_box>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons" id="bottom_toolbar"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Close " events="onclick=onCloseClick" />
+    </div></div>
+</tpl>

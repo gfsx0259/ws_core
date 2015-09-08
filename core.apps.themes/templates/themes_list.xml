@@ -1,0 +1,14 @@
+<tpl name="themes_list">
+    <div class="themes">
+        <div style="text-align: right; height: 24px;">
+            <wsc_button id="btn_install" events="onclick=onInstallClick" title="Install theme" style="width: 80px" class="float_right"/>
+        </div>
+        <div class="themes_tabs" id="types_tabs"></div>
+        <div id="themes_list" class="themes_list"></div>
+        <div id="tcategories_tabs" class="themes_tabs" ></div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Close " events="onclick=onCloseClick"/>
+    </div></div>
+</tpl>

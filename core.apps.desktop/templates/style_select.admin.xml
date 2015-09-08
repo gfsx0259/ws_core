@@ -1,0 +1,22 @@
+<tpl name="admin_style_select">
+    <div class="admin_style_select">
+        <div id="styles_list">
+            <div id="box_create_style" class="box_create_style">
+                <wsc_button events="onclick=onCreateStyleClick" title="Create style" class="w100"/>
+            </div>
+            <div class="styles_box" id="styles_box_theme">
+                <div id="styles_title" class="styles_header">System styles</div>
+                <div id="styles_list_theme" class="styles_list"></div>
+            </div>
+            <div class="styles_box" id="styles_box_admin">
+                <div class="styles_header">System styles</div>
+                <div id="styles_list_admin" class="styles_list"></div>
+            </div>
+            <div class="styles_box" id="styles_box_user">
+                <div class="styles_header">My styles</div>
+                <div id="styles_list_user" class="styles_list"></div>
+            </div>
+        </div>
+        <div id="msg_styles_loading">Loading...</div>
+    </div>
+</tpl>

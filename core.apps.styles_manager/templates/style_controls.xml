@@ -1,0 +1,7 @@
+<tpl name="styles_manager_style_controls">
+    <div id="style_controls" class="controls">
+        <div id="btn_delete_style" class="btn_delete" events="onclick=onDeleteStyleClick" title="Delete style"></div>
+        <div id="btn_clone_style" class="btn_clone" events="onclick=onCloneStyleClick" title="Clone style"></div>
+        <div class="btn_edit" events="onclick=onEditStyleClick" title="Edit style"></div>
+    </div>
+</tpl>

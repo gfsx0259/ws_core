@@ -1,0 +1,17 @@
+.admin_toolbar_theme_fonts {
+    width: 500px;
+}
+
+.admin_toolbar_theme_fonts label {
+    width: 135px;
+}
+
+.admin_toolbar_theme_fonts .footer {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.admin_toolbar_theme_fonts .footer .wsc_button {
+    float: right;
+    width: 100px;
+}

@@ -1,0 +1,29 @@
+.admin_slider_dropdown {
+    position: absolute;
+    z-index: 17010;
+    width: 115px;
+    background: #e3edfc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 0 8px 2px #ced1d4;
+    -webkit-box-shadow: 0 0 8px 2px #ced1d4;
+    box-shadow: 0 0 8px 2px #ced1d4;
+    overflow: hidden;
+    font: normal 12px Arial;
+}
+
+.admin_slider_dropdown div {
+    border-top: 1px solid #becfe8;
+    padding: 8px 12px;
+    color: #333;
+}
+
+.admin_slider_dropdown div:first-child {
+    border: 0;
+}
+
+.admin_slider_dropdown div:hover {
+    background: #fff;
+    cursor: pointer;
+}

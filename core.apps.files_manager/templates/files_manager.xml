@@ -1,0 +1,139 @@
+<tpl name="files_manager">
+
+    <div id="disc_info" class="fmanager_disk_info"></div>
+    <div class="fmanager_search_bar">
+        <wsc_button id="btn_mode_thumbs" title="Thumbs view" events="onclick=onThumbsModeClick"/>
+        <wsc_button id="btn_mode_list" title="List view" events="onclick=onListModeClick"/>
+        <wsc_button id="btn_search_save" title="Save search" events="onclick=onSearchSaveClick"/>
+        <wsc_text id="inp_search_query" clear_control="1" events="onenter=onSearchClick;onclear=onSearchClearClick" hint="search..."/>
+    </div>
+<!--
+
+    <div class="popup_top_buttons"  id="btns2"><div class="popup_buttons_wrapper">
+        <input id="btn_search_save" class="float_right" type="button" value=" Save search " events="onclick=onSearchSaveClick"/>
+        <input id="btn_search" class="float_right" type="button" value=" Search " events="onclick=onSearchClick"/>
+        <div class="fmanager_search float_right">
+            <input type="text" id="inp_search_query"/>
+            <div class="clear_search" title=" Clear " events="onclick=onSearchClearClick"></div>
+        </div>
+    </div></div>
+-->
+
+    <div class="fmanager popup_panels" id="panels">
+        <div class="popup_left_panel_box">
+            <wsc_box>
+                <div id="folders" class="folders"></div>
+            </wsc_box>
+        </div>
+
+        <div class="popup_right_panel_box">
+            <div class="tabs_bar" style="width:70%">
+                <a id="btn_tab_ws" class="active" key="ws" events="onclick=onTabClick"><span>Websemble</span></a>
+                <a id="btn_tab_dropbox" key="dropbox" events="onclick=onTabClick"><span>Dropbox</span></a>
+
+                <div class="loading" id="file_loading"  style="display: none;z-index:999; height: 29px; position:relative"></div>
+                <div class="paginator">
+
+                    <div class="float_left">
+                        <wsc_select id="sel_filemanager_rows_per_page" class="w75" style="margin-top: 4px!important" events="onchange=onSelChange_Filemanager_RowsPerPage">
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="75">75</option>
+                            <option value="100">100</option>
+                        </wsc_select>
+                    </div>
+                </div>
+                <div id="box_filemanager_pager" style="float:right">
+
+            </div>
+            </div>
+
+            <div id="wrapper">
+                <div class="files_box" id="tab_dropbox_disabled"  style="display: none">
+                    <div>DROPBOX IS NOT CONNECTED. CLICK 
+                        <a href="/dropbox/">HERE</a> TO CONNECT
+                    </div>
+                </div>
+                <div class="files_box" id="files_box">
+                    <div class="wsc_box_hl">
+                        <div class="wsc_box_hr">
+                            <div class="sort_bar">
+                                <div class="c2">
+                                    <a id="sort_time" events="onclick=onSortTimeClick">Date <span id="sort_dir_time"></span></a>
+                                </div>
+                                <div class="c2">
+                                    <a id="sort_size" events="onclick=onSortSizeClick">Size <span id="sort_dir_size"></span></a>
+                                </div>
+                                <div class="c2" id="c_sort_pic_size">
+                                    <a id="sort_pic_size" events="onclick=onSortPicSizeClick">Dimensions <span id="sort_dir_pic_size"></span></a>
+                                </div>
+                                <div class="c1">
+                                    <a id="sort_name" events="onclick=onSortNameClick">Name <span id="sort_dir_name"></span></a>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div id="info_dropbox" class="info_dropbox" style="display:none; padding: 5px;text-align:center">
+                        <div style="float:right">
+                            <wsc_button id="btn_copy_to_site" class="float_right"   title="X" events="onclick=onInfoDropBoxClose"/>
+                        </div>
+                        
+                        <div>A new folder has been created in your Dropbox <strong>\apps\webemble</strong></div>
+                        <div>You will need put files there to view them in Websemble</div>
+                    </div>
+                    <div>
+                        <div class="wsc_box_m" id="tab_ws">
+                            <div class="files" id="files_ws" events="onscroll=onThumbsScroll">
+                                <div id="files_list_ws" class="files_list"></div>
+                                <div id="thumbs_list_ws" class="thumbs_list"></div>
+                            </div>
+                        </div>
+
+                        <div class="wsc_box_m" id="tab_dropbox">
+                            <div class="files" id="files_dropbox" events="onscroll=onThumbsScroll">
+                                <div id="files_list_dropbox" class="files_list"></div>
+                                <div id="thumbs_list_dropbox" class="thumbs_list"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file_link_box nowrap"><a id="file_link" target="_blank"></a></div>
+                    <div class="file_link_box nowrap"><a id="file_link_actual" target="_blank"></a></div>
+                    <div class="wsc_box_bl">
+                        <div class="wsc_box_br"><div class="wsc_box_bc"></div></div>
+                    </div>
+                </div>
+
+                <div class="extra_panel">
+                    <wsc_box>
+                        <div id="extra_panel">
+                            <img id="img_preview" class="preview"/>
+                        </div>
+                    </wsc_box>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <div class="float_container fmanager_buttons">
+            <div id="btm_buttons_ws">
+                <wsc_button id="btn_edit" class="float_left" title=" Edit " events="onclick=onEditClick"/>
+                <wsc_button id="btn_rename" class="float_left" title=" Rename " events="onclick=onRenameClick"/>
+                <wsc_button id="btn_delete" class="float_left" title=" Delete " events="onclick=onDeleteClick"/>
+                <wsc_button id="btn_send_links" class="float_left" title=" Send links " events="onclick=onSendLinksClick"/>
+                <wsc_button id="btn_choose" class="float_left" title=" Choose " events="onclick=onChooseClick"/>
+
+                <wsc_button id="btn_refresh_thumbs" class="float_right" title=" Re-Thumb" events="onclick=onReThumbClick"/>
+                <wsc_button id="btn_refresh" class="float_right" title=" Refresh " events="onclick=onRefreshClick"/>
+                <wsc_button id="btn_upload" class="btn_upload float_right" title=" Upload "/>
+                <wsc_button id="btn_download" class="float_right" title=" Download " events="onclick=onDownloadClick"/>
+                <wsc_button id="btn_copy_to_dbox" class="float_left"   style="width: 100px; display: none"  title="Copy to Dropbox" events="onclick=onCopyToDropboxClick"/>
+            </div>
+            <div id="btm_buttons_dropbox" style="display:none">
+                <wsc_button id="btn_disconnect_dropbox" class="float_right" title=" Disconnect " events="onclick=onDisconnectDropboxClick"/>
+                <wsc_button id="btn_copy_to_site" class="float_right"  style="width: 100px;" title="Copy To Site" events="onclick=onCopyToSiteClick"/>
+            </div>
+        </div>
+    </div></div>
+</tpl>

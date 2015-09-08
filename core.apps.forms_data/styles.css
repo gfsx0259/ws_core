@@ -1,0 +1,26 @@
+.forms_data {}
+
+    .forms_data .form_row {
+        margin: 0 0 5px 0;
+    }
+
+    .forms_data .wsc_box {
+        margin: 5px 0 0 0;
+    }
+
+    .forms_data .panel {
+        padding: 5px 5px 0 5px;
+        overflow: auto;
+    }
+
+
+    .forms_data .box_data {
+        height: 50px;
+        overflow: auto;
+    }
+
+
+    .forms_data .box_files {
+        height: 50px;
+        overflow: auto;
+    }

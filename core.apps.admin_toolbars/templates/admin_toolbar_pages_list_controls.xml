@@ -1,0 +1,11 @@
+<tpl name="admin_toolbar_pages_controls">
+    <div class="drag_control" id="drag_control" events="onmousedown=startItemDrag"></div>
+    <div class="page_control" id="page_control">
+        <div class="clone" events="onclick=onCloneItemClick"></div>
+        <div class="edit" events="onclick=onEditItemClick"></div>
+        <div class="delete" events="onclick=onDeleteItemClick"></div>
+    </div>
+    <div class="page_control" id="fixed_page_control">
+        <div class="edit" events="onclick=onEditFixedItemClick"></div>
+    </div>
+</tpl>

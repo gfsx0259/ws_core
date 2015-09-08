@@ -1,0 +1,89 @@
+.styles_editor {}
+
+    .styles_editor .form_row {
+        padding: 5px 5px;
+        margin: 0;
+    }
+
+        .styles_editor .form_row label {
+            width: auto;
+            margin-right: 10px;
+        }
+
+    .styles_editor .popup_left_panel_box {
+        width: 300px;
+        overflow-x: hidden;
+    }
+
+
+    .styles_editor .popup_right_panel_box {
+        margin-left: 315px;
+    }
+
+
+        .styles_editor .box_css {
+            margin-right: 210px;
+        }
+
+        .styles_editor .box_variables {
+            float: right;
+            width: 200px;
+            position: relative;
+        }
+
+        .styles_editor .box_variables .wsc_box {
+            margin-bottom: 10px;
+        }
+
+
+        .styles_editor .variables_list {
+            overflow: auto;
+        }
+
+            .styles_editor .variables_list span {
+                display: block;
+                padding: 2px 8px;
+                position: relative;
+            }
+
+            .styles_editor .variables_list span:hover {
+                cursor: pointer;
+                background: #AEC1E0;
+            }
+
+
+        .styles_editor .color_preview {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: 6px;
+            top: 2px;
+        }
+
+
+    .styles_editor .list_box .item {
+        display: block;
+        padding: 2px 8px;
+        text-decoration: none;
+        cursor: pointer;
+        height: 16px;
+    }
+
+    .styles_editor .list_box .item:hover {
+        text-decoration: underline;
+    }
+
+    .styles_editor .list_box .active,
+    .styles_editor .list_box .active:hover {
+        background: #AEC1E0;
+        font-weight: bold;
+        cursor: default;
+        text-decoration: none;
+    }
+
+
+    .styles_editor textarea {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }

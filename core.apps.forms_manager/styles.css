@@ -1,0 +1,20 @@
+.forms_manager {}
+
+    .forms_manager .tabs_bar {
+        margin: 0 5px;
+        border: 0;
+    }
+
+    .forms_manager .lists {
+        padding: 5px;
+		overflow: auto;
+    }
+
+    .forms_manager .forms_list {
+        overflow: auto;        
+    }
+
+    .forms_manager .form_info {
+        width: auto;
+        margin: 8px 8px 16px 8px;
+    }

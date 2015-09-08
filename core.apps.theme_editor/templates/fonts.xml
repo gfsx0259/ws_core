@@ -1,0 +1,16 @@
+<tpl name="theme_editor_fonts">
+    <wsc_fieldset group="theme_editor" title="Website fonts">
+        <div class="form_row">
+            <label>Main font</label>
+            <wsc_font_family id="inp_main-font"/>
+        </div>
+        <div class="form_row">
+            <label>Heading font</label>
+            <wsc_font_family id="inp_heading-font"/>
+        </div>
+        <div class="form_row">
+            <label>Fancy font</label>
+            <wsc_font_family id="inp_fancy-font"/>
+        </div>
+    </wsc_fieldset>                    
+</tpl>

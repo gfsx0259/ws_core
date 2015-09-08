@@ -1,0 +1,6 @@
+<tpl name="app_window">
+    <div class="app" id="window">
+        <div id="caption" class="app_caption"></div>
+        <div id="content" class="app_content"></div>
+    </div>
+</tpl>

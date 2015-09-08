@@ -1,0 +1,15 @@
+<tpl name="admin_apps_catalog">
+    <div id="window" class="content_inner">
+        <div id="tabs" class="tabs"></div>
+
+        <div class="scroller">
+            <div id="btn_scroll_left" class="btn_scroll_left" events="onclick=onScrollLeftClick"></div>
+            <div id="btn_scroll_right" class="btn_scroll_right" events="onclick=onScrollRightClick"></div>
+            <div class="grad_left"></div>
+            <div class="grad_right"></div>
+            <div class="viewport" id="viewport">
+                <div class="scroller_content" id="scroller_content"></div>
+            </div>
+        </div>
+    </div>
+</tpl>

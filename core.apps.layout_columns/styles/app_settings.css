@@ -1,0 +1,9 @@
+.app_settings_holder {
+    position: fixed;
+    left: 10000px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid red;
+}

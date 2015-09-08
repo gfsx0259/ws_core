@@ -1,0 +1,15 @@
+.admin_toolbar_buttons a.paste_btn_bg,
+.admin_toolbar_buttons a.paste_btn_bg:hover {
+    background: transparent url("/static/admin_toolbars/paste_btn_bg.png") no-repeat 6px 4px;
+    cursor: move;
+    height: 30px;
+}
+
+.admin_toolbar_buttons .upload_bar {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #80abed;
+}

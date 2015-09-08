@@ -1,0 +1,78 @@
+/* tree */
+
+.tree_view {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+
+    font-size: 11px;
+    font-family: Tahoma, Arial;
+    color: #333;
+
+    background: #FFF;
+}
+
+
+    .tree_view .item {
+        width: auto;
+        margin: 0;
+        background: none;
+        position: relative;
+    }
+
+    .tree_view .caption {
+        width: 100%;
+        height: 16px;
+    }
+
+        .tree_view img {
+            float: left;
+            width: 16px;
+            height: 16px;
+            cursor: default;
+        }
+
+
+        .tree_view a, 
+        .tree_view a.active {
+            margin-left: 20px;
+            display: block;
+            width: auto;
+            height: 16px;
+            margin: 0;
+            color: blue;
+            background: none;
+            color: blue !important;
+        }
+
+        .tree_view a.active {
+            background: #AAA !important;
+            font-weight: bold;
+        }
+
+        .tree_view a:hover {
+            text-decoration: underline;
+        }
+
+        .tree_view a.active:hover {
+            text-decoration: none !important;
+        }
+
+
+    .tree_view .childs {
+        width: auto;
+        padding: 0 0 0 16px;
+    }
+
+
+.tree_view_item_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/area.gif) repeat;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;
+}

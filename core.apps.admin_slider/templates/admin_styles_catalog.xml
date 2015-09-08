@@ -1,0 +1,30 @@
+<tpl name="admin_styles_catalog">
+    <div id="window" class="content_inner admin_slider_styles">
+        <div id="msg" class="msg">Loading...</div>
+        <div class="scroller">
+            <div id="btn_scroll_left" class="btn_scroll_left" events="onclick=onScrollLeftClick"></div>
+            <div id="btn_scroll_right" class="btn_scroll_right" events="onclick=onScrollRightClick"></div>
+            <div class="grad_left"></div>
+            <div class="grad_right"></div>
+            <div class="viewport" id="viewport">
+                <div class="scroller_content" id="scroller_content">
+                    <div id="lists_box" class="lists_box">
+                        <div class="btn_create" id="btn_create" events="onclick=onCreateClick"></div>
+                        <div class="items_box" id="box_theme">
+                            <div class="items_header" id="styles_title">Style</div>
+                            <div id="list_theme" class="items_list"></div>
+                        </div>
+                        <div class="items_box" id="box_admin">
+                            <div class="items_header">System styles</div>
+                            <div id="list_admin" class="items_list"></div>
+                        </div>
+                        <div class="items_box" id="box_user">
+                            <div class="items_header">My styles</div>
+                            <div id="list_user" class="items_list"></div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</tpl>

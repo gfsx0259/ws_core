@@ -1,0 +1,16 @@
+<tpl name="themes_manager_theme_controls">
+    <div class="controls" id="theme_controls">
+        <div></div>
+<!--
+        <img id="cbtn_custom_code" src="/static/icons/plugin.png" events="onclick=onManageStylesClick" style_key="custom_code" title="Custom code" class="left"/>
+        <img id="cbtn_typo" src="/static/icons/text_allcaps.png" events="onclick=onManageStylesClick" style_key="typo" title="Text styles" class="left"/>
+        <img id="cbtn_pager" src="/static/icons/application_cascade.png" events="onclick=onManageStylesClick" style_key="pager" title="Pager styles" class="left"/>
+        <img id="cbtn_imagebox" src="/static/icons/picture.png" events="onclick=onManageStylesClick" style_key="imagebox" title="Imagebox styles" class="left"/>
+-->
+
+        <img id="cbtn_edit" src="/static/icons/settings.png" events="onclick=onEditThemeClick" title="Theme properties" class="left"/>
+
+        <img id="cbtn_delete" src="/static/icons/cross.png" events="onclick=onRemoveThemeClick" title="Delete theme" class="right"/>
+        <img id="cbtn_save"  src="/static/icons/disk.png" events="onclick=onSaveThemeClick" title="Export theme to file" class="right"/>
+    </div>
+</tpl>

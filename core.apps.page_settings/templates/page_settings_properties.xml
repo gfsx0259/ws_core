@@ -1,0 +1,198 @@
+<tpl name="page_settings_properties">
+    <include tpl="page_settings_ws_admin"/>
+
+    <wsc_fieldset id="sec_menu" group="page_settings" title="Menu" expanded="1">
+        <div class="form_row">
+            <label>Menu title</label>
+            <wsc_text id="inp_item_title" events="onchange=onTitleChanged"/>
+        </div>
+
+        <div class="form_row">
+            <label>Menu By-line</label>
+            <wsc_text id="inp_item_hint"/>
+        </div>
+
+        <div id="box_visible" class="form_row">
+            <label>Show on menu</label>
+            <wsc_select id="inp_visible">
+                <option value="1">Show</option>
+                <option value="0">Don't show</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row">
+            <label>File name</label>
+            <wsc_text id="inp_item_url" events="onkeyup=onURLChanged;onmouseup=onURLChanged"/>
+        </div>
+
+        <div class="form_row">
+            <label>Full URL</label>
+            <span id="full_item_url"></span>
+        </div>
+
+        <div id="box_inp_page" class="form_row">
+            <label>Or select page</label>
+            <wsc_select id="inp_page" events="onchange=onPageSelectChange">
+                <option value="">...</option>
+            </wsc_select>
+        </div>
+    </wsc_fieldset>
+
+
+
+    <wsc_fieldset id="sec_title" group="page_settings" title="Title &amp; Description">
+        <div id="box_page_title">
+            <div class="form_row">  
+                <label>Page title tag</label>
+                <wsc_text id="inp_title"/>
+            </div>
+
+            <div class="form_row" style="height: 90px;">
+                <wsc_textarea id="inp_description" style="height: 60px;" title="Description tag"/>
+            </div>
+        </div>
+    </wsc_fieldset>
+
+
+
+    <wsc_fieldset id="sec_header_footer" group="page_settings" title="Header &amp; Footer">
+
+        <div class="form_row">
+            <label>Header row source:</label>
+            <wsc_select id="inp_header_row_src" class="float_left w250"></wsc_select>
+        </div>
+
+        <div class="form_row">
+            <label>Footer row source:</label>
+            <wsc_select id="inp_footer_row_src" class="float_left w250"></wsc_select>
+        </div>
+    </wsc_fieldset>
+
+<!--
+    <fieldset class="wsc" id="sec_access">
+        <div class="legend">Access control</div>
+
+        <div class="form_row">  
+            <wsc_select id="inp_access" events="onchange=onAccessChanged" class="float_left w250">
+                <option value="">Avaliable for all</option>
+                <option value="user">Avaliable for registered users</option>
+                <option value="contributor">Avaliable for contributors</option>
+                <option value="pwd">Protected by password</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row" id="inp_pwd_box" style="display: none">
+            <label>Password</label>
+            <wsc_text id="inp_pwd"/>
+        </div>
+    </fieldset>
+-->
+
+
+    <wsc_fieldset id="sec_rss" group="page_settings" title="RSS">
+
+        <div class="form_row">
+            <label>Available via RSS</label>
+            <wsc_checkbox id="inp_rss_available"/>
+        </div>
+
+        <div class="form_row">
+            <label>Title</label>
+            <wsc_text id="inp_rss_title"/>
+        </div>
+    </wsc_fieldset>
+
+
+
+    <wsc_fieldset id="sec_security" group="page_settings" title="Security">
+        <div class="form_row">  
+            <wsc_select id="inp_access" events="onchange=onAccessChanged" class="float_left w250">
+                <option value="">Avaliable for all</option>
+                <option value="user">Avaliable for registered users</option>
+                <option value="contributor">Avaliable for contributors</option>
+                <option value="admin">Avaliable for admin</option>
+                <option value="pwd">Protected by password</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row" id="inp_pwd_box" style="display: none">
+            <label>Password</label>
+            <wsc_text id="inp_pwd"/>
+        </div>            
+    </wsc_fieldset>
+
+
+    <wsc_fieldset id="sec_advanced" group="page_settings" title="Advanced">
+        <div class="form_row">
+            <label>Lock all widgets</label>
+            <wsc_checkbox id="inp_apps_locked"/>
+        </div>
+
+        <div class="form_row">
+            <label>Published</label>
+            <wsc_checkbox id="inp_published"/>
+        </div>
+
+        <div class="form_row">
+            <label>Show on sitemap</label>
+            <wsc_checkbox id="inp_show_on_sitemap"/>
+        </div>
+
+        <div class="form_row">
+            <wsc_textarea id="inp_meta_code" style="height: 60px;" title="Custom header tags"/>
+        </div>
+
+        <div class="form_row" id="box_analytics_cb">
+            <wsc_checkbox id="inp_use_home_analytics_code" title="Use home page analytics code" events="onchange=updateAnalyticsCodeControls"/>
+        </div>
+        <div class="form_row" id="box_analytics_code">
+            <wsc_textarea id="inp_analytics_code" style="height: 60px;" title="Analytics code"/>
+        </div>
+
+        <div class="form_row" id="sec_reduntant">
+            <wsc_fieldset title="Reduntant">
+                <div class="form_row">
+                    <label>Show main menu:</label>
+                    <wsc_select id="inp_header_visible" class="float_left w250">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </wsc_select>
+                </div>
+
+                <div class="form_row">
+                    <label>Show footer:</label>
+                    <wsc_select id="inp_footer_visible" class="float_left w250">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </wsc_select>
+                </div>
+
+                <div id="sec_default_body_menu" class="form_row">
+                    <label>Default body menu</label>
+                    <wsc_checkbox id="inp_default_body_menu"/>
+                </div>
+
+                <div id="sec_style" class="form_row">
+                    <label>Style</label>
+                    <wsc_select id="inp_style">
+                        <option value="">Default</option>
+                    </wsc_select>
+                </div>
+
+                <div id="sec_footer_link" class="form_row">
+                    <label>Show on footer</label>
+                    <wsc_select id="inp_footer_link">
+                        <option value="">Don't show</option>
+                        <option value="p">Show under parent menu</option>
+                        <option value="s">Show seperatly</option>
+                    </wsc_select>
+                </div>
+
+                <div id="sec_body_menu" class="form_row">
+                    <label>Body menu</label>
+                    <wsc_select id="inp_body_menu"/>
+                </div>
+            </wsc_fieldset>
+        </div>                
+    </wsc_fieldset>
+</tpl>

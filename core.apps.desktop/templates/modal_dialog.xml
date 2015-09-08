@@ -1,0 +1,20 @@
+<tpl name="modal_dialog">
+    <div id="overlay" class="modal_dialog_overlay"></div>
+    <div id="wrapper" class="modal_dialog_wrapper">
+        <div id="window" class="modal_dialog">
+            <div id="caption" class="caption" events="onmousedown=startDrag">
+                <div id="title" class="title"></div>
+                <div id="btn_close" class="close" events="onclick=close"></div>
+            </div>
+            <div class="body">
+                <div id="progress_bar" class="progress_bar">
+                    <div></div>
+                </div>
+                <div id="form" class="form"></div>
+                <div id="message" class="message"></div>
+            </div>
+
+            <div id="footer" class="footer"></div>
+        </div>
+    </div>
+</tpl>

@@ -1,0 +1,13 @@
+.admin_toolbar_theme_colors label {
+    width: 135px;
+}
+
+.admin_toolbar_theme_colors .footer {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.admin_toolbar_theme_colors .footer .wsc_button {
+    float: right;
+    width: 100px;
+}

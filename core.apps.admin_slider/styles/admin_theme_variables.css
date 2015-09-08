@@ -1,0 +1,49 @@
+.admin_theme_variables {
+    height: 86px !important;
+    overflow: hidden;
+}
+
+
+.admin_theme_variables .panel_title {
+    color: #becfe8;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #becfe8;
+    padding: 4px 12px;
+    white-space: nowrap;    
+}
+
+.admin_theme_variables .variables_panel {
+    overflow: hidden;
+    zoom: 1;
+}
+
+    .admin_theme_variables .box {
+        float: left;
+        margin: 10px 0 0 10px;            
+    }
+
+        .admin_theme_variables .color_preview  {
+            border: 1px solid #becfe8;
+            border-radius: 5px;
+            height: 26px;
+            cursor: pointer;
+        }
+
+        .admin_theme_variables .box span {
+            display: block;
+            text-align: center;
+            color: #333;
+            font-size: 11px;
+        }
+
+
+
+.admin_theme_variables .panel_colors .box {
+    width: 110px;
+}
+
+.admin_theme_variables .panel_fonts .box {
+    width: 350px;
+}

@@ -1,0 +1,11 @@
+<tpl name="mobile_wrapper">
+    <div id="mobile_wrapper_top">
+        <div class="rotate" events="onclick=rotateMobileEditor"></div>
+    </div>
+    <div id="mobile_wrapper_middle">
+        <div class="rotate" events="onclick=rotateMobileEditor"></div>
+    </div>
+    <div id="mobile_wrapper_bottom">
+        <div class="rotate" events="onclick=rotateMobileEditor"></div>
+    </div>
+</tpl>

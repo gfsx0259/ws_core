@@ -1,0 +1,8 @@
+<tpl name="styles_slider_style_controls">
+    <div id="style_controls" class="admin_slider_dropdown" is_slider_item="1" events="onmouseout=onStyleMouseOut;onmouseover=onStyleMouseOver">
+<!--        <div events="onclick=onSetAsDefaultClick">Set as default</div> -->
+        <div id="btn_delete_style" events="onclick=onDeleteStyleClick">Delete style</div>
+        <div id="btn_clone_style" events="onclick=onCloneStyleClick">Clone style</div>
+        <div events="onclick=onEditStyleClick">Edit style</div>
+    </div>
+</tpl>

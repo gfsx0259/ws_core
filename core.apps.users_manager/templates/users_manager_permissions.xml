@@ -1,0 +1,30 @@
+<tpl name="users_manager_permissions">
+    <div id="content_permissions" style="display: none;">
+
+        <div class="form_row">
+            <strong>Contributor permissions:</strong>
+        </div>
+
+        <div id="permissions_msg" class="form_row">
+            Loading...
+        </div>
+
+        <div id="permissions_form" style="display: none">
+            <div class="form_row">
+                <wsc_checkbox id="inp_p_manage_events" title="Manage events"/>
+            </div>
+            <div class="form_row">
+                <wsc_checkbox id="inp_p_manage_docs" title="Manage documents"/>
+            </div>
+            <div class="form_row">
+                <wsc_checkbox id="inp_p_manage_files" title="Manage files"/>
+            </div>
+
+            <div class="form_row">
+                <wsc_button id="btn_save_permissions" events="onclick=onSavePermissionsClick" title="Save"/>
+            </div>
+
+            <div id="msg_permissions_saved" class="message_success" style="display: none">Permissions saved</div>
+        </div>
+    </div>
+</tpl>

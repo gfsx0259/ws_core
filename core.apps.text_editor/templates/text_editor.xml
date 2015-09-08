@@ -1,0 +1,36 @@
+<tpl name="text_editor">
+    <div class="text_editor">
+        <div id="tabs"></div>
+
+
+        <div id="tabs_content">
+            <div id="editor_body" style="display: none"></div>
+            <div id="editor_summary" style="display: none"></div>
+
+            <div id="extra" style="display: none" class="extra">
+                <div class="form_row">
+                    <label>Author:</label>
+                    <wsc_text id="inp_doc_author"/>
+                </div>
+                <div class="form_row">
+                    <label>Tags:</label>
+                    <wsc_button title="Auto Genrate" events="onclick=onAutoGenrate" class="float_right w100"/>
+                    <wsc_text id="inp_doc_tags" style="margin-right: 110px"/>
+                </div>
+                <div class="form_row">
+                    <label>Date:</label>
+                    <wsc_text id="doc_date" class="w100 float_left" readonly="1"/>
+                    <button class="calendar" id="btn_doc_calendar" ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons text_editor_popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" events="onclick=onCancelClick" title="Cancel"/>
+        <wsc_button class="float_right" events="onclick=onSaveClick" title="Save"/>
+    </div></div>
+
+
+</tpl>

@@ -1,0 +1,66 @@
+/* common styles */
+.w25  {width: 25px !important}
+.w30  {width: 30px !important}
+.w45  {width: 45px !important}
+.w50  {width: 50px !important}
+.w60  {width: 60px !important}
+.w75  {width: 75px !important}
+.w80  {width: 80px !important}
+.w100 {width: 100px !important}
+.w130 {width: 130px !important}
+.w150 {width: 150px !important}
+.w200 {width: 200px !important}
+.w250 {width: 250px !important}
+.w300 {width: 300px !important}
+.w320 {width: 320px !important}
+.w400 {width: 400px !important}
+.w500 {width: 500px !important}
+.w600 {width: 600px !important}
+.w800 {width: 800px !important}
+
+.h50  {height: 50px;}
+.h75  {height: 75px;}
+.h100 {height: 100px;}
+.h200 {height: 200px;}
+.h300 {height: 300px;}
+.h400 {height: 400px;}
+.h500 {height: 500px;}
+
+.mr10 {margin-right: 10px;}
+
+.w10pc {width: 10%}
+.w14pc {width: 14%; margin: 0 !important}
+.w15pc {width: 15%; margin: 0 !important}
+.w20pc {width: 20%; margin: 0 !important}
+.w25pc {width: 25%; margin: 0 !important}
+.w30pc {width: 30%; margin: 0 !important}
+.w45pc {width: 45%; margin: 0 !important}
+.w50pc {width: 50%; margin: 0 !important}
+.w70pc {width: 70%; margin: 0 !important}
+.w75pc {width: 75%; margin: 0 !important}
+.w80pc {width: 80%; margin: 0 !important}
+.w99pc {width: 99%}
+/*
+.w15pc .wsc_text,
+.w20pc .wsc_text,
+.w25pc .wsc_text,
+.w30pc .wsc_text,
+.w50pc .wsc_text {
+    margin: 0 2px !important;
+}
+*/
+
+.margin_right5 {
+    margin-right: 5px;
+}
+.margin_right20 {
+    margin-right: 20px;
+}
+
+.margin_left20 {
+    margin-left: 20px;
+}
+
+.margin_right100{
+    margin-right: 100px;
+}

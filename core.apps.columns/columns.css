@@ -1,0 +1,11 @@
+.app_columns_row {
+    width: auto;
+    zoom: 1;
+    overflow: hidden;
+}
+
+    .app_columns_cell {
+        position: relative;
+        min-height: 40px;
+        float: left;
+    }

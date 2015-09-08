@@ -1,0 +1,142 @@
+.modal_dialog_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 200000;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+
+
+.modal_dialog_wrapper {
+    height: 100%;
+    left: 0;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200001;
+}
+
+
+.modal_dialog {
+    background: none repeat scroll 0 0 #e3edfc;
+    border: 1px solid #ced1d4;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 2px #ced1d4;
+    color: #333;
+    font: 12px Arial;
+    margin: auto;
+    width: 400px;
+}
+
+
+
+    .modal_dialog .caption {
+        position: relative;
+        padding-top: 8px;
+    }
+
+        .modal_dialog .title {
+            padding: 5px 12px;
+            font-weight: bold;
+        }
+
+
+        .modal_dialog .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 18px;
+            height: 26px;
+            cursor: pointer;
+            background: transparent url("/static/modal_dialog/close.png") no-repeat 2px 7px;
+        }
+
+
+    .modal_dialog .body {
+        margin: 5px 12px;
+    }
+
+        .modal_dialog .message {
+        }
+
+            .modal_dialog .message img {
+                vertical-align: middle;
+            }
+
+        .modal_dialog .form {
+        }
+
+        .modal_dialog .gif_load{
+            margin: auto;
+            background:url('static/modal_dialog/gif-load.gif') no-repeat;
+            width:60px;
+            height:60px;
+        }
+
+    .modal_dialog .footer {
+        margin-top: 8px;
+        border-top: 1px solid #BFCFE9;
+        padding: 8px;
+        height: 24px;
+    }
+
+        .modal_dialog .footer .wsc_button {
+            float: right;
+            margin-left: 10px;
+            width: 80px;
+        }
+
+
+        .modal_dialog .footer a {
+            margin: 4px;
+        }
+
+
+
+
+
+.modal_dialog a {
+    color: blue;
+    text-decoration: none;
+    font-weight: normal;
+    border: 0;
+}
+
+.modal_dialog a:hover {
+    text-decoration: underline;
+    background: none;
+}
+
+
+
+.modal_dialog .progress_bar {
+    position: relative;
+    margin: 5px 0;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border: 1px solid #BECFE8;
+    background: #fff;
+    padding: 1px;
+}
+
+
+    .modal_dialog .progress_bar div {
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+
+        background: #BECFE8;
+        color: #000;
+        text-align: right;
+        font: normal 11px Arial;
+        padding-top: 1px;
+        height: 14px;
+        overflow: hidden;
+    }

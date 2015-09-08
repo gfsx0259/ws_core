@@ -1,0 +1,272 @@
+.theme_editor {
+    padding: 10px;
+}
+
+
+    .theme_editor .form_row_nopad {
+        padding: 0;
+        margin: 5px 0;
+    }
+
+
+    .theme_editor .form_row .wsc_select {
+        width: 500px;
+    }
+
+
+/* fonts&colors */
+.theme_editor .list {
+    padding: 4px;
+    overflow: auto;
+    zoom: 1;
+}
+
+
+
+        .theme_editor .colors_item {
+            float: left;
+            border: 1px solid #becfe8;
+            border-radius: 5px;
+            height: 36px;
+            width: 80px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 10px 4px 0;
+        }
+
+
+        .theme_editor .colors_item .color {
+            width: 16px;
+            height: 36px;
+            float: left;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+    .theme_editor .list .darken {
+        display: none;
+    }
+
+
+    .theme_editor .list .selected .darken {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.5; 
+        filter: alpha(opacity=50);
+        z-index: 10;
+        cursor: default;
+    }
+
+
+
+
+/* styles */
+
+    .theme_editor .objects_list {
+        overflow: auto;
+    }
+
+
+    .theme_editor .styles_header {
+        border-bottom: 1px solid #ADC0E0;
+        padding: 4px 8px;
+    }
+
+
+    .theme_editor .styles_header a {
+        float: right;
+    }
+
+    .theme_editor .no_styles_msg {
+        padding: 4px 8px;
+    }
+
+
+
+
+    .theme_editor .item {
+        float: left;
+        border: 1px solid #becfe8;
+        border-radius: 5px;
+/*        height: 36px; */
+        width: 149px;
+        position: relative;
+        overflow: hidden;
+        margin: 10px 0 0 10px;
+        color: #333;
+        background: #becfe8 url("/static/admin_slider/style_bg.png") repeat-x 0 0;
+    }
+
+
+        .theme_editor .item .title {
+            width: 129px;
+            height: 14px;
+            padding: 5px 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            -moz-binding: url("/static/moz-text-overflow.xml#ellipsis");
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+
+
+    .theme_editor .style_buttons {
+        border-top: 1px solid #becfe8;
+        height: 12px;
+    }
+
+
+    .theme_editor .style_buttons div {
+        cursor: pointer;
+        background: #fff;
+        border-left: 1px solid #becfe8;
+        float: left;
+        width: 49px;
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .theme_editor .style_buttons div:hover {
+        background: #f2f5fa;
+    }
+
+    .theme_editor .style_buttons div:first-child {
+        border: 0;
+    }
+
+
+    .theme_editor .style_buttons .btn_included {
+        width: 89px;
+    }
+
+    .theme_editor .style_buttons .btn_default {
+        width: 59px;
+    }
+
+    .theme_editor .style_buttons .btn_single {
+        width: 150px;
+    }
+
+
+    .theme_editor .style_included .btn_included,
+    .theme_editor .style_included .btn_included:hover,
+
+    .theme_editor .style_default .btn_included,
+    .theme_editor .style_default .btn_included:hover,
+    .theme_editor .style_default .btn_default,
+    .theme_editor .style_default .btn_default:hover {
+        background: transparent;
+    }
+
+
+
+
+/*
+
+    .theme_editor .item span {
+        width: 14px;
+        height: 60px;
+        border-left: 1px solid #becfe8;
+        float: left;
+        background: #becfe8 url("/static/admin_slider/style_arrow.png") repeat-x 0 0;
+        cursor: pointer;
+    }
+
+    .theme_editor .item .overlay {
+        display: none;
+    }
+
+    .theme_editor .selected .overlay {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 60px;
+        background: #000;
+        opacity: 0.5; 
+        filter: alpha(opacity=50);
+        z-index: 10;
+        cursor: pointer;
+    }
+
+
+    .theme_editor .item .default_msg {
+        display: none;
+    }
+
+
+    .theme_editor .default .default_msg {
+        color: #fff;
+        background: #000;
+        font-size: 9px;
+
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 2px 6px;
+        z-index: 20;
+        cursor: default;
+    }
+
+
+
+    .theme_editor .item .is_default_style {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background: green;
+        color: #fff;
+        padding: 2px;
+        font-size: 9px;
+        display: none;
+        z-index: 10;
+        border-radius: 2px;
+    }
+
+
+*/
+
+
+.theme_editor_style_controls {
+    position: absolute;
+    z-index: 127010;
+    width: 125px;
+    background: #e3edfc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 0 8px 2px #ced1d4;
+    -webkit-box-shadow: 0 0 8px 2px #ced1d4;
+    box-shadow: 0 0 8px 2px #ced1d4;
+    overflow: hidden;
+    font: normal 12px Arial;
+}
+
+.theme_editor_style_controls div {
+    border-top: 1px solid #becfe8;
+    padding: 8px 12px;
+    color: #333;
+}
+
+.theme_editor_style_controls div:first-child {
+    border: 0;
+}
+
+.theme_editor_style_controls div:hover {
+    background: #fff;
+    cursor: pointer;
+}

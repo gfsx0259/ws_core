@@ -1,0 +1,28 @@
+<tpl name="admin_toolbar_theme_colors">
+    <div class="admin_toolbar_theme_colors">
+        <div class="form_row">
+            <label>Text color</label>
+            <wsc_color id="inp_color1"/>
+        </div>
+        <div class="form_row">
+            <label>Heading color</label>
+            <wsc_color id="inp_color2"/>
+        </div>
+        <div class="form_row">
+            <label>Background color 1</label>
+            <wsc_color id="inp_color3"/>
+        </div>
+        <div class="form_row">
+            <label>Background color 2</label>
+            <wsc_color id="inp_color4"/>
+        </div>
+        <div class="form_row">
+            <label>Extra color</label>
+            <wsc_color id="inp_color5"/>
+        </div>
+
+        <div class="footer">
+            <wsc_button events="onclick=onSaveClick" title="Save"/>
+        </div>
+    </div>
+</tpl>

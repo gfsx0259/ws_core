@@ -1,0 +1,8 @@
+<tpl name="admin_toolbar_window_buttons">
+    <div class="admin_toolbar_buttons" id="window" events="onmouseover=onWindowMouseOver">
+        <div class="inner" id="inner">
+            <div class="admin_toolbar_caption" events="onmousedown=startDrag"></div>
+            <div class="admin_toolbar_content" id="content"></div>
+        </div>
+    </div>
+</tpl>

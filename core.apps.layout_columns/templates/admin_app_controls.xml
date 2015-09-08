@@ -1,0 +1,42 @@
+<tpl name="admin_app_controls">
+    <div class="admin_overlay" id="admin_overlay" events="onclick=onAdminOverlayClick;ondblclick=onAdminOverlayDblClick">
+        <div id="overlay_hover" class="overlay_hover"></div>
+        <div id="overlay_drag" class="overlay_drag"></div>
+
+        <div class="drag_control"></div>
+    </div>
+    
+
+
+    <!-- spans class value used in resize code -->
+    <div class="admin_bound admin_bound_t" id="admin_bound_t">
+        <span class="tl" events="onmousedown=onResizeGripperMouseDown" id="app_resize_gripper_tl"></span>
+    </div>
+    <div class="admin_bound admin_bound_r" id="admin_bound_r">
+        <span class="tr" events="onmousedown=onResizeGripperMouseDown" id="app_resize_gripper_tr"></span>
+    </div>
+    <div class="admin_bound admin_bound_b" id="admin_bound_b">
+        <span class="br" events="onmousedown=onResizeGripperMouseDown" id="app_resize_gripper_br"></span>            
+    </div>
+    <div class="admin_bound admin_bound_l" id="admin_bound_l">
+        <span class="bl" events="onmousedown=onResizeGripperMouseDown" id="app_resize_gripper_bl"></span>
+    </div>
+
+
+
+    <!-- spans class value used in resize code -->
+    <div class="admin_margin admin_margin_l" id="admin_margin_left">
+        <span class="left" events="onmousedown=onMarginGripperMouseDown"></span>
+    </div>
+    <div class="admin_margin admin_margin_r" id="admin_margin_right">
+        <span class="right" events="onmousedown=onMarginGripperMouseDown"></span>
+    </div>
+    <div class="admin_margin admin_margin_t" id="admin_margin_top">
+        <span class="top" events="onmousedown=onMarginGripperMouseDown"></span>
+    </div>
+    <div class="admin_margin admin_margin_b" id="admin_margin_bottom">
+        <span class="bottom" events="onmousedown=onMarginGripperMouseDown"></span>
+    </div>
+
+
+</tpl>

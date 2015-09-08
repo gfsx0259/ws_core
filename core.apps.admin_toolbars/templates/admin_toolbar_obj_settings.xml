@@ -1,0 +1,6 @@
+<tpl name="admin_toolbar_obj_settings">
+    <div id="settings" class="settings"></div>
+    <div class="bottom_buttons">
+        <wsc_button events="onclick=onSaveClick" title="Save"/>
+    </div>
+</tpl>

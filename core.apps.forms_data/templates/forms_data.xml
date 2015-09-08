@@ -1,0 +1,39 @@
+<tpl name="forms_data">
+    <iframe id="forms_data_popup_iframe" style="display: none"></iframe>
+
+    <div class="forms_data" id="forms_data">
+
+        <div id="list" class="panel" style="display: none">
+            <table class="nice" id="table_list">
+                <tr class="head" id="table_list_head">
+                    <th>Date</th>
+                    <th id="list_field_label">Value</th>
+                    <th class="w30 ta_center last">Actions</th>
+                </tr>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+
+        <div id="data" class="panel" style="display: none">
+            <div class="form_row">
+                <label>Email</label>
+                <wsc_text id="inp_email" class="float_left w300"/>
+            </div>
+
+            <wsc_box title="Fields">
+                <div id="box_data"></div>
+            </wsc_box>
+
+            <wsc_box title="Files">
+                <div id="box_files" class="box_files"></div>
+            </wsc_box>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_send" class="float_left" title=" Send " events="onclick=onBtnSendClick" style="display: none"/>
+        <wsc_button class="float_right" title=" Close " events="onclick=onBtnCloseClick"/>
+    </div></div>
+
+</tpl>

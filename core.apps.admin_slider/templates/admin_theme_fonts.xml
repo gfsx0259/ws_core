@@ -1,0 +1,19 @@
+<tpl name="admin_theme_fonts">
+    <div id="window" class="content_inner admin_theme_variables">
+        <div class="panel_title">Website fonts</div>
+        <div class="variables_panel panel_fonts">
+            <div class="box">
+                <wsc_font_family id="inp_main-font" name="main-font" events="onchange=onFontChanged"/>
+                <span>Main font</span>
+            </div>
+            <div class="box">
+                <wsc_font_family id="inp_heading-font" name="heading-font" events="onchange=onFontChanged"/>
+                <span>Heading font</span>
+            </div>
+            <div class="box">
+                <wsc_font_family id="inp_fancy-font" name="fancy-font" events="onchange=onFontChanged"/>
+                <span>Fancy font</span>
+            </div>
+        </div>                    
+    </div>
+</tpl>

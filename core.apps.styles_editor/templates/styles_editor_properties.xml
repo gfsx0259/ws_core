@@ -1,0 +1,7 @@
+<tpl name="styles_editor_properties">
+
+    <div class="form_row">
+        <wsc_textarea class="h100" id="inp_css" title="CSS"/>
+    </div>
+
+</tpl>

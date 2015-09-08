@@ -1,0 +1,49 @@
+<tpl name="styles_editor">
+
+    <div class="styles_editor">
+        <div class="form_row">
+            <div class="float_left w50pc">
+                <label>Title</label>
+                <wsc_text id="inp_title"/>
+            </div>
+
+            <div class="float_left w50pc">
+                <label>Thumbnail</label>
+                <wsc_file id="inp_thumb" events="onclick=onInputClick"/>
+            </div>
+        </div>
+
+        <div class="popup_panels" id="resize_box">
+            <div class="popup_left_panel_box">
+                <wsc_box title="Elements">
+                    <div class="popup_left_panel list_box" id="elements_list"></div>
+                </wsc_box>
+            </div>
+
+            <div class="popup_right_panel_box">
+                <div class="box_variables">
+                    <wsc_box title="Colors">
+                        <div id="colors_list" class="variables_list"></div>
+                    </wsc_box>
+                    <wsc_box title="Fonts">
+                        <div id="fonts_list" class="variables_list"></div>
+                    </wsc_box>
+                </div>
+                <div class="box_css">
+                    <wsc_box title="CSS code">
+                        <textarea id="inp_css"></textarea>
+                    </wsc_box>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_left" events="onclick=onAddElementClick" title="Add class"/>
+        <wsc_button id="btn_delete" class="float_left" events="onclick=onDeleteElementClick" title="Delete class"/>
+
+        <wsc_button class="float_right" events="onclick=onCloseClick" title=" Cancel "/>
+        <wsc_button class="float_right" events="onclick=onSaveClick" title=" Save "/>
+    </div></div>
+
+</tpl>

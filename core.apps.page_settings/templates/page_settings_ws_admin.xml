@@ -1,0 +1,19 @@
+<tpl name="page_settings_ws_admin">
+    <wsc_fieldset id="sec_ws_admin" group="page_settings" title="Page template">
+        <div class="form_row">
+            <label>Available as template</label>
+            <wsc_checkbox id="inp_is_page_tpl"/>
+        </div>
+
+        <div class="form_row">
+            <label>Thumbnail</label>
+            <wsc_file id="inp_thumb" events="onclick=onSelectThumbClick;onchange=onThumbChanged"/>
+        </div>
+
+        <div class="form_row" id="box_thumb">
+            <wsc_box title="Preview (recommended thumbnail size 240x180px)">
+                <img id="img_thumb" class="thumb"/>
+            </wsc_box>
+        </div>
+    </wsc_fieldset>
+</tpl>

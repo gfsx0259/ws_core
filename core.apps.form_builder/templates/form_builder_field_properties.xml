@@ -1,0 +1,222 @@
+<tpl name="form_builder_field_properties">
+
+
+    <div id="prop_required" class="form_row" style="display: none">
+        <wsc_checkbox id="inp_prop_required" title="Required field"/>
+    </div>
+
+    <div id="box_list_field" class="form_row" style="display: none">
+        <wsc_checkbox id="inp_list_field" title="Show in a column in the replies section"/>
+    </div>
+
+    <div id="prop_use_as_reply" class="form_row" style="display: none">
+        <wsc_checkbox id="inp_prop_use_as_reply" title="Use as 'reply to' email address"/>
+    </div>
+
+    <div id="prop_use_as_subject" class="form_row" style="display: none">
+        <wsc_checkbox id="inp_prop_use_as_subject" events="onchange=onUseAsSubjectChange" title="Use as mail subject (set the label)"/>
+    </div>
+
+    <div id="prop_label" class="form_row" style="display: none">
+        <label>Label</label>
+        <wsc_text id="inp_prop_label"/>
+    </div>
+
+
+    <div id="prop_title" class="form_row" style="display: none">
+        <label>Title</label>
+        <wsc_text id="inp_prop_title"/>
+    </div>
+
+
+    <div id="prop_name" class="form_row" style="display: none">
+        <label>Name</label>
+        <wsc_text id="inp_prop_name" events="onchange=onPropNameChange"/>
+    </div>
+
+
+    <div id="prop_width" class="form_row" style="display: none">
+        <label>Width</label>
+        <wsc_size id="inp_prop_width" hide="h"/>
+    </div>
+
+
+    <div id="prop_height" class="form_row" style="display: none">
+        <label>Height</label>
+        <wsc_size id="inp_prop_height" hide="w"/>
+    </div>
+
+
+    <div id="prop_statements" class="form_row" style="display: none">
+        <label>Statements</label>
+        <div style="padding: 1px; clear: both;">
+            <table class="nice" id="statements_table">
+                <tr class="head">
+                    <th class="w99pc">Text</th>
+                    <th class="w80">Value</th>
+                    <th class="w30 ta_center last">Action</th>
+                </tr>
+
+                <tr id="statements_table_head">
+                    <td><wsc_text id="inp_statement_text"/></td>
+                    <td><wsc_text id="inp_statement_value"/></td>
+                    <td class="ta_center last"><img src="/static/icons/add.png" class="icon" events="onclick=onAddStatementClick" title=" Add statement "/></td>
+                </tr>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+    </div>
+
+    <div id="prop_options" class="form_row" style="display: none">
+        <label>Options</label>
+        <div style="padding: 1px; clear: both;">
+            <table class="nice" id="select_options_table">
+                <tr class="head">
+                    <th class="">Text</th>
+                    <th class="w80">Value</th>
+                    <th class="w50 ta_center last">Action</th>
+                </tr>
+
+                <tr id="select_options_table_head">
+                    <td><wsc_text id="inp_option_text"/></td>
+                    <td><wsc_text id="inp_option_value" events="onchange=onOptionValueChange"/></td>
+                    <td class="ta_center last"><img src="/static/icons/add.png" class="icon" events="onclick=onAddSelectOptionClick" title=" Add option "/></td>
+                </tr>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+            <p class="small">
+                <strong>Note:</strong> 
+                First option is default option for Drop down, Select a choice and Choice matrix field types.
+            </p>
+        </div>
+    </div>
+
+
+    <div id="prop_name_format" class="form_row" style="display: none">
+        <label>Name format</label>
+        <wsc_select id="inp_prop_name_format">
+            <option value="name">Name only</option>
+            <option value="first_last">First and last</option>
+            <option value="first_middle_last">First, middle and last</option>
+        </wsc_select>
+    </div>
+
+
+    <div id="prop_time_format" class="form_row" style="display: none">
+        <label>Time format</label>
+        <wsc_select id="inp_prop_time_format">
+            <option value="hhmmss">HH:MM:SS</option>
+            <option value="hhmm">HH:MM</option>
+        </wsc_select>
+    </div>
+
+
+    <div id="prop_text" class="form_row" style="display: none">
+        <wsc_textarea id="inp_prop_text" title="Enter text"/>
+    </div>
+
+    <div id="prop_document" class="form_row" style="display: none">
+        <label>Or use document</label>
+        <div style="clear: both">
+        <wsc_doc_control id="inp_prop_document"/>
+        </div>
+    </div>
+
+    <div id="prop_url" class="form_row" style="display: none">
+        <label>URL</label>
+        <wsc_text id="inp_prop_url"/>
+    </div>
+
+
+    <div id="prop_currency" class="form_row" style="display: none">
+        <label>Currency</label>
+        <wsc_select id="inp_prop_currency">
+            <option value="AUD">AUD</option>
+            <option value="NZD">NZD</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+        </wsc_select>
+    </div>
+
+
+    <div id="prop_confirm_email" class="form_row" style="display: none">
+        <wsc_checkbox id="inp_prop_confirm_email" title="Add confirm email input"/>
+    </div>
+
+    <div id="prop_new_window" class="form_row" style="display: none">
+    <wsc_checkbox id="inp_prop_new_window" title="Open at new window"/>
+    </div>
+
+
+
+    <div id="prop_qty_input_type" class="form_row" style="display: none">
+        <label>Qty input</label>
+        <wsc_select id="inp_prop_qty_input_type">
+            <option value="select">Drop down</option>
+            <option value="text">Text box</option>
+        </wsc_select>
+    </div>
+
+
+    <div id="prop_qty_input_type" class="form_row" style="display: none">
+        <label>Qty input</label>
+        <wsc_select id="inp_prop_qty_input_type">
+            <option value="select">Drop down</option>
+            <option value="text">Text box</option>
+        </wsc_select>
+    </div>
+
+
+    <div id="prop_qty_min" class="form_row" style="display: none">
+        <div>Min qty</div>
+        <wsc_slider id="inp_prop_qty_min" range="min: 1, max: 20" events="onchange=onPropQtyMinChange"/>
+    </div>
+    <div id="prop_qty_max" class="form_row" style="display: none">
+        <div>Max qty</div>
+        <wsc_slider id="inp_prop_qty_max" range="min: 1, max: 20" events="onchange=onPropQtyMaxChange"/>
+
+        <p class="small">
+            <strong>Note:</strong> 
+            You can use placeholder %NUM% to add number to name or label for repeated elements.
+        </p>
+    </div>
+
+
+
+    <div id="box_visibility_condition">
+        <div class="form_row">
+            <strong>Element visibility</strong>
+        </div>
+
+        <div class="form_row">
+            <wsc_checkbox id="inp_ev_always_visible" title="Always visible" events="onchange=toggleEVParamsBox"/>
+        </div>
+
+        <div id="box_ev_params" style="display: none">
+            <div class="form_row">
+                <label>Field</label>
+                <wsc_select id="inp_ev_mode">
+                    <option value="visible">Visible</option>
+                    <option value="hidden">Hidden</option>
+                </wsc_select>
+            </div>
+
+            <div class="form_row">
+                <label>If field </label>
+                <wsc_select id="inp_ev_src">
+                </wsc_select>
+            </div>
+
+            <div class="form_row">
+                <div class="float_left w100">
+                    <wsc_select id="inp_ev_condition">
+                        <option value="equal">Equal</option>
+                        <option value="not_equal">Not equal</option>
+                    </wsc_select>
+                </div>
+                <wsc_text id="inp_ev_value"/>
+            </div>
+        </div>
+    </div>
+
+</tpl>

@@ -1,0 +1,7 @@
+<tpl name="page_templates_list">
+    <div id="list" class="page_templates_list">Loading...</div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onCancelClick" />
+    </div></div>
+</tpl>

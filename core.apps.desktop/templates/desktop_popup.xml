@@ -1,0 +1,16 @@
+<tpl name="desktop_popup">
+    <div class="popup_window" id="popup_window" style="display: none;">
+        <div class="popup_caption">
+            <div class="btn btn_close" events="onclick=hidePopupApp" title="Close"></div>
+            <div class="btn btn_help" id="btn_popup_help" events="onclick=showPopupAppHelp" title="Show help"></div>
+            <span class="title" id="popup_title" events="onmousedown=startPopupDrag">Title</span>
+        </div>
+
+        <div class="popup_inner">
+            <div class="popup_content" id="popup_content"></div>
+            <div id="popup_right" class="popup_right_resize" events="onmousedown=startPopupResize"></div>
+            <div id="popup_footer" class="popup_bottom_resize" events="onmousedown=startPopupResize"></div>
+        </div>
+    </div>
+    <div class="desktop_overlay" id="overlay" style="display: none;"></div>
+</tpl>

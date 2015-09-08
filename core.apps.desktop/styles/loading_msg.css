@@ -1,0 +1,25 @@
+/* loading msg popup */
+
+.desktop_loading {
+    position: fixed; 
+    display: none; 
+    z-index: 100100; 
+    width: 250px; 
+    height: 60px; 
+    padding-top: 20px;
+    text-align: center; 
+    background: transparent url(/static/loading_bg.png) no-repeat;
+}
+
+
+    .desktop_loading span {
+        font: normal 11px Tahoma;
+        color: #333;
+    }
+
+    .desktop_loading img {
+        width: 208px;
+        height: 13px;
+        padding-top: 10px;
+        border: 0;
+    }

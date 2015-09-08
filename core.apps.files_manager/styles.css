@@ -1,0 +1,323 @@
+.fmanager {
+    position: relative;
+}
+
+.fmanager .tabs_bar {
+    border: 0;
+    margin-left: 10px;
+}
+
+
+
+.fmanager .popup_right_panel_box {
+    margin-left: 160px;
+}
+
+.fmanager_buttons {
+    margin-left: 140px;
+}
+
+
+    /* top bars */
+
+    .fmanager_disk_info {
+        padding: 5px;
+        height: 12px;
+    }
+
+    .fmanager_search_bar {
+        padding: 5px 5px 0 5px;
+        height: 24px;
+    }
+
+        .fmanager_search_bar .wsc_text {
+            margin-right: 110px;
+        }
+
+        .fmanager_search_bar .wsc_button {
+            float: right;
+            width: 95px;
+            margin-left: 5px;
+        }
+
+    
+
+    /* folders list */
+
+    .fmanager .folders {
+        margin: 0;
+        width: 145px;
+        overflow: auto;
+    }
+
+
+        .fmanager a.folder_active,
+        .fmanager a.folder,
+        .fmanager a.folder:hover {
+            display: block;
+            min-height: 36px;
+            padding: 4px 0 0 5px;
+            text-decoration: none;
+            color: #000;
+            background: transparent;
+            margin: 2px;
+            border: 0;
+            outline: none;
+        }
+
+        .fmanager a.folder_active {
+            background: #e0edfc url(/static/popup_app/left_menu_item_bg.png) repeat-x;
+            margin: 1px;
+            border: 1px solid #adc0e0;
+        }
+
+        .fmanager a.folder img,
+        .fmanager a.folder_active img {
+            width: 32px;
+            height: 32px;
+            border: 0;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+
+        .fmanager .folders .links {
+            width: auto;
+            margin-left: 4px;
+            display: none;
+        }
+
+        .fmanager a.folder_active .links {
+            display: block;
+        }
+
+        .fmanager .folders .links a,
+        .fmanager .folders .links a:hover {
+            color: blue;
+            display: block;
+            text-decoration: none;
+            font-weight: normal;
+            margin: 0;
+            padding: 2px 18px 2px 0;
+            overflow: hidden;
+            height: 14px;
+            position: relative;
+        }
+
+        .fmanager .folders .links a:hover {
+            text-decoration: underline;
+        }
+
+            .fmanager .folders .links a .remove {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                cursor: default;
+                background: transparent url("/static/icons/cross.png") no-repeat;
+                cursor: pointer;
+                display: none;
+            }
+
+            .fmanager .folders .links a:hover .remove {
+                display: block;
+            }
+
+
+
+
+
+
+
+
+    /* files list */
+    .fmanager .files {
+        overflow: auto;
+        padding: 0 3px;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        
+        .fmanager .files_list file,
+        .fmanager .thumbs_list file {
+            text-decoration: none;
+            color: #333;
+            background: none;
+            cursor: pointer;
+        }
+
+        .fmanager .files file:hover {
+            background: #DDF;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+
+        .fmanager .files file.selected {
+            font-weight: bold;
+            background: #DDF;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+
+        .fmanager .files file.selected:hover {
+            background: #CCE;
+        }
+
+
+/* files */
+
+        .fmanager .files_list file {
+            display: block;
+            overflow: hidden;
+            padding: 2px 8px;
+        }
+
+        .fmanager .files_list file img {
+            border: none;
+            vertical-align: middle;
+            margin-right: 4px;
+            float: left;
+        }
+
+        .fmanager .files_list .fname {
+            margin: 0 180px 0 0;
+        }
+
+        .fmanager .files_list .finfo {
+            width: 90px;
+            float: right;
+            text-align: right;
+        }
+
+
+/* thumbs */
+
+        .fmanager .thumbs_list file {
+            float: left;
+            width: 136px;
+            height: 132px;
+            text-align: center;
+            margin: 0 4px 4px 0;
+            position: relative;
+        }
+
+        .fmanager .thumbs_list .img_box {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 128px;
+            height: 96px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            .fmanager .thumbs_list file img {
+                width: 1px;
+                height: 1px;
+                border: none;
+            }
+
+        .fmanager .thumbs_list .fname {
+            margin: 100px 4px 4px 4px;
+            height: 16px;
+            display: block;
+            overflow: hidden;
+        }
+
+
+
+/* layout */
+
+.fmanager .extra_panel_visible .files_box {
+    margin-right: 255px;
+}
+
+.fmanager .extra_panel_visible .extra_panel {
+    display: block;
+}
+
+.fmanager .extra_panel {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+}
+
+.fmanager .extra_panel img.preview {
+    display: block;
+    width: 100%;
+}
+
+
+
+/* sort bar */
+
+.fmanager .sort_bar {
+}
+
+
+    .fmanager .sort_bar a {
+        color: #000;
+        font-size: 11px;
+    }
+
+
+    .fmanager .sort_bar a img {
+        border: 0;
+        vertical-align: middle;
+    }
+
+    .fmanager .sort_bar a:hover {
+        text-decoration: underline;
+    }
+
+
+    .fmanager .sort_bar a.active {
+        font-weight: bold;
+    }
+
+
+    .fmanager .sort_bar .c1 {
+        margin: 0 300px 0 6px;
+    }
+
+    .fmanager .sort_bar .c2 { 
+        float: right;
+        width: 90px;
+        text-align: center;
+        border-left: 1px solid #ADC0E0;
+        height: 20px;
+    }
+
+
+
+.fmanager .file_link_box,.fmanager .file_link_actual_box  {
+    height: 15px;
+    border: 1px solid #ADC0E0;
+    border-bottom: 0;
+    background: #fff;
+    padding: 0 10px;
+}
+    .fmanager .file_link_box a,
+    .fmanager .file_link_box a:hover {
+        color: #333;
+    }
+
+
+
+
+
+
+.fmanager .bulk_edit label {
+    float: none;
+    display: block;
+    width: auto;
+}

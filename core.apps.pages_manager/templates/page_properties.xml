@@ -1,0 +1,228 @@
+<tpl name="page_properties">
+
+    <div class="form_row">
+        <label>Menu title</label>
+        <wsc_text id="inp_item_title" events="onkeyup=onTitleChanged;onmouseup=onTitleChanged"/>
+    </div>
+
+    <div class="form_row">
+        <label>Menu By-line</label>
+        <wsc_text id="inp_item_hint" style="width: 330px"/>
+    </div>
+
+    <div class="form_row">  
+        <label>Page title tag</label>
+        <wsc_text id="inp_meta_title" events="onkeyup=onMetaTitleChanged;onmouseup=onMetaTitleChanged"/>
+    </div>
+
+    <div class="form_note" id="error_title" style="display: none">
+        <span class="error">Name must be non empty</span>
+    </div>
+
+    <div id="sec_published" class="form_row">
+        <label>Published</label>
+        <wsc_checkbox id="inp_published"/>
+    </div>
+
+    <div id="sec_style" class="form_row">
+        <label>Style</label>
+        <wsc_select id="inp_style">
+            <option value="">Default</option>
+        </wsc_select>
+    </div>
+
+    <div id="sec_style2" class="form_row">
+        <label>Style</label>
+        <a events="onclick=onPageStyleClick">select...</a>
+        <input type="hidden" id="inp_style_id"/>
+    </div>
+    <!--
+    <div id="sec_ecom_category_id" class="form_row">
+        <label>Products category</label>
+        <select id="inp_ecom_category_id" style="width: 330px">
+            <option value="0">None</option>
+        </select>
+    </div>
+    -->
+
+    <div id="sec_visible" class="form_row">
+        <label>Show on menu</label>
+        <wsc_select id="inp_visible">
+            <option value="1">Show</option>
+            <option value="0">Don't show</option>
+            <option value="i">Show for iPhone only</option>
+        </wsc_select>
+    </div>
+
+    <!-- body menu -->
+
+    <div id="sec_default_body_menu" class="form_row">
+        <label>Default body menu</label>
+        <wsc_checkbox id="inp_default_body_menu"/>
+    </div>
+
+    <div id="sec_body_menu" class="form_row">
+        <label>Body menu</label>
+        <wsc_select id="inp_body_menu"/>
+    </div>
+
+
+    <div id="sec_footer_link" class="form_row">
+        <label>Show on footer</label>
+        <wsc_select id="inp_footer_link">
+            <option value="">Don't show</option>
+            <option value="p">Show under parent menu</option>
+            <option value="s">Show seperatly</option>
+        </wsc_select>
+    </div>
+
+    <div class="form_row">
+        <label>File name</label>
+        <wsc_text id="inp_item_url" events="onkeyup=onURLChanged;onmouseup=onURLChanged"/>
+    </div>
+
+    <div class="form_note" id="error_url" style="display: none">
+        <span class="error">Empty or duplicate URL</span>
+    </div>
+
+    <div id="sec_inp_page" class="form_row">
+        <label>Or select page</label>
+        <select id="inp_page" events="onkeyup=onPageSelectChange;onmouseup=onPageSelectChange">
+            <option value="">...</option>
+        </select>
+    </div>
+
+    <div class="form_row">
+        <label>Full URL</label>
+        <span id="full_item_url"></span>
+    </div>
+
+    <div id="sec_blank_page" class="form_row">
+        <label>Open at new page</label>
+        <wsc_checkbox id="inp_blank_page"/>
+    </div>
+
+    <div id="sec_comments" class="form_row">
+        <label>Allow comments</label>
+        <wsc_checkbox id="inp_has_comments"/>
+    </div>
+
+    <div id="sec_ads_visible" class="form_row">
+        <label>Show ads</label>
+        <wsc_checkbox id="inp_ads_visible"/>
+    </div>
+
+    <div id="sec_footer_code" class="form_row">
+        <label>Footer message</label>
+        <wsc_text id="inp_footer_code"/>
+    </div>
+
+
+    <fieldset class="wsc" id="sec_row_src">
+        <div class="legend">Layout</div>
+
+        <div class="form_row">
+            <label>Show main menu:</label>
+            <wsc_select id="inp_header_visible" class="float_left w250">
+                <option value="2">Inherit from site settings</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row">
+            <label>Show footer:</label>
+            <wsc_select id="inp_footer_visible" class="float_left w250">
+                <option value="2">Inherit from site settings</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row">
+            <label>Header row source:</label>
+            <wsc_select id="inp_header_row_src" class="float_left w250"></wsc_select>
+        </div>
+
+        <div class="form_row">
+            <label>Footer row source:</label>
+            <wsc_select id="inp_footer_row_src" class="float_left w250"></wsc_select>
+        </div>
+
+
+    </fieldset>
+
+
+    <fieldset class="wsc" id="sec_access">
+        <div class="legend">Access control</div>
+
+        <div class="form_row">  
+            <wsc_select id="inp_access" events="onchange=onAccessChanged" class="float_left w250">
+                <option value="">Avaliable for all</option>
+                <option value="user">Avaliable for registered users</option>
+                <option value="contributor">Avaliable for contributors</option>
+                <option value="pwd">Protected by password</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row" id="inp_pwd_box" style="display: none">
+            <label>Password</label>
+            <wsc_text id="inp_pwd"/>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="wsc" id="sec_rss">
+        <div class="legend">RSS</div>
+
+        <div class="form_row">
+            <label>Available via RSS</label>
+            <wsc_checkbox id="inp_rss_available"/>
+        </div>
+
+        <div class="form_row">
+            <label>Title</label>
+            <wsc_text id="inp_rss_title"/>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="wsc" id="sec_header_doc" style="display: none">
+        <div class="legend">Header document</div>
+        <div class="form_row">
+            <wsc_box>
+                <div class="h100" style="overflow: auto" id="header_doc_preview"></div>
+            </wsc_box>
+            <div>
+                <a events="onclick=onSelectHeaderDocClick">select document</a> |
+                <a events="onclick=onRemoveHeaderDocClick">remove document</a>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="wsc" id="sec_body_doc">
+        <div class="legend">Body document</div>
+        <div class="form_row">
+            <wsc_box>
+                <div class="h100" style="overflow: auto" id="body_doc_preview"></div>
+            </wsc_box>
+            <a events="onclick=onSelectBodyDocClick">select document</a>
+        </div>
+    </fieldset>
+
+
+    <fieldset class="wsc" id="sec_meta" style="display: none">
+        <div class="legend">Optional META data</div>
+        <div class="form_note">
+            This information will appear in the web page and can impact on the ability for search engines to properly index your webpage.
+            It is recommended you fill this out with appropriate information.
+        </div>
+        <div class="form_row" style="height: 90px;">
+            <wsc_textarea id="inp_description" style="height: 60px;" title="Description tag"/>
+        </div>
+        <div class="form_row" style="height: 90px;">
+            <wsc_textarea id="inp_meta_code" style="height: 60px;" title="Custom code"/>
+        </div>
+    </fieldset>
+</tpl>

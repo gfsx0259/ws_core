@@ -1,0 +1,7 @@
+<tpl name="theme_editor_style_controls">
+    <div id="style_controls" class="theme_editor_style_controls" is_style_controls="1" events="onmouseout=onStyleMouseOut;onmouseover=onStyleMouseOver">
+        <div id="btn_delete_style" events="onclick=onDeleteStyleClick">Delete</div>
+        <div id="btn_clone_style" events="onclick=onCloneStyleClick">Clone</div>
+        <div id="btn_edit_style" events="onclick=onEditStyleClick">Edit</div>
+    </div>
+</tpl>

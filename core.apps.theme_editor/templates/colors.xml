@@ -1,0 +1,5 @@
+<tpl name="theme_editor_colors">
+    <wsc_fieldset group="theme_editor" title="Website colors">
+        <div id="theme_colors"></div>
+    </wsc_fieldset>
+</tpl>

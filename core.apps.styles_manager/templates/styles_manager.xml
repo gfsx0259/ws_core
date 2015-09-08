@@ -1,0 +1,32 @@
+<tpl name="styles_manager">
+
+    <div class="styles_manager">
+<!--    
+        <div class="tabs_bar">
+            <a id="btn_tab_theme_styles" key="theme_styles" events="onclick=onTabClick"><span>Theme styles</span></a>
+            <a id="btn_tab_user_styles" key="user_styles" events="onclick=onTabClick"><span>More my styles</span></a>
+            <a id="btn_tab_admin_styles" key="admin_styles" events="onclick=onTabClick"><span>Styles directory</span></a>
+        </div>
+-->        
+        <wsc_box>
+            <div id="lists_box" class="lists_box">
+                <div class="styles_box" id="box_user">
+                    <div class="styles_header">My styles</div>
+                    <div id="list_user" class="styles_list"></div>
+                </div>
+                <div class="styles_box" id="box_admin">
+                    <div class="styles_header">System styles</div>
+                    <div id="list_admin" class="styles_list"></div>
+                </div>
+            </div>
+        </wsc_box>
+    </div>
+
+
+    <div class="popup_buttons" id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_create" style="display: none" class="float_left w200" title=" Create new " events="onclick=onCreateClick"/>
+        <wsc_button id="btn_apply1" class="float_right w200" title=" Apply to selected only " events="onclick=onApplyToSelected"/>
+        <wsc_button id="btn_apply2" class="float_right w200" title=" Set as default style " events="onclick=onApplyToAll"/>
+    </div></div>
+
+</tpl>

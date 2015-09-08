@@ -1,0 +1,21 @@
+<tpl name="page_settings">
+
+    <div class="page_settings_wrapper">
+        <div class="tabs_bar">
+            <a id="tab_properties" events="onclick=showProperties"><span>Properties</span></a>
+            <a id="tab_styles" events="onclick=showStyles"><span>Styles</span></a>
+        </div>
+
+        <div id="page_settings" class="page_settings">
+            <div id="properties">
+                <include tpl="page_settings_properties"/>
+            </div>
+            <div id="styles" style="display: none"></div>
+        </div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onCancelClick" />
+        <wsc_button class="float_right" title=" Ok " events="onclick=onOkClick"/>
+    </div></div>
+</tpl>

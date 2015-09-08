@@ -1,0 +1,65 @@
+/* window */
+
+
+.pages_manager {
+}
+
+    .pages_manager .item_form {
+        padding: 1px;
+    }
+
+    .pages_manager .mi_controls {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-left: 6px;
+        width: 70px;
+        height: 16px;
+        background: #FFF;
+    }
+
+        .pages_manager .mi_controls .mup,
+        .pages_manager .mi_controls .mdown,
+        .pages_manager .mi_controls .mclone,
+        .pages_manager .mi_controls .mdelete {
+            float: left;
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .pages_manager .mi_controls .mup {
+            background: transparent url("/static/arrows/blue.png") 0 0 no-repeat;
+        }
+
+        .pages_manager .mi_controls .mdown {
+            background: transparent url("/static/arrows/blue.png") -32px 0 no-repeat;
+        }
+
+        .pages_manager .mi_controls .mclone  {
+            background: url(/static/icons/copy.png) no-repeat;
+        }
+
+        .pages_manager .mi_controls .mdelete  {
+            background: url(/static/icons/cross.png) no-repeat;
+        }
+
+
+
+.pages_manager .tree_view .caption {
+    height: 16px;
+    overflow: hidden;
+}
+
+.pages_manager .tree_view .caption img {
+    float: left;
+}
+
+.pages_manager .tree_view a {
+/*
+    float: none;
+    display: inline !important;
+    */
+    margin-left: 16px;
+    float: none;
+}

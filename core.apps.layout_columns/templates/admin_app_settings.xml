@@ -1,0 +1,26 @@
+<tpl name="admin_app_settings">
+
+    <div class="app_settings_holder">
+        <div class="app_settings">
+            <div class="settings_content" id="app_settings_holder"></div>
+        </div>
+    </div>
+<!--
+    <div class="app_settings" id="app_settings_panel" style="display: none">
+        <div class="resizer_top" events="onmousedown=startAppSettingsResize"></div>
+        <div class="box_t">
+            <span class="close" events="onclick=onCancelWidgetSettingClick" title="Close panel"></span>
+            <div id="app_settings_title" events="onmousedown=startAppSettingsDrag"></div>
+        </div>
+        <div class="box_m">
+            <div id="app_settings" class="settings_content"></div>
+            <div id="app_settings_controls" class="control_buttons">
+                <wsc_button events="onclick=onPreviewWidgetSettingClick" title="Preview"/>
+                <wsc_button events="onclick=onSaveWidgetSettingClick" title="Save"/>
+            </div>
+        </div>
+        <div class="box_b"></div>
+        <div class="resizer_bottom" events="onmousedown=startAppSettingsResize"></div>
+    </div>
+-->
+</tpl>

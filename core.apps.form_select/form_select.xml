@@ -1,0 +1,6 @@
+<tpl name="form_select">
+    <div class="select_form" id="list"></div>
+    <div class="popup_buttons" id="bottom_toolbar"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onCloseClick" />
+    </div></div>
+</tpl>

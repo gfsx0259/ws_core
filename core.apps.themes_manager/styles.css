@@ -1,0 +1,136 @@
+.themes_manager .tabs_bar {
+    margin: 0 5px;
+    border: 0;
+}
+
+
+.themes_manager .themes_list {
+    overflow: auto;
+}
+
+
+.themes_manager .theme {
+    cursor: pointer;
+    float: left;
+    width: 240px;
+    height: 180px;
+
+    margin: 10px;
+
+    background: #fff;
+
+    box-shadow: 0 0 4px 2px #ccc;
+    border-radius: 5px;
+
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+    .themes_manager .theme .title {
+        display: none;
+        height: 15px;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 5px 10px;
+        position: absolute;
+    }
+
+        .themes_manager .theme .title div {
+            z-index: 5;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background: #fff;
+            opacity: 0.66; 
+            filter: alpha(opacity=66);
+        }
+
+        .themes_manager .theme .title span {
+            z-index: 10;
+            position: relative;
+            color: #000;
+            text-align: center;
+            height: 16px;
+        }
+
+
+    .themes_manager .theme:hover .title {
+        display: block;
+    }
+
+    .themes_manager .theme img.thumb {
+        z-index: 5;
+        width: 240px;
+        height: 180px;
+    }
+
+
+.themes_manager .controls {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 16px;
+    padding: 5px 10px;
+    z-index: 10;
+}
+
+    .themes_manager .controls div {
+        z-index: 5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        opacity: 0.66; 
+        filter: alpha(opacity=66);
+    }
+
+
+    .themes_manager .controls img {
+        position: relative;
+        z-index: 10;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+
+    .themes_manager .controls img.left {
+        margin-right: 8px;
+        float: left;
+    }
+
+    .themes_manager .controls img.right {
+        margin-left: 8px;
+        float: right;
+    }
+
+
+
+.themes_manager .active_theme {
+    background: #ddd;
+    cursor: default;
+}
+
+.themes_manager .active_theme .title {
+    display: block;
+}
+
+    .themes_manager .active_theme .title span {
+            font-weight: bold;
+            background: url("/static/icons/accept.png") no-repeat 0 center;
+            padding-left: 24px;
+        }
+
+
+
+    .themes_manager .lists {
+        padding: 5px;
+        overflow: auto;
+    }

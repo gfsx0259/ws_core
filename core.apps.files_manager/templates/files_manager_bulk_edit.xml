@@ -1,0 +1,56 @@
+<tpl name="files_manager_bulk_edit">
+    <div id="bulk_edit" class="bulk_edit">
+        <div class="form_row">
+            <wsc_checkbox id="inp_be_resize" title="Resize selected images" events="onclick=updateBulkEditUI"/>
+        </div>
+        <div id="box_be_resize">
+            <div class="form_row">
+                <label>Resize method</label>
+                <wsc_select id="inp_be_resize_method" events="onchange=updateBulkEditUI">
+                    <option value="fill">Fill</option>
+                    <option value="fit">Fit</option>
+                    <option value="stretch">Stretch</option>
+                    <option value="pc">Preserve aspect ratio</option>
+                </wsc_select>      
+            </div>
+
+            <div class="form_row" id="box_size1">
+                <label>Resize to</label>
+                <wsc_size id="inp_be_size"/>
+            </div>
+
+            <div class="form_row" id="box_size2">
+                <label>Percentage of reduction</label>
+                <wsc_text id="inp_pc_size" class="float_left w50" events="onblur=onPcSizeblur"/>
+            </div>
+        </div>
+
+        <div class="form_row">
+            <wsc_checkbox id="inp_be_rename" title="Rename selected images" events="onclick=updateBulkEditUI"/>
+        </div>
+        <div id="box_be_rename">
+            <div class="form_row">
+                <label>New file name</label>
+                <wsc_text id="inp_be_name" value="image#" events="onblur=onBENameBlur"/>
+                <p class="small">
+                    Placeholders:<br/>
+                    <b>#</b> - autoincrement number<br/>
+                    <b>%</b> - existing file name
+                </p>
+                <label>Autoincrement start value</label>
+                <wsc_text id="inp_be_autoincrement_start" value="1" events="onblur=onBEAutoincremtStartBlur" class="w50"/>
+            </div>
+            <div class="form_row">
+                <wsc_checkbox id="inp_be_delete_original" title="Delete original files" checked="1"/>
+            </div>
+            <div class="form_row">
+                <wsc_checkbox id="inp_be_overwrite" title="Overwrite existing files" checked="1"/>
+            </div>
+        </div>
+
+
+        <div class="form_row" id="box_be_apply">
+            <wsc_button events="onclick=onBulkEditApplyClick" title="Apply"/>
+        </div>
+    </div>
+</tpl>

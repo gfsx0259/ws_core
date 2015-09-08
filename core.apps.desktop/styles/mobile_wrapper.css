@@ -1,0 +1,24 @@
+.mobile_wrapper_top {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+
+.mobile_wrapper_middle {
+    position: absolute;
+    z-index: 0;
+}
+
+
+/* per mobile */
+.mobile_top_iphone4 {
+}
+
+.mobile_middle_iphone4 {
+}
+
+.mobile_bottom_iphone4 {
+}

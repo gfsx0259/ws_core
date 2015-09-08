@@ -1,0 +1,12 @@
+.select_form {
+    overflow: auto;
+}
+
+    .select_form .item {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .select_form .item:hover {
+        background: #D5E5FA;
+    }

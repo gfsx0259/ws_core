@@ -1,0 +1,26 @@
+<tpl name="pages_manager">
+    <div id="toolbar" class="toolbar_wrapper"></div>
+
+    <div class="pages_manager popup_panels" id="manager">
+        <div class="popup_left_panel_box">
+            <wsc_box title="Pages list">
+                <div class="popup_left_panel tree_view" id="tree"></div>
+            </wsc_box>
+        </div>
+
+        <div class="popup_right_panel_box">
+            <wsc_box id="properties_box" title="">
+                <div id="item_form" class="item_form">
+                    <include tpl="page_properties"/>
+                </div>
+            </wsc_box>
+        </div>            
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" events="onclick=onCloseClick" title=" Cancel "/>
+        <wsc_button class="float_right" events="onclick=onSaveClick" title=" Save "/>
+    </div></div>
+
+</tpl>

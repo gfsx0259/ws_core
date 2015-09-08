@@ -1,0 +1,29 @@
+<tpl name="emails_manager">
+    <div class="emails_manager" id="emails_manager">
+        <div id="list" class="email_list">
+        </div>
+
+        <div id="editor" class="email_editor" style="display: none">
+            <div class="email_keys">
+                <div class="margin_wrapper">
+                    <strong>Placeholders</strong>
+                    <div id="email_keys"></div>
+                </div>
+            </div>
+            <div class="email_form">
+                <div class="margin_wrapper">
+                    <strong>Subject</strong>
+                    <wsc_text id="inp_email_subject" events="onfocus=setActiveInput;onblur=clearActiveInput"/>
+                    <strong>Body</strong>
+                    <wsc_textarea id="inp_email_body" events="onfocus=setActiveInput;onblur=clearActiveInput" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons" id="bottom_toolbar"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onEditorCancelClick" />
+        <wsc_button class="float_right" title=" Save " events="onclick=onEditorSaveClick" style="display: none" id="btn_save_email"/>
+    </div></div>
+</tpl>

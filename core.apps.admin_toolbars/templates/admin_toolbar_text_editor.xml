@@ -1,0 +1,8 @@
+<tpl name="admin_toolbar_text_editor">
+    <div id="buttons" class="c1"></div>
+        
+    <div class="c2">
+        <a events="onclick=onTextEditorHTMLClick"><span>HTML</span></a>
+        <a events="onclick=onTextEditorAdvancedClick"><span>Advanced editor</span></a>
+    </div>
+</tpl>

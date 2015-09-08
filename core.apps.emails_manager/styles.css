@@ -1,0 +1,70 @@
+.emails_manager {
+    position: relative;
+}
+
+    .emails_manager .email_info {
+        width: auto;
+        margin: 8px 8px 16px 8px;
+    }
+
+
+.emails_manager .margin_wrapper {
+    position: relative;
+    margin: 10px;
+    width: auto;
+    height: 100%;
+}
+
+
+.emails_manager .email_list {
+    width: auto;
+    height: 100%;
+    overflow: auto;
+}
+
+
+.email_editor {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+    .email_editor strong {
+        display: block;
+        height: 12px;
+        margin: 6px 0 4px 0;
+        font-weight: bold;
+        font-family: Verdana;
+        font-size: 12px;
+    }
+
+    .email_editor .email_form {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: 100%;
+        margin-right: 230px;
+    }
+
+        .email_editor textarea {
+            height: 308px;
+        }
+
+
+    .email_editor .email_keys {
+        float: right;
+        width: 230px; 
+    }
+
+        .email_keys .key {
+            display: block;
+            width: auto;
+            margin: 4px 0px;
+            background: #DDD;
+            color: blue;
+            padding: 2px 4px;
+            text-decoration: none;
+            cursor: pointer;
+            overflow: hidden;
+        }

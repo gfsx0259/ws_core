@@ -1,0 +1,7 @@
+<tpl name="notify_bar">
+    <div id="notify_bar" class="desktop_notify_bar">
+        <div>
+            <span id="notify_text"></span>
+        </div>
+    </div>
+</tpl>

@@ -1,0 +1,6 @@
+<tpl name="preview_panel">
+    <div class="preview_message" events="onclick=closeBrowser" title="Click to close preview">
+        <span>Preview mode</span>
+        <a href="void" events="onclick=closeBrowser">Close</a>
+    </div>
+</tpl>

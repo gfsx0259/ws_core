@@ -1,0 +1,7 @@
+<tpl name="desktop_loading">
+    <div id="desktop_loading" class="desktop_loading" style="display: none">
+        <span>Please wait...</span>
+        <img src="/static/loading.gif"/>
+    </div>
+    <div class="desktop_overlay" id="document_overlay" style="display: none; z-index: 100000;"></div>
+</tpl>

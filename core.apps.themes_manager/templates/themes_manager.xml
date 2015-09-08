@@ -1,0 +1,29 @@
+<tpl name="themes_manager">
+    <div class="themes_manager">
+
+        <div id="lists" class="lists">
+            <div class="tabs_bar">
+                <a id="btn_tab_user_themes" key="user_themes" events="onclick=onTabClick"><span>My themes</span></a>
+                <a id="btn_tab_admin_themes" key="admin_themes" events="onclick=onTabClick"><span>Themes directory</span></a>
+            </div>
+            <wsc_box>
+                <div class="themes_list" id="lists">
+                    <div id="list_user_themes"  style="display: none"></div>
+                    <div id="list_admin_themes" style="display: none"></div>
+                </div>
+            </wsc_box>
+        </div>
+
+        <div id="msg_loading" class="loading" style="display: none"></div>
+        <div id="msg_error" class="message_error" style="display: none">Data loading error</div>
+
+    </div>
+
+
+    <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_create" class="float_left" title=" Create " events="onclick=onCreateClick"/>
+        <wsc_button id="btn_install" class="float_left" title=" Install " events="onclick=onLoadClick"/>
+        <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
+    </div></div>
+
+</tpl>

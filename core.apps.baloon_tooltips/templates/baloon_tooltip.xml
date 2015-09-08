@@ -1,0 +1,14 @@
+<tpl name="baloon_tooltip">
+    <div id="window" class="baloon_tooltip">
+        <div class="pointer pointer_tl" id="pointer_tl"></div>
+        <div class="pointer pointer_tr" id="pointer_tr"></div>
+        <div class="pointer pointer_bl" id="pointer_bl"></div>
+        <div class="pointer pointer_br" id="pointer_br"></div>
+        <div class="inner" id="inner">
+            <div class="content">
+                <div id="title" class="title"></div>
+                <div id="description" class="description"></div>
+            </div>
+        </div>
+    </div>
+</tpl>

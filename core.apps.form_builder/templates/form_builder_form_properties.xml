@@ -1,0 +1,16 @@
+<tpl name="form_builder_form_properties">
+
+    <div class="form_row">
+        <label>Form name</label>
+        <wsc_text id="inp_form_title" prop="title" events="onblur=setFormProperty"/>
+    </div>
+
+    <div class="form_row">
+        <wsc_textarea id="inp_form_description" prop="description" events="onblur=setFormProperty" title="Form description"/>
+    </div>
+
+    <div class="form_row">
+        <wsc_textarea id="inp_form_confirmation" prop="confirmation" events="onblur=setFormProperty" title="Confirmation text"/>
+    </div>
+
+</tpl>

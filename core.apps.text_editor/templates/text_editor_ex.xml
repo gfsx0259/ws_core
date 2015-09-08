@@ -1,0 +1,32 @@
+<tpl name="text_editor_ex">
+    <div id="window" class="text_editor_ex">
+        <div id="toolbar">
+            <div id="toolbar_iframe" class="popup_toolbar float_container"></div>
+            <div id="toolbar_textarea" class="popup_toolbar float_container" style="display: none">
+               <a class="button" id="wyz_editor_summary" title="Back to WYSIWYG mode" href="void" 
+                  style="background: url(/static/text_editor/arrow_rotate_clockwise.png) 3px 3px no-repeat"
+                  events="onclick=setWYZMode"></a>
+            </div>
+        </div>
+
+        <div id="pages_list"  class="pages_list_dropdown"></div>
+
+        <div id="panels">
+            <include tpl="text_editor_panels"/>
+        </div>
+
+        <div id="content" class="content">
+            <iframe src="about:blank" id="iframe" scrolling="auto"></iframe>
+            <textarea id="textarea"></textarea>
+
+            <div id="preview_wrapper" class="preview_wrapper" style="display: none">
+                <div class="preview_caption">
+                    <span id="preview_title"></span>
+                    <a events="onclick=hidePreview">close</a>
+                </div>
+                <div id="preview" class="preview"></div>
+            </div>
+        </div>
+
+    </div>
+</tpl>

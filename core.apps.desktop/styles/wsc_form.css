@@ -1,0 +1,114 @@
+/* forms */
+.red {
+    color: red;
+}
+
+fieldset.wsc {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font: normal 12px Tahoma;
+    border: 0;
+    background: #FFF;
+}
+
+
+fieldset.wsc_odd {
+    background: #FFF url(/static/wsc/fieldset_bg.png) repeat-x 0 16px;
+}
+
+
+fieldset.wsc_icon {
+    background: #FFF url(/static/wsc/fieldset_bg.png) repeat-x 0 16px;
+}
+
+
+fieldset.wsc .legend {
+    border: 1px solid #aec1e0;
+    background: transparent url(/static/wsc/legend_bg.png) repeat-x;
+    height: 12px;
+    padding: 0 8px 2px 8px;
+}
+
+fieldset.wsc label {
+    float: left;
+    width: 120px;
+    padding-top: 4px;
+}
+
+
+.form_line {
+    overflow: hidden;
+    margin: 2px 0;
+    clear: both;
+}
+
+.form_row {
+    overflow: hidden;
+    margin: 10px 15px;
+}
+
+    /* duplicate!!! */
+    .form_row label {
+        float: left;
+        width: 120px;
+        padding-top: 4px;
+    }
+
+    .form_row p.text {
+        float: left;
+        padding: 4px 2px 0 2px;
+        margin: 0;
+    }
+
+    .form_row p.small_text {
+        margin-top: 1px;
+        display: inline-block;
+        font-size: 9px;
+        line-height: 10px;
+        margin: 0;
+    }
+
+    .form_row .float_left {
+/*        margin-right: 5px;*/
+    }
+
+    .form_row .float_right {
+        margin-left: 5px;
+    }
+
+    .form_row .wsc_button {
+        width: 90px;
+    }
+
+
+.form_row hr {
+    height: 1px;
+    border: 0;
+    background: #ADC0E0;
+    margin: 4px 0;
+}
+
+
+.form_note {
+    margin: 4px 2px;
+    font-size: 10px;    
+}
+
+    .form_note span.error {
+        color: red;
+    }
+
+
+
+
+.wsc_btn_calendar {
+    margin: 4px 0 0 2px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    float: left;
+    background: transparent url(/static/site.images/icons/calendar.gif) no-repeat;
+}

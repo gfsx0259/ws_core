@@ -1,0 +1,92 @@
+.themes {
+    padding: 10px 15px;
+}
+
+.themes .themes_tabs {
+    width: auto;
+    height: 18px;
+    overflow: hidden;
+}
+
+    .themes .themes_tabs a {
+        float: left;
+        padding: 2px 10px;
+        color: #000;
+        background: none;
+        text-decoration: none;
+    }
+
+    .themes .themes_tabs a:hover {
+        color: #000;
+        background: #cfdfef;
+        text-decoration: none;
+    }
+
+    .themes .themes_tabs a.active,
+    .themes .themes_tabs a.active:hover {
+        float: left;
+        padding: 2px 10px;
+        color: #000;
+        background: #FFF;
+        font-weight: bold;
+        cursor: default;
+        text-decoration: none;
+    }
+
+
+.themes .themes_list {
+    background: #FFF;
+/*    width: 780px;
+    height: 350px;*/
+    overflow: auto;
+    position: relative;
+}
+
+
+    .themes .themes_list .item {
+        font-size: 12px;
+        float: left;
+        background: #DEF;
+        border: 1px solid #CDE;
+        cursor: pointer;
+        text-align: center;
+        width: 158px;
+        height: 120px;
+        margin: 5px 10px;
+        padding: 9px 0 9px 0;
+        color: #333333;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .themes .themes_list img {
+        border: 0;
+        margin-bottom: 2px;
+    }
+
+    .themes .themes_list .active {
+        background: #AFFFB0;
+        border: 1px solid #BE8;
+        cursor: default;
+        font-weight: bold;
+    }
+
+    .themes .themes_list img.active_icon {
+        position: absolute;
+        z-index: 10;
+        right: 15px;
+        top: 15px;
+    }
+
+
+    .themes .themes_list .delete_icon {
+        position: absolute;
+        z-index: 20;
+        right: -1px;
+        top: -1px;
+        width: 16px;
+        height: 16px;
+        background: #FFF url(/static/icons/cross.png) no-repeat;
+        border: 1px solid #CCC;
+        cursor: pointer;
+    }

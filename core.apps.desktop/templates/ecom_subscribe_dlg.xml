@@ -1,0 +1,17 @@
+<tpl name="ecom_subscribe_dlg">
+    <div id="ecom_subscribe_dlg" class="ecom_subscribe_dlg_wrapper">
+        <div class="ecom_subscribe_dlg">
+            <div class="btn_close" events="onclick=hideEcomSubscribeDlg"></div>
+            <div id="ecom_subscribe_form" class="form">
+                <div class="row">
+                    <label>Enter email:</label>
+                    <input type="text" id="inp_ecom_subscribe_email"/>
+                </div>
+                <div class="row">
+                    <button events="onclick=onEcomSubscribeClick">Ok</button>
+                </div>
+            </div>
+            <div id="ecom_subscribe_msg" class="msg"></div>
+        </div>
+    </div>
+</tpl>

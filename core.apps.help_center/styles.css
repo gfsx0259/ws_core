@@ -1,0 +1,38 @@
+.help_center .popup_left_panel {
+    overflow: auto;
+}
+
+.help_center .popup_right_panel_box {
+    width: auto;
+}
+
+.help_center .popup_left_panel a { 
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid #e3edfc;
+	font-size: 14px;
+}
+
+.help_center .popup_left_panel a:hover {
+    text-decoration: underline;	
+	background: url("/static/admin_toolbars/gradients.png") repeat-x scroll 0 0 transparent;
+
+}
+
+.help_center .popup_left_panel a.active,
+.help_center .popup_left_panel a.active:hover {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: default;
+	background: url("/static/admin_toolbars/gradients.png") repeat-x scroll 0 0 transparent;
+}
+
+
+.help_center .menu_header {
+    background: url("/static/admin_toolbars/drag_bg.png") repeat scroll 0 0 #E3EDFC;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}

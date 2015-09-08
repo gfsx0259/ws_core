@@ -1,0 +1,128 @@
+.admin_slider_styles {
+    height: 86px !important;
+    overflow: hidden;
+}
+
+
+.admin_slider_styles .scroller {
+    height: 86px;
+    margin: 0;
+}
+
+.admin_slider_styles .scroller .viewport {
+    background: transparent url("/static/admin_slider/styles_hr.png") repeat-x 0 0;
+    height: 86px;
+}
+
+
+.admin_slider_styles .scroller .grad_left,
+.admin_slider_styles .scroller .grad_right {
+    height: 86px;
+}
+
+.admin_slider_styles .scroller .btn_scroll_left,
+.admin_slider_styles .scroller .btn_scroll_right {
+    top: 54px;
+}
+
+
+.admin_slider_styles .msg {
+    height: 55px;
+    padding-top: 25px;
+    color: #becfe8;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.admin_slider_styles .lists_box {
+    float: left;
+}
+
+    .admin_slider_styles .items_box {
+        float: left;
+        height: 86px;
+        border-left: 1px solid #becfe8;
+    }
+
+    .admin_slider_styles .items_box:first-child {
+        border-left: 0;
+    }
+
+
+    .admin_slider_styles .items_header {
+        color: #becfe8;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #becfe8;
+        padding: 4px 12px;
+        white-space: nowrap;
+    }
+
+
+    .admin_slider_styles .items_list {
+        overflow: hidden;
+        zoom: 1;
+        margin-right: 10px;
+    }
+
+
+
+        .admin_slider_styles .item {
+            float: left;
+            border: 1px solid #becfe8;
+            border-radius: 5px;
+            height: 36px;
+            width: 121px;
+            position: relative;
+            overflow: hidden;
+            margin: 10px 0 0 10px;
+        }
+
+        .admin_slider_styles .item .title {
+            width: 86px;
+            height: 14px;
+            float: left;
+            cursor: pointer;
+            padding: 11px 10px;
+            color: #333;
+            background: #becfe8 url("/static/admin_slider/style_bg.png") repeat-x 0 0;
+            font-size: 12px;
+        }
+
+        .admin_slider_styles .item span {
+            width: 14px;
+            height: 36px;
+            border-left: 1px solid #becfe8;
+            float: left;
+            background: #becfe8 url("/static/admin_slider/style_arrow.png") no-repeat 0 center;
+            cursor: pointer;
+        }
+
+        .admin_slider_styles .item .overlay {
+            display: none;
+        }
+
+        .admin_slider_styles .active .overlay {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 15px;
+            height: 36px;
+            background: #000;
+            opacity: 0.5; 
+            filter: alpha(opacity=50);
+            z-index: 10;
+            cursor: default;
+        }
+
+
+
+    .admin_slider_styles .btn_scroll_left,
+    .admin_slider_styles .btn_scroll_right {
+        top: 40px !important;
+    }

@@ -1,0 +1,15 @@
+.users_manager {
+    overflow: hidden;
+    position: relative;
+    zoom: 1;
+}
+
+
+.users_manager .noted td {
+    padding: 4px 2px;
+}
+
+.users_manager .noted .wsc_checkbox {
+    width: 43px;
+    margin: 0 auto;
+}

@@ -1,0 +1,40 @@
+<tpl name="forms_manager">
+    <div class="forms_manager">
+
+        <div id="lists" class="lists">
+            <div class="tabs_bar">
+                <a id="btn_tab_my_forms" key="my_forms" events="onclick=onTabClick"><span>My Forms</span></a>
+                <a id="btn_tab_templates" key="templates" events="onclick=onTabClick"><span>Templates</span></a>
+            </div>
+            <div id="list_my_forms" class="forms_list" style="display: none">
+                <table class="nice" id="table_my_forms">
+                    <tr class="head" id="table_my_forms_head">
+                        <th>Title</th>
+                        <th class="w50 ta_center last">Actions</th>
+                    </tr>
+                </table>
+                <div class="nice_table_footer"><div></div></div>
+            </div>
+            <div id="list_templates" class="forms_list" style="display: none">
+                <table class="nice" id="table_templates">
+                    <tr class="head" id="table_templates_head">
+                        <th>Title</th>
+                        <th class="w30 ta_center last">Actions</th>
+                    </tr>
+                </table>
+                <div class="nice_table_footer"><div></div></div>
+            </div>
+        </div>
+
+        <div id="msg_loading" class="loading" style="display: none"></div>
+        <div id="msg_error" class="message_error" style="display: none">Form loading error</div>
+
+    </div>
+
+
+    <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_left" title=" Create " events="onclick=onCreateClick"/>
+        <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
+    </div></div>
+
+</tpl>

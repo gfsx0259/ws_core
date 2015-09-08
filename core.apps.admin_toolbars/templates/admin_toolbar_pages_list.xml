@@ -1,0 +1,15 @@
+<tpl name="admin_toolbar_pages_list">
+    <div class="list">
+        <div id="pages_list" class="pages_list"></div>
+        <a class="btn_add" id="btn_add" events="onclick=onAddItemClick">
+            <img src='/static/admin_toolbars/plus.png'/> Add Page
+<!--
+            <div class="arrow_right"></div>
+            <div class="dropdown">
+                <a class="first" events="onclick=onAddStdItemClick"><img src='/static/admin_toolbars/page_icons/std.png'/>Empty</a>
+                <a events="onclick=onAddExternalItemClick"><img src='/static/admin_toolbars/page_icons/external.png'/>External</a>
+            </div>
+            -->
+        </a>
+    </div>
+</tpl>

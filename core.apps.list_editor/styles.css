@@ -1,0 +1,113 @@
+/* popup content layout */
+
+.list_editor {
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+.list_editor .pic_preview {
+    border: 1px solid #ADC0E0;
+    width: auto;
+    height: 140px;
+    margin-top: 5px;
+    clear: both;
+    text-align: center;
+}
+
+    .list_editor .pic_preview img {
+        height: 100%;
+    }
+
+
+.list_editor .doc_preview {
+    border: 1px solid #ADC0E0;
+    width: auto;
+    height: 140px;
+    margin-top: 5px;
+    clear: both;
+    padding: 2px;
+    overflow: auto;
+}
+
+
+/* items list */
+
+.list_editor_list {
+    background: #FFF;
+    font: normal 12px Tahoma;
+    overflow: auto;
+    width: 195px;
+}
+
+    .list_editor_list .placeholder {
+        margin: 2px;
+        height: 22px;
+        border: 1px solid #bdcede;
+        background: url(/static/images/area.gif) repeat;
+    }
+
+    .list_editor_list .item {
+        width: auto;
+        height: 24px;
+        margin: 2px;
+    }
+
+        .list_editor_list .active {}
+
+
+        .list_editor_list span {
+            margin: 0 20px;
+            padding: 4px 6px;
+            background: #fff;
+            color: #000;
+            border: 1px solid #FFF;
+            display: block;
+            overflow: hidden;
+            cursor: default;
+            height: 14px;
+        }
+
+            .list_editor_list .item:hover span {
+                background: #f2f2f2;
+            }
+
+            .list_editor_list .active span {
+                border: 1px solid #ccc;
+                background: #f2f2f2;
+            }
+
+        .list_editor_list .icon_move {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            float: left;
+            background: transparent url(/static/icons/move_ud.png) no-repeat;
+            margin-top: 4px;
+            cursor: move;
+        }
+
+        .list_editor_list .icon_delete {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            float: right;
+            background: transparent url(/static/icons/cross.png) no-repeat;
+            margin-top: 4px;
+        }
+
+
+.list_editor_list_dragable {
+    padding: 4px 6px;
+    position: fixed;
+    z-index: 32000;
+    color: #000;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    font: normal 12px Tahoma;
+}    
+
+
+.list_editor .properties {
+    overflow: auto;
+}

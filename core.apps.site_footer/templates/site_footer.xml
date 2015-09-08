@@ -1,0 +1,4 @@
+<tpl name="site_footer">
+    <div id="links" class="links"></div>
+    <div id="info" class="info"></div>
+</tpl>

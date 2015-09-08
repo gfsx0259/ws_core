@@ -1,0 +1,16 @@
+<tpl name="admin_toolbar_app_settings">
+    <div class="tabs_bar">
+        <a id="tab_properties" events="onclick=showProperties"><span>Properties</span></a>
+        <a id="tab_styles" events="onclick=showStyles"><span>Styles</span></a>
+    </div>
+    <div id="scrollable_content" class="scrollable_content">
+        <div id="properties" class="settings"></div>
+        <div id="styles" style="display: none"></div>
+    </div>
+    <div class="bottom_buttons" id="box_bottom_buttons">
+        <wsc_button events="onclick=onDeleteClick" title="Delete" class="btn_float_left"/>
+        <wsc_button events="onclick=onCopyClick" title="Copy" class="btn_float_left"/>
+        <wsc_button events="onclick=onPreviewClick" title="Apply"/>
+        <wsc_button events="onclick=onSaveClick" title="Save"/>
+    </div>
+</tpl>

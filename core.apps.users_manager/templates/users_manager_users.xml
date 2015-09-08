@@ -1,0 +1,72 @@
+<tpl name="users_manager_users">
+    <div id="content_users" style="display: none">
+
+        <div class="form_row">
+            <p class="text float_left">Confirmed:</p>
+            <wsc_select id="inp_filter_confirmed" class="float_left w60">
+                <option value="">All</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </wsc_select>
+
+            <p class="text float_left">Type: </p>
+            <wsc_select id="inp_filter_contributor" class="float_left w130">
+                <option value="">All</option>
+                <option value="0">Users</option>
+                <option value="1">Contributors</option>
+            </wsc_select>
+
+            <p class="text float_left">Users Per Page: </p>
+            <wsc_select id="inp_user_manager_users_per_page" class="float_left w60" events="onchange=onChangeRowsPerPage">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </wsc_select>
+        </div>
+
+        <div class="form_row">
+            <wsc_text id="inp_filter_q" value="" class="float_left w500"/>
+            <wsc_button events="onclick=onUsersSearchClick" title="Search" class="float_left w75"/>
+            <wsc_button events="onclick=onResetUsersSearchClick" title="Reset" class="float_left w75"/>
+        </div>
+
+
+        <div id="users_pager_box"></div>
+
+        <div class="form_row" id="msg_users" style="display: none">
+            <div class="message_info" id="msg_users_content"></div>
+        </div>
+
+        <div class="form_row">
+            <table class="nice">
+                <tbody id="users_table">
+                    <tr class="head">
+                        <th class="w10pc">First name</th>
+                        <th class="w10pc">Last name</th>
+                        <th class="w20pc">Email</th>
+                        <th class="w20pc">Password</th>
+                        <th class="w45 ta_center">Confirmed</th>
+                        <th class="w45 ta_center">Contributor</th>
+                        <th class="w45 ta_center last">Actions</th>
+                    </tr>
+
+                    <tr class="noted" id="user_editor">
+                        <td><wsc_text id="inp_user_first_name"/></td>
+                        <td><wsc_text id="inp_user_last_name"/></td>
+                        <td><wsc_text id="inp_user_email"/></td>
+                        <td><wsc_text id="inp_user_pwd"/></td>
+                        <td><wsc_checkbox id="inp_user_confirmed"/></td>
+                        <td><wsc_checkbox id="inp_user_contributor"/></td>
+                        <td class="last">
+                            <wsc_button id="btn_add_user" events="onclick=onAddUserClick" title="Add"/>
+                            <wsc_button id="btn_save_user" events="onclick=onSaveUserClick" title="Save" style="display: none"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nice_table_footer"><div></div></div>
+        </div>
+
+    </div>
+</tpl>

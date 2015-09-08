@@ -1,0 +1,46 @@
+html {
+    min-height: 100%;
+    position: relative !important;
+}
+
+.layout_row {
+    position: relative;
+    zoom: 1;
+    min-height: 40px;
+/*    overflow: hidden; */
+    overflow: auto;
+    z-index: 10;
+    padding-bottom: 0;
+    clear: both;
+}
+
+
+.layout_cells_container {
+    overflow: auto;
+    position: relative;
+    zoom: 1;
+}
+
+    .layout_cell {
+        min-height: 20px;
+        float: left;
+        overflow: auto;
+        position: relative;
+    }
+
+
+.app {                 
+    min-height: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.app_caption,
+.app_content,
+.app_footer {
+    z-index: 2;
+}
+
+.app_content {
+    overflow: hidden;
+}

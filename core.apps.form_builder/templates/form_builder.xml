@@ -1,0 +1,56 @@
+<tpl name="form_builder">
+
+    <div class="form_builder" id="editor_content">
+        <div id="editor">
+            <div id="toolbar" class="toolbar_wrapper"></div>
+
+            <div class="popup_panels" id="panels" style="position: relative">
+                <div class="popup_left_panel_box">
+                    <div class="tabs_bar">
+                        <a id="btn_tab_form" key="form" events="onclick=onTabClick"><span>Form properties</span></a>
+                        <a id="btn_tab_field" key="field" events="onclick=onTabClick"><span>Field properties</span></a>
+                    </div>
+
+                    <wsc_box>
+                        <div class="popup_left_panel" id="left_panel">
+                            <div id="tab_form" style="display: none">
+                                <div class="form_properties">
+                                    <include tpl="form_builder_form_properties"/>
+                                </div>
+                            </div>
+
+                            <div id="tab_field" style="display: none">
+                                <div id="properties_box">
+                                    <div class="form_row">
+                                        Field type: <strong id="lbl_element_type"></strong>
+                                    </div>
+
+                                    <div class="field_properties">
+                                        <include tpl="form_builder_field_properties"/>
+                                    </div>
+
+                                    <div class="form_row" id="box_apply_field_properties">
+                                        <wsc_button events="onclick=onApplyFieldPropertiesClick" title="Apply" class="float_left"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </wsc_box>
+                </div>
+
+
+                <div class="popup_right_panel_box">
+                    <wsc_box>
+                        <div class="form_view popup_right_panel" id="view" events="onclick=onFormViewBoxClick"></div>
+                    </wsc_box>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popup_buttons" id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" events="onclick=onCancelClick" title=" Cancel "/>
+        <wsc_button id="btn_save" class="float_right" events="onclick=onSaveClick" title=" Save "/>
+    </div></div>
+</tpl>

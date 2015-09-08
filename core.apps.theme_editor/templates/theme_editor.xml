@@ -1,0 +1,18 @@
+<tpl name="theme_editor">
+    <div class="theme_editor">
+        <div class="form_row form_row_nopad">
+            <label>Name</label>
+            <wsc_text id="inp_title"/>
+        </div>
+        <div class="form_row form_row_nopad">
+            <label>Thumbnail</label>
+            <wsc_file id="inp_thumb" events="onclick=onInputClick" type="pictures"/>
+        </div>
+        <div class="objects_list" id="objects_list"></div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onCancelClick"/>
+        <wsc_button class="float_right" title=" Save " events="onclick=onSaveClick"/>
+    </div></div>
+</tpl>

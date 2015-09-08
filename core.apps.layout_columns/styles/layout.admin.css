@@ -1,0 +1,112 @@
+.layout_row_box {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.layout_cell_container {
+    z-index: 10;
+    padding-bottom: 4px;
+}
+
+.layout_cell {
+    min-height: 40px;
+}
+
+
+.layout_cell .cell_info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    display: none; 
+    z-index: 10000;
+}
+
+    .layout_cell .cell_info span {
+        display: block;
+        width: 60px;
+        margin-left: -30px;
+        border: 1px solid #333;
+        background: #FFF;
+        color: #333;
+        font: normal 11px Arial;
+        padding: 3px 3px 1px 3px;
+        text-align: center;
+    }
+
+
+
+.layout_row_controls_wrapper {
+    height: 12px;
+    overflow: hidden;   
+}
+
+.layout_row_controls_fixed {
+    background: #FFF;
+    position: fixed;
+    width: 100%;
+    height: 16px;
+    left: 0;
+    bottom: 0;
+    z-index: 6000;
+}
+
+    .layout_row_controls {
+        height: 16px;
+        background: #FFF url(/static/layout_columns/row_controls_bg.png) repeat-x;
+        font: normal 9px Arial;
+        position: relative;
+        cursor: default;
+    }
+
+        .layout_row_controls span,
+        .layout_row_controls a.title {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            color: #000;
+            font-weight: bold;
+            text-transform: lowercase;
+            text-align: center;
+        }
+
+        .layout_row_controls a.title:hover {
+            text-decoration: underline;
+        }
+
+
+.row_resize_markers {
+    position: absolute;
+    height: 13px;
+    z-index: 100;
+    font: normal 9px Arial;
+}
+
+    .row_resize_markers .bar {
+        position: absolute;
+        top: 0px;
+        height: 13px;
+        text-align: center;
+    }
+
+        .row_resize_markers .marker {
+            position: absolute;
+            left: 0px;
+            width: 7px;
+            top: 4px;
+            height: 13px;
+            background: transparent url(/static/layout_columns/resize_marker.png) no-repeat;
+        }
+
+        .row_resize_markers .marker_dragable {
+            cursor: e-resize;
+        }
+
+        .row_resize_markers span {
+            cursor: pointer;
+        }

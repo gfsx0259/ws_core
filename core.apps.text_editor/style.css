@@ -1,0 +1,20 @@
+.text_editor .tabs_bar {
+    margin-top: 5px;
+}
+
+.text_editor .extra {
+    padding: 10px 15px;
+}
+
+    .text_editor .tabs_bar a:first-child {
+        margin-left: 5px;
+    }
+
+.text_editor .calendar {
+    margin-top: 4px;
+}
+
+
+.text_editor_popup_buttons {
+    margin-top: 0;
+}

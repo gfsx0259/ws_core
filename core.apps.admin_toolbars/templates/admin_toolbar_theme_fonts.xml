@@ -1,0 +1,19 @@
+<tpl name="admin_toolbar_theme_fonts">
+    <div class="admin_toolbar_theme_fonts">
+        <div class="form_row">
+            <label>Main font</label>
+            <wsc_font_family id="inp_font1"/>
+        </div>
+        <div class="form_row">
+            <label>Heading font</label>
+            <wsc_font_family id="inp_font2"/>
+        </div>
+        <div class="form_row">
+            <label>Fancy font</label>
+            <wsc_font_family id="inp_font3"/>
+        </div>
+        <div class="footer">
+            <wsc_button events="onclick=onSaveClick" title="Save"/>
+        </div>
+    </div>
+</tpl>

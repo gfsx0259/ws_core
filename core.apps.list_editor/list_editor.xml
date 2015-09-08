@@ -1,0 +1,67 @@
+<tpl name="list_editor">
+    <div class="list_editor">
+
+        <div class="popup_panels" id="resize_box">
+
+        <div class="popup_left_panel_box">
+            <wsc_box title="Blocks">
+                <div id="list" class="list_editor_list" is_list="1"></div>
+            </wsc_box>
+        </div>
+
+        <div class="popup_right_panel_box">
+            <wsc_box title="Properties">
+                <div id="properties" class="properties">
+                    <div id="properties_list">
+
+                        <div class="form_row" id="sec_title">
+                            <label id="lbl_item_title"></label>
+                            <wsc_text id="inp_item_title" events="onblur=onTitleBlur"/>
+                        </div>
+
+                        <div class="form_row" id="sec_file">
+                            <label id="lbl_item_file"></label>
+                            <wsc_file id="inp_item_file" events="onchange=onFileChanged"/>
+                            <div class="pic_preview" id="pic_preview" style="display: none"></div>
+                        </div>
+
+                        <div class="form_row" id="sec_alt">
+                            <label id="lbl_item_alt"></label>
+                            <wsc_text id="inp_item_alt"/>
+                        </div>
+
+                        <div class="form_row" id="sec_doc">
+                            <label id="lbl_item_doc"></label>
+                            <wsc_doc_control id="inp_item_doc" events="onchange=onDocChanged"/>
+                            <div class="doc_preview" id="doc_preview"></div>
+                        </div>
+
+                        <div class="form_row" id="sec_code">
+                            <label id="lbl_item_code"></label>
+                            <wsc_textarea id="inp_item_code"/>
+                        </div>
+
+                        <div class="form_row" id="sec_html">
+                            <label id="lbl_item_html"></label>
+                            <wsc_textarea id="inp_item_html"/>
+                        </div>
+
+                        <div class="form_row" id="sec_url">
+                            <label id="lbl_item_url"></label>
+                            <wsc_text id="inp_item_url" events="onblur=onUrlBlur"/>
+                        </div>
+
+                    </div>
+                </div>
+            </wsc_box>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="popup_buttons" id="bottom_toolbar"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_left" title=" Add " events="onclick=onAddItemClick" />
+        <wsc_button class="float_right" title=" Cancel " events="onclick=onCancelClick" />
+        <wsc_button class="float_right" title=" Save " events="onclick=onSaveClick"/>
+    </div></div>
+</tpl>

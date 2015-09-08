@@ -1,0 +1,33 @@
+<tpl name="texts_manager">
+    <div class="texts_manager" id="texts_manager">
+
+        <div class="p_content" id="p_content">
+            <div class="left_panel" id="left_panel">
+                <wsc_text id="input_search_text" clear_control="1" hint="search..." events="onenter=onSearchClick;onclear=onSearchClearClick"/>
+                <div style="height: 5px"></div>
+                <wsc_box>
+                    <div id="list" class="texts_list"></div>
+                </wsc_box>
+                <div class="pslider" style="right: -9px; top: 50%" events="onclick=togglePreview"></div>
+            </div>
+            <div class="previews_box" id="previews_box">
+                <wsc_fieldset group="texts_manager" title="Summary" expanded="1">
+                    <div id="preview_content_summary" class="preview_summary"></div>
+                </wsc_fieldset>
+                <wsc_fieldset group="texts_manager" title="Body" expanded="1">
+                    <div id="preview_content" class="preview_content"></div>
+                </wsc_fieldset>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button class="float_left" id="btn_create" title=" Create " events="onclick=onCreateClick"/>
+        <wsc_button class="float_left" id="btn_rename_doc" title=" Rename " events="onclick=onRenameClick"/>
+        <wsc_button class="float_left" id="btn_edit_doc" title=" Edit " events="onclick=onEditClick"/>
+        <wsc_button class="float_left" id="btn_delete_doc" title=" Delete " events="onclick=onDeleteClick"/>
+        <wsc_button class="float_left btn_important" id="btn_choose" title=" Choose " events="onclick=onChooseClick"/>
+        <wsc_button class="float_right" id="btn_refresh" title=" Refresh " events="onclick=refresh"/>
+    </div></div>
+</tpl>

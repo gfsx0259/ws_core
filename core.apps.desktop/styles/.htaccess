@@ -1,0 +1,3 @@
+<FilesMatch "^datepicker\.css">
+Allow from all
+</FilesMatch>
