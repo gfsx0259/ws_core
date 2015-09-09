@@ -28,19 +28,19 @@
         }
 
         .pages_manager .mi_controls .mup {
-            background: transparent url("/js_apps/core.apps.pages_manager/images/blue.png") 0 0 no-repeat;
+            background: transparent url("/vendor/generdyn/core/images/blue.png") 0 0 no-repeat;
         }
 
         .pages_manager .mi_controls .mdown {
-            background: transparent url("/js_apps/core.apps.pages_manager/images/blue.png") -32px 0 no-repeat;
+            background: transparent url("/vendor/generdyn/core/images/blue.png") -32px 0 no-repeat;
         }
 
         .pages_manager .mi_controls .mclone  {
-            background: url("/js_apps/core.apps.pages_manager/images/copy.png") no-repeat;
+            background: url("/vendor/generdyn/core/images/copy.png") no-repeat;
         }
 
         .pages_manager .mi_controls .mdelete  {
-            background: url("/js_apps/core.apps.pages_manager/images/cross.png") no-repeat;
+            background: url("/vendor/generdyn/core/images/cross.png") no-repeat;
         }
 
 

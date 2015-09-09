@@ -28,7 +28,7 @@
     float: left;
     width: 13px;
     height: 36px;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
     cursor: move;
     border-right: 1px solid #ced1d4;
 }
@@ -60,7 +60,7 @@
 
 .admin_toolbar_text_editor a:hover {
     text-decoration: none;
-    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x 0 0;
+    background: url("/vendor/generdyn/core/images/gradients.png") repeat-x 0 0;
 }
 
 .admin_toolbar_text_editor a:hover .dropdown {
@@ -70,7 +70,7 @@
 .admin_toolbar_text_editor a.active,
 .admin_toolbar_text_editor a.active:hover {
     cursor: default;
-    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x;
+    background: url("/vendor/generdyn/core/images/gradients.png") repeat-x;
 }
 
 .admin_toolbar_text_editor .disabled,

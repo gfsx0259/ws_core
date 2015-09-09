@@ -10,7 +10,7 @@
     z-index: 10;
     width: 33px;
     height: 23px;
-    background: transparent url("/js_apps/core.apps.baloon_tooltips/images/pointer.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/pointer.png") no-repeat 0 0;
     display: none;
 }
 

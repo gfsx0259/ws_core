@@ -50,7 +50,7 @@
 .admin_toolbar_pages_list .btn_add,
 .admin_toolbar_pages_list .btn_add:hover {
     position: relative;
-    background: transparent url(/js_apps/core.apps.admin_toolbars/images/bth_add_bg.png) repeat-x;
+    background: transparent url(/vendor/generdyn/core/images/bth_add_bg.png) repeat-x;
 }
 
 .admin_toolbar_pages_list .item_overlay {
@@ -59,7 +59,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
 }
 
 .admin_toolbar_pages_list .drag_control {
@@ -68,7 +68,7 @@
     top: 9px;
     width: 9px;
     height: 16px;
-    background: transparent url(/js_apps/core.apps.admin_toolbars/images/page_drag.png) no-repeat;
+    background: transparent url(/vendor/generdyn/core/images/page_drag.png) no-repeat;
     cursor: move;
     z-index: 10;
 }

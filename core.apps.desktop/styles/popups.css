@@ -17,7 +17,7 @@
 }
 
 .popup_caption {
-    background: transparent url("/js_apps/core.apps.desktop/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
     cursor: move;
     position: relative;
     font-size: 11px;
@@ -38,7 +38,7 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
-    background: url("/js_apps/core.apps.desktop/images/popup_app/buttons.png") no-repeat;
+    background: url("/vendor/generdyn/core/images/popup_app/buttons.png") no-repeat;
 }
 
 .popup_caption .btn_help {
@@ -196,7 +196,7 @@
     height: 56px;
     position: absolute;
     z-index: 10;
-    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/pslider.png) no-repeat;
+    background: transparent url(/vendor/generdyn/core/images/popup_app/pslider.png) no-repeat;
 }
 
 .popup_right_resize {
@@ -260,11 +260,11 @@
 }
 
 .popup_sidebar a.active {
-    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/left_menu_item.png) no-repeat left bottom;
+    background: transparent url(/vendor/generdyn/core/images/popup_app/left_menu_item.png) no-repeat left bottom;
 }
 
 .popup_sidebar a.active:first-child {
-    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/left_menu_item.png) no-repeat left top;
+    background: transparent url(/vendor/generdyn/core/images/popup_app/left_menu_item.png) no-repeat left top;
 }
 
 .popup_sidebar a img {

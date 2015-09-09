@@ -99,7 +99,7 @@ core.apps.files_manager.prototype = {
                     id: "folder" + fn,
                     events: { onclick: ["onFolderClick", fn] },
                     childs: [
-                        { tag: "img", src: "/js_apps/core.apps.files_manager/images/folders/" + f.icon },
+                        { tag: "img", src: "/vendor/generdyn/core/images/folders/" + f.icon },
                         { tag: "span", innerHTML: f.title },
                         { tag: "span", id: "files_count" + fn },
                         { tag: "div", className: "links",
@@ -1088,7 +1088,7 @@ core.apps.files_manager.prototype = {
         }
 
         this.$["sort_" + this.sort_mode.key].className = "active";
-        this.$["sort_dir_" + this.sort_mode.key].innerHTML = this.sort_mode.reverse ? "<img src='/js_apps/core.apps.files_manager/images/arrow_up.png'/>" : "<img src='/js_apps/core.apps.files_manager/images/arrow_down.png'/>";
+        this.$["sort_dir_" + this.sort_mode.key].innerHTML = this.sort_mode.reverse ? "<img src='/vendor/generdyn/core/images/arrow_up.png'/>" : "<img src='/vendor/generdyn/core/images/arrow_down.png'/>";
     },
 
 

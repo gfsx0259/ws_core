@@ -6,7 +6,7 @@
     cursor: pointer;
     position: absolute;
     z-index: 10000;
-    background: transparent url(/js_apps/core.apps.layout_columns/images/lock.png) no-repeat;
+    background: transparent url(/vendor/generdyn/core/images/lock.png) no-repeat;
 }
 
 /* app mouse hover */
@@ -28,7 +28,7 @@
     right: 0;
     bottom: 0;
     border: 1px solid #F00;
-    background: transparent url(/js_apps/core.apps.layout_columns/images/overlay_bg.png) repeat;
+    background: transparent url(/vendor/generdyn/core/images/overlay_bg.png) repeat;
 }
 
 .app .admin_overlay .overlay_drag {
@@ -54,12 +54,12 @@
 
 .app .admin_bound_t,
 .app .admin_bound_b {
-    background: #00F url(/js_apps/core.apps.layout_columns/images/selection1_h.gif) repeat-x;
+    background: #00F url(/vendor/generdyn/core/images/selection1_h.gif) repeat-x;
 }
 
 .app .admin_bound_l,
 .app .admin_bound_r {
-    background: #00F url(/js_apps/core.apps.layout_columns/images/selection1_v.gif) repeat-y;
+    background: #00F url(/vendor/generdyn/core/images/selection1_v.gif) repeat-y;
 }
 
 .app .admin_bound {
@@ -143,12 +143,12 @@
 
 .app .admin_margin_t,
 .app .admin_margin_b {
-    background: #F00 url(/js_apps/core.apps.layout_columns/images/selection2_h.gif) repeat-x;
+    background: #F00 url(/vendor/generdyn/core/images/selection2_h.gif) repeat-x;
 }
 
 .app .admin_margin_l,
 .app .admin_margin_r {
-    background: #F00 url(/js_apps/core.apps.layout_columns/images/selection2_v.gif) repeat-y;
+    background: #F00 url(/vendor/generdyn/core/images/selection2_v.gif) repeat-y;
 }
 
 .app .admin_margin span {
@@ -269,6 +269,6 @@
     margin-left: -36px;
     width: 73px;
     height: 26px;
-    background: transparent url(/js_apps/core.apps.layout_columns/images/drag.png) no-repeat;
+    background: transparent url(/vendor/generdyn/core/images/drag.png) no-repeat;
     cursor: move;
 }

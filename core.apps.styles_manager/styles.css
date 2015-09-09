@@ -86,13 +86,13 @@
         }
 
         .styles_manager .styles_list .item .btn_edit {
-            background: transparent url('/js_apps/core.apps.styles_manager/images/page_edit.png') no-repeat 0 0;
+            background: transparent url('/vendor/generdyn/core/images/page_edit.png') no-repeat 0 0;
         }
 
         .styles_manager .styles_list .item .btn_delete {
-            background: transparent url('/js_apps/core.apps.styles_manager/images/cross.png') no-repeat 0 0;
+            background: transparent url('/vendor/generdyn/core/images/cross.png') no-repeat 0 0;
         }
 
         .styles_manager .styles_list .item .btn_clone {
-            background: transparent url('/js_apps/core.apps.styles_manager/images/copy.png') no-repeat 0 0;
+            background: transparent url('/vendor/generdyn/core/images/copy.png') no-repeat 0 0;
         }

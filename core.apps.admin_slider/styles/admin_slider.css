@@ -4,7 +4,7 @@
     width: 100%;
     position: fixed;
     height: 36px;
-    background: #fff url("/js_apps/core.apps.admin_slider/images/header_bg.png") repeat-x 0 0;
+    background: #fff url("/vendor/generdyn/core/images/header_bg.png") repeat-x 0 0;
     text-align: center;
     border-bottom: 1px solid #becfe8;
     z-index: 16001;
@@ -22,7 +22,7 @@
     width: 32px;
     height: 27px;
     margin: 1px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/header_btns.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/header_btns.png") no-repeat 0 0;
     cursor: pointer;
 }
 
@@ -47,7 +47,7 @@
     width: 81px;
     height: 33px;
     cursor: pointer;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/header_buttons.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/header_buttons.png") no-repeat 0 0;
 }
 
 .admin_slider_header .right_buttons .preview {
@@ -77,7 +77,7 @@
             width: 81px;
             height: 33px;
             cursor: pointer;
-            background: transparent url("/js_apps/core.apps.admin_slider/images/header_buttons.png") no-repeat 0 0;
+            background: transparent url("/vendor/generdyn/core/images/header_buttons.png") no-repeat 0 0;
         }
 
         .admin_slider_header .right_buttons .preview {
@@ -135,7 +135,7 @@
 }
 
 .admin_slider .footer {
-    background: transparent url("/js_apps/core.apps.admin_slider/images/footer_shadow.png") repeat-x 0 0;
+    background: transparent url("/vendor/generdyn/core/images/footer_shadow.png") repeat-x 0 0;
     height: 11px;
     overflow: visible;
 }
@@ -153,14 +153,14 @@
     padding-top: 2px;
     height: 36px;
     width: 124px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/bolt.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/bolt.png") no-repeat 0 0;
 }
 
 .admin_slider .footer .icon {
     margin: 0 auto;
     width: 24px;
     height: 24px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/bolt_icons.png") no-repeat;
+    background: transparent url("/vendor/generdyn/core/images/bolt_icons.png") no-repeat;
 }
 
 .admin_slider .bolt .icon_apps_catalog {
@@ -195,7 +195,7 @@
     left: 13px;
     width: 98px;
     height: 11px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/footer_shadow.png") repeat-x 0 0;
+    background: transparent url("/vendor/generdyn/core/images/footer_shadow.png") repeat-x 0 0;
 }
 
 .admin_slider .bolt_active .shadow {

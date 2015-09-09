@@ -82,7 +82,7 @@
 
             .texts_manager docitem .title {
                 padding-left: 20px;
-                background: transparent url("/js_apps/core.apps.texts_manager/images/text.gif") no-repeat 0 50%;
+                background: transparent url("/vendor/generdyn/core/images/text.gif") no-repeat 0 50%;
                 margin: 0 80px 0 0px;
             }
 

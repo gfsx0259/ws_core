@@ -38,7 +38,7 @@ table.nice tr.head {
 table.nice th {
     height: 18px;
     padding: 1px 4px 0 4px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/table_header.png) no-repeat -5px 0;
+    background: transparent url(/vendor/generdyn/core/images/wsc/table_header.png) no-repeat -5px 0;
     border-left: 1px solid #adc0e0;
     color: #333;
     font: normal 12px Tahoma;
@@ -64,7 +64,7 @@ table.nice td {
     height: 14px;
     font: normal 12px Tahoma;
     padding: 4px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/table_cell.png) no-repeat -1px bottom;
+    background: transparent url(/vendor/generdyn/core/images/wsc/table_cell.png) no-repeat -1px bottom;
 }
 
 table.nice td:first-child {
@@ -76,7 +76,7 @@ table.nice td.last {
 }
 
 table.nice .noted td {
-    background-image: url(/js_apps/core.apps.desktop/images/wsc/table_cell_noted.png);
+    background-image: url(/vendor/generdyn/core/images/wsc/table_cell_noted.png);
 }
 
 input[type="checkbox"] {
@@ -87,13 +87,13 @@ input[type="checkbox"] {
 }
 
 .nice_table_footer {
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/box_bottom.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/box_bottom.png) no-repeat right top;
     padding-right: 5px;
     margin-top: -1px;
 }
 
 .nice_table_footer div {
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/box_bottom.png) no-repeat left bottom;
+    background: transparent url(/vendor/generdyn/core/images/wsc/box_bottom.png) no-repeat left bottom;
     height: 5px;
 }
 

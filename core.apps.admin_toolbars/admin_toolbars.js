@@ -154,7 +154,7 @@ core.apps.admin_toolbars.prototype = {
         if(core.data.site_info.is_paid != 0 && (core.data.site_version.is_changed == 1 || desktop.layout.site_changed)) {
             var p = {
                 title: "Exiting site editor",
-                message: "<img src='/js_apps/core.apps.admin_toolbars/images/icons/exit.png'/> Would you like to publish your changes now?",
+                message: "<img src='/vendor/generdyn/core/images/icons/exit.png'/> Would you like to publish your changes now?",
                 buttons: [
                     { title: "Revert to live version", callback: this.unpublishSite.bind(this), type: "link", className: "float_left" },
                     { title: "Yes", callback: this.publishSite.bind(this), ok_button: true },

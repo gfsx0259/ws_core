@@ -16,7 +16,7 @@
 
 .admin_toolbar_buttons .admin_toolbar_caption {
     height: 13px;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
     cursor: move;
     border-bottom: 1px solid #ced1d4;
 }
@@ -48,7 +48,7 @@
 
 .admin_toolbar_buttons a:hover {
     text-decoration: none;
-    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x 0 0;
+    background: url("/vendor/generdyn/core/images/gradients.png") repeat-x 0 0;
 }
 
 .admin_toolbar_buttons a:hover .dropdown {
@@ -58,7 +58,7 @@
 .admin_toolbar_buttons a.active,
 .admin_toolbar_buttons a.active:hover {
     cursor: default;
-    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x;
+    background: url("/vendor/generdyn/core/images/gradients.png") repeat-x;
 }
 
 .admin_toolbar_buttons .disabled,

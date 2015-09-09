@@ -9,7 +9,7 @@
 .tabs_bar a:hover {
     float: left;
     text-decoration: none;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/tab.png) no-repeat right -60px;
+    background: transparent url(/vendor/generdyn/core/images/wsc/tab.png) no-repeat right -60px;
     margin: 0 4px -1px 0;
     padding-right: 6px;
 }
@@ -18,7 +18,7 @@
     display: block;
     padding: 8px 2px 8px 10px;
     height: 14px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/tab.png) no-repeat 0 -90px;
+    background: transparent url(/vendor/generdyn/core/images/wsc/tab.png) no-repeat 0 -90px;
     color: #333;
 }
 

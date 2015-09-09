@@ -24,7 +24,7 @@
 /* with text in header */
 .wsc_box_hl,
 .wsc_box_hr {
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/rch.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/rch.png) no-repeat right top;
 }
 
 .wsc_box_hr {
@@ -41,7 +41,7 @@
 .wsc_box_tr,
 .wsc_box_bl,
 .wsc_box_br {
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/rc.png) no-repeat 0 0;
+    background: transparent url(/vendor/generdyn/core/images/wsc/rc.png) no-repeat 0 0;
 }
 
 .wsc_box_tr {
@@ -110,13 +110,13 @@
 .wsc_slider .bar {
     float: left;
     width: 67%;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/slider.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/slider.png) no-repeat right top;
     margin-top: 4px;
 }
 
 .wsc_slider .bar_l {
     margin-right: 4px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/slider.png) no-repeat 0 -8px;
+    background: transparent url(/vendor/generdyn/core/images/wsc/slider.png) no-repeat 0 -8px;
 }
 
 .wsc_slider .bar_c {
@@ -131,7 +131,7 @@
     top: -4px;
     width: 16px;
     height: 16px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/slider.png) no-repeat 0 -16px;
+    background: transparent url(/vendor/generdyn/core/images/wsc/slider.png) no-repeat 0 -16px;
 }
 
 .wsc_slider .title {
@@ -149,7 +149,7 @@
 
 .wsc_select .value {
     padding: 0 8px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/select.png) no-repeat left -24px;
+    background: transparent url(/vendor/generdyn/core/images/wsc/select.png) no-repeat left -24px;
     height: 24px;
     overflow: hidden;
     cursor: default;
@@ -181,7 +181,7 @@
     height: 24px;
     right: 0;
     top: 0;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/select.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/select.png) no-repeat right top;
     cursor: pointer;
 }
 
@@ -221,13 +221,13 @@ iframe.wsc_font_family {
 /* wsc_button */
 .wsc_button {
     padding: 0 5px 0 0;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/button.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/button.png) no-repeat right top;
     cursor: pointer;
 }
 
 .wsc_button div {
     padding: 5px 0 0 5px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/button.png) no-repeat left bottom;
+    background: transparent url(/vendor/generdyn/core/images/wsc/button.png) no-repeat left bottom;
     height: 19px;
     text-align: center;
 }
@@ -236,7 +236,7 @@ iframe.wsc_font_family {
 
 .wsc_text {
     padding: 0 5px 0 0;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/text.png) no-repeat right top;
+    background: transparent url(/vendor/generdyn/core/images/wsc/text.png) no-repeat right top;
     height: 24px;
     overflow: hidden;
     position: relative;
@@ -244,7 +244,7 @@ iframe.wsc_font_family {
 
 .wsc_text div {
     padding: 0 0 0 5px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/text.png) no-repeat left bottom;
+    background: transparent url(/vendor/generdyn/core/images/wsc/text.png) no-repeat left bottom;
 }
 
 .wsc_text input {
@@ -267,7 +267,7 @@ iframe.wsc_font_family {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    background: url(/js_apps/core.apps.desktop/images/wsc/clear_text.png);
+    background: url(/vendor/generdyn/core/images/wsc/clear_text.png);
     z-index: 5;
 }
 
@@ -294,7 +294,7 @@ iframe.wsc_font_family {
     width: 43px;
     height: 17px;
     margin-right: 6px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/checkbox.png) no-repeat left bottom;
+    background: transparent url(/vendor/generdyn/core/images/wsc/checkbox.png) no-repeat left bottom;
     cursor: pointer;
 }
 
@@ -403,7 +403,7 @@ iframe.wsc_font_family {
     top: 2px;
     width: 21px;
     height: 21px;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/fieldset_state.png) no-repeat 0 0;
+    background: transparent url(/vendor/generdyn/core/images/wsc/fieldset_state.png) no-repeat 0 0;
 }
 
 .wsc_fieldset .wsc_fieldset_content_wrapper {
@@ -418,12 +418,12 @@ iframe.wsc_font_family {
 }
 
 .wsc_fieldset .wsc_fieldset_expanded {
-    background: #fdfeff url(/js_apps/core.apps.desktop/images/wsc/fieldset_caption_bg.png) repeat-x;
+    background: #fdfeff url(/vendor/generdyn/core/images/wsc/fieldset_caption_bg.png) repeat-x;
     font-weight: bold;
 }
 
 .wsc_fieldset .wsc_fieldset_expanded:hover {
-    background: #fdfeff url(/js_apps/core.apps.desktop/images/wsc/fieldset_caption_bg.png) repeat-x;
+    background: #fdfeff url(/vendor/generdyn/core/images/wsc/fieldset_caption_bg.png) repeat-x;
 }
 
 .wsc_fieldset .wsc_fieldset_expanded .state {

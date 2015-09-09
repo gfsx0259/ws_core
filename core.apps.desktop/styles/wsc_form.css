@@ -13,16 +13,16 @@ fieldset.wsc {
 }
 
 fieldset.wsc_odd {
-    background: #FFF url(/js_apps/core.apps.desktop/images/wsc/fieldset_bg.png) repeat-x 0 16px;
+    background: #FFF url(/vendor/generdyn/core/images/wsc/fieldset_bg.png) repeat-x 0 16px;
 }
 
 fieldset.wsc_icon {
-    background: #FFF url(/js_apps/core.apps.desktop/images/wsc/fieldset_bg.png) repeat-x 0 16px;
+    background: #FFF url(/vendor/generdyn/core/images/wsc/fieldset_bg.png) repeat-x 0 16px;
 }
 
 fieldset.wsc .legend {
     border: 1px solid #aec1e0;
-    background: transparent url(/js_apps/core.apps.desktop/images/wsc/legend_bg.png) repeat-x;
+    background: transparent url(/vendor/generdyn/core/images/wsc/legend_bg.png) repeat-x;
     height: 12px;
     padding: 0 8px 2px 8px;
 }

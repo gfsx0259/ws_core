@@ -86,7 +86,7 @@
         top: -1px;
         width: 16px;
         height: 16px;
-        background: #FFF url('/js_apps/core.apps.themes/images/cross.png') no-repeat;
+        background: #FFF url('/vendor/generdyn/core/images/cross.png') no-repeat;
         border: 1px solid #CCC;
         cursor: pointer;
     }

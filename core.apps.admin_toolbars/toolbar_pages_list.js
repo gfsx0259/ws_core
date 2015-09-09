@@ -54,7 +54,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
                           id: "item_title" + id,
                           style: { paddingLeft: node_depth * 10 + "px" },
                           childs: [
-                            { tag: "img", src: "/js_apps/core.apps.admin_toolbars/images/page_icons/" + node[i].type + ".png" },
+                            { tag: "img", src: "/vendor/generdyn/core/images/page_icons/" + node[i].type + ".png" },
                             { tag: "span", 
                               id: "title" + id,
                               innerHTML: node[i].title }

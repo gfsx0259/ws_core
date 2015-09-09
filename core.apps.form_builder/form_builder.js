@@ -62,10 +62,10 @@ core.apps.form_builder.prototype = {
 
         // toolbar
         var toolbarData = [
-            { title: "Add element", icon: "/js_apps/core.apps.form_builder/images/plugin.png",
+            { title: "Add element", icon: "/vendor/generdyn/core/images/plugin.png",
               subitems: []},
 
-            { title: "Add control", icon: "/js_apps/core.apps.form_builder/images/application_form.png",
+            { title: "Add control", icon: "/vendor/generdyn/core/images/application_form.png",
               subitems: [] }
         ];
 
@@ -74,7 +74,7 @@ core.apps.form_builder.prototype = {
             var tidx = el.behavior == "element" ? 0 : 1;
 
             toolbarData[tidx].subitems.push(
-                { title: el.title, icon: "/js_apps/core.apps.form_builder/images/plugin.png", id: "add_" + key,
+                { title: el.title, icon: "/vendor/generdyn/core/images/plugin.png", id: "add_" + key,
                   onclick: this.onAddField.bind(this, key) }
 
             );

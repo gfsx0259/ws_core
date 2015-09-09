@@ -9,7 +9,7 @@
 }
 
 .admin_slider_styles .scroller .viewport {
-    background: transparent url("/js_apps/core.apps.admin_slider/images/styles_hr.png") repeat-x 0 0;
+    background: transparent url("/vendor/generdyn/core/images/styles_hr.png") repeat-x 0 0;
     height: 86px;
 }
 
@@ -81,7 +81,7 @@
     cursor: pointer;
     padding: 11px 10px;
     color: #333;
-    background: #becfe8 url("/js_apps/core.apps.admin_slider/images/style_bg.png") repeat-x 0 0;
+    background: #becfe8 url("/vendor/generdyn/core/images/style_bg.png") repeat-x 0 0;
     font-size: 12px;
 }
 
@@ -90,7 +90,7 @@
     height: 36px;
     border-left: 1px solid #becfe8;
     float: left;
-    background: #becfe8 url("/js_apps/core.apps.admin_slider/images/style_arrow.png") no-repeat 0 center;
+    background: #becfe8 url("/vendor/generdyn/core/images/style_arrow.png") no-repeat 0 center;
     cursor: pointer;
 }
 

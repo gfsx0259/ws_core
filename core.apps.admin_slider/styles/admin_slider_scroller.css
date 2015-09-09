@@ -11,7 +11,7 @@
     height: 30px;
     top: 22px;
     left: 0;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/scroll_buttons.png") no-repeat -8px 0;
+    background: transparent url("/vendor/generdyn/core/images/scroll_buttons.png") no-repeat -8px 0;
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
     height: 30px;
     top: 22px;
     right: 0;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/scroll_buttons.png") no-repeat 0 -30px;
+    background: transparent url("/vendor/generdyn/core/images/scroll_buttons.png") no-repeat 0 -30px;
     cursor: pointer;
 }
 
@@ -31,7 +31,7 @@
     height: 70px;
     top: 0;
     left: 30px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/grad.png") repeat-y -6px 0;
+    background: transparent url("/vendor/generdyn/core/images/grad.png") repeat-y -6px 0;
     z-index: 10;
 }
 
@@ -41,7 +41,7 @@
     height: 70px;
     top: 0;
     right: 30px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/grad.png") repeat-y 0 0;
+    background: transparent url("/vendor/generdyn/core/images/grad.png") repeat-y 0 0;
     z-index: 10;
 }
 
@@ -74,7 +74,7 @@
     margin: 0 4px 0 0;
     text-align: center;
     float: left;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/app_thumb.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/app_thumb.png") no-repeat 0 0;
     cursor: move;
 }
 

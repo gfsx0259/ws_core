@@ -15,14 +15,14 @@
 /* settings */
 
 .admin_toolbar_settings .section {
-    background: transparent url(/js_apps/core.apps.admin_toolbars/images/app_settings/section_bg.png) repeat-y;
+    background: transparent url(/vendor/generdyn/core/images/app_settings/section_bg.png) repeat-y;
     border-bottom: 1px solid #cadef9;
     overflow: hidden;
     zoom: 1;
 }
 
 .admin_toolbar_settings .section_odd {
-    background: #e8f1fc url(/js_apps/core.apps.admin_toolbars/images/app_settings/section_bg_odd.png) no-repeat;
+    background: #e8f1fc url(/vendor/generdyn/core/images/app_settings/section_bg_odd.png) no-repeat;
 }
 
 .admin_toolbar_settings .section_last {
@@ -46,14 +46,14 @@
 .admin_toolbar_settings .divider {
     width: auto;
     height: 2px;
-    background: transparent url(/js_apps/core.apps.admin_toolbars/images/app_settings/divider.png) repeat-x;
+    background: transparent url(/vendor/generdyn/core/images/app_settings/divider.png) repeat-x;
     margin: 2px 0;
 }
 
 .admin_toolbar_settings .dividerLarge {
     width: auto;
     height: 2px;
-    background: transparent url(/js_apps/core.apps.admin_toolbars/images/app_settings/divider.png) repeat-x;
+    background: transparent url(/vendor/generdyn/core/images/app_settings/divider.png) repeat-x;
     margin: 5px 0;
 }
 

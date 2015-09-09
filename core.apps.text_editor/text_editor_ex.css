@@ -154,6 +154,6 @@
     cursor: pointer;
     width: 30px;
     height: 30px;
-    background: #FFF url('/js_apps/core.apps.text_editor/images/cancel.gif');
+    background: #FFF url('/vendor/generdyn/core/images/cancel.gif');
     border: 1px solid #999;
 }

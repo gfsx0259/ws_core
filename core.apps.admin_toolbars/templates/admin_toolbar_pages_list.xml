@@ -2,7 +2,7 @@
     <div class="list">
         <div id="pages_list" class="pages_list"></div>
         <a class="btn_add" id="btn_add" events="onclick=onAddItemClick">
-            <img src='/js_apps/core.apps.admin_toolbars/images/plus.png'/> Add Page
+            <img src='/vendor/generdyn/core/images/plus.png'/> Add Page
         </a>
     </div>
 </tpl>

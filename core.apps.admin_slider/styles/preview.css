@@ -21,7 +21,7 @@
     left: 20px;
     width: 39px;
     height: 26px;
-    background: transparent url("/js_apps/core.apps.admin_slider/images/preview_pointer.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/preview_pointer.png") no-repeat 0 0;
 }
 
 .admin_slider_preview .title {

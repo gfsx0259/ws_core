@@ -16,7 +16,7 @@
 
 .admin_toolbar_list .admin_toolbar_caption {
     height: 26px;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
     cursor: move;
     position: relative;
     font-size: 11px;
@@ -34,7 +34,7 @@
     width: 18px;
     height: 26px;
     cursor: pointer;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/close.png") no-repeat 2px 7px;
+    background: transparent url("/vendor/generdyn/core/images/close.png") no-repeat 2px 7px;
 }
 
 .admin_toolbar_list .list a.first {
@@ -60,7 +60,7 @@
 
 .admin_toolbar_list .list a:hover {
     text-decoration: none;
-    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x 0 0;
+    background: url("/vendor/generdyn/core/images/gradients.png") repeat-x 0 0;
 }
 
 .admin_toolbar_list .list a img {
@@ -92,6 +92,6 @@
 .admin_toolbar_list .bottom_gripper {
     border-top: 1px solid #BFCFE9;
     height: 8px;
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    background: transparent url("/vendor/generdyn/core/images/drag_bg.png");
     cursor: n-resize;
 }

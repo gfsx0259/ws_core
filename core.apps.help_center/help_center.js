@@ -26,11 +26,11 @@ core.apps.help_center.prototype = {
         this.displayTpl(this.$["content"], "help_center");
 
         var toolbarData = [
-            { title: "Home", icon: "/js_apps/core.apps.help_center/images/house.png", id: "nav_home",
+            { title: "Home", icon: "/vendor/generdyn/core/images/house.png", id: "nav_home",
               onclick: this.navHome.bind(this) },
-            { title: "Backward", icon: "/js_apps/core.apps.help_center/images/arrow_left.png", id: "nav_prev",
+            { title: "Backward", icon: "/vendor/generdyn/core/images/arrow_left.png", id: "nav_prev",
               onclick: this.navPrev.bind(this) }, 
-            { title: "Forward", icon: "/js_apps/core.apps.help_center/images/arrow_right.png", id: "nav_next",
+            { title: "Forward", icon: "/vendor/generdyn/core/images/arrow_right.png", id: "nav_next",
               onclick: this.navNext.bind(this) }
         ];
 

@@ -1,6 +1,6 @@
 .admin_toolbar_buttons a.paste_btn_bg,
 .admin_toolbar_buttons a.paste_btn_bg:hover {
-    background: transparent url("/js_apps/core.apps.admin_toolbars/images/paste_btn_bg.png") no-repeat 6px 4px;
+    background: transparent url("/vendor/generdyn/core/images/paste_btn_bg.png") no-repeat 6px 4px;
     cursor: move;
     height: 30px;
 }
