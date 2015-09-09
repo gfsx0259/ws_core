@@ -58,7 +58,7 @@ core.apps.form.extendPrototype({
         } else if(l) {
             for(var i=0; i<l.length; i++) {
                 if(l[i].id == el.form_id) {
-                    el.innerHTML = l[i].title
+                    el.innerHTML = l[i].title;
                     return;
                 }
             }
@@ -75,7 +75,7 @@ core.apps.form.extendPrototype({
             dialog: "forms_manager",
             act: "get_list",
             default_forms: 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onFormsListResponce.bind(this));
     },
 
@@ -108,7 +108,7 @@ core.apps.form.extendPrototype({
         core.values.form_builder = {
             tag: "exists",
             form_id: this.$["lbl_form"].form_id
-        }
+        };
         desktop.showPopupApp("form_builder");
     }
 

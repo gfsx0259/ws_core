@@ -14,7 +14,7 @@ core.apps.webnote = function(args) {
     }
 
 
-}
+};
 
 core.apps.webnote.prototype = {
 
@@ -173,6 +173,6 @@ core.apps.webnote.prototype = {
     }
 
 
-}
+};
 core.apps.webnote.extendPrototype(core.components.html_component);
 core.apps.webnote.extendPrototype(core.components.desktop_app);

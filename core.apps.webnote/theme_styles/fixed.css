@@ -1,9 +1,9 @@
-.webnote_btn_close{
-    display:block;
+.webnote_btn_close {
+    display: block;
     position: absolute;
     right: 0;
     width: 37px;
     height: 37px;
     top: -10px;
-    background: url('../static/admin_slider/btn_exit.png');
+    background: url('/js_apps/core.apps.webnote/images/btn_exit.png');
 }

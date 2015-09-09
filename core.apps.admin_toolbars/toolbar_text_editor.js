@@ -1,4 +1,4 @@
-core.apps.admin_toolbar_text_editor = function() {}
+core.apps.admin_toolbar_text_editor = function() {};
 
 core.apps.admin_toolbar_text_editor.prototype = {
 
@@ -24,7 +24,7 @@ core.apps.admin_toolbar_text_editor.prototype = {
         this.stopTextEditor();
         var p = {
             open_advanced_editor: true
-        }
+        };
         this.text_editor_onchange(p);
     },
 
@@ -35,7 +35,7 @@ core.apps.admin_toolbar_text_editor.prototype = {
         var p = {
             open_advanced_editor: true,
             edit_html: true
-        }
+        };
         this.text_editor_onchange(p);
     },
 
@@ -56,7 +56,7 @@ core.apps.admin_toolbar_text_editor.prototype = {
         var pos = {
             top: el_pos.top - scroll.top - this.$["window"].offsetHeight - 4,
             left: el_pos.left - scroll.left
-        }
+        };
         this.setState(pos);
         this.updatePosition();
 
@@ -95,6 +95,6 @@ core.apps.admin_toolbar_text_editor.prototype = {
         this.hideElement("window");
     }
 
-}
+};
 core.apps.admin_toolbar_text_editor.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_text_editor.extendPrototype(core.components.html_component);

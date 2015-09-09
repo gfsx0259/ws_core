@@ -1,4 +1,4 @@
-core.apps.page_templates_list = function() {}
+core.apps.page_templates_list = function() {};
 
 
 core.apps.page_templates_list.prototype = {
@@ -30,7 +30,7 @@ core.apps.page_templates_list.prototype = {
         }
         this.is_page_templates_loaded = true;
         var p = {
-            dialog: "pages_manager2",
+            dialog: "pages_manager",
             act: "get_page_templates"
         };
         core.transport.send("/controller.php", p, this.onPageTemplatesResponse.bind(this));
@@ -113,6 +113,6 @@ core.apps.page_templates_list.prototype = {
         desktop.hidePopupApp();
     }
 
-}
+};
 core.apps.page_templates_list.extendPrototype(core.components.html_component);
 core.apps.page_templates_list.extendPrototype(core.components.popup_app);

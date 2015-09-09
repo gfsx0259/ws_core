@@ -3,7 +3,7 @@ core.apps.texts_manager = function() {
 
     this.is_preview_visible = true;
     this.preview_width = 0;
-}
+};
 
 
 core.apps.texts_manager.prototype = {
@@ -101,7 +101,7 @@ core.apps.texts_manager.prototype = {
     refresh: function() {
         var p = {
             act: "get_list"
-        }
+        };
         this.sendRequest(p);
     },
 
@@ -172,7 +172,7 @@ core.apps.texts_manager.prototype = {
     updateSelection: function() {
     //dimk
         for(var id in this.selection) {
-            this.setDocSelected
+            this.setDocSelected;
             this.$["cb" + id].setChecked(this.selection[id]);
         }
     },
@@ -262,10 +262,10 @@ core.apps.texts_manager.prototype = {
         var str = this.$["input_search_text"].getValue();
         if(str.length) {
             var p = {
-                dialog: "texts",
+                dialog: "texts_manager",
                 act: 'get_list',
                 text: str
-            }
+            };
             core.transport.send("/controller.php", p, this.onList.bind(this));
             this.$["list"].innerHTML = "";
         } else if(!this.data.length) {
@@ -302,7 +302,7 @@ core.apps.texts_manager.prototype = {
             act: "update", 
             title: new_name, 
             id: doc.id
-        }
+        };
         this.sendRequest(p);
     },
 
@@ -331,7 +331,7 @@ core.apps.texts_manager.prototype = {
         var p = {
             act: "delete", 
             ids: ids.join("-")
-        }
+        };
         this.sendRequest(p);
     },
 
@@ -415,7 +415,7 @@ core.apps.texts_manager.prototype = {
         this.is_loading = true;
         this.updateInterface();
         this.setPreview(false);
-        p.dialog = "texts";
+        p.dialog = "texts_manager";
         p.get_list = "1";
         var t = this.$["input_search_text"].getValue();
         if(t != "") {
@@ -424,7 +424,7 @@ core.apps.texts_manager.prototype = {
         core.transport.send("/controller.php", p, this.onList.bind(this), method);
     }
 
-}
+};
 
 core.apps.texts_manager.extendPrototype(core.components.html_component);
 core.apps.texts_manager.extendPrototype(core.components.popup_app);

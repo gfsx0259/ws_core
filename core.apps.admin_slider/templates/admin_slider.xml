@@ -13,6 +13,7 @@
         <div class="right_buttons">
             <div class="exit" events="onclick=onExitClick" baloon_tooltip_id="14"></div>
             <div class="preview" events="onclick=onPreviewClick" baloon_tooltip_id="9"></div>
+            <div class="import" events="onclick=onRunImportClick" baloon_tooltip_id="9"></div>
             <div class="save" events="onclick=onSaveClick" id="btn_save_site" style="display: none"></div>
         </div>
     </div>

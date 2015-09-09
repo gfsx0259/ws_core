@@ -4,7 +4,7 @@ core.objects.admin_theme_fonts = function(parent_el) {
 
     this.fonts = core.data.site_version[core.data.layout_mode + "_fonts"];
 
-}
+};
 
 
 core.objects.admin_theme_fonts.prototype = {
@@ -29,10 +29,10 @@ core.objects.admin_theme_fonts.prototype = {
         desktop.setState("loading");
         this.fonts[name] = font;
         var p = {
-            dialog: "site_styles",
+            dialog: "styles_manager",
             act: "set_fonts",
             fonts: varToString(this.fonts)
-        }
+        };
         core.transport.send("/controller.php", p, this.onServerResponse.bind(this));
     },
 
@@ -47,7 +47,7 @@ core.objects.admin_theme_fonts.prototype = {
         desktop.reloadThemeCSS();
     }
     
-}
+};
 core.objects.admin_theme_fonts.extendPrototype(core.components.html_component);
 core.objects.admin_theme_fonts.extendPrototype(core.objects.slider_obj_common);
 core.objects.admin_theme_fonts.extendPrototype(core.objects.admin_theme_variables);

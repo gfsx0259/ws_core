@@ -1,4 +1,4 @@
-core.apps.admin_toolbar_obj_settings = function() {}
+core.apps.admin_toolbar_obj_settings = function() {};
 
 core.apps.admin_toolbar_obj_settings.prototype = {
 
@@ -41,6 +41,6 @@ core.apps.admin_toolbar_obj_settings.prototype = {
         }
     }
 
-}
+};
 core.apps.admin_toolbar_obj_settings.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_obj_settings.extendPrototype(core.components.html_component);

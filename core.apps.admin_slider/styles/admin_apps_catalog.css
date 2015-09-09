@@ -4,47 +4,48 @@
     overflow: hidden;
     width: 5000px;
 }
-    .admin_slider .tabs a {
-        display: block;
-        float: left;
-        height: 19px;
-        padding: 4px 35px;
-        outline: none;
-        letter-spacing: 50%;
-        font-weight: normal;
-        font-size: 14px;
-        color: #666;
-        text-decoration: none;
-        background: transparent;
-        border-left: 1px solid #adc0e0;
-        border-right: 1px solid #adc0e0;
-        border-bottom: 1px solid #adc0e0;
-        margin-left: -1px;
-    }
-    .admin_slider .tabs a:hover {
-        text-decoration: underline;
-    }
-    .admin_slider .tabs a.active {
-        letter-spacing: 0;
-        font-weight: bold;
-        color: #333;
-        background: #fff;
-        border-bottom: 0;
-        height: 20px;
-        border: 0;
-        margin-left: 0;
-    }
-    .admin_slider .tabs a.active:hover {
-        text-decoration: none;
-    }
 
+.admin_slider .tabs a {
+    display: block;
+    float: left;
+    height: 19px;
+    padding: 4px 35px;
+    outline: none;
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    background: transparent;
+    border-left: 1px solid #adc0e0;
+    border-right: 1px solid #adc0e0;
+    border-bottom: 1px solid #adc0e0;
+    margin-left: -1px;
+}
 
-    .admin_slider .tabs .spacer {
-        border-left: 1px solid #adc0e0;
-        border-right: 1px solid #adc0e0;
-        border-bottom: 1px solid #adc0e0;
-        margin-left: -1px;
-        height: 28px;
-        float: left;
-        width: 3000px;
-    }
+.admin_slider .tabs a:hover {
+    text-decoration: underline;
+}
+
+.admin_slider .tabs a.active {
+    letter-spacing: 0;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+    height: 20px;
+    border: 0;
+    margin-left: 0;
+}
+
+.admin_slider .tabs a.active:hover {
+    text-decoration: none;
+}
+
+.admin_slider .tabs .spacer {
+    border-left: 1px solid #adc0e0;
+    border-right: 1px solid #adc0e0;
+    border-bottom: 1px solid #adc0e0;
+    margin-left: -1px;
+    height: 28px;
+    float: left;
+    width: 3000px;
+}

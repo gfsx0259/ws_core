@@ -1,6 +1,6 @@
 core.apps.form_builder = function() {
 
-}
+};
 
 
 core.apps.form_builder.prototype = {
@@ -31,11 +31,11 @@ core.apps.form_builder.prototype = {
         this.displayTpl(this.$["content"], "form_builder");
 
         // init form
-        var fp = { 
+        var fp = {
             parent_el: this.$["view"],
             form_builder_mode: true,
             disable_submit: true
-        }
+        };
         this.form = new core.objects.form(fp);
         this.form.onSectionFocus = this.selectField.bind(this);
 
@@ -62,19 +62,19 @@ core.apps.form_builder.prototype = {
 
         // toolbar
         var toolbarData = [
-            { title: "Add element", icon: "/static/icons/plugin.png",
+            { title: "Add element", icon: "/js_apps/core.apps.form_builder/images/plugin.png",
               subitems: []},
 
-            { title: "Add control", icon: "/static/icons/application_form.png",
+            { title: "Add control", icon: "/js_apps/core.apps.form_builder/images/application_form.png",
               subitems: [] }
-        ]
+        ];
 
         for(var key in this.form_elements) {
             var el = this.form_elements[key];
             var tidx = el.behavior == "element" ? 0 : 1;
 
             toolbarData[tidx].subitems.push(
-                { title: el.title, icon: "/static/icons/plugin.png", id: "add_" + key,
+                { title: el.title, icon: "/js_apps/core.apps.form_builder/images/plugin.png", id: "add_" + key,
                   onclick: this.onAddField.bind(this, key) }
 
             );
@@ -121,7 +121,7 @@ core.apps.form_builder.prototype = {
                     title: fb.form_title || "New form",
                     description: "",
                     confirmation: ""
-                }
+                };
                 this.form_id = false;
                 this.initEditor();
                 break;
@@ -145,7 +145,7 @@ core.apps.form_builder.prototype = {
                         dialog: "forms_manager",
                         act: "get",
                         id: fb.form_id
-                    }
+                    };
                     core.transport.send("/controller.php", p, this.onFormDataResponce.bind(this));
                 }
                 break;
@@ -324,7 +324,7 @@ core.apps.form_builder.prototype = {
         var field = {
             type: type,
             properties: clone(d.properties)
-        }
+        };
 
 
         if(field.properties["name"] && this.isFieldTypeExists(type)) {
@@ -375,7 +375,7 @@ core.apps.form_builder.prototype = {
         this.renderFields();
         this.selectField(new_idx);
     },
-        
+
 
 
     getFieldsCount: function() {
@@ -438,7 +438,7 @@ core.apps.form_builder.prototype = {
     onCloneFieldClick: function(e) {
         if(!this.processProperties()) return;
         core.browser.event.kill(e);
-        
+
         var p = this.getFieldByIdx(this.selected_idx);
         var field = clone(p.field);
         field.properties.name += this.data.fields.length;
@@ -489,7 +489,7 @@ core.apps.form_builder.prototype = {
 
             var v = this.getPropertyValue(pname);
             if(v == null) {
-                desktop.modal_dialog.alert("Wrong " + pname + " value!")
+                desktop.modal_dialog.alert("Wrong " + pname + " value!");
                 this.setPropertyFocus(pname);
                 return false;
             }
@@ -522,8 +522,6 @@ core.apps.form_builder.prototype = {
             }
         }
     },
-
-
 
     fillProperties: function() {
         var p = this.getFieldByIdx(this.selected_idx);
@@ -725,7 +723,7 @@ core.apps.form_builder.prototype = {
                           className: "icon",
                           events: { onclick: [ "onRemoveStatementClick", i ] },
                           title: " Remove statement " }
-                      ]} 
+                      ]}
                   ]}
             );
         }
@@ -736,7 +734,7 @@ core.apps.form_builder.prototype = {
         var statement = {
             text: this.$["inp_statement_text"].value.trim(),
             value: this.$["inp_statement_value"].value.trim()
-        }
+        };
         if(statement.text != "" && statement.value != "") {
             this.$["inp_statement_text"].value = "";
             this.$["inp_statement_value"].value = "";
@@ -782,7 +780,7 @@ core.apps.form_builder.prototype = {
                           events: { onclick: [ "onRemoveOptionClick", i ] },
                           title: " Remove option " }
                           */
-                      ]} 
+                      ]}
                   ]}
             );
         }
@@ -793,7 +791,7 @@ core.apps.form_builder.prototype = {
         var option = {
             text: this.$["inp_option_text"].value.trim(),
             value: this.$["inp_option_value"].value.trim()
-        }
+        };
         if(option.text != "" && option.value != "") {
             this.$["inp_option_text"].value = "";
             this.$["inp_option_value"].value = "";
@@ -869,7 +867,7 @@ core.apps.form_builder.prototype = {
             description: this.$["inp_form_description"].value,
             confirmation: this.$["inp_form_confirmation"].value,
             fields: this.data.fields
-        }
+        };
         var p = {
             dialog: "forms_manager",
             act: "set",
@@ -880,7 +878,7 @@ core.apps.form_builder.prototype = {
             fields: varToString(this.tmp_form_data.fields),
             list_field_name: this.data.list_field_name,
             list_field_label: this.data.list_field_label
-        }
+        };
         core.transport.send("/controller.php", p, this.onSaveFormResponce.bind(this), "POST");
     },
 
@@ -938,6 +936,6 @@ core.apps.form_builder.prototype = {
         this.$.inp_option_value.value = this.formatFieldName(this.$.inp_option_value.value);
     }
 
-}
+};
 core.apps.form_builder.extendPrototype(core.components.html_component);
 core.apps.form_builder.extendPrototype(core.components.popup_app);

@@ -6,7 +6,7 @@ core.apps.styles_manager = function() {
 
     this.style_title = "Select style";
 
-}
+};
 
 core.apps.styles_manager.prototype = {
 
@@ -63,7 +63,7 @@ core.apps.styles_manager.prototype = {
                 act: "get_styles_list",
                 key: core.values.styles_manager.key,
                 load_default_styles: core.data.css_default_styles ? 0 : 1
-            }
+            };
             core.transport.send("/controller.php", p, this.onDataResponse.bind(this));
 //        }
     },
@@ -86,7 +86,7 @@ core.apps.styles_manager.prototype = {
             this.style_title = "";
             for(var i=0; i<core.data.apps_list.length; i++) {
                 if(core.data.apps_list[i].name == core.values.styles_manager.key) {
-                    this.style_title = core.data.apps_list[i].title
+                    this.style_title = core.data.apps_list[i].title;
                     break;
                 }
             }
@@ -125,7 +125,7 @@ core.apps.styles_manager.prototype = {
         this.styles_count = {
             user: 0,
             admin: 0
-        }
+        };
 
         var target, m = [], events;
         for(var i=0; i<l.length; i++) {
@@ -173,11 +173,8 @@ core.apps.styles_manager.prototype = {
         if(!this.$["style_controls"]) {
             this.displayTpl(document.body, "styles_manager_style_controls");
         }
-        if(style.site_id == core.data.site_info.id) {
-            this.showElements(["btn_delete_style", "btn_clone_style"]);
-        } else {
-            this.hideElements(["btn_delete_style", "btn_clone_style"]);
-        }
+        this.showElements(["btn_delete_style", "btn_clone_style"]);
+
         this.$["style_" + style.id].appendChild(this.$["style_controls"]);
         this.showElement("style_controls");
     },
@@ -255,7 +252,7 @@ core.apps.styles_manager.prototype = {
             act: "get_style_data",
             id: id,
             key: core.values.styles_manager.key
-        }
+        };
         core.transport.send("/controller.php", p, this.onStyleDataResponse.bind(this));
     },
 
@@ -267,10 +264,6 @@ core.apps.styles_manager.prototype = {
             return;
         }
 
-        if(r.data.site_id != core.data.site_info.id) {
-            r.data.thumb = "";
-            delete(r.data.id);
-        }
         core.values.styles_editor = r.data;
 
         if(this.clone_style_flag) {
@@ -296,9 +289,9 @@ core.apps.styles_manager.prototype = {
             thumb: core.values.styles_editor.thumb,
             data: php_serialize(core.values.styles_editor.data),
             key: core.values.styles_editor.key
-        }
+        };
 
-        if(core.values.styles_editor.id && core.values.styles_editor.site_id == core.data.site_info.id) {
+        if(core.values.styles_editor.id) {
             p.id = core.values.styles_editor.id;
             p.act = "update_style";
         } else {
@@ -338,7 +331,7 @@ core.apps.styles_manager.prototype = {
             act: "delete_style",
             key: core.values.styles_manager.key,
             id: style.id
-        }
+        };
         if(this.selected_style_id == style.id) {
             this.selected_style_id = null;
         }
@@ -394,7 +387,7 @@ core.apps.styles_manager.prototype = {
             id: this.selected_style_id,
             key: core.values.styles_manager.key,
             is_default_style: is_default_style ? 1 : 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onUseStyleResponse.bind(this));
     },
 
@@ -415,6 +408,6 @@ core.apps.styles_manager.prototype = {
     }
 
 
-}
+};
 core.apps.styles_manager.extendPrototype(core.components.html_component);
 core.apps.styles_manager.extendPrototype(core.components.popup_app);

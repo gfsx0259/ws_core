@@ -6,7 +6,7 @@ core.apps.page_title = function(args) {
         content: "%MENU-NAME%"
     }
 
-}
+};
 
 core.apps.page_title.prototype = {
 
@@ -48,6 +48,6 @@ core.apps.page_title.prototype = {
         return null;
     }
 
-}
+};
 core.apps.page_title.extendPrototype(core.components.html_component);
 core.apps.page_title.extendPrototype(core.components.desktop_app);

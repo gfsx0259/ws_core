@@ -6,7 +6,7 @@ core.objects.admin_styles_catalog = function(parent_el) {
 
     this.render(parent_el);
 
-}
+};
 
 
 core.objects.admin_styles_catalog.prototype = {
@@ -46,12 +46,12 @@ core.objects.admin_styles_catalog.prototype = {
         if(style_id == core.data.page_style_id) return;
         core.data.page_style_id = style_id;
         var r = {
-            dialog: "save_page",
+            dialog: "layout_columns",
             act: "set_page_style",
             layout_mode: core.data.layout_mode,
             page_id: core.data.page_id,
             style_id: core.data.page_style_id
-        }
+        };
         core.transport.send("/controller.php", r, this.onSetPageStyleResponse.bind(this), "POST");
         desktop.setState("loading");
         desktop.layout.site_changed = true;
@@ -79,7 +79,7 @@ core.objects.admin_styles_catalog.prototype = {
             key: this.params.key,
             load_theme_styles: core.data.theme_styles ? 0 : 1,
             load_styles_per_pages: core.data.styles_per_pages ? 0 : 1
-        }
+        };
         core.transport.send("/controller.php", p, this.onDataResponse.bind(this));
     },
 
@@ -138,7 +138,7 @@ core.objects.admin_styles_catalog.prototype = {
         this.styles_count = {
             user: 0,
             admin: 0
-        }
+        };
 
         var target, m = [], events;
         for(var i=0; i<l.length; i++) {
@@ -204,11 +204,7 @@ core.objects.admin_styles_catalog.prototype = {
             this.displayTpl(document.body, "styles_slider_style_controls");
         }
 
-        if(style.site_id == core.data.site_info.id) {
-            this.showElements(["btn_delete_style", "btn_clone_style"]);
-        } else {
-            this.hideElements(["btn_delete_style", "btn_clone_style"]);
-        }
+        this.showElements(["btn_delete_style", "btn_clone_style"]);
 
 
         var pos = core.browser.element.getPosition(this.$["style_" + style.id]);
@@ -379,7 +375,7 @@ core.objects.admin_styles_catalog.prototype = {
             act: "get_style_data",
             id: id,
             key: this.params.key
-        }
+        };
         core.transport.send("/controller.php", p, this.onStyleDataResponse.bind(this));
     },
 
@@ -389,11 +385,6 @@ core.objects.admin_styles_catalog.prototype = {
         if(!r || r.status != "ok") {
             desktop.modal_dialog.alert("Error");
             return;
-        }
-
-        if(r.data.site_id != core.data.site_info.id) {
-            r.data.thumb = "";
-            delete(r.data.id);
         }
         core.values.styles_editor = r.data;
 
@@ -420,11 +411,11 @@ core.objects.admin_styles_catalog.prototype = {
             thumb: core.values.styles_editor.thumb,
             data: php_serialize(core.values.styles_editor.data),
             key: core.values.styles_editor.key
-        }
+        };
 
         this.reload_theme = false;
 
-        if(core.values.styles_editor.id && core.values.styles_editor.site_id == core.data.site_info.id) {
+        if(core.values.styles_editor.id ) {
             p.id = core.values.styles_editor.id;
             p.act = "update_style";
 //            if(this.key_styles[p.id]) {
@@ -474,7 +465,7 @@ core.objects.admin_styles_catalog.prototype = {
             act: "delete_style",
             key: this.params.key,
             id: style.id
-        }
+        };
         if(this.selected_style_id == style.id) {
             this.selected_style_id = null;
         }
@@ -511,7 +502,7 @@ core.objects.admin_styles_catalog.prototype = {
     }
 
     
-}
+};
 core.objects.admin_styles_catalog.extendPrototype(core.components.html_component);
 core.objects.admin_styles_catalog.extendPrototype(core.objects.slider_obj_common);
 core.objects.admin_styles_catalog.extendPrototype(core.objects.slider_obj_scroller);

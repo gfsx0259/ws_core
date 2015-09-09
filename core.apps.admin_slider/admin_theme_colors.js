@@ -21,7 +21,7 @@ core.objects.admin_theme_colors = function(parent_el) {
         "extra-color" :                "Extra",
         "extra-color-light" :          "Extra light",
         "extra-color-dark" :           "Extra dark"
-    }
+    };
 
     for(var l in this.labels) {
         this.buildModel(this.$.panel_colors,
@@ -36,7 +36,7 @@ core.objects.admin_theme_colors = function(parent_el) {
         );
     }
 
-}
+};
 
 
 core.objects.admin_theme_colors.prototype = {
@@ -70,10 +70,10 @@ core.objects.admin_theme_colors.prototype = {
         desktop.setState("loading");
         this.colors[this.target_key] = color;
         var p = {
-            dialog: "site_styles",
+            dialog: "styles_manager",
             act: "set_colors",
             colors: varToString(this.colors)
-        }
+        };
         core.transport.send("/controller.php", p, this.onServerResponse.bind(this));
     },
 
@@ -89,6 +89,6 @@ core.objects.admin_theme_colors.prototype = {
     }
 
     
-}
+};
 core.objects.admin_theme_colors.extendPrototype(core.components.html_component);
 core.objects.admin_theme_colors.extendPrototype(core.objects.slider_obj_common);

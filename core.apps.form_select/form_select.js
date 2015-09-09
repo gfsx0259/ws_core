@@ -1,7 +1,7 @@
-if(!core.data.forms) core.data.forms = {}
+if(!core.data.forms) core.data.forms = {};
 
 
-core.apps.form_select = function() {}
+core.apps.form_select = function() {};
 
 core.apps.form_select.prototype = {
 
@@ -44,7 +44,7 @@ core.apps.form_select.prototype = {
             dialog: "forms_manager",
             act: "get_list",
             default_forms: 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onListResponce.bind(this));
     },
 
@@ -87,6 +87,6 @@ core.apps.form_select.prototype = {
     }
 
 
-}
+};
 core.apps.form_select.extendPrototype(core.components.html_component);
 core.apps.form_select.extendPrototype(core.components.popup_app);

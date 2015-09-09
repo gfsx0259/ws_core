@@ -6,7 +6,7 @@ core.objects.layout_row = function(args) {
     this.data = null;
     this.flag = 0;
 
-}
+};
 
 
 core.objects.layout_row.extendPrototype({
@@ -57,7 +57,7 @@ core.objects.layout_row.extendPrototype({
             style_id: this.style_id,
             position: this.position,
             data: this.data
-        }
+        };
         return res;
     },
 
@@ -170,9 +170,9 @@ core.objects.layout_row.extendPrototype({
         var res = {
             left: 0,
             width: el.offsetWidth
-        }
+        };
         do {    
-            res.left += el.offsetLeft
+            res.left += el.offsetLeft;
             el = el.parentNode;
         } while(el.parentNode && !el.is_row);
         return res;
@@ -189,7 +189,7 @@ core.objects.layout_row.extendPrototype({
             key: "layout_row" + this.position, 
             style_id: this.style_id, 
             callback: this.onStyleSelected.bind(this)
-        }
+        };
         desktop.showPopupApp("layout_row_settings");
     },
 
@@ -200,12 +200,12 @@ core.objects.layout_row.extendPrototype({
             this.refreshStyle();
 
             var r = {
-                dialog: "save_page",
+                dialog: "layout_columns",
                 act: "set_row_style",
                 layout_mode: core.data.layout_mode,
                 row_id: this.id,
                 style_id: this.style_id
-            }
+            };
             core.transport.send("/controller.php", r, this.onSetRowStyleResponse.bind(this), "POST");
             desktop.setState("loading");
             this.site_changed = true;

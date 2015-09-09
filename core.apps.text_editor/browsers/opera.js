@@ -18,7 +18,7 @@ if(core.browser.opera) {
                 }
                 , 20);
                 setTimeout(this.initEditor.bind(this), 50);
-                return ;
+
             }
         },
 

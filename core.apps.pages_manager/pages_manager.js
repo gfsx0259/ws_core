@@ -4,7 +4,7 @@ core.apps.pages_manager = function() {
     this.active_item = null;
     this.default_body_menu = null;
 
-}
+};
 
 core.apps.pages_manager.prototype = {
 
@@ -143,10 +143,7 @@ core.apps.pages_manager.prototype = {
 
     renderContent: function() {
         this.displayTpl(this.$["content"], "pages_manager");
-
-        if(core.data.scheme["seo_custom_meta"] == "1") {
-            this.showElement("sec_meta");
-        }
+        this.showElement("sec_meta");
 
         this.buildModel(document.body,
             { tag: "div", className: "mi_controls",
@@ -192,7 +189,7 @@ core.apps.pages_manager.prototype = {
                 { title: "External", icon: "/static/icons/page_link.png", id: "add_external",
                   onclick: this.onAddItem.bind(this, "external") }
               ]}
-        ]
+        ];
 
 
         this.toolbar = new core.objects.toolbar({
@@ -563,11 +560,7 @@ return true;
             "sec_comments"
         ];
 
-
-        if(core.data.scheme["seo_custom_meta"] == 1) {
-            std_elements_list.push("sec_meta");
-
-        }
+        std_elements_list.push("sec_meta");
 
         if(mi.type == "std" || mi.type == "doc") {
             this.showElements(std_elements_list);
@@ -1381,7 +1374,7 @@ return true;
                 pages_data: php_serialize(this.pages_data),
                 deleted_pages: php_serialize(this.deleted_pages),
                 flags: flags
-            }
+            };
             core.transport.send("/controller.php", r, this.onDataSaved.bind(this), "POST");
         }
         
@@ -1430,7 +1423,7 @@ return true;
                 published: 1,
                 body_menu: v.body_menu,
                 childs: []
-            }
+            };
 
             if(this.default_body_menu == v.id) {
                 menu_node[i]["default_body_menu"] = 1;
@@ -1465,7 +1458,7 @@ return true;
                         header_visible: v.header_visible,
                         footer_visible: v.footer_visible,
                         style_id: v.style_id
-                    }
+                    };
                     if(v.type == "std" || v.type == "doc") {
                         pd.header_row_page_id = v.header_row_page_id;
                         pd.footer_row_page_id = v.footer_row_page_id;
@@ -1561,6 +1554,6 @@ return true;
     }
 
 
-}
+};
 core.apps.pages_manager.extendPrototype(core.components.html_component);
 core.apps.pages_manager.extendPrototype(core.components.popup_app);

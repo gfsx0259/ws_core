@@ -12,20 +12,17 @@ fieldset.wsc {
     background: #FFF;
 }
 
-
 fieldset.wsc_odd {
-    background: #FFF url(/static/wsc/fieldset_bg.png) repeat-x 0 16px;
+    background: #FFF url(/js_apps/core.apps.desktop/images/wsc/fieldset_bg.png) repeat-x 0 16px;
 }
-
 
 fieldset.wsc_icon {
-    background: #FFF url(/static/wsc/fieldset_bg.png) repeat-x 0 16px;
+    background: #FFF url(/js_apps/core.apps.desktop/images/wsc/fieldset_bg.png) repeat-x 0 16px;
 }
-
 
 fieldset.wsc .legend {
     border: 1px solid #aec1e0;
-    background: transparent url(/static/wsc/legend_bg.png) repeat-x;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/legend_bg.png) repeat-x;
     height: 12px;
     padding: 0 8px 2px 8px;
 }
@@ -35,7 +32,6 @@ fieldset.wsc label {
     width: 120px;
     padding-top: 4px;
 }
-
 
 .form_line {
     overflow: hidden;
@@ -48,39 +44,38 @@ fieldset.wsc label {
     margin: 10px 15px;
 }
 
-    /* duplicate!!! */
-    .form_row label {
-        float: left;
-        width: 120px;
-        padding-top: 4px;
-    }
+/* duplicate!!! */
+.form_row label {
+    float: left;
+    width: 120px;
+    padding-top: 4px;
+}
 
-    .form_row p.text {
-        float: left;
-        padding: 4px 2px 0 2px;
-        margin: 0;
-    }
+.form_row p.text {
+    float: left;
+    padding: 4px 2px 0 2px;
+    margin: 0;
+}
 
-    .form_row p.small_text {
-        margin-top: 1px;
-        display: inline-block;
-        font-size: 9px;
-        line-height: 10px;
-        margin: 0;
-    }
+.form_row p.small_text {
+    margin-top: 1px;
+    display: inline-block;
+    font-size: 9px;
+    line-height: 10px;
+    margin: 0;
+}
 
-    .form_row .float_left {
-/*        margin-right: 5px;*/
-    }
+.form_row .float_left {
+    /*        margin-right: 5px;*/
+}
 
-    .form_row .float_right {
-        margin-left: 5px;
-    }
+.form_row .float_right {
+    margin-left: 5px;
+}
 
-    .form_row .wsc_button {
-        width: 90px;
-    }
-
+.form_row .wsc_button {
+    width: 90px;
+}
 
 .form_row hr {
     height: 1px;
@@ -89,18 +84,14 @@ fieldset.wsc label {
     margin: 4px 0;
 }
 
-
 .form_note {
     margin: 4px 2px;
-    font-size: 10px;    
+    font-size: 10px;
 }
 
-    .form_note span.error {
-        color: red;
-    }
-
-
-
+.form_note span.error {
+    color: red;
+}
 
 .wsc_btn_calendar {
     margin: 4px 0 0 2px;

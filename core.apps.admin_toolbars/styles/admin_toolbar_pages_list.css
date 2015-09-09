@@ -16,7 +16,6 @@
     font-weight: bold;
 }
 
-
 .admin_toolbar_pages_list .dropdown {
     display: none;
     left: 100%;
@@ -34,31 +33,25 @@
 }
 
 .admin_toolbar_pages_list a:hover .dropdown {
-    display: block;        
+    display: block;
 }
 
-    .admin_toolbar_pages_list .dropdown a:first-child {
-        border-radius: 5px 5px 0 0;
-        -moz-border-radius: 5px 5px 0 0;
-        -webkit-border-radius: 5px 5px 0 0;
-    }
+.admin_toolbar_pages_list .dropdown a:first-child {
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
 
-    .admin_toolbar_pages_list .admin_toolbar_right_position .dropdown {
-        top: 10;
-        left: -152px;
-    }
-
-
-
+.admin_toolbar_pages_list .admin_toolbar_right_position .dropdown {
+    top: 10;
+    left: -152px;
+}
 
 .admin_toolbar_pages_list .btn_add,
 .admin_toolbar_pages_list .btn_add:hover {
     position: relative;
-    background: transparent url(/static/admin_toolbars/bth_add_bg.png) repeat-x; 
+    background: transparent url(/js_apps/core.apps.admin_toolbars/images/bth_add_bg.png) repeat-x;
 }
-
-
-
 
 .admin_toolbar_pages_list .item_overlay {
     position: absolute;
@@ -66,7 +59,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: transparent url("/static/admin_toolbars/drag_bg.png");
+    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
 }
 
 .admin_toolbar_pages_list .drag_control {
@@ -75,11 +68,10 @@
     top: 9px;
     width: 9px;
     height: 16px;
-    background: transparent url(/static/admin_toolbars/page_drag.png) no-repeat;
+    background: transparent url(/js_apps/core.apps.admin_toolbars/images/page_drag.png) no-repeat;
     cursor: move;
     z-index: 10;
 }
-
 
 .admin_toolbar_pages_list .page_control {
     position: absolute;
@@ -90,42 +82,35 @@
     z-index: 100;
 }
 
+.admin_toolbar_pages_list .page_control div {
+    float: left;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 2px;
+}
 
+.admin_toolbar_pages_list .clone {
+    background: transparent url(/static/icons/copy.png) no-repeat;
+}
 
-    .admin_toolbar_pages_list .page_control div {
-        float: left;
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
-        margin-left: 2px;
-    }
+.admin_toolbar_pages_list .edit {
+    background: transparent url(/static/icons/settings.png) no-repeat;
+}
 
-    .admin_toolbar_pages_list .clone {
-        background: transparent url(/static/icons/copy.png) no-repeat;
-    }
-
-    .admin_toolbar_pages_list .edit {
-        background: transparent url(/static/icons/settings.png) no-repeat;
-    }
-
-    .admin_toolbar_pages_list .delete {
-        background: transparent url(/static/icons/cross.png) no-repeat;
-    }
-
-
-
+.admin_toolbar_pages_list .delete {
+    background: transparent url(/static/icons/cross.png) no-repeat;
+}
 
 .admin_toolbar_pages_list .pages_list {
     overflow: auto;
     position: relative;
 }
 
-
 .admin_toolbar_pages_list .drag_el {
-    -moz-opacity:0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
 }
-
 
 .admin_toolbar_pages_list .drag_zone,
 .admin_toolbar_pages_list .drag_zone * {

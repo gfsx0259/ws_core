@@ -16,7 +16,7 @@ if(core.browser.mozilla) {
                 }
             } catch(e) {
                 setTimeout(this.initEditor.bind(this), 50);
-                return ;
+
             }
         },
 

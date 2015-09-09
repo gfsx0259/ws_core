@@ -2,7 +2,7 @@ core.apps.texts = function() {
     this.data = {};
     this.listeners = [];
     this._parsePage();
-}
+};
 
 
 
@@ -10,15 +10,15 @@ core.apps.texts.prototype = {
 
     get: function(id, callback, callback_error) {
         if(!id) return;
-        if(this.data[id] != undefined && this.data[id].content.length) {
+        if(this.data[id] != undefined) {
             callback(this.data[id]);
             return true;
         }
         var p = {
-            dialog: "texts",
+            dialog: "texts_manager",
             act: "get_content",
             id: id
-        }
+        };
         var f = function(res) {
             if(res == null) {
                 if(callback_error) callback_error();
@@ -26,7 +26,7 @@ core.apps.texts.prototype = {
                 core.data.texts.data[res.id] = res;
                 callback(res);
             }
-        }
+        };
         core.transport.send("/controller.php", p, f);
     },
 
@@ -53,4 +53,4 @@ core.apps.texts.prototype = {
         }
     }
 
-}
+};

@@ -11,7 +11,7 @@ core.apps.files_manager = function() {
     this.obj_pager = {per_page:25};
     this.items_sum={};
 
-}
+};
 
 
 
@@ -99,7 +99,7 @@ core.apps.files_manager.prototype = {
                     id: "folder" + fn,
                     events: { onclick: ["onFolderClick", fn] },
                     childs: [
-                        { tag: "img", src: "/static/folders/" + f.icon },
+                        { tag: "img", src: "/js_apps/core.apps.files_manager/images/folders/" + f.icon },
                         { tag: "span", innerHTML: f.title },
                         { tag: "span", id: "files_count" + fn },
                         { tag: "div", className: "links",
@@ -243,11 +243,10 @@ core.apps.files_manager.prototype = {
         var files = this.getSelectedFiles();
         if(files.length > 0) {
             var p = { act: "rethumb", files: files.join("*")};
-            p.dialog = "files";
+            p.dialog = "files_manager";
             core.transport.send("/controller.php", p);
         }
     },
-
 
     onRenameClick: function() {
         var file = this.getSelectedFile();
@@ -427,7 +426,7 @@ core.apps.files_manager.prototype = {
             act: "get_files",
             user_search: load_user_search ? 1 : 0,
             force:force?1:0
-        }
+        };
         this.sendToServer(p);
     },
 
@@ -437,7 +436,7 @@ core.apps.files_manager.prototype = {
         if(this.is_loading) return;
         this.is_loading = true;
 
-        p.dialog = "files";
+        p.dialog = "files_manager";
         core.transport.send("/controller.php", p, response ? response : this.onServerResponce.bind(this));
     },
 
@@ -639,11 +638,11 @@ core.apps.files_manager.prototype = {
         }
 
         var p = {
-            dialog: "files",
+            dialog: "files_manager",
             act: "save_user_search",
             folder: folder,
             data: data.join("\n")
-        }
+        };
         core.transport.send("/controller.php", p, this.onUserSearchSaved.bind(this), "POST");
     },
 
@@ -766,7 +765,7 @@ core.apps.files_manager.prototype = {
         this.hideElement('file_loading');
         this.is_loading = false;
         this.visible_files[r.data.id].link = r.data.link;
-        core.data.short_links[this.visible_files[r.data.id].path] = r.data.link
+        core.data.short_links[this.visible_files[r.data.id].path] = r.data.link;
         this.files[this.active_tab][this.active_folder][r.data.id].link = r.data.link;
         if($('file_img_'+r.data.id)){
             $('file_img_'+r.data.id).src = r.data.link;
@@ -864,11 +863,7 @@ core.apps.files_manager.prototype = {
             this.$["disc_info"].innerHTML = "";
             return;
         }
-        var free_space = core.data.scheme.fs_disc_space - used_size;
-        this.$["disc_info"].innerHTML =
-            "Total space: <strong>" + core.utils.fsystem.formatSize(core.data.scheme.fs_disc_space) + "</strong>" +
-                ", Used: <strong>" + core.utils.fsystem.formatSize(used_size) + "</strong>" +
-                ", Free: <strong>" + core.utils.fsystem.formatSize(free_space) + "</strong>";
+        this.$["disc_info"].innerHTML = "Used: <strong>" + core.utils.fsystem.formatSize(used_size) + "</strong>"
     },
 
 
@@ -919,11 +914,11 @@ core.apps.files_manager.prototype = {
         this.updateViewModeUI();
 
         var r = {
-            dialog: "session_data",
+            dialog: "desktop",
             act: "set",
             key: "files_manager_view_mode",
             data: this.view_mode
-        }
+        };
         core.transport.send("/controller.php", r, null, "POST");
     },
 
@@ -952,7 +947,7 @@ core.apps.files_manager.prototype = {
         var visible_rect = {
             top: files_el.scrollTop,
             bottom: files_el.scrollTop + files_el.offsetHeight
-        }
+        };
 
         var list_el = this.$[this.getThumbsListId()];
         for(var i=0; i<list_el.childNodes.length; i++) {
@@ -976,7 +971,7 @@ core.apps.files_manager.prototype = {
             var old_height = e.target.parentNode.offsetHeight;
             var new_height = Math.floor(e.target.parentNode.offsetWidth * img.height / img.width);
             e.target.style.width = "100%";
-            e.target.style.height = new_height + "px"
+            e.target.style.height = new_height + "px";
             e.target.style.marginTop = Math.floor(0.5 * (old_height - new_height)) + "px";
         } else if(img.width < img.height){
             e.target.style.width = Math.floor(e.target.parentNode.offsetHeight * img.width / img.height) + "px";
@@ -1093,7 +1088,7 @@ core.apps.files_manager.prototype = {
         }
 
         this.$["sort_" + this.sort_mode.key].className = "active";
-        this.$["sort_dir_" + this.sort_mode.key].innerHTML = this.sort_mode.reverse ? "<img src='/static/app_files_manager/arrow_up.png'/>" : "<img src='/static/app_files_manager/arrow_down.png'/>";
+        this.$["sort_dir_" + this.sort_mode.key].innerHTML = this.sort_mode.reverse ? "<img src='/js_apps/core.apps.files_manager/images/arrow_up.png'/>" : "<img src='/js_apps/core.apps.files_manager/images/arrow_down.png'/>";
     },
 
 
@@ -1106,7 +1101,7 @@ core.apps.files_manager.prototype = {
             label: "Enter e-mail",
             default_value: core.data.user.email,
             callback: this.onEmailEntered.bind(this, files.join("*"))
-        }
+        };
         desktop.showPopupApp("dialog_prompt");
     },
 
@@ -1114,11 +1109,11 @@ core.apps.files_manager.prototype = {
     onEmailEntered: function(files, email) {
         desktop.setState("loading");
         var p = {
-            dialog: "files",
+            dialog: "files_manager",
             act: "send_links",
             files: files,
             email: email
-        }
+        };
         core.transport.send("/controller.php", p, this.onSendLinksResponse.bind(this), "POST");
     },
 
@@ -1211,7 +1206,7 @@ core.apps.files_manager.prototype = {
 
 
     onBulkEditApplyClick: function() {
-        this.bulk_edit = {}
+        this.bulk_edit = {};
         if(this.$.inp_be_resize.checked) {
             this.bulk_edit.resize = {
                 method: this.$.inp_be_resize_method.value
@@ -1239,7 +1234,7 @@ core.apps.files_manager.prototype = {
                 autoincrement_start: Math.max(parseInt(this.$.inp_be_autoincrement_start.value, 10), 0),
                 overwrite: this.$.inp_be_overwrite.checked ? 1 : 0,
                 delete_original: this.$.inp_be_delete_original.checked ? 1 : 0
-            }
+            };
             if(this.bulk_edit.rename.name == "" || this.bulk_edit.rename.name.indexOf("#") == -1) {
                 desktop.modal_dialog.alert("Enter correct file name.<br/>Placeholder # required in file name.");
                 return;
@@ -1257,10 +1252,10 @@ core.apps.files_manager.prototype = {
     bulkEditIteration: function() {
         var file = this.bulk_edit.files[this.bulk_edit.current_file_idx];
         var p = {
-            dialog: "files",
+            dialog: "files_manager",
             act: "bulk_edit_iteration",
             file: file
-        }
+        };
 
         desktop.modal_dialog.progress(
             "Processing files",
@@ -1332,6 +1327,6 @@ core.apps.files_manager.prototype = {
         return str;
     }
 
-}
+};
 core.apps.files_manager.extendPrototype(core.components.html_component);
 core.apps.files_manager.extendPrototype(core.components.popup_app);

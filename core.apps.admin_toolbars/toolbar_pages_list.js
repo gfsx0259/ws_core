@@ -2,7 +2,7 @@ if(!core.data.main_menu) {
     core.data.main_menu = [];
 }
 
-core.apps.admin_toolbar_pages_list = function() {}
+core.apps.admin_toolbar_pages_list = function() {};
 
 core.apps.admin_toolbar_pages_list.prototype = {
 
@@ -54,7 +54,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
                           id: "item_title" + id,
                           style: { paddingLeft: node_depth * 10 + "px" },
                           childs: [
-                            { tag: "img", src: "/static/admin_toolbars/page_icons/" + node[i].type + ".png" },
+                            { tag: "img", src: "/js_apps/core.apps.admin_toolbars/images/page_icons/" + node[i].type + ".png" },
                             { tag: "span", 
                               id: "title" + id,
                               innerHTML: node[i].title }
@@ -264,7 +264,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
 
 
             var p = {
-                dialog: "pages_manager2",
+                dialog: "pages_manager",
                 act: "save_menu_struct",
                 menu_data: varToString(core.data.main_menu)
             };
@@ -414,7 +414,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
             menu_item_data: menu_item_data,
             page_data: page_data,
             callback: this.onItemEdited.bind(this)
-        }
+        };
         desktop.showPopupApp("page_settings");
     },
 
@@ -440,7 +440,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
 
 
         var p = {
-            dialog: "pages_manager2",
+            dialog: "pages_manager",
             act: this.edit_item_act,
             type: menu_item_data.type,
             page_data: varToString(page_data),
@@ -482,7 +482,7 @@ core.apps.admin_toolbar_pages_list.prototype = {
 
         this.renderTree();
         var p = {
-            dialog: "pages_manager2",
+            dialog: "pages_manager",
             act: "delete",
             page_ids: ids.join(";"),
             menu_data: varToString(core.data.main_menu)
@@ -673,6 +673,6 @@ core.apps.admin_toolbar_pages_list.prototype = {
     }
 
 
-}
+};
 core.apps.admin_toolbar_pages_list.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_pages_list.extendPrototype(core.components.html_component);

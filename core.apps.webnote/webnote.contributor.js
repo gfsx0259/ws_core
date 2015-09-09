@@ -16,7 +16,7 @@ core.apps.webnote.extendPrototype({
     updateText: function(html) {
         desktop.setState("loading");
         var p = {
-            dialog: "texts",
+            dialog: "texts_manager",
             act: "update",
             id: this.profile["text_id"],
             content: html

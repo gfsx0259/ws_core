@@ -4,7 +4,7 @@
     border-radius: 5px;
     height: 36px;
     width: 60px;
-    background: #fff url("/static/admin_slider/plus.png") no-repeat center center;
+    background: #fff url("/js_apps/core.apps.admin_slider/images/plus.png") no-repeat center center;
     margin: 39px 10px 0 10px;
     cursor: pointer;
 }

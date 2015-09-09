@@ -2,7 +2,7 @@ core.apps.files_upload = function(args) {
     
     this._renderContent();
 
-}
+};
 
 
 core.apps.files_upload.prototype = {
@@ -149,6 +149,6 @@ core.apps.files_upload.prototype = {
     }
 
 
-}
+};
 core.apps.files_upload.extendPrototype(core.components.html_component);
 core.apps.files_upload.extendPrototype(core.components.popup_app);

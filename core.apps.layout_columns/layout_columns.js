@@ -5,7 +5,7 @@ core.apps.layout_columns = function(args) {
     this.pel = args.parentElement;
     this.rows = [];
     this.haveApps = true;
-}
+};
 
 
 
@@ -105,5 +105,5 @@ core.apps.layout_columns.prototype = {
     }
 
 
-}
+};
 core.apps.layout_columns.extendPrototype(core.components.html_component);

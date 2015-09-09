@@ -1,4 +1,4 @@
-core.objects.layout_parser = function() {}
+core.objects.layout_parser = function() {};
 
 
 
@@ -34,7 +34,7 @@ core.objects.layout_parser.prototype = {
         var container_data = {
             type: "container",
             childs: [] 
-        }
+        };
 
 
         var w = container_el.offsetWidth;
@@ -54,7 +54,7 @@ core.objects.layout_parser.prototype = {
                 type: "cell",
                 width: 100 * (cell_width / container_el.offsetWidth), // formula ;)
                 childs: [] 
-            }
+            };
             this.parseLayoutCell(cell_el, container_data.childs[i].childs);
         }
         layout.push(container_data);
@@ -81,7 +81,7 @@ core.objects.layout_parser.prototype = {
                 type: "app",
                 id: "" + id,
                 app_name: app.appName
-            }
+            };
             if(app.apps_container) {
                 d.childs = [];
 
@@ -105,4 +105,4 @@ core.objects.layout_parser.prototype = {
         }
     }
 
-}
+};

@@ -13,25 +13,29 @@
 
 
 .modal_dialog_wrapper {
-    height: 100%;
-    left: 0;
-    overflow: visible;
     position: fixed;
-    top: 0;
-    width: 100%;
+    left: 50%;
+    top: 50%;
+    width: 1px;
+    height: 1px;
+    overflow: visible;
     z-index: 200001;
 }
 
 
 .modal_dialog {
-    background: none repeat scroll 0 0 #e3edfc;
+    width: 400px;
+    margin-left: -200px;
+    background: #e3edfc;
     border: 1px solid #ced1d4;
     border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 0 8px 2px #ced1d4;
+    -webkit-box-shadow: 0 0 8px 2px #ced1d4;
     box-shadow: 0 0 8px 2px #ced1d4;
     color: #333;
-    font: 12px Arial;
-    margin: auto;
-    width: 400px;
+    font: normal 12px Arial;
 }
 
 

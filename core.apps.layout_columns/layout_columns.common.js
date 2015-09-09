@@ -3,7 +3,7 @@ core.apps.layout_columns.extendPrototype({
 
     sortRows: function() {
         if(core.data.page_rows_data) {
-            var func = function(a, b) { return a.position > b.position }
+            var func = function(a, b) { return a.position > b.position };
             core.data.page_rows_data.rows = core.data.page_rows_data.rows.sort(func);
         }
     },
@@ -46,7 +46,7 @@ core.apps.layout_columns.extendPrototype({
     },
 
     getFreeAppId: function() {
-        var d = new Date()
+        var d = new Date();
         var id = d.getTime() + d.getTimezoneOffset()*60000;
         return id;
     },
@@ -78,7 +78,7 @@ core.apps.layout_columns.extendPrototype({
                 desktop.layout.setActiveApp(app);
                 app.callFunction("onFirstRun");
             }
-        }
+        };
         core.launcher.run(args);
     },
 
@@ -110,7 +110,7 @@ core.apps.layout_columns.extendPrototype({
                 desktop.setState("normal");
                 desktop.layout.setActiveApp(new_app);
             }
-        }
+        };
         core.launcher.run(p);
     },
 
@@ -154,7 +154,7 @@ core.apps.layout_columns.extendPrototype({
                         appName: node.app_name,
                         parentElement: parent_element,
                         id: node.id
-                    }
+                    };
                     if(node.childs) {
                         if(node.multiple_childs) {
                             p.onplaced = function(app) {

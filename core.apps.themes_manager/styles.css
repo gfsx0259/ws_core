@@ -124,7 +124,7 @@
 
     .themes_manager .active_theme .title span {
             font-weight: bold;
-            background: url("/static/icons/accept.png") no-repeat 0 center;
+            background: url("/js_apps/core.apps.themes_manager/images/accept.png") no-repeat 0 center;
             padding-left: 24px;
         }
 

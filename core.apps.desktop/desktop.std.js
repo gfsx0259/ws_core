@@ -65,7 +65,7 @@ core.apps.desktop.extendPrototype({
     onSiteSearchBlur: function(e) {
         var f = function() {
             desktop.hideElement("site_search_popup");
-        }
+        };
         setTimeout(f, 300);
         return true;
     },
@@ -102,7 +102,7 @@ core.apps.desktop.extendPrototype({
             file = this.theme.site_logo.src;
             if(core.data.site_info.custom_theme) {
                 file = 
-                    "/custom_themes/" + core.data.site_info.user_id + "/" + 
+                    "/custom_themes/" +
                     core.data.site_info.custom_theme + "/"+ this.theme.site_logo.src;
             } else {
                 file = "/themes/" + core.data.site_info.theme + "/" + this.theme.site_logo.src;
@@ -150,6 +150,35 @@ core.apps.desktop.extendPrototype({
     },
 
 
+/*
+
+    // status: "error" || "success"
+    showEcomCartMsg: function(product) {
+        if(!this.$["ecom_cart_msg"]) {
+            this.displayTpl(document.body, "ecom_cart_msg");
+        }
+        this.showElement("ecom_cart_msg");
+        this.$["ecom_cart_msg_product_title"].innerHTML = product.name;
+        var pic = product.pic ? core.common.getUserFile(product.pic) : "/static/ecommerce/default_product_picture.gif";
+        this.$["ecom_cart_msg_product_img"].src = pic;
+
+        clearTimeout(this.ecom_cart_product_msg_timeout);
+        this.ecom_cart_product_msg_timeout = setTimeout(this.hideEcomCartMsg.bind(this), 6000);
+    },
+
+
+    hideEcomCartMsg: function() {
+        clearTimeout(this.ecom_cart_product_msg_timeout);
+        this.hideElement("ecom_cart_msg");
+    },
+
+
+    onEcomCartMsgCheckoutClick: function() {
+        this.ecom_cart.gotoCheckoutPage();
+    },
+
+*/
+
 
 
     // ecom stock subscribers
@@ -182,12 +211,12 @@ core.apps.desktop.extendPrototype({
         this.showElement("ecom_subscribe_msg");
         this.$.ecom_subscribe_msg.innerHTML = "Please wait...";
         var p = {
-            dialog: "ecom_stock_notifications",
+            dialog: "ecommerce",
             act: "subscribe",
             product_id: this.ecom_subscribe_product_id,
             dc_products: varToString(this.ecom_subscribe_dc_products),
             email: this.$["inp_ecom_subscribe_email"].value
-        }
+        };
         core.transport.send('/controller.php', p, this.onEcomSubscribeResponse.bind(this));
     },
 

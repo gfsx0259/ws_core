@@ -92,7 +92,7 @@ core.apps.desktop.extendPrototype({
         var p = {
             onload: this.onPopupAppLoaded.bind(this, popup_args),
             components: [ name ]
-        }
+        };
         core.launcher.load(p);
     },
 
@@ -168,7 +168,7 @@ core.apps.desktop.extendPrototype({
             var rect = {
                 width: core.data.popups_position.width - (app.window_resize.wmargin || 0),
                 height: core.data.popups_position.height - (app.window_resize.hmargin || 0)
-            }
+            };
 //varp(app.window_resize);
             el.style.width = rect.width + "px";
             el.style.height = rect.height + "px";
@@ -192,7 +192,7 @@ core.apps.desktop.extendPrototype({
         this.mouse_ofs = {
             width: core.data.popups_position.width - 2*e.clientX,
             height: core.data.popups_position.height - 2*e.clientY
-        }
+        };
 
         core.browser.event.push(document, ["onmousemove", "onmouseup"]);
         document.onmousemove = this.processPopupResize.bindAsEventListener(this);
@@ -216,14 +216,14 @@ core.apps.desktop.extendPrototype({
         core.data.popups_position = {
             width: Math.max(this.popup_min_size.width, this.mouse_ofs.width + 2*e.clientX),
             height: Math.max(this.popup_min_size.height, this.mouse_ofs.height + 2*e.clientY)
-        }
+        };
 
 
         var el = app.$[app.window_resize.target];
         var rect = {
             width: core.data.popups_position.width - (app.window_resize.wmargin || 0),
             height: core.data.popups_position.height - (app.window_resize.hmargin || 0)
-        }
+        };
 
 
         el.style.width = rect.width + "px";
@@ -237,11 +237,11 @@ core.apps.desktop.extendPrototype({
     stopPopupResize: function(e) {
         core.browser.event.pop();
         var r = {
-            dialog: "session_data",
+            dialog: "desktop",
             act: "set",
             key: "popups_position",
             data: varToString(core.data.popups_position)
-        }
+        };
         core.transport.send("/controller.php", r, this.onSetPopupPositionResponse.bind(this), "POST");
     },
 
@@ -287,7 +287,7 @@ core.apps.desktop.extendPrototype({
         this.popup_ofs = { 
             left: el.offsetLeft - e.clientX, 
             top: el.offsetTop - e.clientY 
-        }
+        };
 
         core.browser.event.push(document, ["onmousemove", "onmouseup"]);
         document.onmouseup = this.stopPopupDrag.bindAsEventListener(this);
@@ -335,8 +335,8 @@ core.apps.desktop.extendPrototype({
             author: false,
             modified: false,
             title: "New document"
-        }
-        if(!text) text = {}
+        };
+        if(!text) text = {};
         for(var key in default_text) {
             if(text[key] == undefined) text[key] = default_text[key];
         }
@@ -350,7 +350,7 @@ core.apps.desktop.extendPrototype({
         core.values.texts_manager_args = {
             callback: callback,
             multiselect: multiselect
-        }
+        };
         this.showPopupApp("texts_manager");
     },
 
@@ -358,7 +358,7 @@ core.apps.desktop.extendPrototype({
     openFilesManager: function(callback, folder) {
         var p = {
             folder: folder
-        }
+        };
         if(callback && callback["onselect"]) {
             p.onselect = callback["onselect"];
             p.onselect_multiple = callback["onselect_multiple"];
@@ -383,7 +383,7 @@ core.apps.desktop.extendPrototype({
             mode: mode,//standard,select,select_one
             bar: bar,
             list_filter: list_filter
-        }
+        };
         this.showPopupApp("ecommerce_manager");
     },
 
@@ -392,7 +392,7 @@ core.apps.desktop.extendPrototype({
             callback: callback,
             mode: mode,//standard,select
             bar: bar
-        }
+        };
         this.showPopupApp("events_manager");
     },
 
@@ -406,7 +406,7 @@ core.apps.desktop.extendPrototype({
         core.values.color_picker = {
             callback: cb,
             color: c
-        }
+        };
         this.showPopupApp("color_picker");
     },
 
@@ -418,10 +418,10 @@ core.apps.desktop.extendPrototype({
         core.values.image_editor = { callback: cb };
         this.setState("loading");
         var p = {
-            dialog: "files",
+            dialog: "files_manager",
             act: "get_image_data",
             file: fname
-        }
+        };
         core.transport.send("/controller.php", p, this.onImageInfoResponce.bind(this));
     },
 
@@ -452,7 +452,7 @@ core.apps.desktop.extendPrototype({
             selected_id: style_id,
             callback: callback,
             is_single_style: is_single_style
-        }
+        };
         this.showPopupApp("styles_manager");
     }
 

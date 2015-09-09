@@ -83,19 +83,19 @@
         }
 
         .form_builder .mup {
-            background: transparent url("/static/arrows/blue.png") 0 0 no-repeat;
+            background: transparent url("/js_apps/core.apps.form_builder/images/arrow_blue.png") 0 0 no-repeat;
         }
 
         .form_builder .mdown {
-            background: transparent url("/static/arrows/blue.png") -32px 0 no-repeat;
+            background: transparent url("/js_apps/core.apps.form_builder/images/arrow_blue.png") -32px 0 no-repeat;
         }
 
         .form_builder .mclone  {
-            background: url(/static/icons/copy.png) no-repeat;
+            background: url("/js_apps/core.apps.form_builder/images/copy.png") no-repeat;
         }
 
         .form_builder .mdelete  {
-            background: url(/static/icons/cross.png) no-repeat;
+            background: url("/js_apps/core.apps.form_builder/images/cross.png") no-repeat;
         }
 
 

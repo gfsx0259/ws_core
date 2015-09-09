@@ -1,4 +1,4 @@
-core.apps.help_center = function() {}
+core.apps.help_center = function() {};
                                     
 
 core.apps.help_center.prototype = {
@@ -26,13 +26,13 @@ core.apps.help_center.prototype = {
         this.displayTpl(this.$["content"], "help_center");
 
         var toolbarData = [
-            { title: "Home", icon: "/static/icons/house.png", id: "nav_home",
+            { title: "Home", icon: "/js_apps/core.apps.help_center/images/house.png", id: "nav_home",
               onclick: this.navHome.bind(this) },
-            { title: "Backward", icon: "/static/icons/arrow_left.png", id: "nav_prev",
+            { title: "Backward", icon: "/js_apps/core.apps.help_center/images/arrow_left.png", id: "nav_prev",
               onclick: this.navPrev.bind(this) }, 
-            { title: "Forward", icon: "/static/icons/arrow_right.png", id: "nav_next",
+            { title: "Forward", icon: "/js_apps/core.apps.help_center/images/arrow_right.png", id: "nav_next",
               onclick: this.navNext.bind(this) }
-        ]
+        ];
 
         this.toolbar = new core.objects.toolbar({
             parentElement: this.$["toolbar"],
@@ -60,7 +60,7 @@ core.apps.help_center.prototype = {
                 dialog: "help_center",
                 act: "set_status",
                 status: 0
-            }
+            };
             core.transport.send("/controller.php", p);
         }
     },
@@ -81,7 +81,7 @@ core.apps.help_center.prototype = {
                 name: f,
                 load_menu: this.menu_loaded ? 0 : 1,
                 dialog: "help_center"
-            }
+            };
             core.transport.send("/controller.php", p, this.onServerResponce.bind(this));
             this.isLoading = true;
             this.updateToolbar();
@@ -167,6 +167,6 @@ core.apps.help_center.prototype = {
         }
     }
 
-}
+};
 core.apps.help_center.extendPrototype(core.components.html_component);
 core.apps.help_center.extendPrototype(core.components.popup_app);

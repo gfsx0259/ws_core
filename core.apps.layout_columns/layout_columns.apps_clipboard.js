@@ -17,7 +17,7 @@ core.apps.layout_columns.extendPrototype({
             profiles: {},
             apps: {},
             layout: []
-        }
+        };
         this.layout_parser.parse(app.$["window"], res, true);
         if(!res.layout.length) {
             res = null;
@@ -32,8 +32,8 @@ core.apps.layout_columns.extendPrototype({
         var r = {
             dialog: "apps_clipboard",
             data: varToString(core.data.apps_clipboard)
-        }
-        core.transport.send("/controller.php", r, this.onCopyResponse.bind(this), "POST");
+        };
+        core.transport.send("/site.php", r, this.onCopyResponse.bind(this), "POST");
     },
 
 
@@ -51,7 +51,7 @@ core.apps.layout_columns.extendPrototype({
         var res = {
             el: document.createDocumentFragment(),
             app_ids: []
-        }
+        };
 
         var start_id = this.getFreeAppId();
         var new_ids = {};

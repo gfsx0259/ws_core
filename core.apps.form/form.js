@@ -9,7 +9,7 @@ core.apps.form = function(args) {
 
 
 
-}
+};
 
 
 core.apps.form.prototype = {
@@ -18,7 +18,7 @@ core.apps.form.prototype = {
     onOpen: function() {
         var fp = {
             parent_el: this.$["content"]
-        }
+        };
         this.form = new core.objects.form(fp);
 
         this.setTitle(this.profile["title"]);
@@ -45,7 +45,7 @@ core.apps.form.prototype = {
             dialog: "forms_manager",
             act: "get",
             id: this.profile["form_id"]
-        }
+        };
         core.transport.send("/controller.php", p, this.onFormDataResponce.bind(this));
     },
 
@@ -73,13 +73,13 @@ core.apps.form.prototype = {
         var fp = {
             target_value: this.profile["target_url"],
             target_type: "url"
-        }
+        };
         this.form.setProperties(fp);
         this.form.setStructure(form, this.profile["form_id"]);
         this.form.render();
     }
 
 
-}
+};
 core.apps.form.extendPrototype(core.components.html_component);
 core.apps.form.extendPrototype(core.components.desktop_app);

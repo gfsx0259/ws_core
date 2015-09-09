@@ -2,7 +2,7 @@ core.apps.users_manager = function() {
     this.users_offset = 0;
     this.usersPerPage = 10;
     this.users_total=0;
-}
+};
 
 
 core.apps.users_manager.prototype = {
@@ -97,9 +97,9 @@ core.apps.users_manager.prototype = {
 
             case "permissions":
                 var p = {
-                    dialog: "site_users",
+                    dialog: "users_manager",
                     act: "get_permissions"
-                }
+                };
                 core.transport.send("/controller.php", p, this.onPermissionsData.bind(this), "POST");
                 break;
         }
@@ -126,14 +126,14 @@ core.apps.users_manager.prototype = {
         this.$["btn_save_settings"].disabled = true;
         this.hideElement("msg_settings_saved");
         var p = {
-            dialog: "site_users",
+            dialog: "users_manager",
             act: "save_settings",
             //email: this.$["inp_site_email"].value.trim(),
             enable_users: this.$["inp_enable_users"].checked ? 1 : 0,
             users_reg_confirmation: this.$["inp_users_reg_confirmation"].checked ? 1 : 0,
             users_reg_moderation: this.$["inp_users_reg_moderation"].checked ? 1 : 0,
             users_reg_msg: this.$["inp_users_reg_msg"].value
-        }
+        };
         with(core.data.site_info) {
             enable_users = p.enable_users;
             users_reg_moderation = p.users_reg_moderation;
@@ -179,13 +179,13 @@ core.apps.users_manager.prototype = {
         this.$["btn_save_permissions"].disabled = true;
         this.hideElement("msg_permissions_saved");
         var p = {
-            dialog: "site_users",
+            dialog: "users_manager",
             act: "set_permissions",
 //            forum_post: this.$["inp_p_forum_post"].checked ? 1 : 0,
             manage_events: this.$["inp_p_manage_events"].checked ? 1 : 0,
             manage_docs: this.$["inp_p_manage_docs"].checked ? 1 : 0,
             manage_files: this.$["inp_p_manage_files"].checked ? 1 : 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onPermissionsSaved.bind(this), "POST");
     },
 
@@ -221,7 +221,7 @@ core.apps.users_manager.prototype = {
             confirmed: this.$["inp_filter_confirmed"].value,
             contributor: this.$["inp_filter_contributor"].value,
             offset: this.users_offset
-        }
+        };
         return f;
     },
 
@@ -229,7 +229,7 @@ core.apps.users_manager.prototype = {
     loadUsers: function() {
         this.setUsersBlocked("Loading...");
         var p = this.getSearchFilter();
-        p.dialog = "site_users";
+        p.dialog = "users_manager";
         p.act = "search_users";
         p.offset = this.users_offset;
         p.per_page = this.users_pager.per_page;
@@ -337,7 +337,7 @@ core.apps.users_manager.prototype = {
             confirmed: this.$["inp_user_confirmed"].checked ? 1 : 0,
             contributor: this.$["inp_user_contributor"].checked ? 1 : 0,
             approved: 1
-        }
+        };
         if(d.email == "") {
             desktop.modal_dialog.alert("Please enter user email");
             return false;
@@ -369,7 +369,7 @@ core.apps.users_manager.prototype = {
         var d = this.processUserForm();
         if(d) {
             this.setUsersBlocked("Saving...");
-            d.dialog = "site_users";
+            d.dialog = "users_manager";
             d.act = "create_user";
             core.transport.send("/controller.php", d, this.onAddUserResponce.bind(this), "POST");
         }
@@ -400,7 +400,7 @@ core.apps.users_manager.prototype = {
             this.setUsersBlocked("Updating user...");
             var id = this.users[this.activeUserIdx].id;
             this.users[this.activeUserIdx].id = clone(d);
-            d.dialog = "site_users";
+            d.dialog = "users_manager";
             d.act = "update_user";
             d.id = id;
             core.transport.send("/controller.php", d, this.onSaveUserResponce.bind(this), "POST");
@@ -435,10 +435,10 @@ core.apps.users_manager.prototype = {
     deleteUser: function(idx) {
         this.setUsersBlocked("Deleting user...");
         var p = {
-            dialog: "site_users",
+            dialog: "users_manager",
             act: "delete_user",
             id: this.users[idx].id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteUserResponce.bind(this), "POST");
     },
 
@@ -494,11 +494,11 @@ core.apps.users_manager.prototype = {
     loadModerationList: function() {
         this.setModerationBlocked("Loading...");
         var p = {
-            dialog: "site_users",
+            dialog: "users_manager",
             act: "get_moderation_list",
             offset: this.moderation_offset,
             per_page: this.moderation_pager.per_page
-        }
+        };
         core.transport.send("/controller.php", p, this.onModerationListResponce.bind(this), "POST");
     },
 
@@ -587,12 +587,12 @@ core.apps.users_manager.prototype = {
     },
     onApplyModerationClick: function(e) {
         var p = {
-            dialog: "site_users",
+            dialog: "users_manager",
             act: "moderate",
             per_page: this.moderation_pager.per_page,
             approved: [],
             disapproved: []
-        }
+        };
         for(var i=0; i<this.moderation_list.length; i++) {
             var uid = this.moderation_list[i].id;
             switch(this.$["inp_moder_act" + i].value) {
@@ -638,6 +638,6 @@ core.apps.users_manager.prototype = {
     }
 
 
-}
+};
 core.apps.users_manager.extendPrototype(core.components.html_component);
 core.apps.users_manager.extendPrototype(core.components.popup_app);

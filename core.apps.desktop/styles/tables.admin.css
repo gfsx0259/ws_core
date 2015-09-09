@@ -7,81 +7,77 @@ table.nice {
     width: 100%;
 }
 
-    table.nice .ta_left {
-        text-align: left;
-    }
+table.nice .ta_left {
+    text-align: left;
+}
 
-    table.nice .ta_center {
-        text-align: center;
-    }
+table.nice .ta_center {
+    text-align: center;
+}
 
-    table.nice .ta_right {
-        text-align: right;
-    }
+table.nice .ta_right {
+    text-align: right;
+}
 
+table.nice tr {
+}
 
-    table.nice tr {
-    }
+table.nice tr.controls {
+    border-bottom: 1px solid #adc0e0;
+}
 
-    table.nice tr.controls {
-        border-bottom: 1px solid #adc0e0;
-    }
+table.nice tr.controls td {
+    padding: 4px;
+}
 
-        table.nice tr.controls td {
-            padding: 4px;
-        }
+table.nice tr.head {
+    background: transparent;
+    border: 0;
+}
 
+table.nice th {
+    height: 18px;
+    padding: 1px 4px 0 4px;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/table_header.png) no-repeat -5px 0;
+    border-left: 1px solid #adc0e0;
+    color: #333;
+    font: normal 12px Tahoma;
+    text-transform: capitalize;
+    text-align: left;
 
-    table.nice tr.head {
-        background: transparent;
-        border: 0;
-    }
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-        table.nice th {
-            height: 18px;
-            padding: 1px 4px 0 4px;
-            background: transparent url(/static/wsc/table_header.png) no-repeat -5px 0;
-            border-left: 1px solid #adc0e0;
-            color: #333;
-            font: normal 12px Tahoma;
-            text-transform: capitalize;
-            text-align: left;
+table.nice th:first-child {
+    border: 0;
+    background-position: 0 0;
+}
 
-            overflow: hidden;
-            white-space: nowrap;
-        }
+table.nice th.last {
+    background-position: right 0;
+    padding-right: 7px;
+}
 
-        table.nice th:first-child {
-            border: 0;
-            background-position: 0 0;
-        }
+table.nice td {
+    color: #333;
+    height: 14px;
+    font: normal 12px Tahoma;
+    padding: 4px;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/table_cell.png) no-repeat -1px bottom;
+}
 
-        table.nice th.last {
-            background-position: right 0;
-            padding-right: 7px;
-        }
+table.nice td:first-child {
+    background-position: 0 bottom;
+}
 
+table.nice td.last {
+    background-position: right bottom;
+}
 
-    table.nice td {
-        color: #333;
-        height: 14px;
-        font: normal 12px Tahoma;
-        padding: 4px;
-        background: transparent url(/static/wsc/table_cell.png) no-repeat -1px bottom;
-    }
-
-        table.nice td:first-child {
-            background-position: 0 bottom;
-        }
-
-        table.nice td.last {
-            background-position: right bottom;
-        }
-
-    table.nice .noted td {
-        background-image: url(/static/wsc/table_cell_noted.png);
-    }
-
+table.nice .noted td {
+    background-image: url(/js_apps/core.apps.desktop/images/wsc/table_cell_noted.png);
+}
 
 input[type="checkbox"] {
     padding: 0;
@@ -90,40 +86,34 @@ input[type="checkbox"] {
     height: 12px;
 }
 
-
 .nice_table_footer {
-    background: transparent url(/static/wsc/box_bottom.png) no-repeat right top;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/box_bottom.png) no-repeat right top;
     padding-right: 5px;
     margin-top: -1px;
 }
 
-    .nice_table_footer div {
-        background: transparent url(/static/wsc/box_bottom.png) no-repeat left bottom;
-        height: 5px;
-    }
-
-
-
-
-
+.nice_table_footer div {
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/box_bottom.png) no-repeat left bottom;
+    height: 5px;
+}
 
 /* simple table */
 table.simple {
     border: 0;
 }
 
-    table.simple td {
-        padding: 2px 4px;
-    }
+table.simple td {
+    padding: 2px 4px;
+}
 
-    table.simple tr.big button {
-        height: 28px;
-        padding-bottom: 4px;
-    }
+table.simple tr.big button {
+    height: 28px;
+    padding-bottom: 4px;
+}
 
-    table.simple tr.big input {
-        padding-top: 4px;
-        height: 22px;
-        border: 1px solid #999;
-        vertical-align: middle;
-    }
+table.simple tr.big input {
+    padding-top: 4px;
+    height: 22px;
+    border: 1px solid #999;
+    vertical-align: middle;
+}

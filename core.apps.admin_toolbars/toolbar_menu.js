@@ -1,4 +1,4 @@
-core.apps.admin_toolbar_menu = function() {}
+core.apps.admin_toolbar_menu = function() {};
 
 core.apps.admin_toolbar_menu.prototype = {
 
@@ -45,6 +45,6 @@ core.apps.admin_toolbar_menu.prototype = {
         desktop.showPopupApp("events_manager");
     }
 
-}
+};
 core.apps.admin_toolbar_menu.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_menu.extendPrototype(core.components.html_component);

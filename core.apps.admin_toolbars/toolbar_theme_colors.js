@@ -1,4 +1,4 @@
-core.apps.admin_toolbar_theme_colors = function() {}
+core.apps.admin_toolbar_theme_colors = function() {};
 
 core.apps.admin_toolbar_theme_colors.prototype = {
 
@@ -28,7 +28,7 @@ core.apps.admin_toolbar_theme_colors.prototype = {
             "background-color1": this.$["inp_color3"].value,
             "background-color2": this.$["inp_color4"].value,
             "extra-color": this.$["inp_color5"].value
-        }
+        };
         return res;
     },
 
@@ -38,6 +38,6 @@ core.apps.admin_toolbar_theme_colors.prototype = {
         this.hideElement("window");
     }
 
-}
+};
 core.apps.admin_toolbar_theme_colors.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_theme_colors.extendPrototype(core.components.html_component);

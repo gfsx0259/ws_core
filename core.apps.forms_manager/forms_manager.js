@@ -1,8 +1,8 @@
-core.values.default_forms = {}
-if(!core.data.forms) core.data.forms = {}
+core.values.default_forms = {};
+if(!core.data.forms) core.data.forms = {};
 
 
-core.apps.forms_manager = function() {}
+core.apps.forms_manager = function() {};
 
 core.apps.forms_manager.prototype = {
 
@@ -82,7 +82,7 @@ core.apps.forms_manager.prototype = {
             act: "get_list",
             default_forms: first_load ? 1 : 0,
             submits_count: 1
-        }
+        };
         core.transport.send("/controller.php", p, this.onListResponce.bind(this));
     },
 
@@ -180,7 +180,7 @@ core.apps.forms_manager.prototype = {
             dialog: "forms_manager",
             act: "delete",
             id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteFormResponce.bind(this));
     },
 
@@ -233,7 +233,7 @@ core.apps.forms_manager.prototype = {
                 dialog: "forms_manager",
                 act: "get",
                 id: id
-            }
+            };
             core.transport.send("/controller.php", p, this.onDefaultFormDataResponce.bind(this));
         } else {
             this.useDefaultForm(id);
@@ -256,7 +256,7 @@ core.apps.forms_manager.prototype = {
         core.values.form_builder = {
             tag: "data",
             form_data: core.values.default_forms[id]
-        }
+        };
         desktop.showPopupApp("form_builder");
     },
 
@@ -307,6 +307,6 @@ core.apps.forms_manager.prototype = {
     }
 
 
-}
+};
 core.apps.forms_manager.extendPrototype(core.components.html_component);
 core.apps.forms_manager.extendPrototype(core.components.popup_app);

@@ -205,8 +205,7 @@ core.apps.columns.extendPrototype({
                     res.push({ 
                         wid: wid, 
                         name: app.appName, 
-                        pos: i, 
-                        owner: this.id 
+                        pos: i
                     });
                 }
             }

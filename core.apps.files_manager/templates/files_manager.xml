@@ -123,7 +123,6 @@
                 <wsc_button id="btn_delete" class="float_left" title=" Delete " events="onclick=onDeleteClick"/>
                 <wsc_button id="btn_send_links" class="float_left" title=" Send links " events="onclick=onSendLinksClick"/>
                 <wsc_button id="btn_choose" class="float_left" title=" Choose " events="onclick=onChooseClick"/>
-
                 <wsc_button id="btn_refresh_thumbs" class="float_right" title=" Re-Thumb" events="onclick=onReThumbClick"/>
                 <wsc_button id="btn_refresh" class="float_right" title=" Refresh " events="onclick=onRefreshClick"/>
                 <wsc_button id="btn_upload" class="btn_upload float_right" title=" Upload "/>

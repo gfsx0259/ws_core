@@ -10,7 +10,7 @@ core.objects.slider_obj_common = {
         this.hideElement("window");
     }
 
-}
+};
 
 core.objects.slider_obj_scroller = {
 
@@ -92,4 +92,4 @@ core.objects.slider_obj_scroller = {
         this.updateScrollButtons();
     }    
 
-}
+};

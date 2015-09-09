@@ -14,7 +14,7 @@ core.apps.desktop.prototype.ecom_cart = {
             dc_products: varToString(args.dc_products) || "",
             form_data: args.form_data || "",
             discount: args.discount ? args.discount : 0
-        }
+        };
 
 
         this.send(p, callback);
@@ -27,7 +27,7 @@ core.apps.desktop.prototype.ecom_cart = {
             act: "cart_add_donation",
             amount_to_pay: parseFloat(args.amount_to_pay),
             form_data: args.form_data || ""
-        }
+        };
         if(!p.amount_to_pay) return;
         this.send(p, callback);
     },
@@ -125,7 +125,7 @@ core.apps.desktop.prototype.ecom_cart = {
             var p = {
                 dialog: "ecommerce_checkout",
                 act: "get_checkout_page"
-            }
+            };
             core.transport.send('/controller.php', p, this.onCheckoutPage.bind(this));
             return;
         }
@@ -152,4 +152,4 @@ core.apps.desktop.prototype.ecom_cart = {
         }
     }
 
-}
+};

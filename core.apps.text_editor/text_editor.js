@@ -1,6 +1,6 @@
 core.apps.text_editor = function(args) {
 
-}
+};
 
 
 core.apps.text_editor.prototype = {
@@ -51,7 +51,7 @@ core.apps.text_editor.prototype = {
 
     onAutoGenrate: function() {
         var p = {
-            dialog: "wordcount",
+            dialog: "text_editor",
             act: "parse",
             content: this.editor.body.getHTML() + this.editor.summary.getHTML()
         };
@@ -81,7 +81,7 @@ core.apps.text_editor.prototype = {
         this.editor = {
             body: new core.objects.text_editor_ex({parent_el: this.$.editor_body}),
             summary: new core.objects.text_editor_ex({parent_el: this.$.editor_summary})
-        }
+        };
 
         this.tabs = new core.objects.tabs({
             parent_el: this.$.tabs,
@@ -123,7 +123,7 @@ core.apps.text_editor.prototype = {
     setData: function(doc, options) {
         this.initial_doc = doc;
 
-        if(!options) options = {}
+        if(!options) options = {};
 
         this.editor.body.hide();
         this.editor.body.setHTML(doc.content);
@@ -155,7 +155,7 @@ core.apps.text_editor.prototype = {
         this.$["inp_doc_author"].value = doc.author || "";
         this.$["inp_doc_tags"].value = doc.tags || "";
 
-        if(!options) options = {}
+        if(!options) options = {};
         if(options.tab == "content") {
             this.tabs.selectTab(0);
         } else if(options.tab == "summary") {
@@ -167,7 +167,7 @@ core.apps.text_editor.prototype = {
 
 
     isChanged: function() {
-        return 
+        return;
             this.editor.body.is_changed || 
             this.editor.summary.is_changed ||
             this.initial_doc.tags != this.$["inp_doc_tags"].value.trim() ||
@@ -189,7 +189,7 @@ core.apps.text_editor.prototype = {
             tags: this.$["inp_doc_tags"].value.trim(),
             modified: this.$["doc_date"].time,
             author: this.$["inp_doc_author"].value.trim()
-        }
+        };
         this.onsave(doc);
     },
 
@@ -199,6 +199,6 @@ core.apps.text_editor.prototype = {
     }
 
 
-}
+};
 core.apps.text_editor.extendPrototype(core.components.html_component);
 core.apps.text_editor.extendPrototype(core.components.popup_app);

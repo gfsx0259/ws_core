@@ -24,84 +24,75 @@
     border-left: 1px solid #BFCFE9;
 }
 
+.admin_toolbar_text_editor .admin_toolbar_caption {
+    float: left;
+    width: 13px;
+    height: 36px;
+    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    cursor: move;
+    border-right: 1px solid #ced1d4;
+}
 
+.admin_toolbar_text_editor .admin_toolbar_content {
+    float: left;
+}
 
+.admin_toolbar_text_editor a:first-child {
+    border-left: 0;
+}
 
-    .admin_toolbar_text_editor .admin_toolbar_caption {
-        float: left;
-        width: 13px;
-        height: 36px;
-        background: transparent url("/static/admin_toolbars/drag_bg.png");
-        cursor: move;
-        border-right: 1px solid #ced1d4;
-    }
+.admin_toolbar_text_editor a:last-child {
+    border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+}
 
+.admin_toolbar_text_editor a {
+    height: 36px;
+    padding: 0 12px;
+    border-left: 1px solid #bfcfe9;
+    float: left;
+    text-decoration: none;
+    position: relative;
+    outline: none;
+    color: #333;
+}
 
-    .admin_toolbar_text_editor .admin_toolbar_content {
-        float: left;
-    }
+.admin_toolbar_text_editor a:hover {
+    text-decoration: none;
+    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x 0 0;
+}
 
+.admin_toolbar_text_editor a:hover .dropdown {
+    display: block;
+}
 
-    .admin_toolbar_text_editor a:first-child {
-        border-left: 0;
-    }
+.admin_toolbar_text_editor a.active,
+.admin_toolbar_text_editor a.active:hover {
+    cursor: default;
+    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x;
+}
 
-    .admin_toolbar_text_editor a:last-child {
-        border-radius: 0 5px 5px 0;
-        -moz-border-radius: 0 5px 5px 0;
-        -webkit-border-radius: 0 5px 5px 0;
-    }
+.admin_toolbar_text_editor .disabled,
+.admin_toolbar_text_editor .disabled:hover {
+    cursor: default !important;
+    background: transparent;
+}
 
-    .admin_toolbar_text_editor a {
-        height: 36px;
-        padding: 0 12px;
-        border-left: 1px solid #bfcfe9;
-        float: left;
-        text-decoration: none;
-        position: relative;
-        outline: none;
-        color: #333;
-    }
+.admin_toolbar_text_editor .disabled span {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 
-    .admin_toolbar_text_editor a:hover {
-        text-decoration: none;
-        background: url("/static/admin_toolbars/gradients.png") repeat-x 0 0;
-    }
+.admin_toolbar_text_editor a span {
+    z-index: 10;
+    line-height: 20px;
+    padding-top: 9px;
+    float: left;
+}
 
-        .admin_toolbar_text_editor a:hover .dropdown {
-            display: block;
-        }
-
-
-    .admin_toolbar_text_editor a.active,
-    .admin_toolbar_text_editor a.active:hover {
-        cursor: default;
-        background: url("/static/admin_toolbars/gradients.png") repeat-x;
-    }
-
-
-    .admin_toolbar_text_editor .disabled,
-    .admin_toolbar_text_editor .disabled:hover {
-        cursor: default !important;
-        background: transparent;
-    }
-
-    .admin_toolbar_text_editor .disabled span {
-        opacity: 0.5; 
-        filter: alpha(opacity=50);
-    }
-
-
-
-    .admin_toolbar_text_editor a span {
-        z-index: 10;
-        line-height: 20px;
-        padding-top: 9px;
-        float: left;
-    }
-
-    .admin_toolbar_text_editor a img {
-        border: 0;
-        vertical-align: middle;
-        margin: -4px 0 0 0;
-    }
+.admin_toolbar_text_editor a img {
+    border: 0;
+    vertical-align: middle;
+    margin: -4px 0 0 0;
+}

@@ -6,7 +6,7 @@ core.apps.breadcrumbs_old = function(args) {
         url: "index",
         title: "Home",
         type: "std"
-    }
+    };
     
 
     function findItem(url, node) {
@@ -58,5 +58,5 @@ core.apps.breadcrumbs_old = function(args) {
     args.parentElement.innerHTML = links.join(" :: ");
     args.parentElement.childNodes[0].className += " first_item";
 
-}
+};
 core.apps.breadcrumbs_old.extendPrototype(core.components.html_component);

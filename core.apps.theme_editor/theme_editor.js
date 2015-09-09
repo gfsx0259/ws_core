@@ -1,4 +1,4 @@
-core.apps.theme_editor = function() {}
+core.apps.theme_editor = function() {};
 
 
 core.apps.theme_editor.prototype = {
@@ -45,7 +45,7 @@ core.apps.theme_editor.prototype = {
             "extra-color" :                "Extra",
             "extra-color-light" :          "Extra light",
             "extra-color-dark" :           "Extra dark"
-        }
+        };
 
         for(var l in labels) {
             this.buildModel(this.$.theme_colors,
@@ -152,7 +152,7 @@ core.apps.theme_editor.prototype = {
         var r = {
             dialog: "theme_editor",
             act: "get_data"
-        }
+        };
 
         if(!core.data.css_styles) r.load_all_css_styles = 1;
 
@@ -228,7 +228,7 @@ core.apps.theme_editor.prototype = {
                       innerHTML: style.title },
                     { tag: "div",
                       className: "style_buttons" }
-                  ]}
+                  ]};
 
 
 
@@ -302,11 +302,7 @@ core.apps.theme_editor.prototype = {
         }
 
 
-        if(style.site_id == core.data.site_info.id) {
-            this.showElements(["btn_delete_style", "btn_clone_style"]);
-        } else {
-            this.hideElements(["btn_delete_style", "btn_clone_style"]);
-        }
+        this.showElements(["btn_delete_style", "btn_clone_style"]);
 
         this.showElement("style_controls");
         var pos = core.browser.element.getPosition(this.$["style_title" + style.id]);
@@ -377,7 +373,7 @@ core.apps.theme_editor.prototype = {
             if(this.default_styles[style.key]) {
                 var old_style_id = this.default_styles[style.key];
                 this.updateStyleSelection(old_style_id, null);
-                delete(this.default_styles[style.key]);;
+                delete(this.default_styles[style.key]);
                 delete(this.styles_selection[old_style_id]);
             }
             this.default_styles[style.key] = style.id;
@@ -451,7 +447,7 @@ core.apps.theme_editor.prototype = {
             thumb: this.$["inp_thumb"].value,
             colors: {},
             fonts: {}
-        }
+        };
         for(var k in this.theme.colors) {
             res.colors[k] = this.$["inp_" + k].value;
         }
@@ -524,7 +520,7 @@ core.apps.theme_editor.prototype = {
             act: "get_style_data",
             id: id,
             key: key
-        }
+        };
         core.transport.send("/controller.php", p, this.onStyleDataResponse.bind(this));
     },
 
@@ -536,10 +532,6 @@ core.apps.theme_editor.prototype = {
             return;
         }
 
-        if(r.data.site_id != core.data.site_info.id) {
-            r.data.thumb = "";
-            delete(r.data.id);
-        }
         core.values.styles_editor = r.data;
 
         if(this.clone_style_flag) {
@@ -564,10 +556,10 @@ core.apps.theme_editor.prototype = {
             thumb: core.values.styles_editor.thumb,
             data: php_serialize(core.values.styles_editor.data),
             key: core.values.styles_editor.key
-        }
+        };
 
 
-        if(core.values.styles_editor.id && core.values.styles_editor.site_id == core.data.site_info.id) {
+        if(core.values.styles_editor.id) {
             p.id = core.values.styles_editor.id;
             p.act = "update_style";
         } else {
@@ -608,7 +600,7 @@ core.apps.theme_editor.prototype = {
             act: "delete_style",
             key: style.key,
             id: style.id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteStyleResponse.bind(this));
     },
 
@@ -631,6 +623,6 @@ core.apps.theme_editor.prototype = {
     }
 
 
-}
+};
 core.apps.theme_editor.extendPrototype(core.components.html_component);
 core.apps.theme_editor.extendPrototype(core.components.popup_app);

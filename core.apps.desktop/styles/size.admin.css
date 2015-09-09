@@ -40,15 +40,6 @@
 .w75pc {width: 75%; margin: 0 !important}
 .w80pc {width: 80%; margin: 0 !important}
 .w99pc {width: 99%}
-/*
-.w15pc .wsc_text,
-.w20pc .wsc_text,
-.w25pc .wsc_text,
-.w30pc .wsc_text,
-.w50pc .wsc_text {
-    margin: 0 2px !important;
-}
-*/
 
 .margin_right5 {
     margin-right: 5px;
@@ -56,11 +47,9 @@
 .margin_right20 {
     margin-right: 20px;
 }
-
 .margin_left20 {
     margin-left: 20px;
 }
-
 .margin_right100{
     margin-right: 100px;
 }

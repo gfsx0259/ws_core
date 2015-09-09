@@ -11,7 +11,7 @@ core.apps.styles_editor = function() {
     ];
     this.caps = {};
     this.clipboard_data = null;
-}
+};
 
 core.apps.styles_editor.prototype = {
 
@@ -196,7 +196,7 @@ core.apps.styles_editor.prototype = {
             "extra-color" :                "Extra",
             "extra-color-light" :          "Extra light",
             "extra-color-dark" :           "Extra dark"
-        }
+        };
         var m = [], v;
         for(var l in labels) {
             v = "[" + l + "]";
@@ -312,6 +312,6 @@ core.apps.styles_editor.prototype = {
         desktop.hidePopupApp();
     }
 
-}
+};
 core.apps.styles_editor.extendPrototype(core.components.html_component);
 core.apps.styles_editor.extendPrototype(core.components.popup_app);

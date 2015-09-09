@@ -2,13 +2,12 @@
     position: relative;
 }
 
-    .app .app_tl,
-    .app .app_ml,
-    .app .app_bl {
-        position: relative;
-        z-index: 100;
-    }
-
+.app .app_tl,
+.app .app_ml,
+.app .app_bl {
+    position: relative;
+    z-index: 100;
+}
 
 /* app caption edit */
 

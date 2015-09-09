@@ -60,7 +60,7 @@
                 <tr id="statements_table_head">
                     <td><wsc_text id="inp_statement_text"/></td>
                     <td><wsc_text id="inp_statement_value"/></td>
-                    <td class="ta_center last"><img src="/static/icons/add.png" class="icon" events="onclick=onAddStatementClick" title=" Add statement "/></td>
+                    <td class="ta_center last"><img src="/js_apps/core.apps.form_builder/images/add.png" class="icon" events="onclick=onAddStatementClick" title=" Add statement "/></td>
                 </tr>
             </table>
             <div class="nice_table_footer"><div></div></div>
@@ -80,7 +80,7 @@
                 <tr id="select_options_table_head">
                     <td><wsc_text id="inp_option_text"/></td>
                     <td><wsc_text id="inp_option_value" events="onchange=onOptionValueChange"/></td>
-                    <td class="ta_center last"><img src="/static/icons/add.png" class="icon" events="onclick=onAddSelectOptionClick" title=" Add option "/></td>
+                    <td class="ta_center last"><img src="/js_apps/core.apps.form_builder/images/add.png" class="icon" events="onclick=onAddSelectOptionClick" title=" Add option "/></td>
                 </tr>
             </table>
             <div class="nice_table_footer"><div></div></div>

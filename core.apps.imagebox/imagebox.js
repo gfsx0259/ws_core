@@ -1,4 +1,4 @@
-core.apps.imagebox = function() {}
+core.apps.imagebox = function() {};
 
 
 core.apps.imagebox.prototype = {
@@ -161,7 +161,7 @@ core.apps.imagebox.prototype = {
         return fname.indexOf("http://") == -1 ? core.common.getUserFile(fname) : fname;
     }
 
-}
+};
 
 core.apps.imagebox.extendPrototype(core.components.html_component);
 core.apps.imagebox.extendPrototype(core.components.popup_app);

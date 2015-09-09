@@ -160,7 +160,7 @@ core.apps.webnote.extendPrototype({
         doc.id = this.profile["text_id"];
         core.data.texts.updateContent(doc);
 
-        doc.dialog = "texts";
+        doc.dialog = "texts_manager";
         doc.act = "update";
         core.transport.send("/controller.php", doc, this.onTextUpdated.bind(this), "POST");
         this.tmp = doc;
@@ -174,7 +174,7 @@ core.apps.webnote.extendPrototype({
 
 
     createText: function(doc) {
-        doc.dialog = "texts";
+        doc.dialog = "texts_manager";
         doc.rid = 1;
         doc.act = "create",
         doc.title = "Text block content";

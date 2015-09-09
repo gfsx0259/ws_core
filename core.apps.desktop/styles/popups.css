@@ -16,79 +16,67 @@
     box-shadow: 0 0 8px 2px #ced1d4;
 }
 
+.popup_caption {
+    background: transparent url("/js_apps/core.apps.desktop/images/drag_bg.png");
+    cursor: move;
+    position: relative;
+    font-size: 11px;
+}
 
-    .popup_caption {
-        background: transparent url("/static/admin_toolbars/drag_bg.png");
-        cursor: move;
-        position: relative;
-        font-size: 11px;
-    }
+.popup_caption .title {
+    display: block;
+    color: #000;
+    font: normal 18px Tahoma;
+    margin: 0 20px;
+    padding: 10px 0 10px 0;
+}
 
-        .popup_caption .title {
-            display: block;
-            color: #000;
-            font: normal 18px Tahoma;
-            margin: 0 20px;
-            padding: 10px 0 10px 0;
-        }
+.popup_caption .btn {
+    z-index: 10;
+    position: absolute;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url("/js_apps/core.apps.desktop/images/popup_app/buttons.png") no-repeat;
+}
 
+.popup_caption .btn_help {
+    background-position: 0 0;
+    right: 35px;
+}
 
-        .popup_caption .btn {
-            z-index: 10;
-            position: absolute;
-            top: 15px;
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-            background: url("/static/popup_app/buttons.png") no-repeat;
-        }
+.popup_caption .btn_close {
+    right: 10px;
+    background-position: -16px 0;
+}
 
-        .popup_caption .btn_help {
-            background-position: 0 0;
-            right: 35px;
-        }
+.popup_window button {
+    font: normal 12px Tahoma;
+}
 
-        .popup_caption .btn_close {
-            right: 10px;
-            background-position: -16px 0;
-        }
+.popup_window a {
+    color: blue;
+    text-decoration: none;
+    font-weight: normal;
+    border: 0;
+    display: inline;
+}
 
+.popup_window a:hover {
+    text-decoration: underline;
+    background: none;
+}
 
+.popup_window hr {
+    border: 0;
+    height: 1px;
+    background: #adc0e0;
+}
 
-
-
-
-    .popup_window button {
-        font: normal 12px Tahoma;
-    }
-
-
-    .popup_window a {
-        color: blue;
-        text-decoration: none;
-        font-weight: normal;
-        border: 0;
-        display: inline;
-    }
-
-    .popup_window a:hover {
-        text-decoration: underline;
-        background: none;
-    }
-
-
-    .popup_window hr {
-        border: 0;
-        height: 1px;
-        background: #adc0e0;
-    }
-
-    .popup_window .small {
-        font-size: 9px;
-    }
-
-
-
+.popup_window .small {
+    font-size: 9px;
+}
 
 /* popup widgets top toolbar */
 /* used only in texteditor */
@@ -101,52 +89,49 @@
     margin: 0 !important;
 }
 
-    .popup_toolbar a.button {
-        float: left;
-        width: 22px;
-        height: 22px;
-        margin: 1px 2px 1px 1px;
-    }
+.popup_toolbar a.button {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: 1px 2px 1px 1px;
+}
 
-    .popup_toolbar a.button:hover {
-        margin: 0 1px 0 0;
-        border: 1px solid #999;
-    }
+.popup_toolbar a.button:hover {
+    margin: 0 1px 0 0;
+    border: 1px solid #999;
+}
 
-    .popup_toolbar .disabled {
-        cursor: pointer;
-        filter: alpha(opacity=30);
-        opacity: 0.3;
-    }
+.popup_toolbar .disabled {
+    cursor: pointer;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
 
-    .popup_toolbar .divider {
-        width: 1px;
-        height: 16px;
-        margin: 4px 3px 0 2px;
-        border-right: 1px dotted #999;
-        float: left;
-    }
+.popup_toolbar .divider {
+    width: 1px;
+    height: 16px;
+    margin: 4px 3px 0 2px;
+    border-right: 1px dotted #999;
+    float: left;
+}
 
-    .popup_toolbar .control {
-        float: left;
-        margin: 4px 3px 0 2px;
-        padding-left: 10px;
-        border-left: 1px dotted #999;
-    }
+.popup_toolbar .control {
+    float: left;
+    margin: 4px 3px 0 2px;
+    padding-left: 10px;
+    border-left: 1px dotted #999;
+}
 
-        .popup_toolbar .control span {
-            color: #333;
-        }
+.popup_toolbar .control span {
+    color: #333;
+}
 
-
-        .popup_toolbar .control select {
-            border: 1px solid #666;
-            padding: 0;
-            background: transparent;
-            font-size: 11px;
-        }
-
-
+.popup_toolbar .control select {
+    border: 1px solid #666;
+    padding: 0;
+    background: transparent;
+    font-size: 11px;
+}
 
 /* popup widgets top & bottom buttons */
 
@@ -164,159 +149,140 @@
     border-top: 1px solid #ced1d4;
 }
 
-    .popup_buttons .popup_buttons_wrapper {
-        position: absolute;
-        left: 20px;
-        top: 10px;
-        right: 20px;
-        bottom: 10px;
-    }
+.popup_buttons .popup_buttons_wrapper {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    right: 20px;
+    bottom: 10px;
+}
 
 .popup_top_buttons .wsc_button,
 .popup_buttons .wsc_button {
     width: 80px;
 }
 
-    .popup_buttons .float_left {
-        float: left;
-        margin-right: 5px;
-        overflow: hidden;
-        position: relative;
-    }
+.popup_buttons .float_left {
+    float: left;
+    margin-right: 5px;
+    overflow: hidden;
+    position: relative;
+}
 
-    .popup_buttons .float_right {
-        float: right;
-        margin-left: 5px;
-        overflow: hidden;
-        position: relative;
-    }
-
+.popup_buttons .float_right {
+    float: right;
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+}
 
 .popup_top_buttons {
     border-bottom: 1px solid #ced1d4;
 }
 
-    .popup_top_buttons input[type="button"],
-    .popup_buttons input[type="button"] {
-        display: block;
-        margin: 0 5px;
-        font-family: Arial;
-        font-size: 12px;
-        width: 80px;
-    }
-
-
-
-
+.popup_top_buttons input[type="button"],
+.popup_buttons input[type="button"] {
+    display: block;
+    margin: 0 5px;
+    font-family: Arial;
+    font-size: 12px;
+    width: 80px;
+}
 
 /* popup resize */
-    .popup_window .pslider {
-        cursor: pointer;
-        width: 7px;
-        height: 56px;
-        position: absolute;
-        z-index: 10;
-        background: transparent url(/static/popup_app/pslider.png) no-repeat;
-    }
+.popup_window .pslider {
+    cursor: pointer;
+    width: 7px;
+    height: 56px;
+    position: absolute;
+    z-index: 10;
+    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/pslider.png) no-repeat;
+}
 
+.popup_right_resize {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    height: 100%;
+    width: 5px;
+    z-index: 10;
+}
 
-
-    .popup_right_resize {
-        position: absolute;
-        top: 0;
-        right: -5px;
-        height: 100%;
-        width: 5px;
-        z-index: 10;
-    }
-
-    .popup_bottom_resize {
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        z-index: 10;
-    }
-
+.popup_bottom_resize {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: 10;
+}
 
 /* popup pager */
-.popup_window .obj_pager a, 
+.popup_window .obj_pager a,
 .popup_window .obj_pager a:hover {
     border: 1px solid #333;
 }
-
 
 /* popup panels */
 
 .popup_panels {
     overflow: hidden;
     position: relative;
-    zoom: 1;    
+    zoom: 1;
     clear: both;
 }
-
 
 .popup_left_panel_box {
     float: left;
     margin: 5px;
 }
 
-    .popup_left_panel {
-        width: auto;    
-        min-width: 198px;
-    }
+.popup_left_panel {
+    width: auto;
+    min-width: 198px;
+}
 
-                  
-    .popup_sidebar {
-        width: 195px;
-    }
-    
+.popup_sidebar {
+    width: 195px;
+}
 
-    .popup_sidebar a,
-    .popup_sidebar a:hover {
-        display: block;
-        height: 36px;
-        padding: 4px 0 0 5px;
-        margin: 0 1px 1px 1px;
-        border: 0;
-        background: transparent;
-        text-decoration: none;
-        color: #000;
-        outline: none;
-    }
+.popup_sidebar a,
+.popup_sidebar a:hover {
+    display: block;
+    height: 36px;
+    padding: 4px 0 0 5px;
+    margin: 0 1px 1px 1px;
+    border: 0;
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
 
-    .popup_sidebar a.active {
-        background: transparent url(/static/popup_app/left_menu_item.png) no-repeat left bottom;
-    }
+.popup_sidebar a.active {
+    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/left_menu_item.png) no-repeat left bottom;
+}
 
-    .popup_sidebar a.active:first-child {
-        background: transparent url(/static/popup_app/left_menu_item.png) no-repeat left top;
-    }
+.popup_sidebar a.active:first-child {
+    background: transparent url(/js_apps/core.apps.desktop/images/popup_app/left_menu_item.png) no-repeat left top;
+}
 
-    .popup_sidebar a img {
-        width: 32px;
-        height: 32px;
-        border: 0;
-        vertical-align: middle;
-        margin-right: 4px;
-    }
+.popup_sidebar a img {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    vertical-align: middle;
+    margin-right: 4px;
+}
 
+.popup_right_panel_box {
+    margin: 5px 5px 5px 210px;
+    position: relative;
+}
 
-
-    .popup_right_panel_box {
-        margin: 5px 5px 5px 210px;
-        position: relative;
-    }
-
-        .popup_right_panel {
-            overflow: auto;
-        }
-
-
-
-
-
+.popup_right_panel {
+    overflow: auto;
+}
 
 /* popup left sidebar  OLD!!! */
 
@@ -326,35 +292,33 @@
     float: left;
 }
 
-    .sidebar a {
-        display: block;
-        padding: 4px 8px;
-        text-decoration: none;
-        color: #333;
-        background: none;
-        cursor: pointer;
-    }
+.sidebar a {
+    display: block;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #333;
+    background: none;
+    cursor: pointer;
+}
 
-        .sidebar a img {
-            border: none;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
+.sidebar a img {
+    border: none;
+    vertical-align: middle;
+    margin-right: 8px;
+}
 
-    .sidebar a:hover {
-        background: #DDF;
-        text-decoration: none;
-    }
+.sidebar a:hover {
+    background: #DDF;
+    text-decoration: none;
+}
 
-
-    .sidebar a.active,
-    .sidebar a.active:hover {
-        background: #DDF;
-        cursor: default;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
+.sidebar a.active,
+.sidebar a.active:hover {
+    background: #DDF;
+    cursor: default;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .sidebar_content {
     float: left;
@@ -364,15 +328,12 @@
     padding: 4px;
 }
 
-    .sidebar_content strong.title {
-        display: block;
-        height: 20px;
-        padding-top: 4px;
-        font-weight: bold;
-    }
-
-
-
+.sidebar_content strong.title {
+    display: block;
+    height: 20px;
+    padding-top: 4px;
+    font-weight: bold;
+}
 
 /* popup HTML elements */
 .popup_window p {

@@ -4,48 +4,72 @@
     width: 100%;
     position: fixed;
     height: 36px;
-    background: #fff url("/static/admin_slider/header_bg.png") repeat-x 0 0;
+    background: #fff url("/js_apps/core.apps.admin_slider/images/header_bg.png") repeat-x 0 0;
     text-align: center;
     border-bottom: 1px solid #becfe8;
     z-index: 16001;
 }
 
+.admin_slider_header .mode_controls {
+    margin: 0 auto;
+    width: 70px;
+    height: 29px;
+    margin-top: 4px;
+}
 
-    .admin_slider_header .mode_controls {
-        margin: 0 auto;
-        width: 70px;
-        height: 29px;
-        margin-top: 4px;
-    }
+.admin_slider_header .btn {
+    float: left;
+    width: 32px;
+    height: 27px;
+    margin: 1px;
+    background: transparent url("/js_apps/core.apps.admin_slider/images/header_btns.png") no-repeat 0 0;
+    cursor: pointer;
+}
 
+.admin_slider_header .mobile {
+    background-position: 0 -27px;
+}
 
-        .admin_slider_header .btn {
-            float: left;
-            width: 32px;
-            height: 27px;
-            margin: 1px;
-            background: transparent url("/static/admin_slider/header_btns.png") no-repeat 0 0;
-            cursor: pointer;
-        }
+.admin_slider_header .selected {
+    margin: 0;
+    border: 1px solid #b5c7e4;
+    cursor: default;
+}
 
-        .admin_slider_header .mobile {
-            background-position: 0 -27px;
-        }
+.admin_slider_header .right_buttons {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
 
-        .admin_slider_header .selected {
-            margin: 0;
-            border: 1px solid #b5c7e4;
-            cursor: default;
-        }
+.admin_slider_header .right_buttons div {
+    float: right;
+    width: 81px;
+    height: 33px;
+    cursor: pointer;
+    background: transparent url("/js_apps/core.apps.admin_slider/images/header_buttons.png") no-repeat 0 0;
+}
 
+.admin_slider_header .right_buttons .preview {
+    background-position: 0 -33px;
+}
 
+.admin_slider_header .right_buttons .save {
+    background-position: 0 -66px;
+}
 
+.admin_slider_header .left_buttons {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}
 
-    .admin_slider_header .right_buttons {
-        position: absolute;
-        right: 0;
-        top: 2px;
-    }
+.admin_slider_header .left_buttons a,
+.admin_slider_header .left_buttons a:hover {
+    color: #00F;
+    text-decoration: underline;
+    font: normal 12px Arial;
+}
 
 
         .admin_slider_header .right_buttons div {
@@ -53,11 +77,15 @@
             width: 81px;
             height: 33px;
             cursor: pointer;
-            background: transparent url("/static/admin_slider/header_buttons.png") no-repeat 0 0;
+            background: transparent url("/js_apps/core.apps.admin_slider/images/header_buttons.png") no-repeat 0 0;
         }
 
         .admin_slider_header .right_buttons .preview {
             background-position: 0 -33px;
+        }
+
+        .admin_slider_header .right_buttons .import {
+            background-position: 0 -100px;
         }
 
         .admin_slider_header .right_buttons .save {
@@ -89,98 +117,87 @@
     font: normal 14px Arial;
 }
 
+.admin_slider .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 
-  
+.admin_slider .content {
+    background: #fff;
 
-    .admin_slider .slider {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-    }
+}
 
-        .admin_slider .content {
-            background: #fff;
+.admin_slider .content_inner {
+    height: 110px;
+    background: #fff;
+}
 
-        }
+.admin_slider .footer {
+    background: transparent url("/js_apps/core.apps.admin_slider/images/footer_shadow.png") repeat-x 0 0;
+    height: 11px;
+    overflow: visible;
+}
 
-        .admin_slider .content_inner {
-            height: 110px;
-            background: #fff;
-        }
+.admin_slider .footer .bolts_wrapper {
+    width: 372px;
+    height: 36px;
+    margin: 0;
+}
 
+.admin_slider .footer .bolt {
+    float: left;
+    position: relative;
+    margin: 0;
+    padding-top: 2px;
+    height: 36px;
+    width: 124px;
+    background: transparent url("/js_apps/core.apps.admin_slider/images/bolt.png") no-repeat 0 0;
+}
 
-        .admin_slider .footer {
-            background: transparent url("/static/admin_slider/footer_shadow.png") repeat-x 0 0;
-            height: 11px;
-            overflow: visible;
-        }
+.admin_slider .footer .icon {
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    background: transparent url("/js_apps/core.apps.admin_slider/images/bolt_icons.png") no-repeat;
+}
 
-            .admin_slider .footer .bolts_wrapper {
-                width: 372px;
-                height: 36px;
-                margin: 0;
-            }
+.admin_slider .bolt .icon_apps_catalog {
+    background-position: 0 0;
+}
 
+.admin_slider .bolt .icon_styles_catalog {
+    background-position: 0 -24px;
+}
 
-            .admin_slider .footer .bolt {
-                float: left;
-                position: relative;
-                margin: 0;
-                padding-top: 2px;
-                height: 36px;
-                width: 124px;
-                background: transparent url("/static/admin_slider/bolt.png") no-repeat 0 0;
-            }
+.admin_slider .bolt .icon_theme_colors {
+    background-position: 0 -48px;
+}
 
+.admin_slider .bolt .icon_theme_fonts {
+    background-position: 0 -72px;
+}
 
-                .admin_slider .footer .icon {
-                    margin: 0 auto;
-                    width: 24px;
-                    height: 24px;
-                    background: transparent url("/static/admin_slider/bolt_icons.png") no-repeat;
-                }
+.admin_slider .bolt .clickable_zone {
+    z-index: 10;
+    position: absolute;
+    left: 13px;
+    top: 0;
+    width: 98px;
+    height: 28px;
+    cursor: pointer;
+}
 
+.admin_slider .bolt .shadow {
+    position: absolute;
+    top: 0;
+    left: 13px;
+    width: 98px;
+    height: 11px;
+    background: transparent url("/js_apps/core.apps.admin_slider/images/footer_shadow.png") repeat-x 0 0;
+}
 
-                .admin_slider .bolt .icon_apps_catalog {
-                    background-position: 0 0;
-                }
-
-                .admin_slider .bolt .icon_styles_catalog {
-                    background-position: 0 -24px;
-                }
-
-
-                .admin_slider .bolt .icon_theme_colors {
-                    background-position: 0 -48px;
-                }
-
-
-                .admin_slider .bolt .icon_theme_fonts {
-                    background-position: 0 -72px;
-                }
-
-
-                .admin_slider .bolt .clickable_zone {
-                    z-index: 10;
-                    position: absolute;
-                    left: 13px;
-                    top: 0;
-                    width: 98px;
-                    height: 28px;
-                    cursor: pointer;
-                }
-
-                .admin_slider .bolt .shadow {
-                    position: absolute;
-                    top: 0px;
-                    left: 13px;
-                    width: 98px;
-                    height: 11px;
-                    background: transparent url("/static/admin_slider/footer_shadow.png") repeat-x 0 0;
-                }
-
-
-                .admin_slider .bolt_active .shadow { 
-                    display: none;
-                }
+.admin_slider .bolt_active .shadow {
+    display: none;
+}

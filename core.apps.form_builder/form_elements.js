@@ -26,11 +26,11 @@ core.apps.form_builder.extendPrototype({
 
 
 
-    
-    
+
+
 /*
 form data: [
-    { type: "...", 
+    { type: "...",
       properties: {
           name: "",
           label: "",
@@ -44,14 +44,14 @@ form data: [
 
     form_elements: {
         text: {
-          title: "Single line text",
-          properties: {
-            "label": "Single line text",
-            "name": "text",
-            "required": false,
-              "use_as_subject": false
-          },
-          behavior: "element"
+            title: "Single line text",
+            properties: {
+                "label": "Single line text",
+                "name": "text",
+                "required": false,
+                "use_as_subject": false
+            },
+            behavior: "element"
         },
 
 

@@ -1,4 +1,4 @@
-core.apps.themes_manager = function() {}
+core.apps.themes_manager = function() {};
 
 core.apps.themes_manager.prototype = {
 
@@ -83,7 +83,7 @@ core.apps.themes_manager.prototype = {
             dialog: "themes_manager",
             act: "get_list",
             admin_themes: first_load ? 1 : 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onListResponce.bind(this));
     },
 
@@ -158,7 +158,7 @@ core.apps.themes_manager.prototype = {
             dialog: "themes_manager",
             act: "delete",
             id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteFormResponce.bind(this));
     },
 
@@ -194,7 +194,7 @@ core.apps.themes_manager.prototype = {
 
                 is_active_theme = core.data.site_version[core.data.layout_mode + "_theme_id"] == t.id;
 
-                title = "<span class='nowrap'>" + (is_active_theme ? "<img src='/static/icons/accept.png'/>" : "") + t.title + "</span><div></div>"
+                title = "<span class='nowrap'>" + (is_active_theme ? "<img src='/static/icons/accept.png'/>" : "") + t.title + "</span><div></div>";
 
                 m.push(
                     { tag: "div",
@@ -231,7 +231,7 @@ core.apps.themes_manager.prototype = {
             dialog: "themes_manager",
             act: "use_theme",
             id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onUseThemeResponse.bind(this));
     },
 
@@ -268,7 +268,7 @@ core.apps.themes_manager.prototype = {
                 fonts: core.data.site_version[core.data.layout_mode + "_fonts"]
             },
             callback: this.onThemeData.bind(this)
-        }
+        };
         desktop.showPopupApp("theme_editor");
     },
 
@@ -283,7 +283,7 @@ core.apps.themes_manager.prototype = {
             colors: theme.colors,
             fonts: theme.fonts,
             styles: varToString(theme.styles)
-        }
+        };
         core.transport.send("/controller.php", p, this.onThemeCreatedResponse.bind(this));
     },
 
@@ -322,7 +322,7 @@ core.apps.themes_manager.prototype = {
                 fonts: theme.fonts
             },
             callback: this.onEditThemeData.bind(this)
-        }
+        };
         desktop.showPopupApp("theme_editor");
     },
 
@@ -340,7 +340,7 @@ core.apps.themes_manager.prototype = {
             fonts: theme.fonts,
             styles: varToString(theme.styles),
             load_default_styles: this.reload_theme ? 1 : 0
-        }
+        };
         core.transport.send("/controller.php", p, this.onThemeUpdatedResponse.bind(this));
     },
 
@@ -381,7 +381,7 @@ core.apps.themes_manager.prototype = {
                 act: "load_from_file",
                 file: file,
                 new_title: theme_name
-            }
+            };
             core.transport.send("/controller.php", p, this.onThemeLoadResponse.bind(this));
         } else {
             desktop.modal_dialog.alert("Theme name already used");
@@ -408,7 +408,7 @@ core.apps.themes_manager.prototype = {
             dialog: "themes_manager",
             act: "save_to_file",
             id: this.hover_theme_id
-        }
+        };
         core.transport.send("/controller.php", p, this.onThemeSaveResponse.bind(this));        
     },
 
@@ -486,6 +486,6 @@ core.apps.themes_manager.prototype = {
         desktop.hidePopupApp();
     }
 
-}
+};
 core.apps.themes_manager.extendPrototype(core.components.html_component);
 core.apps.themes_manager.extendPrototype(core.components.popup_app);

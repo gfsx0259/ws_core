@@ -2,7 +2,7 @@ core.apps.emails_manager = function() {
     if(!core.data.email_templates) {
         core.data.email_templates = {};
     }
-}
+};
 
 
 core.apps.emails_manager.prototype = {
@@ -50,7 +50,7 @@ core.apps.emails_manager.prototype = {
         var p = {
             dialog: "emails_manager",
             act: "get_infos"
-        }
+        };
         core.transport.send("/controller.php", p, this.onInfosResponce.bind(this));
     },
 
@@ -89,7 +89,7 @@ core.apps.emails_manager.prototype = {
                 dialog: "emails_manager",
                 act: "get_template",
                 key: this.active_info.key
-            }
+            };
             core.transport.send("/controller.php", p, this.onGetTemplateResponce.bind(this));
         } else {
             this.editTemplate();
@@ -178,14 +178,14 @@ core.apps.emails_manager.prototype = {
         this.tmp = {
             subject: this.$["inp_email_subject"].value,
             body: this.$["inp_email_body"].value
-        }
+        };
         var p = {
             dialog: "emails_manager",
             act: "set_template",
             email_info_id: this.active_info.id,
             subject: this.tmp.subject,
             body: this.tmp.body
-        }
+        };
         core.transport.send("/controller.php", p, this.onSetTemplateResponce.bind(this));        
     },
 
@@ -201,6 +201,6 @@ core.apps.emails_manager.prototype = {
     }
 
 
-}
+};
 core.apps.emails_manager.extendPrototype(core.components.html_component);
 core.apps.emails_manager.extendPrototype(core.components.popup_app);

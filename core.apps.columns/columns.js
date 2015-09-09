@@ -7,7 +7,7 @@ core.apps.columns = function(args) {
         width: [50,50]
     }
 
-}
+};
 
 core.apps.columns.prototype = {
 
@@ -53,7 +53,7 @@ core.apps.columns.prototype = {
         return this.$["cell" + c];
     }
 
-}
+};
 
 core.apps.columns.extendPrototype(core.components.html_component);
 core.apps.columns.extendPrototype(core.components.desktop_app);

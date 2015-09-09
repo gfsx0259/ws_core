@@ -6,7 +6,7 @@ core.apps.menu2 = function(args) {
         node_id: ""
     }
 
-}
+};
 
 
 core.apps.menu2.prototype = {
@@ -163,6 +163,6 @@ core.apps.menu2.prototype = {
 
 
 
-}
+};
 core.apps.menu2.extendPrototype(core.components.html_component);
 core.apps.menu2.extendPrototype(core.components.desktop_app);

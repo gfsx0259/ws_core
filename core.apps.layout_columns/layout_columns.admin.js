@@ -212,7 +212,7 @@ core.apps.layout_columns.extendPrototype({
 
 
         var r = {
-            dialog: "save_page",
+            dialog: "layout_columns",
             act: "save_layout",
             layout_mode: core.data.layout_mode,
             page_id: core.data.page_id,
@@ -220,7 +220,7 @@ core.apps.layout_columns.extendPrototype({
             contact_us_emails: varToString(core.data.contact_us_emails),
             ecom_category_id: core.values.ecom_category_id || 0,
             log: this.log.join("\n")
-        }
+        };
 
         core.transport.send("/controller.php", r, this.onPageSaved.bind(this, need_css_reload), "POST");
         this.site_changed = true;
@@ -354,7 +354,7 @@ core.apps.layout_columns.extendPrototype({
     getData: function() {
         var data = {
             rows: []
-        }
+        };
         for(var i=0; i<this.rows.length; i++) {
             if(this.rows[i].getData) {
                 data.rows[i] = this.rows[i].getData();

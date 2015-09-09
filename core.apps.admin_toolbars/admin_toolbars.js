@@ -49,7 +49,7 @@ core.apps.admin_toolbars = function() {
         obj_settings: true,
         theme_colors: true,
         theme_fonts: true
-    }
+    };
 
     if(!core.data.admin_toolbars_state) {
         core.data.admin_toolbars_state = {};
@@ -70,7 +70,7 @@ core.apps.admin_toolbars = function() {
         }
     }
 
-}
+};
 
 core.apps.admin_toolbars.prototype = {
 
@@ -154,13 +154,13 @@ core.apps.admin_toolbars.prototype = {
         if(core.data.site_info.is_paid != 0 && (core.data.site_version.is_changed == 1 || desktop.layout.site_changed)) {
             var p = {
                 title: "Exiting site editor",
-                message: "<img src='/static/admin_toolbars/icons/exit.png'/> Would you like to publish your changes now?",
+                message: "<img src='/js_apps/core.apps.admin_toolbars/images/icons/exit.png'/> Would you like to publish your changes now?",
                 buttons: [
                     { title: "Revert to live version", callback: this.unpublishSite.bind(this), type: "link", className: "float_left" },
                     { title: "Yes", callback: this.publishSite.bind(this), ok_button: true },
                     { title: "No", callback: this.gotoUserSites.bind(this) }
                 ]
-            }
+            };
             desktop.modal_dialog.open(p);
         } else {
             this.gotoUserSites();
@@ -173,8 +173,8 @@ core.apps.admin_toolbars.prototype = {
         var p = {
             dialog: "save_site",
             act: "publish"
-        }
-        core.transport.send("/controller.php", p, this.onPublishResponse.bind(this));
+        };
+        core.transport.send("/site.php", p, this.onPublishResponse.bind(this));
     },
 
 
@@ -182,7 +182,7 @@ core.apps.admin_toolbars.prototype = {
     onPublishResponse: function(r) {
         desktop.setState("normal");
         if(r && r.status == "ok") {
-            desktop.loadURL("http://" + core.data.home_domain + "/?dialog=user_sites&action=stop_build_site&id=" + core.data.sid);
+            desktop.loadURL("http://" + core.data.http_host + "/site.php?dialog=user_sites&action=stop_build_site");
         } else {
             desktop.modal_dialog.alert("Server error");
         }
@@ -195,15 +195,15 @@ core.apps.admin_toolbars.prototype = {
         var p = {
             dialog: "save_site",
             act: "unpublish"
-        }
-        core.transport.send("/controller.php", p, this.onUnpublishResponse.bind(this));
+        };
+        core.transport.send("/site.php", p, this.onUnpublishResponse.bind(this));
     },
 
 
     onUnpublishResponse: function(r) {
         desktop.setState("normal");
         if(r && r.status == "ok") {
-            desktop.loadURL("http://" + core.data.home_domain + "/?dialog=user_sites&action=stop_build_site&id=" + core.data.sid);
+            desktop.loadURL("http://" + core.data.http_host + "/site.php?dialog=user_sites&action=stop_build_site");
         } else {
             desktop.modal_dialog.alert("Server error");
         }
@@ -211,7 +211,7 @@ core.apps.admin_toolbars.prototype = {
 
 
     gotoUserSites: function() {
-        desktop.loadURL("http://" + core.data.home_domain + "/?dialog=user_sites&action=stop_build_site&id=" + core.data.sid);
+        desktop.loadURL("http://" + core.data.http_host + "/site.php?dialog=user_sites&action=stop_build_site");
     },
 
 
@@ -221,5 +221,5 @@ core.apps.admin_toolbars.prototype = {
         }
     }
 
-}
+};
 core.apps.admin_toolbars.extendPrototype(core.components.html_component);

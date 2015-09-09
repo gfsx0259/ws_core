@@ -6,7 +6,7 @@
     cursor: pointer;
     position: absolute;
     z-index: 10000;
-    background: transparent url(/static/app_settings/lock.png) no-repeat;
+    background: transparent url(/js_apps/core.apps.layout_columns/images/lock.png) no-repeat;
 }
 
 /* app mouse hover */
@@ -21,28 +21,26 @@
     display: none;
 }
 
-    .app .admin_overlay .overlay_hover {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        border: 1px solid #F00;
-        background: transparent url(/static/app_settings/overlay_bg.png) repeat;
-    }
+.app .admin_overlay .overlay_hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #F00;
+    background: transparent url(/js_apps/core.apps.layout_columns/images/overlay_bg.png) repeat;
+}
 
-    .app .admin_overlay .overlay_drag {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: url(/static/blank.gif) repeat;
-        cursor: default;
-        display: none;
-    }
-
-
+.app .admin_overlay .overlay_drag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/static/blank.gif) repeat;
+    cursor: default;
+    display: none;
+}
 
 /* app focused - bounds */
 
@@ -50,19 +48,18 @@
 .app .admin_bound span {
     position: absolute;
     z-index: 100;
-/*    background: #00F; */
+    /*    background: #00F; */
     overflow: visible;
 }
 
-
 .app .admin_bound_t,
 .app .admin_bound_b {
-    background: #00F url(/static/app_settings/selection1_h.gif) repeat-x;
+    background: #00F url(/js_apps/core.apps.layout_columns/images/selection1_h.gif) repeat-x;
 }
 
 .app .admin_bound_l,
 .app .admin_bound_r {
-    background: #00F url(/static/app_settings/selection1_v.gif) repeat-y;
+    background: #00F url(/js_apps/core.apps.layout_columns/images/selection1_v.gif) repeat-y;
 }
 
 .app .admin_bound {
@@ -75,59 +72,57 @@
     background: #00F;
 }
 
+.app .admin_bound_t {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+}
 
-    .app .admin_bound_t {
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 1px;
-    }
+.app .admin_bound_t span {
+    left: 0;
+    top: 0;
+    cursor: nw-resize;
+}
 
-        .app .admin_bound_t span {
-            left: 0;
-            top: 0;
-            cursor: nw-resize;
-        }
+.app .admin_bound_r {
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+}
 
-    .app .admin_bound_r {
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 1px;
-    }
+.app .admin_bound_r span {
+    right: 0;
+    top: 0;
+    cursor: ne-resize;
+}
 
-        .app .admin_bound_r span {
-            right: 0;
-            top: 0;
-            cursor: ne-resize;
-        }
+.app .admin_bound_b {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
 
-    .app .admin_bound_b {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-    }
+.app .admin_bound_b span {
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+}
 
-        .app .admin_bound_b span {
-            right: 0;
-            bottom: 0;
-            cursor: se-resize;
-        }
+.app .admin_bound_l {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+}
 
-    .app .admin_bound_l {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 1px;
-    }
-
-        .app .admin_bound_l span {
-            left: 0;
-            bottom: 0;
-            cursor: sw-resize;
-        }
-
+.app .admin_bound_l span {
+    left: 0;
+    bottom: 0;
+    cursor: sw-resize;
+}
 
 /* app content margin */
 .app .app_css_box {
@@ -148,14 +143,13 @@
 
 .app .admin_margin_t,
 .app .admin_margin_b {
-    background: #F00 url(/static/app_settings/selection2_h.gif) repeat-x;
+    background: #F00 url(/js_apps/core.apps.layout_columns/images/selection2_h.gif) repeat-x;
 }
 
 .app .admin_margin_l,
 .app .admin_margin_r {
-    background: #F00 url(/static/app_settings/selection2_v.gif) repeat-y;
+    background: #F00 url(/js_apps/core.apps.layout_columns/images/selection2_v.gif) repeat-y;
 }
-
 
 .app .admin_margin span {
     background: #F00;
@@ -163,87 +157,83 @@
     height: 6px;
 }
 
+.app .admin_margin_t {
+    left: 1px;
+    top: 1px;
+    right: 1px;
+    height: 1px;
+}
 
-    .app .admin_margin_t {
-        left: 1px;
-        top: 1px;
-        right: 1px;
-        height: 1px;
-    }
+.app .admin_margin_t span {
+    left: 50%;
+    top: 0;
+    cursor: n-resize;
+}
 
-        .app .admin_margin_t span {
-            left: 50%;
-            top: 0;
-            cursor: n-resize;
-        }
+.app .admin_margin_r {
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 1px;
+}
 
-    .app .admin_margin_r {
-        right: 1px;
-        top: 1px;
-        bottom: 1px;
-        width: 1px;
-    }
+.app .admin_margin_r span {
+    right: 0;
+    top: 47%;
+    cursor: e-resize;
+}
 
-        .app .admin_margin_r span {
-            right: 0;
-            top: 47%;
-            cursor: e-resize;
-        }
+.app .admin_margin_b {
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+    height: 1px;
+}
 
-    .app .admin_margin_b {
-        left: 1px;
-        bottom: 1px;
-        right: 1px;
-        height: 1px;
-    }
+.app .admin_margin_b span {
+    left: 50%;
+    bottom: 0;
+    cursor: s-resize;
+}
 
-        .app .admin_margin_b span {
-            left: 50%;
-            bottom: 0;
-            cursor: s-resize;
-        }
+.app .admin_margin_l {
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 1px;
+}
 
-    .app .admin_margin_l {
-        left: 1px;
-        top: 1px;
-        bottom: 1px;
-        width: 1px;
-    }
+.app .admin_margin_l span {
+    left: 0;
+    top: 47%;
+    cursor: w-resize;
+}
 
-        .app .admin_margin_l span {
-            left: 0;
-            top: 47%;
-            cursor: w-resize;
-        }
+.app_gripper_hint {
+    position: absolute;
+    z-index: 100;
+    width: 1px;
+    height: 1px;
+    overflow: visible;
+}
 
-
-    .app_gripper_hint {
-        position: absolute;
-        z-index: 100;
-        width: 1px;
-        height: 1px;
-        overflow: visible;
-    }
-
-
-        .app_gripper_hint div {
-            border: 1px solid #bfcfe9;
-            background: #f3f8fe;
-            color: #000;
-            font: normal 11px Arial;
-            padding: 2px 4px;
-            width: 40px;
-            text-align: center;
-            border-radius: 4px;
-            margin: -8px 0 0 -24px;
-        }
-
+.app_gripper_hint div {
+    border: 1px solid #bfcfe9;
+    background: #f3f8fe;
+    color: #000;
+    font: normal 11px Arial;
+    padding: 2px 4px;
+    width: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin: -8px 0 0 -24px;
+}
 
 .app_outer_overlay {
     position: absolute;
     z-index: 5000;
     background: #000;
-    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
     opacity: 0.3;
 }
 
@@ -267,8 +257,6 @@
     bottom: 0;
 }
 
-
-
 .app_drag_control {
     z-index: 6000;
     position: absolute;
@@ -277,10 +265,10 @@
     overflow: visible;
 }
 
-    .app_drag_control div {
-        margin-left: -36px;
-        width: 73px;
-        height: 26px;
-        background: transparent url(/static/app_admin/drag.png) no-repeat;
-        cursor: move;
-    }
+.app_drag_control div {
+    margin-left: -36px;
+    width: 73px;
+    height: 26px;
+    background: transparent url(/js_apps/core.apps.layout_columns/images/drag.png) no-repeat;
+    cursor: move;
+}

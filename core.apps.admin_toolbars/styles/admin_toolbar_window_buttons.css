@@ -14,131 +14,118 @@
     font: normal 12px Tahoma;
 }
 
+.admin_toolbar_buttons .admin_toolbar_caption {
+    height: 13px;
+    background: transparent url("/js_apps/core.apps.admin_toolbars/images/drag_bg.png");
+    cursor: move;
+    border-bottom: 1px solid #ced1d4;
+}
 
+.admin_toolbar_buttons .admin_toolbar_content {
+}
 
-    .admin_toolbar_buttons .admin_toolbar_caption {
-        height: 13px;
-        background: transparent url("/static/admin_toolbars/drag_bg.png");
-        cursor: move;
-        border-bottom: 1px solid #ced1d4;
-    }
+.admin_toolbar_buttons a:first-child {
+    border: 0;
+}
 
+.admin_toolbar_buttons a:last-child {
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+}
 
-    .admin_toolbar_buttons .admin_toolbar_content {
-    }
+.admin_toolbar_buttons a {
+    display: block;
+    padding: 8px;
+    border-top: 1px solid #bfcfe9;
+    text-decoration: none;
+    position: relative;
+    outline: none;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+}
 
+.admin_toolbar_buttons a:hover {
+    text-decoration: none;
+    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x 0 0;
+}
 
-    .admin_toolbar_buttons a:first-child {
-        border: 0;
-    }
+.admin_toolbar_buttons a:hover .dropdown {
+    display: block;
+}
 
-    .admin_toolbar_buttons a:last-child {
-        border-radius: 0 0 5px 5px;
-        -moz-border-radius: 0 0 5px 5px;
-        -webkit-border-radius: 0 0 5px 5px;
-    }
+.admin_toolbar_buttons a.active,
+.admin_toolbar_buttons a.active:hover {
+    cursor: default;
+    background: url("/js_apps/core.apps.admin_toolbars/images/gradients.png") repeat-x;
+}
 
-    .admin_toolbar_buttons a {
-        display: block;
-        padding: 8px;
-        border-top: 1px solid #bfcfe9;
-        text-decoration: none;
-        position: relative;
-        outline: none;
-        color: #333;
-        text-align: center;
-        font-weight: normal;
-    }
+.admin_toolbar_buttons .disabled,
+.admin_toolbar_buttons .disabled:hover {
+    cursor: default !important;
+    background: transparent;
+}
 
-    .admin_toolbar_buttons a:hover {
-        text-decoration: none;
-        background: url("/static/admin_toolbars/gradients.png") repeat-x 0 0;
-    }
+.admin_toolbar_buttons .disabled span {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
 
-        .admin_toolbar_buttons a:hover .dropdown {
-            display: block;
-        }
+.admin_toolbar_buttons a span {
+    z-index: 10;
+    line-height: 25px;
+}
 
-
-    .admin_toolbar_buttons a.active,
-    .admin_toolbar_buttons a.active:hover {
-        cursor: default;
-        background: url("/static/admin_toolbars/gradients.png") repeat-x;
-    }
-
-
-    .admin_toolbar_buttons .disabled,
-    .admin_toolbar_buttons .disabled:hover {
-        cursor: default !important;
-        background: transparent;
-    }
-
-    .admin_toolbar_buttons .disabled span {
-        opacity: 0.5; 
-        filter: alpha(opacity=50);
-    }
-
-
-
-    .admin_toolbar_buttons a span {
-        z-index: 10;
-        line-height: 25px;
-    }
-
-    .admin_toolbar_buttons a img {
-        border: 0;
-        vertical-align: middle;
-    }
-
+.admin_toolbar_buttons a img {
+    border: 0;
+    vertical-align: middle;
+}
 
 /* drop down */
 
-    .admin_toolbar_buttons .dropdown {
-        display: none;
-        position: absolute;
-        z-index: 10;
-        left: 100%;
-        top: 0;
-        width: 165px;
+.admin_toolbar_buttons .dropdown {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 100%;
+    top: 0;
+    width: 165px;
 
-        background: #e3edfc;
-        border: 1px solid #ced1d4;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-box-shadow: 0 0 8px 2px #ced1d4;
-        -webkit-box-shadow: 0 0 8px 2px #ced1d4;
-        box-shadow: 0 0 8px 2px #ced1d4;
-    }
+    background: #e3edfc;
+    border: 1px solid #ced1d4;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 0 8px 2px #ced1d4;
+    -webkit-box-shadow: 0 0 8px 2px #ced1d4;
+    box-shadow: 0 0 8px 2px #ced1d4;
+}
 
+.admin_toolbar_right_position .dropdown {
+    top: 10px;
+    left: -165px;
+}
 
-    .admin_toolbar_right_position .dropdown {
-        top: 10;
-        left: -165px;
-    }
+.admin_toolbar_buttons .dropdown a {
+    display: block;
+    float: none;
+    border: 0;
+    border-top: 1px solid #adc0e0;
+    overflow: hidden;
+    text-align: left;
+    height: auto;
+}
 
+.admin_toolbar_buttons .dropdown a:first-child {
+    border-top: 0;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+}
 
-
-        .admin_toolbar_buttons .dropdown a {
-            display: block;
-            float: none;
-            border: 0;
-            border-top: 1px solid #adc0e0;
-            overflow: hidden;
-            text-align: left;
-            height: auto;
-        }
-
-
-        .admin_toolbar_buttons .dropdown a:first-child {
-            border-top: 0;
-            border-radius: 5px 5px 0 0;
-            -moz-border-radius: 5px 5px 0 0;
-            -webkit-border-radius: 5px 5px 0 0;
-        }
-
-        .admin_toolbar_buttons .dropdown a:last-child {
-            border-radius: 0 0 5px 5px;
-            -moz-border-radius: 0 0 5px 5px;
-            -webkit-border-radius: 0 0 5px 5px;
-        }
+.admin_toolbar_buttons .dropdown a:last-child {
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+}

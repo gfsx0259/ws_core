@@ -52,7 +52,7 @@
             height: 16px;
             top: 2px;
             right: 2px;
-            background: url(/static/icons/cross.png) no-repeat;
+            background: url(/js_apps/core.apps.files_upload/images/cross.png) no-repeat;
         }
 
         .files_upload .uploaded .cancel_file,
@@ -88,11 +88,11 @@
         }
 
         .files_upload .uploaded .status_img {
-            background: url(/static/icons/accept.png) no-repeat;
+            background: url(/js_apps/core.apps.files_upload/images/accept.png) no-repeat;
         }
 
         .files_upload .error .status_img {
-            background: url(/static/icons/error.png) no-repeat;
+            background: url(/js_apps/core.apps.files_upload/images/error.png) no-repeat;
         }
 
 

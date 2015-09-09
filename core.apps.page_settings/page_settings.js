@@ -1,7 +1,7 @@
 core.apps.page_settings = function() {
 
 
-}
+};
 
 core.apps.page_settings.prototype = {
 
@@ -144,7 +144,7 @@ core.apps.page_settings.prototype = {
 
         desktop.setState("loading");
         var p = {
-            dialog: "pages_manager2",
+            dialog: "pages_manager",
             act: "get_data"
         };
         core.transport.send("/controller.php", p, this.onDataResponse.bind(this));
@@ -561,6 +561,6 @@ core.apps.page_settings.prototype = {
     }
 
 
-}
+};
 core.apps.page_settings.extendPrototype(core.components.html_component);
 core.apps.page_settings.extendPrototype(core.components.popup_app);

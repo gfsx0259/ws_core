@@ -17,7 +17,7 @@ core.apps.site_footer = function(args) {
 
     this.refresh();
 
-}
+};
 
 
 
@@ -74,5 +74,5 @@ core.apps.site_footer.prototype = {
         return "<a href='" + url + "' " + (mi.blank_page == "1" ? "target='_new'" : "") + ">" + t + "</a>"
     }
 
-}
+};
 core.apps.site_footer.extendPrototype(core.components.html_component);

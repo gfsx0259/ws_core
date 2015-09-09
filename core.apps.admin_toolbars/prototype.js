@@ -132,13 +132,13 @@ core.objects.admin_toolbar =  {
         if(this.drag_resize_mode) {
             var pos = {
                 height: this.drag_offset + e.clientY
-            }
+            };
             pos.height = Math.max(0, pos.height);
         } else {
             var pos = {
                 left: this.drag_offset.x + e.clientX,
                 top: this.drag_offset.y + e.clientY
-            }
+            };
             pos.left = Math.max(0, pos.left);
             pos.top = Math.max(0, pos.top);
         }
@@ -174,12 +174,12 @@ core.objects.admin_toolbar =  {
 
     saveState: function() {
         var r = {
-            dialog: "session_data",
+            dialog: "desktop",
             act: "set",
             key: "admin_toolbars_state",
             data: varToString(core.data.admin_toolbars_state)
-        }
+        };
         core.transport.send("/controller.php", r, null, "POST");
     }
 
-}
+};

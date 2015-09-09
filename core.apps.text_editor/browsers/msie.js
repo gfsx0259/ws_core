@@ -13,11 +13,11 @@ if(core.browser.ie) {
             try {
                 if(pdoc.readyState != "complete") {
                     setTimeout(this.initEditor.bind(this), 20);
-                    return ;
+
                 }
             } catch(excp) {
                 setTimeout(this.initEditor.bind(this), 20);
-                return ;
+
             }
         },
 

@@ -91,7 +91,7 @@ core.apps.site_menu = function(args) {
     }
 
 
-}
+};
 
 core.apps.site_menu.extendPrototype({
 

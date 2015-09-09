@@ -5,28 +5,28 @@
     font: normal 12px Tahoma;
 }
 
-    .tabs_bar a,
-    .tabs_bar a:hover {
-        float: left;
-        text-decoration: none;
-        background: transparent url(/static/wsc/tab.png) no-repeat right -60px;
-        margin: 0 4px -1px 0;
-        padding-right: 6px;
-    }
+.tabs_bar a,
+.tabs_bar a:hover {
+    float: left;
+    text-decoration: none;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/tab.png) no-repeat right -60px;
+    margin: 0 4px -1px 0;
+    padding-right: 6px;
+}
 
-        .tabs_bar a span {
-            display: block;
-            padding: 8px 2px 8px 10px;
-            height: 14px;
-            background: transparent url(/static/wsc/tab.png) no-repeat 0 -90px;
-            color: #333;
-        }
+.tabs_bar a span {
+    display: block;
+    padding: 8px 2px 8px 10px;
+    height: 14px;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/tab.png) no-repeat 0 -90px;
+    color: #333;
+}
 
-    .tabs_bar a.active {
-        cursor: default;
-        background-position: right 0;
-    }
+.tabs_bar a.active {
+    cursor: default;
+    background-position: right 0;
+}
 
-        .tabs_bar a.active span {
-            background-position: 0 -30px;
-        }
+.tabs_bar a.active span {
+    background-position: 0 -30px;
+}

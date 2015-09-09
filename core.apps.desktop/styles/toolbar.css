@@ -5,7 +5,7 @@
 
 .toolbar_box {
     padding-right: 5px;
-    background: transparent url(/static/wsc/text.png) no-repeat right top;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/text.png) no-repeat right top;
 }
 
 .toolbar {
@@ -16,116 +16,106 @@
     padding: 1px 0 1px 5px;
     height: 22px;
     z-index: 10000;
-    background: transparent url(/static/wsc/text.png) no-repeat left bottom;
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/text.png) no-repeat left bottom;
 }
 
+.toolbar .disabled {
+    cursor: default !important;
+    color: #BBB !important;
+    background: none !important;
+}
 
-    .toolbar .disabled {
-        cursor: default !important;
-        color: #BBB !important;
-        background: none !important;
-    }
+.toolbar .disabled .sub_menu {
+    display: none !important;
+}
 
-        .toolbar .disabled .sub_menu {
-            display: none !important;
-        }
+.toolbar .disabled img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
 
-        .toolbar .disabled img {
-            opacity: 0.4;
-            filter: alpha(opacity=40);
-        }
+.toolbar div.divider {
+    float: left;
+    height: 20px;
+    width: 2px;
+    margin: 1px;
+}
 
+.toolbar a.item {
+    z-index: 100;
+    position: relative;
+    float: left;
+    padding: 4px 8px;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
 
+.toolbar a.item .sub_menu {
+    display: none;
+}
 
-    .toolbar div.divider {
-        float: left;
-        height: 20px;
-        width: 2px;
-        margin: 1px;
-    }
+.toolbar a.item:hover {
+    background: transparent url(/js_apps/core.apps.desktop/images/wsc/toolbar_active_item_bg.png) repeat-x;
+    margin: 0;
+    color: #333;
+}
 
+.toolbar a.item:hover .sub_menu {
+    display: block;
+}
 
-    .toolbar a.item {
-        z-index: 100;
-        position: relative;
-        float: left;
-        padding: 4px 8px;
-        margin: 0;
-        color: #000;
-        text-decoration: none;
-    }
+.toolbar img {
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin-right: 4px;
+    vertical-align: top;
+}
 
-        .toolbar a.item .sub_menu {
-            display: none;
-        }
+.toolbar .sub_menu {
+    position: absolute;
+    left: -7px;
+    top: 22px;
+    z-index: 1000;
+    width: 203px;
+    overflow: hidden;
+}
 
-    .toolbar a.item:hover {
-        background: transparent url(/static/wsc/toolbar_active_item_bg.png) repeat-x;
-        margin: 0;
-        color: #333;
-    }
+.toolbar .sub_menu .t,
+.toolbar .sub_menu .b {
+    height: 12px;
+    background: transparent url(/static/site_toolbar/popup_tb.png) no-repeat;
+}
 
-        .toolbar a.item:hover .sub_menu {
-            display: block;
-        }
+.toolbar .sub_menu .b {
+    background-position: left bottom;
+}
 
+.toolbar .sub_menu .m {
+    background: transparent url(/static/site_toolbar/popup_m.png) repeat-y;
+    padding: 0 8px;
+}
 
-    .toolbar img {
-        width: 16px;
-        height: 16px;
-        border: none;
-        margin-right: 4px;
-        vertical-align: top;
-    }
+.toolbar .sub_menu .divider {
+    float: none;
+    height: 1px;
+    margin: 4px 0;
+    background: #FFF;
+    font-size: 1px;
+}
 
+.toolbar a.sub_item {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 3px 8px;
+    color: #000;
+    text-decoration: none;
+    border: none;
+}
 
-
-    .toolbar .sub_menu {
-        position: absolute;
-        left: -7px;
-        top: 22px;
-        z-index: 1000;
-        width: 203px;
-        overflow: hidden;
-    }
-
-
-        .toolbar .sub_menu .t,
-        .toolbar .sub_menu .b {        
-            height: 12px;
-            background: transparent url(/static/site_toolbar/popup_tb.png) no-repeat;
-        }
-
-        .toolbar .sub_menu .b {
-            background-position: left bottom;
-        }
-
-        .toolbar .sub_menu .m {
-            background: transparent url(/static/site_toolbar/popup_m.png) repeat-y;
-            padding: 0 8px;
-        }
-
-
-
-        .toolbar .sub_menu .divider {
-            float: none;
-            height: 1px;
-            margin: 4px 0;
-            background: #FFF;
-            font-size: 1px;
-        }
-
-        .toolbar a.sub_item {
-            display: block;
-            width: auto;
-            margin: 0;
-            padding: 3px 8px;
-            color: #000;
-            text-decoration: none;
-            border: none;
-        }
-
-        .toolbar a.sub_item:hover {
-            background: #FFF;
-            color: #000;
-        }
+.toolbar a.sub_item:hover {
+    background: #FFF;
+    color: #000;
+}

@@ -1,4 +1,4 @@
-core.objects.app_move = function(args) {}
+core.objects.app_move = function(args) {};
 
 core.objects.app_move.prototype = {
 
@@ -171,5 +171,5 @@ core.objects.app_move.prototype = {
     },
 
 
-}
+};
 core.objects.app_move.extendPrototype(core.components.html_component);

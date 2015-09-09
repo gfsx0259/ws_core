@@ -14,7 +14,7 @@ if(core.browser.safari) {
                 }
             } catch(e) {
                 setTimeout(this.initEditor.bind(this), 50);
-                return ;
+
             }
         },
 

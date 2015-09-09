@@ -1,4 +1,4 @@
-core.apps.admin_toolbar_theme_fonts = function() {}
+core.apps.admin_toolbar_theme_fonts = function() {};
 
 core.apps.admin_toolbar_theme_fonts.prototype = {
 
@@ -24,7 +24,7 @@ core.apps.admin_toolbar_theme_fonts.prototype = {
             "main-font": this.$["inp_font1"].value.trim(),
             "heading-font": this.$["inp_font2"].value.trim(),
             "fancy-font": this.$["inp_font3"].value.trim()
-        }
+        };
         return res;
     },
 
@@ -41,6 +41,6 @@ core.apps.admin_toolbar_theme_fonts.prototype = {
         this.hideElement("window");
     }
 
-}
+};
 core.apps.admin_toolbar_theme_fonts.extendPrototype(core.objects.admin_toolbar);
 core.apps.admin_toolbar_theme_fonts.extendPrototype(core.components.html_component);

@@ -6,7 +6,7 @@ core.apps.menu = function(args) {
         buttton_text: "Menu"
     }
 
-}
+};
 
 
 core.apps.menu.prototype = {
@@ -203,6 +203,6 @@ core.apps.menu.prototype = {
         this.setElementVisible("mobile_menu", this.mobile_menu_visible);
     }
 
-}
+};
 core.apps.menu.extendPrototype(core.components.html_component);
 core.apps.menu.extendPrototype(core.components.desktop_app);

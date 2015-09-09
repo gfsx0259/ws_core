@@ -1,4 +1,4 @@
-core.apps.list_editor = function() {}
+core.apps.list_editor = function() {};
 
 core.apps.list_editor.prototype = {
 
@@ -67,7 +67,7 @@ core.apps.list_editor.prototype = {
         }
 
         for(var k in this.default_item) {
-            this.$["lbl_item_" + k].innerHTML = d.labels && d.labels[k] ? d.labels[k] : default_labels[k]
+            this.$["lbl_item_" + k].innerHTML = d.labels && d.labels[k] ? d.labels[k] : default_labels[k];
             this.showElement("sec_" + k);
         }
 
@@ -121,7 +121,7 @@ core.apps.list_editor.prototype = {
                 var callbacks = {
                     onselect: this.onItemFileSelected.bind(this),
                     onselect_multiple: this.onItemFileSelectedMultiple.bind(this)
-                }
+                };
                 desktop.openFilesManager(callbacks, this.files_filter);
                 break;
 
@@ -164,7 +164,7 @@ core.apps.list_editor.prototype = {
         this.new_item.doc = {
             id: doc.id,
             content: "content"
-        }
+        };
         this.addNewItem();
 
         this.onAddItemClick();
@@ -466,6 +466,6 @@ core.apps.list_editor.prototype = {
         return res ? res : "#" + (idx + 1);
     }
 
-}
+};
 core.apps.list_editor.extendPrototype(core.components.html_component);
 core.apps.list_editor.extendPrototype(core.components.popup_app);

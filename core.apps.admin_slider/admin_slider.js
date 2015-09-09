@@ -10,7 +10,7 @@ core.apps.admin_slider = function() {
 
     this.updateBoltsPosition();
 
-}
+};
 
 
 core.apps.admin_slider.prototype = {
@@ -96,11 +96,11 @@ core.apps.admin_slider.prototype = {
         core.browser.event.pop();        
         if(this.dragging) {
             var r = {
-                dialog: "session_data",
+                dialog: "desktop",
                 act: "set",
                 key: "admin_slider_pos",
                 data: varToString(core.data.admin_slider_pos)
-            }
+            };
             core.transport.send("/controller.php", r, null, "POST");            
         } else {
             this.toggleSection(name);
@@ -218,7 +218,7 @@ core.apps.admin_slider.prototype = {
 
 
     refresh: function() {
-        if(!this.is_expanded) return
+        if(!this.is_expanded) return;
         if(this.active_section == "styles_catalog") {
             this.content_objects[this.active_section].refresh();
         }
@@ -240,9 +240,9 @@ core.apps.admin_slider.prototype = {
     clearMobileData: function() {
         desktop.setState("loading");
         var p = {
-            dialog: "layout_mode",
+            dialog: "layout_columns",
             act: "clear_mobile_data"
-        }
+        };
         core.transport.send("/controller.php", p, this.onClearMobileDataResponse.bind(this));
     },
 
@@ -264,6 +264,31 @@ core.apps.admin_slider.prototype = {
             this.preview_window.close();
         }
         this.preview_window = window.open(location.href.split("#")[0] + "#preview", "page_preview");
+    },
+
+    onRunImportClick:function(){
+        desktop.setState("loading");
+        var p = {
+            dialog: "import"
+        };
+        core.transport.send("/controller.php", p, this.onRunImportClickResponse.bind(this));
+        return false;
+    },
+
+    onRunImportClickResponse:function(data){
+        desktop.setState("normal");
+        var p = {
+            title: "Import result",
+            message: data,
+            disable_close: true,
+            buttons: [
+                {
+                    title: "Ok",
+                    ok_button: true
+                }
+            ]
+        }
+            desktop.modal_dialog.open(p);
     },
 
     onExitClick: function(e) {
@@ -296,10 +321,10 @@ core.apps.admin_slider.prototype = {
         if(e.target.mode == core.data.layout_mode) return;
         desktop.setState("loading");
         var p = {
-            dialog: "layout_mode",
+            dialog: "layout_columns",
             act: "set",
             mode: e.target.mode
-        }
+        };
         core.transport.send("/controller.php", p, this.onSetLayoutModeResponse.bind(this));        
     },
 
@@ -311,5 +336,5 @@ core.apps.admin_slider.prototype = {
 
 
 
-}
+};
 core.apps.admin_slider.extendPrototype(core.components.html_component);

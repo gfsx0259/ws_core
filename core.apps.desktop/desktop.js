@@ -91,7 +91,7 @@ core.apps.desktop = function(args) {
 //    desktop.openTextsManager();
 
 
-}
+};
 
 
 
@@ -113,8 +113,7 @@ core.apps.desktop.prototype = {
         this.page_comments = core.launcher.run({ appName: "comments", parentElement: this.$["page_comments"]});
         this.page_comments.open(
             { profile: {
-                title: "",
-                sid: core.data.page_id
+                title: ""
               },
               fixed_mode: true,
               parentElement: this.$["page_comments"],
@@ -180,5 +179,5 @@ core.apps.desktop.prototype = {
     }
 
  
-}
+};
 core.apps.desktop.extendPrototype(core.components.html_component);

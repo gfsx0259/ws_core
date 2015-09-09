@@ -12,7 +12,7 @@ core.apps.layout_columns.extendPrototype({
         this.resize_offset = {
             x: e.clientX,
             y: e.clientY
-        }
+        };
 
 
         var resize_cell_idx = this.getAppResizeCellIdx(this.active_app, this.app_resize_dir);

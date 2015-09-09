@@ -1,4 +1,4 @@
-core.apps.themes = function() {}
+core.apps.themes = function() {};
 
 
 core.apps.themes.prototype = {
@@ -27,7 +27,7 @@ core.apps.themes.prototype = {
         var p = {
             dialog: "themes", 
             act: "get_categories"
-        }
+        };
         core.transport.send("/controller.php", p, this.onCategoriesResponce.bind(this));
     },
 
@@ -173,7 +173,7 @@ core.apps.themes.prototype = {
             for(var i=0; i<list.length; i++) {
 
                 if(this.themesType == "custom") {
-                    var thumb_src = "/custom_themes/" + core.data.site_info.user_id + "/" + list[i].name + "/thumb.jpg";
+                    var thumb_src = "/custom_themes/" + list[i].name + "/thumb.jpg";
                     var is_custom = 1;
                 } else {
                     var thumb_src = "/themes/" + list[i].name + "/thumb.jpg";
@@ -230,7 +230,7 @@ core.apps.themes.prototype = {
             act: "set_theme", 
             theme_id: args[0],
             is_custom: args[1]
-        }
+        };
         if(p.is_custom && core.data.site_info.custom_theme_id == args[0]) return;
         if(!core.data.site_info.custom_theme_id && !p.is_custom && core.data.site_info.theme_id == args[0]) return;
         core.transport.send("/controller.php", p, this.onThemeSaved.bind(this));
@@ -264,7 +264,7 @@ core.apps.themes.prototype = {
             dialog: "themes",
             act: "install",
             file: file
-        }
+        };
         core.transport.send("/controller.php", p, this.onThemeInstalled.bind(this));
     },
 
@@ -300,7 +300,7 @@ core.apps.themes.prototype = {
             act: "delete",
             theme_id: theme_id,
             load_list: this.reload_after_delete ? 0 : 1
-        }
+        };
         core.transport.send("/controller.php", p, this.onDeleteResponce.bind(this));
     },
 
@@ -324,7 +324,7 @@ core.apps.themes.prototype = {
     }
 
 
-}
+};
 
 core.apps.themes.extendPrototype(core.components.html_component);
 core.apps.themes.extendPrototype(core.components.popup_app);

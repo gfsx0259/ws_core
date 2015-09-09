@@ -24,7 +24,7 @@ core.objects.app_drag = function(args) {
           ]}
     );
 
-}
+};
 
 
 core.objects.app_drag.prototype = {
@@ -304,7 +304,7 @@ core.objects.app_drag.prototype = {
                 this.showPlaceholder({ parent_el: this.tmp_cell });
                 break;
         }
-        return;
+
     },
 
 
@@ -477,7 +477,7 @@ core.objects.app_drag.prototype = {
             // run new app
             var p = {
                 appName: this.args.app_name
-            }
+            };
 
             switch(mode) {
                 case "before":
@@ -601,7 +601,7 @@ core.objects.app_drag.prototype = {
             el.parentNode.insertBefore(container_el, el);
 
             var w1 = 100 * this.placeholder_size/container_el.offsetWidth + "%",
-                w2 = 100 * (container_el.offsetWidth - this.placeholder_size) / container_el.offsetWidth + "%"
+                w2 = 100 * (container_el.offsetWidth - this.placeholder_size) / container_el.offsetWidth + "%";
             switch(direction) {
                 case "left":
                     container_el.lastChild.appendChild(el);
@@ -611,7 +611,7 @@ core.objects.app_drag.prototype = {
                     container_el.lastChild.style.width = w2; 
 
                     return container_el.firstChild;
-                    break
+                    break;
                 case "right":
                     container_el.firstChild.appendChild(el);
                     container_el.lastChild.style.height = new_cell_height + "px";
@@ -699,5 +699,5 @@ core.objects.app_drag.prototype = {
     }
 
 
-}
+};
 core.objects.app_drag.extendPrototype(core.components.html_component);

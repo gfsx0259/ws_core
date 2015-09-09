@@ -11,7 +11,7 @@ core.objects.text_editor_ex = function(args) {
     this.updateToolbar();
     
 
-}
+};
 
 
 
@@ -255,7 +255,7 @@ core.objects.text_editor_ex.prototype = {
         } else {
             var theme_src = 
                 core.data.site_info.custom_theme ?
-                "/custom_themes/" + core.data.site_info.user_id + "/" + core.data.site_info.custom_theme + "/_editor.css"
+                "/custom_themes/" + core.data.site_info.custom_theme + "/_editor.css"
                 :
                 "/themes/" + core.data.site_info.theme + "-editor.css";
             var theme_html = "<link rel='stylesheet' type='text/css' href='" + theme_src + "'/>";
@@ -1236,5 +1236,5 @@ core.objects.text_editor_ex.prototype = {
         return m;
     }
  
-}
+};
 core.objects.text_editor_ex.extendPrototype(core.components.html_component);

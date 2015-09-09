@@ -67,8 +67,8 @@ core.apps.desktop.extendPrototype({
             dialog: "save_site",
             act: "update_site_logo",
             value: file
-        }
-        core.transport.send("/controller.php", r, this.onSiteLogoUpdated.bind(this), "POST");
+        };
+        core.transport.send("/site.php", r, this.onSiteLogoUpdated.bind(this), "POST");
     },
 
 
@@ -95,7 +95,7 @@ core.apps.desktop.extendPrototype({
         var oThis = this;
         el.onclick = function() {
             oThis.onTitleClick();
-        }
+        };
         this.$["site_title"].appendChild(el);
     },
 
@@ -105,7 +105,7 @@ core.apps.desktop.extendPrototype({
         var oThis = this;
         el.onclick = function() {
             oThis.saveTitle();
-        }
+        };
         this.$["site_title"].appendChild(el);
     },
 
@@ -146,7 +146,7 @@ core.apps.desktop.extendPrototype({
 
         inp.onblur = function() {
             oThis.saveTitle();
-        }
+        };
         this.$["site_title"].appendChild(inp);
 
         this.$["site_title_inp"] = inp;
@@ -178,8 +178,8 @@ core.apps.desktop.extendPrototype({
             title: this.$["site_title_inp"].value,
             subdomain: core.data.site_info.subdomain,
             act: "update_info"
-        }
-        core.transport.send("/controller.php", r, this.onTitleSaved.bind(this), "POST");
+        };
+        core.transport.send("/site.php", r, this.onTitleSaved.bind(this), "POST");
     },
 
     onTitleSaved: function() {

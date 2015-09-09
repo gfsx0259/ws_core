@@ -1,4 +1,4 @@
-core.apps.forms_data = function() {}
+core.apps.forms_data = function() {};
 
 core.apps.forms_data.prototype = {
 
@@ -69,7 +69,7 @@ core.apps.forms_data.prototype = {
             dialog: "forms_manager",
             act: "get_form_data_list",
             form_id: core.values.forms_data_id
-        }
+        };
         core.transport.send("/controller.php", p, this.onListResponce.bind(this));
     },
 
@@ -132,7 +132,7 @@ core.apps.forms_data.prototype = {
             act: "get_form_data_list",
             form_id: core.values.forms_data_id,
             delete_data_id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onListResponce.bind(this));
     },
 
@@ -148,7 +148,7 @@ core.apps.forms_data.prototype = {
             dialog: "forms_manager",
             act: "get_form_data",
             id: id
-        }
+        };
         core.transport.send("/controller.php", p, this.onDataResponce.bind(this));
     },
 
@@ -174,10 +174,9 @@ core.apps.forms_data.prototype = {
         for(var i=0; i<this.files.length; i++) {
             var f = this.files[i];
             files_html.push(
-                "<a target='forms_data_popup_iframe' href='/controller.php?dialog=forms_download_file"+
+                "<a target='forms_data_popup_iframe' href='/controller.php?dialog=file_download"+
                 "&id=" + f.id + 
-                "&_sid=" + core.data.sid + 
-                "'>" + f.name + 
+                "'>" + f.name +
                 "</a>"
             );
         }
@@ -198,7 +197,7 @@ core.apps.forms_data.prototype = {
             act: "send_form_data",
             email: email,
             id: this.form_data_id
-        }
+        };
         core.transport.send("/controller.php", p, this.onSendResponce.bind(this));        
     },
 
@@ -216,6 +215,6 @@ core.apps.forms_data.prototype = {
         }
     }
 
-}
+};
 core.apps.forms_data.extendPrototype(core.components.html_component);
 core.apps.forms_data.extendPrototype(core.components.popup_app);

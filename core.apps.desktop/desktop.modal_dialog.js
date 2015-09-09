@@ -8,7 +8,7 @@ core.apps.desktop.prototype.modal_dialog = {
             buttons: [
                 { title: "Ok", ok_button: true }
             ]
-        }
+        };
         this.open(p);
     },
 
@@ -22,7 +22,7 @@ core.apps.desktop.prototype.modal_dialog = {
                   ok_button: true },
                 { title: "No", callback: callback_no }
             ]
-        }
+        };
         this.open(p);
     },
 
@@ -39,7 +39,7 @@ core.apps.desktop.prototype.modal_dialog = {
                   callback: this.onPromptOkClick.bind(this, callback) },
                 { title: "Cancel" }
             ]
-        }
+        };
         this.open(p);
     },
 
@@ -57,7 +57,7 @@ core.apps.desktop.prototype.modal_dialog = {
                   callback: this.onPromptOkClick.bind(this, callback) },
                 { title: "Cancel" }
             ]
-        }
+        };
         this.open(p);
     },
 
@@ -69,11 +69,11 @@ core.apps.desktop.prototype.modal_dialog = {
             disable_close: true,
             progress_bar: true,
             message: message
-        }
+        };
         this.open(p);
         this.$.message.innerHTML = message;
         var el = this.$.progress_bar.firstChild;
-        percents = percents + "%"
+        percents = percents + "%";
         el.style.width = percents;
         el.innerHTML = percents + "&nbsp;";
     },
@@ -84,7 +84,7 @@ core.apps.desktop.prototype.modal_dialog = {
             disable_close: true,
             progress_bar: false,
             message: 'gif_loader'
-        }
+        };
         this.open(p);
     },
 
@@ -162,7 +162,7 @@ core.apps.desktop.prototype.modal_dialog = {
         this.renderForm();
 
         this.showElements(["overlay", "wrapper"]);
-//        this.$["window"].style.marginTop = -0.5 * this.$["window"].offsetHeight + "px";
+        //this.$["window"].style.marginTop = -0.5 * this.$["window"].offsetHeight + "px";
     },
 
 
@@ -287,5 +287,5 @@ core.apps.desktop.prototype.modal_dialog = {
 
 
 
-}
+};
 extendObject(core.apps.desktop.prototype.modal_dialog, core.components.html_component);
