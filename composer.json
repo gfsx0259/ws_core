@@ -3,7 +3,7 @@
     "description": "core websemble apps composer package",
     "homepage": "http:\/\/websemble.com",
     "license": "MIT",
-   "version": "1.0.9",
+   "version": "1.0.10",
     "support": {
         "email": "konst@generdyn.com"
 	},
