@@ -44,7 +44,8 @@ class dialog_controller_layout_columns extends dialog_controller
                 }
 
                 //necessary to protect the code as a widget can not be installed
-                try{
+                //TODO occurs error
+               /* try{
                     $this->useAppAPI("contact_us/contact_us_emails");
                     $contact_us_emails = $this->json->decode($_REQUEST["contact_us_emails"]);
 
@@ -56,7 +57,7 @@ class dialog_controller_layout_columns extends dialog_controller
                     }
                 }catch (Exception $e){
 
-                }
+                }*/
 
                 break;
 

@@ -150,6 +150,10 @@ core.apps.layout_columns.extendPrototype({
                     break;
 
                 case "app":
+                    if(parent_element.className == 'layout_cell'){
+                        parent_element.className= parent_element.className+' col-xs-12 col-md-6';
+                        parent_element.style.width = '';
+                    }
                     var p = {
                         appName: node.app_name,
                         parentElement: parent_element,

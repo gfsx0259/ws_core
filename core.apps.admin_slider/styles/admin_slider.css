@@ -21,6 +21,7 @@
     float: left;
     width: 32px;
     height: 27px;
+    padding:0;
     margin: 1px;
     background: transparent url("/vendor/generdyn/core/images/header_btns.png") no-repeat 0 0;
     cursor: pointer;

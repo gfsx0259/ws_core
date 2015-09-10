@@ -183,6 +183,8 @@
     top: 0;
     background: transparent url(/vendor/generdyn/core/images/wsc/select.png) no-repeat right top;
     cursor: pointer;
+    border:0!important;/*overwite bootstrap class styles*/
+    padding:0!important;/*overwite bootstrap class styles*/
 }
 
 .wsc_select_list {
