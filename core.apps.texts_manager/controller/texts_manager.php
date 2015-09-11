@@ -2,7 +2,7 @@
 
 class dialog_controller_texts_manager extends dialog_controller
 {
-
+    public $widgetName = 'texts_manager';
     public $appAPIs = ['site_texts'];
 
     var $allowedTags = "<p><span><div><blockquote><h1><h2><h3><h4><h5><h6><ul><li><ol><br><hr><b><u><i><img><a>";

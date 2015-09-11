@@ -114,7 +114,7 @@ core.apps.layout_columns.extendPrototype({
 
     onWindowUnload: function(e) {
         if(!this.isPageSaved) {
-            return "Data saving, please wait.";        
+            return "Data saving, please wait.";
         } else if(desktop.files_uploader.is_uploading) {
             return "File(s) upload in process, please wait.";
         }
@@ -123,7 +123,7 @@ core.apps.layout_columns.extendPrototype({
 
 
     // save page data
-    
+
     savePage: function(skip_history_save_state, need_css_reload) {
         if(core.usertype < USERTYPE_ADMIN) return;
         this.isPageSaved = false;
@@ -173,10 +173,10 @@ core.apps.layout_columns.extendPrototype({
                     var images = app.getUsedImages();
                     if(images) {
                         for(var j=0; j<images.length; j++) {
-                            var img_html = 
-                                "<img src='" + 
+                            var img_html =
+                                "<img src='" +
                                 core.common.getUserFile(images[j].file) +
-                                "' alt='" + 
+                                "' alt='" +
                                 images[j].title.addSlashes() +
                                 "'/>";
                             used_images[img_html] = 1;
@@ -434,23 +434,23 @@ core.apps.layout_columns.extendPrototype({
 
         if(cell.is_row && !cell.childNodes.length) {
             this.buildModel(cell,
-                { tag: "div", 
-                  className: "layout_cells_container",
-                  wid: "container",
-                  childs: [
-                    { tag: "div",
-                      className: "layout_cell",
-                      style: { width: "100%" },
-                      wid: "cell" }
-                  ]}
+                { tag: "div",
+                    className: "layout_cells_container row",
+                    wid: "container",
+                    childs: [
+                        { tag: "div",
+                            className: "layout_cell",
+                            style: { width: "100%" },
+                            wid: "cell" }
+                    ]}
             );
             return;
         }
 
         var container_el = cell.parentNode;
 
-        if(container_el.parentNode.is_row && 
-           container_el.childNodes.length == 1 && 
+        if(container_el.parentNode.is_row &&
+           container_el.childNodes.length == 1 &&
            container_el.parentNode.childNodes.length == 1) return; // last cell in row, we need it
 
 
@@ -491,11 +491,11 @@ core.apps.layout_columns.extendPrototype({
 
         if(!this.$["layout_row_controls_fixed"]) {
             this.buildModel(document.body,
-                { tag: "div", 
+                { tag: "div",
                   className: "layout_row_controls_fixed",
                   id: "resize_controls",
                   childs: [
-                    { tag: "div", 
+                    { tag: "div",
                       className: "row_resize_markers",
                       id: "row_resize_markers" }
                   ]}
