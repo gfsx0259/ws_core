@@ -12,7 +12,7 @@ core.apps.layout_columns.extendPrototype({
 
     apps: {},
     profiles: {},
-    
+
     // apps kernel
 
     getApp: function(id) {
@@ -34,7 +34,7 @@ core.apps.layout_columns.extendPrototype({
         }
         this.apps = [];
     },
-        
+
 
     callApps: function(app_name, function_name) {
         for(var id in this.apps) {
@@ -42,7 +42,7 @@ core.apps.layout_columns.extendPrototype({
             if(app && app.appName == app_name) {
                 app[function_name]();
             }
-        }        
+        }
     },
 
     getFreeAppId: function() {
@@ -102,7 +102,7 @@ core.apps.layout_columns.extendPrototype({
 
                 var data = old_app.getCompatibleData();
                 old_app.close();
-                
+
                 data.theme2_style_id = core.data.theme_default_styles[new_app_name] || 0;
                 new_app.setCompatibleData(data);
 
@@ -125,13 +125,13 @@ core.apps.layout_columns.extendPrototype({
             switch(node.type) {
                 case "container":
                     new_element = this.buildModel(parent_element,
-                        { tag: "div", 
+                        { tag: "div",
                           wid: "container",
                           className: "layout_cells_container" }
                     );
                     if(node.childs.length == 0) {
-                        node.childs = [                
-                            { type: "cell", 
+                        node.childs = [
+                            { type: "cell",
                               width: 100,
                               childs: []}
                         ];
@@ -141,7 +141,7 @@ core.apps.layout_columns.extendPrototype({
 
                 case "cell":
                     new_element = this.buildModel(parent_element,
-                        { tag: "div", 
+                        { tag: "div",
                           wid: "cell",
                           style: { width: node.width + "%" },
                           className: "layout_cell" }
@@ -150,9 +150,12 @@ core.apps.layout_columns.extendPrototype({
                     break;
 
                 case "app":
-                    if(parent_element.className == 'layout_cell'){
-                        parent_element.className= parent_element.className+' col-xs-12 col-md-6';
-                        parent_element.style.width = '';
+                    if(typeof(desktop.layout.profiles[node.id])!='undefined' && typeof(desktop.layout.profiles[node.id].bootstrap)!='undefined'){
+                        var bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
+                        if(parent_element.className == 'layout_cell' && bootstrapClasses){
+                            parent_element.className= parent_element.className+' '+bootstrapClasses;
+                            parent_element.style.width = '';
+                        }
                     }
                     var p = {
                         appName: node.app_name,
