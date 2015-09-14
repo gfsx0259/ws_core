@@ -1,0 +1,3 @@
+[submodule "ws_core"]
+	path = ws_core
+	url = https://kpopopv:tartar777@bitbucket.org/kpopopv/ws_core.git
