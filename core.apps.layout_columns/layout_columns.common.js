@@ -119,7 +119,6 @@ core.apps.layout_columns.extendPrototype({
 
     renderNodes: function(parent_element, nodes_list) {
         if(!nodes_list) return;
-
         for(var i=0; i<nodes_list.length; i++) {
             var node = nodes_list[i];
             switch(node.type) {
@@ -150,17 +149,25 @@ core.apps.layout_columns.extendPrototype({
                     break;
 
                 case "app":
+                    var isTarget = false;
                     if(typeof(desktop.layout.profiles[node.id])!='undefined' && typeof(desktop.layout.profiles[node.id].bootstrap)!='undefined'){
                         var bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
+                        //if app in cell
                         if(parent_element.className == 'layout_cell' && bootstrapClasses){
                             parent_element.className= parent_element.className+' '+bootstrapClasses;
                             parent_element.style.width = '';
+                        }
+                       
+                        //if app without cell
+                        if(parent_element.className.indexOf("layout_row")!=-1){
+                            isTarget = bootstrapClasses;
                         }
                     }
                     var p = {
                         appName: node.app_name,
                         parentElement: parent_element,
-                        id: node.id
+                        id: node.id,
+                        isTarget: isTarget
                     };
                     if(node.childs) {
                         if(node.multiple_childs) {

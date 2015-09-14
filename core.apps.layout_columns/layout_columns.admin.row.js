@@ -73,6 +73,12 @@ core.objects.layout_row.extendPrototype({
 
     render: function() {
         var row_class = "layout_row_box";
+        var row_style = {};
+
+        if(core.data.bootstrap_supported){
+            row_style.clear = 'both';
+        }
+
         if(this.position == 0) {
             row_class += " layout_first_row";
         } else if(this.position == 255) {
@@ -80,7 +86,7 @@ core.objects.layout_row.extendPrototype({
         }
 
 
-        var row_style = {};
+
         if(this.data.style == "background") {
             row_style.background = "url(" + core.common.getUserFile(this.data.background, 1) + ") repeat";
         } else {
