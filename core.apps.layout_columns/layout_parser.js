@@ -50,12 +50,21 @@ core.objects.layout_parser.prototype = {
             }
 
 
-            container_data.childs[i] = {
+            var cell = {
                 type: "cell",
                 width: 100 * (cell_width / container_el.offsetWidth), // formula ;)
+                bootstrap: '',
                 childs: [] 
             };
-            this.parseLayoutCell(cell_el, container_data.childs[i].childs);
+
+            if(cell_el.getAttribute('data-bootstrap')){
+                cell.bootstrap = JSON.parse(cell_el.getAttribute('data-bootstrap'));
+                console.log("set attribute from dom before saving in layout_parser.js");
+            }
+
+            container_data.childs[i] = cell;
+
+                this.parseLayoutCell(cell_el, container_data.childs[i].childs);
         }
         layout.push(container_data);
     },

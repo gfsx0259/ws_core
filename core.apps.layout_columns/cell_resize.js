@@ -30,6 +30,13 @@ core.objects.layout_row.extendPrototype({
             this.resize_markers[i] = this.buildModel(el,
                 { tag: "div", className: "bar",
                   childs: [
+                      { tag: "wsc_button",
+                          title: "Apply bootstrap",
+                          id: 'bootstrapOption_'+i,
+                          events: { onclick: ["onBootstrapSelectChange", i] },
+                          style: { float:"left",  margin: "0 0 0 10px"},
+                          className: 'content-box'
+                },
                     { tag: "div", className: "marker" + c,
                       events: { onmousedown: ["onCellsResizeMouseDown", i] }},
                     { tag: "span",
@@ -167,6 +174,47 @@ core.objects.layout_row.extendPrototype({
     },
 
 
+    onBootstrapSelectChange: function(e,idx){
+        var selects = [];
+        var labels = core.components.desktop_app.bootstrapLabels;
+        var options = core.components.desktop_app.getBootstrapGridOptions();
+
+        for(var i in core.components.desktop_app.bootstrapDevices){
+            var device = core.components.desktop_app.bootstrapDevices[i];
+            selects.push(
+                {name: "bootstrap-" + device + "-option", type: "select",
+                    label: 'Please set specific width for '+labels[i]+' devices',
+                options: options
+            }
+            );
+        }
+
+        desktop.modal_dialog.prompt3(
+            "Bootstrap grid dialog",
+            selects,
+            this.onBootstrapSaveSettings.bind(this, idx)
+
+        );
+    },
+
+    onBootstrapSaveSettings:function(idx){
+        var values = {};
+        for(var i in core.components.desktop_app.bootstrapDevices){
+            var device = core.components.desktop_app.bootstrapDevices[i];
+            values[device] = parseInt($("inp_bootstrap-" + device + "-option").value);
+        }
+
+        for(var i=0; i<this.resize_container.childNodes.length; i++) {
+            var cell = this.resize_container.childNodes[i];
+            if(i == idx) {
+                console.log("set to dom new bootstrap value");
+                cell.setAttribute('data-bootstrap',JSON.stringify(values));
+            }
+        }
+
+        desktop.layout.savePage();
+
+    },
 
     onCellsResizeSetValue: function(e, cell_idx) {
         if(this.resize_container.childNodes.length == 1) return;

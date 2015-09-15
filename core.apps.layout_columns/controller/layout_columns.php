@@ -28,6 +28,9 @@ class dialog_controller_layout_columns extends dialog_controller
 
         switch ($_REQUEST["act"]) {
             case "save_layout":
+                $data = unserialize($_REQUEST['rows_data']);
+                //varp(json_decode($data[0]['data']));
+
                 // set rows data
                 if (get_magic_quotes_gpc()) {
                     $_REQUEST["rows_data"] = stripslashes($_REQUEST["rows_data"]);

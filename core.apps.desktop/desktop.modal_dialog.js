@@ -52,15 +52,32 @@ core.apps.desktop.prototype.modal_dialog = {
             ],
             message: message,
             buttons: [
-                { title: "Ok", 
-                  ok_button: true, 
-                  callback: this.onPromptOkClick.bind(this, callback) },
+                { title: "Ok",
+                    ok_button: true,
+                    callback: this.onPromptOkClick.bind(this, callback) },
                 { title: "Cancel" }
             ]
         };
         this.open(p);
     },
 
+    prompt3: function(title, form, callback) {
+
+        var p = {
+            title: title,
+            form: form,
+            message: "1",
+            labelForSelect: true,
+            buttons: [
+                { title: "Ok",
+                    ok_button: true,
+                    callback: this.onPromptOkClick.bind(this, callback) },
+                { title: "Cancel" }
+            ]
+
+        };
+        this.open(p);
+    },
 
 
     progress: function(title, percents, message) {
@@ -192,10 +209,20 @@ core.apps.desktop.prototype.modal_dialog = {
                 if(fi.label) {
                     m.childs.push({ tag: "label", innerHTML: fi.label });
                 }
-                m.childs.push(
-                    { tag: "wsc_" + fi.type,
-                      id: "inp_" + fi.name }
-                );
+                var input = {
+                    tag: "wsc_" + fi.type,
+                    id: "inp_" + fi.name
+                };
+
+                if(fi.type=='select'){
+                    if(fi.options){
+                        input.options = fi.options;
+                    }
+                }
+
+                    m.childs.push(
+                        input
+                    );
                 this.buildModel(this.$["form"], m);
                 this.setFormElementValue(fi);
             }

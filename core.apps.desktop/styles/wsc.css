@@ -188,7 +188,7 @@
 }
 
 .wsc_select_list {
-    z-index: 32000;
+    z-index: 200001;
     position: absolute;
 }
 
