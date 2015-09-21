@@ -2,6 +2,14 @@
 
 $config["js_apps"]["core.apps.users_manager"] = array(
 
+    'general' => array(
+        'title' => 'Users manager',
+        'name' => 'users_manager',//should be like 3th part of folder
+        'version' => '1.0.0',
+        'category' => CATEGORY_HIDDEN,
+        'description' => ''
+    ),
+
     "content" => array(
         USERTYPE_ADMIN => array(
             "code" => array("users_manager.js"),
