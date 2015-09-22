@@ -324,41 +324,15 @@ class api_forms
     function sendDataByEmail($email, $html, $files, $subject = "Form data", $custom_from_field = false)
     {
         global $config;
-
-        $boundary = "ws_form_email" . md5(time());
-
+        $this->dialog->useApi('site_mailer');
         $email_from = "donotreply@" . $config["domain"];
         if ($custom_from_field) {
             $email_from = $custom_from_field;
         }
 
-        $headers =
-            "From:" . $email_from .
-            "\nMIME-Version: 1.0" .
-            "\nContent-Type: multipart/mixed; boundary=\"$boundary\"";
-
-        $body =
-            "This is a multi-part message in MIME format." .
-            "\n\n--" . $boundary .
-            "\nContent-Type: text/html; charset=\"iso-8859-1\"" .
-            "\nContent-Transfer-Encoding: 7bit" .
-            "\n\n" . $html . "\n";
-
-        for ($i = 0; $i < count($files); $i++) {
-            $file = $files[$i];
-            $sys_name = $config["storage"] . "/" . $file["sys_name"];
-
-            $body .=
-                "\n\n--" . $boundary .
-                "\nContent-Type: application/octet-stream" .
-                "\nContent-Transfer-Encoding: base64" .
-                "\nContent-Disposition: attachment; filename=\"" . $file["name"] . "\"\n\n" .
-                chunk_split(base64_encode(file_get_contents($sys_name)));
-        }
-        $body .= "\n\n--" . $boundary . "--";
-
-        $subject = preg_replace("~[\r\n]~", "", $subject);
-        return mail($email, $subject, $body, $headers);
+        $this->dialog->site_mailer->setSubjectForce($subject);
+        $this->dialog->site_mailer->setBodyForce($html);
+        return $this->dialog->site_mailer->sendWithAttachment($email_from, $email, $files);
     }
 
 }
