@@ -1,0 +1,197 @@
+<tpl name="image_editor">
+
+    <div class="image_editor">
+        <div class="tools" id="tools"></div>
+        <div class="settings" id="settings" style="height: 52px;">
+
+            <div id="msg_need_resize" style="display: none">
+                <div class="settings_ctrl">
+                    Max image size <strong id="max_image_size"></strong>. Please reduce image size first.
+                </div>
+            </div>
+
+            <div id="ctrl_position" style="display: none">
+                <div class="settings_ctrl">
+                    <div class="contol_box w200">
+                        <label>Left</label>
+                        <wsc_text id="inp_left" class="float_left w50"/>
+                        <span>px</span>
+                    </div>
+                    <div class="contol_box w200">
+                        <label>Top</label>
+                        <wsc_text id="inp_top" class="float_left w50"/>
+                        <span>px</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctrl_rect_size" style="display: none">
+                <div class="settings_ctrl">
+                    Original size: <strong id="original_image_size"></strong>.
+                    Resize to: <a events="onclick=setPercentageSize" value="10">10%</a> &#160; &#160;
+                    <a events="onclick=setPercentageSize" value="15">15%</a> &#160; &#160;
+                    <a events="onclick=setPercentageSize" value="25">25%</a> &#160; &#160;
+                    <a events="onclick=setPercentageSize" value="50">50%</a> &#160; &#160;
+                    <a events="onclick=setPercentageSize" value="75">75%</a> | <a events="onclick=setValueSize" value="small">small</a> &#160; &#160;
+                    <a events="onclick=setValueSize" value="medium">medium</a> &#160; &#160;
+                    <a events="onclick=setValueSize" value="big">big</a> 
+
+                </div>
+                <div class="settings_ctrl">
+                    <div class="contol_box w200">
+                        <label>Width </label>
+                        <wsc_text id="inp_width" class="float_left w50"/>
+                        <span>px</span>
+                    </div>
+                    <div class="contol_box w200">
+                        <label style="margin-left: 20px">Height </label>
+                        <wsc_text id="inp_height" class="float_left w50"/>
+                        <span>px</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="ctrl_crop" style="display: none">
+                <div class="settings_ctrl">
+                    <div class="contol_box w200">
+                        <label>Left</label>
+                        <wsc_text id="inp_crop_left" class="float_left w50" events="onblur=processCropForm"/>
+                        <span>px</span>
+                    </div>
+                    <div class="contol_box w200">
+                        <label>Top</label>
+                        <wsc_text id="inp_crop_top" class="float_left w50" events="onblur=processCropForm"/>
+                        <span>px</span>
+                    </div>
+                </div>
+                <div class="settings_ctrl">
+                    <div class="contol_box w200">
+                        <label>Width</label>
+                        <wsc_text id="inp_crop_width" class="float_left w50" events="onblur=processCropForm"/>
+                        <span>px</span>
+                    </div>
+                    <div class="contol_box w200">
+                        <label>Height</label>
+                        <wsc_text id="inp_crop_height" class="float_left w50" events="onblur=processCropForm"/>
+                        <span>px</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ctrl_size" class="settings_ctrl" style="display: none">
+                <label>Size</label>
+                <wsc_text id="inp_size" class="float_left w50"/>
+                <span>px</span>
+            </div>
+
+            <div id="ctrl_color" class="settings_ctrl" style="display: none">
+                <label>Color</label>
+                <div id="inp_color" class="inp_color_preview" events="onclick=showColorPicker"></div>
+                <img src="/static/icons/color_swatch.png" class="btn_color_picker" events="onclick=showColorPicker"/>
+            </div>
+
+            <div id="ctrl_angle" class="settings_ctrl" style="display: none">
+                <label>Angle</label>
+                <wsc_text id="inp_angle" class="float_left w50"/>
+                <span> 
+                degrees &#160; &#160;
+                ( CW: &#160;
+                 <a events="onclick=setAngle" value="90">90&#176;</a> &#160; &#160;
+                 <a events="onclick=setAngle" value="180">180&#176;</a> &#160; &#160;
+                 <a events="onclick=setAngle" value="270">270&#176;</a> &#160; &#160;
+                 CCW: &#160;
+                 <a events="onclick=setAngle" value="-90">90&#176;</a> &#160; &#160;
+                 <a events="onclick=setAngle" value="-180">180&#176;</a> &#160; &#160;
+                 <a events="onclick=setAngle" value="-270">270&#176;</a> 
+                )
+                </span>
+            </div>
+
+            <div id="ctrl_direction_vh" class="settings_ctrl" style="display: none">
+                <label>Direction</label>
+                <wsc_select id="inp_direction_vh" class="float_left w100">
+                    <option value="v">Vertical</option>
+                    <option value="h">Horizontal</option>
+                </wsc_select>
+            </div>
+
+            <div id="ctrl_direction_h" class="settings_ctrl" style="display: none">
+                <label>Direction</label>
+                <wsc_select id="inp_direction_h" class="float_left w150">
+                    <option value="lr">Left to right</option>
+                    <option value="rl">Right to left</option>
+                </wsc_select>
+            </div>
+
+
+            <div id="ctrl_quart_angle" class="settings_ctrl" style="display: none">
+                <label>Angle</label>       
+                <wsc_text id="inp_quart_angle" class="float_left w50"/>
+                <span>
+                degrees &#160; &#160;
+                ( 
+                 <a events="onclick=setQAngle" value="15">15&#176;</a> &#160; &#160;
+                 <a events="onclick=setQAngle" value="30">30&#176;</a> &#160; &#160;
+                 <a events="onclick=setQAngle" value="45">45&#176;</a> &#160; &#160;
+                 <a events="onclick=setQAngle" value="60">60&#176;</a> &#160; &#160;
+                 <a events="onclick=setQAngle" value="75">75&#176;</a>
+                )
+                </span>
+            </div>
+
+            <div id="ctrl_radius" class="settings_ctrl" style="display: none">
+                <label>Radius</label>
+                <wsc_text id="inp_radius" class="float_left w50"/>
+                <span>px</span>
+            </div>
+            
+
+            <wsc_button id="btn_apply_settings" class="btn_apply_settings" events="onclick=onApplyClick" title="Apply"/>
+            <wsc_button id="btn_reset_settings" class="btn_reset_settings" events="onclick=onResetClick" title="Reset"/>
+        </div>
+
+        <div class="preview_panel">
+            <div class="preview_box" id="preview_box">
+                <img id="preview"/>
+                <div id="crop_control" class="crop_control" style="display: none">
+                    <div mode="move" class="crop_bg" events="onmousedown=onCropDragStart"></div>
+
+                    <div class="crop_top"><div mode="top" class="crop_gripper" events="onmousedown=onCropDragStart"></div></div>
+                    <div class="crop_bottom"><div mode="bottom" class="crop_gripper" events="onmousedown=onCropDragStart"></div></div>
+                    <div class="crop_left"><div mode="left" class="crop_gripper" events="onmousedown=onCropDragStart"></div></div>
+                    <div class="crop_right"><div mode="right" class="crop_gripper" events="onmousedown=onCropDragStart"></div></div>
+                </div>
+            </div>
+            <div class="preview_controls">
+                <div class="btn_minus" events="onclick=onZoomOutClick" title="Zoom Out"></div>
+                <div class="zoom_level" id="zoom_value">100%</div>
+                <div class="btn_plus" events="onclick=onZoomInClick" title="Zoom In"></div>
+            </div>
+        </div>
+
+        <div class="messages">
+            <div id="msg_error" class="message_error" style="display: none">Test message</div>
+        </div>
+    </div>
+
+    <div class="popup_buttons"><div class="popup_buttons_wrapper">
+        <div style="height: 24px; width: 560px; float: left;">
+            <label class="float_left w50" style="padding-top: 6px">Save as</label>
+            <wsc_text id="inp_new_file" class="float_left w200"/>
+            <wsc_select id="inp_new_file_type" events="onchange=onFileTypeChanged;onkeyup=onFileTypeChanged;onmouseup=onFileTypeChanged" class="float_left w60">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+            </wsc_select>
+            <wsc_select id="inp_jpg_quality" style="display: none" class="float_left w130" value="85">
+                <option value="60">Low quality</option>
+                <option value="85">Mid quality</option>
+                <option value="100">High quality</option>
+            </wsc_select>
+            <wsc_button id="btn_save" events="onclick=onSaveClick" title="Save" class="float_left"/>
+        </div>
+        <wsc_button class="float_right" events="onclick=onCloseClick" title="Cancel"/>
+    </div></div>
+
+</tpl>
