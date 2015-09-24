@@ -121,7 +121,6 @@ core.objects.app_drag.prototype = {
                     break;
                 }                                     
             }
-            icon = "/static/app_icons/" + icon;
         }
         this.$["drag_container"].innerHTML = 
             "<div class='app_thumb_box'>" +
