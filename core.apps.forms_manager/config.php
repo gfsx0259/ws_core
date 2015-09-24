@@ -14,7 +14,7 @@ $config["js_apps"]["core.apps.forms_manager"] = array(
             'form_builder',
             'form_select',
             'forms_data',
-            'captcha'
+          //  'captcha'
         ]
     ),
 
