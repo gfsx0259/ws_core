@@ -5,7 +5,7 @@ class dialog_controller_pages_manager extends dialog_controller
 
     public $appAPIs = [
         'menu/site_menu',
-        'comments/comments',
+        //'comments/comments',
         'texts_manager/site_texts',
         'layout_columns/layout_rows'
     ];
