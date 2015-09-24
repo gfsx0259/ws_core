@@ -10,10 +10,10 @@ $config["js_apps"]["core.apps.menu"] = array(
         'category' => CATEGORY_NAVIGATE,
         'description' => '',
         'depends' => [
-            'ecommerce',
-            'ecommerce_product',
-            'ecommerce_category',
-            'ecommerce_brands_menu'
+           // 'ecommerce',
+          //  'ecommerce_product',
+          //  'ecommerce_category',
+           // 'ecommerce_brands_menu'
         ]
     ),
 

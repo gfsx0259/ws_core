@@ -36,7 +36,7 @@ class dialog_controller_image_editor extends dialog_controller
 
         $act = $_REQUEST["act"];
 
-        $tmp_dir = "var/image_editor/" . "/";
+        $tmp_dir = "var/image_editor/";
 
         // save file, delete tmp actions
         switch ($act) {
