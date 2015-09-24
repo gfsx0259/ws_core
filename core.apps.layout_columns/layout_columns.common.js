@@ -119,7 +119,6 @@ core.apps.layout_columns.extendPrototype({
 
     renderNodes: function(parent_element, nodes_list) {
         if(!nodes_list) return;
-
         for(var i=0; i<nodes_list.length; i++) {
             var node = nodes_list[i];
             switch(node.type) {
@@ -133,6 +132,7 @@ core.apps.layout_columns.extendPrototype({
                         node.childs = [
                             { type: "cell",
                               width: 100,
+                                bootstrap: node.bootstrap,
                               childs: []}
                         ];
                     }
@@ -140,27 +140,49 @@ core.apps.layout_columns.extendPrototype({
                     break;
 
                 case "cell":
+                    var cell = {
+                        tag: "div",
+                        wid: "cell",
+                        id: "target_cell",
+                        style: { width: node.width + "%" },
+                        className: "layout_cell"
+                    };
+
+                    if(node.bootstrap instanceof Object){
+                        console.log("isObject!!!");
+                        cell.data_bootstrap = JSON.stringify(node.bootstrap);
+                        cell.className= cell.className+' '+core.components.desktop_app.getBootstrapClasses(node.bootstrap);
+                        cell.style.width = '';
+                    }
+
                     new_element = this.buildModel(parent_element,
-                        { tag: "div",
-                          wid: "cell",
-                          style: { width: node.width + "%" },
-                          className: "layout_cell" }
+                        cell
                     );
                     this.renderNodes(new_element, node.childs);
                     break;
 
                 case "app":
+                    var isTarget = false;
                     if(typeof(desktop.layout.profiles[node.id])!='undefined' && typeof(desktop.layout.profiles[node.id].bootstrap)!='undefined'){
                         var bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
+                        // TODO need apply bootstrap options to apps and cell correctly
+                        // if app in cell
                         if(parent_element.className == 'layout_cell' && bootstrapClasses){
-                            parent_element.className= parent_element.className+' '+bootstrapClasses;
-                            parent_element.style.width = '';
+                          //  parent_element.className= parent_element.className+' '+bootstrapClasses;
+                           // parent_element.style.width = '';
                         }
+                 //       console.log(parent_elementparent_element.length,parent_element.className.indexOf("layout_row"));
+                        //if app without cell
+                       // if(parent_element.length && parent_element.className.indexOf("layout_row")!=-1){
+                         //   isTarget = bootstrapClasses;
+                      //  }
                     }
+
                     var p = {
                         appName: node.app_name,
                         parentElement: parent_element,
-                        id: node.id
+                        id: node.id,
+                        isTarget: isTarget
                     };
                     if(node.childs) {
                         if(node.multiple_childs) {

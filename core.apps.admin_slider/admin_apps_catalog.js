@@ -79,7 +79,7 @@ core.objects.admin_apps_catalog.prototype = {
             if (a.category_id != category_id) continue;
             var iconHtml = '';
             if (a.icon && a.icon != '') {
-                iconHtml = "<img src='/js_apps/core.apps." + a.name + "/icon.png' /></div>";
+                iconHtml = "<img src='" + a.icon + ".png' /></div>";
             } else {
                 iconHtml = "<img src='/static/app_icons/default.png'/></div>";
             }
