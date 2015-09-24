@@ -8,7 +8,7 @@ $config["js_apps"]["core.apps.files_manager"] = array(
         'version' => '1.0.0',
         'category' => CATEGORY_HIDDEN,
         'depends' => [
-            'dialog_prompt'
+           // 'dialog_prompt'
         ]
     ),
 

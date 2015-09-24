@@ -3,8 +3,8 @@
 class dialog_controller_files_manager extends dialog_controller
 {
 
-    public $widgetName = 'files_manager';
 
+    public $widgetName = 'files_manager';
     public $appAPIs = [
         'filesmanager_search',
         "image_editor/images"
