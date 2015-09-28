@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.menu2"] = array(
         'title' => 'Site menu v2',
         'name' => 'menu2',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_NAVIGATE,
         'description' => '',
         'depends' => [

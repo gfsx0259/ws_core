@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.form"] = array(
         'title' => 'Form',
         'name' => 'form',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_FORMS,
         'description' => '',
         'depends'=>[

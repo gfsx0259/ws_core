@@ -5,7 +5,6 @@ $config["js_apps"]["core.apps.baloon_tooltips"] = array(
         'title' => 'Baloon tooltips',
         'name' => 'baloon_tooltips',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_HIDDEN,
         'description' => ''
     ),

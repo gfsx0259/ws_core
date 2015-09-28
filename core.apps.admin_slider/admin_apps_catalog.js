@@ -78,10 +78,12 @@ core.objects.admin_apps_catalog.prototype = {
             a = core.data.apps_list[i];
             if (a.category_id != category_id) continue;
             var iconHtml = '';
+            console.log(a);
             if (a.icon && a.icon != '') {
-                iconHtml = "<img src='" + a.icon + ".png' /></div>";
+                iconHtml = "<img src='/" + a.icon+".png' /></div>";
             } else {
-                iconHtml = "<img src='/static/app_icons/default.png'/></div>";
+                iconHtml = "<img src='" + '/vendor/'+a.vendor+'/'+ a.package +'/core.apps.'+ a.name +"/icon"+".png' /></div>";
+                //iconHtml = "<img src='/static/app_icons/default.png'/></div>";
             }
             m.push(
                 {

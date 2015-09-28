@@ -6,7 +6,6 @@ $config["js_apps"]["core.apps.files_upload"] = array(
         'title' => 'Files upload',
         'name' => 'files_upload',//should be like 3th part of folder
         'version' => '1.0.0',
-        'icon' => 'icon.png',
         'category' => CATEGORY_HIDDEN,
         'description' => '',
         'depends'=>[
