@@ -36,7 +36,7 @@
         top: 2px;
         width: 32px;
         height: 32px;
-        background: transparent url(/static/app_settings/drag_controls.png) no-repeat;
+        background: transparent url(/vendor/generdyn/core/images/app_settings/drag_controls.png) no-repeat;
         z-index: 10;
     }
 
@@ -93,7 +93,7 @@
     width: 116px;
     height: 72px;
     text-align: center;
-    background: transparent url("/static/admin_slider/app_thumb.png") no-repeat 0 0;
+    background: transparent url("/vendor/generdyn/core/images/app_thumb.png") no-repeat 0 0;
     padding-top: 4px;
 }
 
