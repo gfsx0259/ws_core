@@ -54,22 +54,26 @@ class api_images
     function removeThumb($file){
         global $config;
         //remove thumbs
-        $this->dialog->useAppAPI("ecommerce/ecommerce");
-        $dir = $config["storage"].$this->dialog->site_info["id"]."/";
-        $ecommerce_settings = $this->dialog->ecommerce->generalReadSettings($this->dialog->site_info["id"]);
-        foreach(array('list','grid') as $mode){
-            if($mode == 'list'){
-                $width = $ecommerce_settings['widget_list_size_w'];
-                $height = $ecommerce_settings['widget_list_size_h'];
-            }else{
-                $width = $ecommerce_settings['widget_grid_size_w'];
-                $height = $ecommerce_settings['widget_grid_size_h'];
+        $this->dialog->useAppAPI("ecommerce_manager/ecommerce");
+
+         if(method_exists($this->dialog->ecommerce,'generalReadSettings')){
+                $dir = $config["storage"];
+                $ecommerce_settings = $this->dialog->ecommerce->generalReadSettings();
+                foreach(array('list','grid') as $mode){
+                    if($mode == 'list'){
+                        $width = $ecommerce_settings['widget_list_size_w'];
+                        $height = $ecommerce_settings['widget_list_size_h'];
+                    }else{
+                        $width = $ecommerce_settings['widget_grid_size_w'];
+                        $height = $ecommerce_settings['widget_grid_size_h'];
+                    }
+                    $newPath = $dir . $width . 'x' . $height;
+                    $newFullPath = $newPath . '/' . $file;
+                    if (file_exists($newFullPath)) {
+                        @unlink($newFullPath);
+                    }
+                }
             }
-            $newPath = $dir . $width . 'x' . $height;
-            $newFullPath = $newPath . '/' . $file;
-            if (file_exists($newFullPath)) {
-                @unlink($newFullPath);
-            }
-        }
     }
+
 }
