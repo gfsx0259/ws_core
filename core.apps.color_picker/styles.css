@@ -24,12 +24,12 @@
 }
 
 .color_picker .map .colors {
-    background: url("/js_apps/core.apps.color_picker/images/map_colors.png") no-repeat;
+    background: url("/vendor/generdyn/core/core.apps.color_picker/images/map_colors.png") no-repeat;
 }
 
 .color_picker .map .overlay {
     z-index: 20;
-    background: transparent url("/js_apps/core.apps.color_picker/images/map_overlay.png") no-repeat;
+    background: transparent url("/vendor/generdyn/core/core.apps.color_picker/images/map_overlay.png") no-repeat;
 }
 
 .color_picker .map .cursor {
@@ -37,7 +37,7 @@
     z-index: 30;
     width: 16px;
     height: 16px;
-    background: transparent url("/js_apps/core.apps.color_picker/images/map_cursor.png") no-repeat;
+    background: transparent url("/vendor/generdyn/core/core.apps.color_picker/images/map_cursor.png") no-repeat;
 }
 
 .color_picker .bar {
@@ -56,7 +56,7 @@
     top: 0;
     width: 20px;
     height: 256px;
-    background: transparent url("/js_apps/core.apps.color_picker/images/bar_overlay.png") no-repeat;
+    background: transparent url("/vendor/generdyn/core/core.apps.color_picker/images/bar_overlay.png") no-repeat;
 }
 
 .color_picker .bar .cursor {
@@ -66,7 +66,7 @@
     height: 9px;
     top: 0;
     left: -10px;
-    background: transparent url("/js_apps/core.apps.color_picker/images/bar_cursor.png") no-repeat;
+    background: transparent url("/vendor/generdyn/core/core.apps.color_picker/images/bar_cursor.png") no-repeat;
 }
 
 .color_picker .controls {
