@@ -1,0 +1,62 @@
+<tpl name="color_picker">
+    <div class="color_picker">
+        <div id="map" class="map" events="onmousedown=onMapDragStart">
+            <div id="map_colors" class="colors"/>
+            <div id="map_cursor" class="cursor"></div>
+        </div>
+
+        <div id="bar" class="bar" events="onmousedown=onBarStartDrag">
+            <div id="bar_overlay" class="overlay"/>
+            <div id="bar_cursor" class="cursor"></div>
+        </div>
+
+        <div class="controls">
+            <div class="controls_block">
+                <div id="preview" class="preview"></div>
+            </div>
+
+            <div class="inputs">
+                <div class="inputs_column1">
+                    <div class="input_box">
+                        <label>H</label>
+                        <input type="text" id="inp_hsv_h" readonly="1"/>&#176;
+                    </div>
+                    <div class="input_box">
+                        <label>S</label>
+                        <input type="text" id="inp_hsv_s" readonly="1"/>%
+                    </div>
+                    <div class="input_box">
+                        <label>B</label>
+                        <input type="text" id="inp_hsv_v" readonly="1"/>%
+                    </div>
+                </div>
+
+                <div class="inputs_column2">
+                    <div class="input_box">
+                        <label>R</label>
+                        <input type="text" id="inp_rgb_r" readonly="1"/>
+                    </div>
+                    <div class="input_box">
+                        <label>G</label>
+                        <input type="text" id="inp_rgb_g" readonly="1"/>
+                    </div>
+                    <div class="input_box">
+                        <label>B</label>
+                        <input type="text" id="inp_rgb_b" readonly="1"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inputs">
+                <label>#</label>
+                <input type="text" id="inp_hex" style="width: 90px" events="onkeyup=onHexChange;onmouseup=onHexChange"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup_buttons">
+        <div class="popup_buttons_wrapper">
+            <wsc_button class="float_right" title="Ok" events="onclick=onPopupOkClick"/>
+        </div>
+    </div>
+</tpl>

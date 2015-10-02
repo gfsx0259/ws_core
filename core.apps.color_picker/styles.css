@@ -1,0 +1,114 @@
+.color_picker {
+    width: 445px;
+    height: 258px;
+    padding: 20px;
+    z-index: 35000;
+}
+
+.color_picker .map {
+    position: relative;
+    float: left;
+    width: 256px;
+    height: 256px;
+    border: 1px solid #000;
+}
+
+.color_picker .map .colors,
+.color_picker .map .overlay {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    width: 256px;
+    height: 256px;
+}
+
+.color_picker .map .colors {
+    background: url("/js_apps/core.apps.color_picker/images/map_colors.png") no-repeat;
+}
+
+.color_picker .map .overlay {
+    z-index: 20;
+    background: transparent url("/js_apps/core.apps.color_picker/images/map_overlay.png") no-repeat;
+}
+
+.color_picker .map .cursor {
+    position: absolute;
+    z-index: 30;
+    width: 16px;
+    height: 16px;
+    background: transparent url("/js_apps/core.apps.color_picker/images/map_cursor.png") no-repeat;
+}
+
+.color_picker .bar {
+    position: relative;
+    float: left;
+    width: 20px;
+    height: 256px;
+    margin-left: 20px;
+    border: 1px solid #000;
+}
+
+.color_picker .bar .overlay {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 256px;
+    background: transparent url("/js_apps/core.apps.color_picker/images/bar_overlay.png") no-repeat;
+}
+
+.color_picker .bar .cursor {
+    position: absolute;
+    z-index: 30;
+    width: 40px;
+    height: 9px;
+    top: 0;
+    left: -10px;
+    background: transparent url("/js_apps/core.apps.color_picker/images/bar_cursor.png") no-repeat;
+}
+
+.color_picker .controls {
+    float: left;
+    width: 125px;
+    margin-left: 20px;
+}
+
+.color_picker .preview {
+    width: 124px;
+    height: 105px;
+    border: 1px solid #000;
+    background: blue;
+}
+
+.color_picker .inputs {
+    width: 130px;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 30px;
+}
+
+.color_picker .inputs_column1 {
+    float: left;
+    width: 80px;
+}
+
+.color_picker .inputs_column2 {
+    float: left;
+    width: 50px;
+}
+
+.color_picker .input_box {
+    height: 23px;
+}
+
+.color_picker .inputs label {
+    float: left;
+    width: 12px;
+    margin-top: 4px;
+}
+
+.color_picker .inputs input {
+    width: 30px;
+}
