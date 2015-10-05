@@ -10,7 +10,6 @@ $config["js_apps"]["core.apps.form"] = array(
         'description' => '',
         'depends'=>[
             'forms_manager',
-            'form',
             'form_builder',
             'form_select',
             'forms_data'
