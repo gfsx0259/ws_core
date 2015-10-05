@@ -105,7 +105,7 @@ core.apps.forms_data.prototype = {
                     { tag: "td", 
                       className: "ta_center last",
                       childs: [
-                        { tag: "img", src: "/static/icons/page_edit.png",
+                        { tag: "img", src: "/vendor/generdyn/core/images/page_edit.png",
                           className: "icon",
                           events: { onclick: [ "onViewDataClick", f.id ] },
                           title: " View " },

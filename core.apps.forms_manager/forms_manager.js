@@ -137,15 +137,15 @@ core.apps.forms_manager.prototype = {
                     { tag: "td", 
                       className: "ta_center last",
                       childs: [
-                        { tag: "img", src: "/static/icons/list.png",
+                        { tag: "img", src: "/vendor/generdyn/core/images/list.png",
                           className: "icon",
                           events: { onclick: [ "onViewFormDataClick", i ] },
                           title: " View submitted data " },
-                        { tag: "img", src: "/static/icons/page_edit.png",
+                        { tag: "img", src: "/vendor/generdyn/core/images/page_edit.png",
                           className: "icon",
                           events: { onclick: [ "onEditFormClick", f.id ] },
                           title: " Edit form " },
-                        { tag: "img", src: "/static/icons/cross.png",
+                        { tag: "img", src: "/vendor/generdyn/core/images/cross.png",
                           className: "icon",
                           events: { onclick: [ "onRemoveFormClick", f.id ] },
                           title: " Delete form " }
@@ -215,7 +215,7 @@ core.apps.forms_manager.prototype = {
                     { tag: "td", 
                       className: "ta_center last",
                       childs: [
-                        { tag: "img", src: "/static/icons/page_edit.png",
+                        { tag: "img", src: "/vendor/generdyn/core/images/page_edit.png",
                           className: "icon",
                           events: { onclick: [ "onOpenTemplateClick", f.id ] },
                           title: " Open this template " }
