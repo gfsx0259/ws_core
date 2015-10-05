@@ -198,6 +198,9 @@ class dialog_controller_styles_manager extends dialog_controller
         );
         if ($p["key"]) {
             $res = $this->css_styles->getList($p);
+            foreach($res as $k => $v) {
+                $res[$k]["is_admin_style"] = $v["user_id"] == $config["websemble_admin_id"] ? 1 : 0;
+            }
         }
         return $res;
     }
