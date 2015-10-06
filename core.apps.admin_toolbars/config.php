@@ -40,7 +40,6 @@ $config["js_apps"]["core.apps.admin_toolbars"] = array(
                 "templates/admin_toolbar_window_buttons.xml",
                 "templates/admin_toolbar_window_list.xml",
                 "templates/admin_toolbar_menu.xml",
-                "../../ecommerce/core.apps.ecommerce/templates/admin_toolbar_menu_ecommerce.xml",//path to ecommerce widget
                 "templates/admin_toolbar_app_settings.xml",
                 "templates/admin_toolbar_obj_settings.xml",
                 "templates/admin_toolbar_text_editor.xml",
@@ -48,6 +47,16 @@ $config["js_apps"]["core.apps.admin_toolbars"] = array(
                 "templates/admin_toolbar_pages_list_controls.xml",
                 "templates/admin_toolbar_theme_colors.xml",
                 "templates/admin_toolbar_theme_fonts.xml"
+            ),
+            "external_templates" => array(
+                 array(
+                    'name' => 'events_manager',
+                    'template' => 'admin_toolbar_menu_events_manager.xml'
+                ),
+                array(
+                    'name' => 'ecommerce',
+                    'template' => 'admin_toolbar_menu_ecommerce.xml'
+                )
             )
         )
     )

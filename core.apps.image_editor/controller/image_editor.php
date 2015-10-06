@@ -46,7 +46,7 @@ class dialog_controller_image_editor extends dialog_controller
                 $tmp_file = $tmp_dir . str_replace("..", "", $_REQUEST["tmp_file"]);
                 $quality = (int)$_REQUEST["quality"];
 
-                $ufile = $config["storage"] . "/" . $new_file;
+                $ufile = $config["storage"] . $new_file;
 
                 if (file_exists($ufile)) {
                     @unlink($ufile);
@@ -72,7 +72,7 @@ class dialog_controller_image_editor extends dialog_controller
 
 
         // file names for other actions
-        $dir = $config["storage"].$this->sid."/";
+        $dir = $config["storage"];
         if (isset($_REQUEST["file"])) {
             $isOriginal = true;
             $file_name = str_replace("..", "", $_REQUEST["file"]);

@@ -5,7 +5,7 @@
         <a events="onclick=openFilesManager"><img src="/static/icons/folder_explore.png"/>My Files Manager</a>
         <a events="onclick=showUsersManager"><img src="/static/icons/users.png"/>Users Manager</a>
         <a events="onclick=showFormsManager"><img src="/static/icons/application_form.png"/>Forms Manager</a>
-        <a events="onclick=showEventsManager"><img src="/static/icons/calendar.png"/>Events Manager</a>
+        <include tpl="admin_toolbar_menu_events_manager"/>
         <include tpl="admin_toolbar_menu_ecommerce"/>
     </div>
 </tpl>
