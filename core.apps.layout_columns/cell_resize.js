@@ -30,20 +30,18 @@ core.objects.layout_row.extendPrototype({
             this.resize_markers[i] = this.buildModel(el,
                 { tag: "div", className: "bar",
                   childs: [
-                      { tag: "wsc_button",
-                          title: "Apply bootstrap",
+                      { tag: "span",
                           id: 'bootstrapOption_'+i,
                           events: { onclick: ["onBootstrapSelectChange", i] },
-                          style: { float:"left",  margin: "0 0 0 10px"},
-                          className: 'content-box'
-                },
+                          style: { float:"left",  margin: "0 0 0 10px",'font-size':"16px"},
+                          className: 'glyphicon glyphicon-edit bootstrap-dialog-icon'
+                      },
                     { tag: "div", className: "marker" + c,
                       events: { onmousedown: ["onCellsResizeMouseDown", i] }},
                     { tag: "span",
                       events: { onclick: ["onCellsResizeSetValue", i] }},
 
                   ]}
-//                  innerHTML: "<div class='marker'></div><span></span>" }
             );
         }
 
@@ -175,6 +173,10 @@ core.objects.layout_row.extendPrototype({
 
 
     onBootstrapSelectChange: function(e,idx){
+
+        var cellElement = this.resize_container.childNodes[idx];
+        var bootstrapData = JSON.parse(cellElement.getAttribute('data-bootstrap'));
+
         var selects = [];
         var labels = core.components.desktop_app.bootstrapLabels;
         var options = core.components.desktop_app.getBootstrapGridOptions();
@@ -183,6 +185,7 @@ core.objects.layout_row.extendPrototype({
             var device = core.components.desktop_app.bootstrapDevices[i];
             selects.push(
                 {name: "bootstrap-" + device + "-option", type: "select",
+                    value: bootstrapData[device],
                     label: 'Please set specific width for '+labels[i]+' devices',
                 options: options
             }
@@ -193,7 +196,6 @@ core.objects.layout_row.extendPrototype({
             "Bootstrap grid dialog",
             selects,
             this.onBootstrapSaveSettings.bind(this, idx)
-
         );
     },
 
@@ -204,13 +206,19 @@ core.objects.layout_row.extendPrototype({
             values[device] = parseInt($("inp_bootstrap-" + device + "-option").value);
         }
 
-        for(var i=0; i<this.resize_container.childNodes.length; i++) {
-            var cell = this.resize_container.childNodes[i];
-            if(i == idx) {
+            var cell = this.resize_container.childNodes[idx];
                 console.log("set to dom new bootstrap value");
                 cell.setAttribute('data-bootstrap',JSON.stringify(values));
+
+        var classes = cell.className.split(' ');
+        for(var i in classes){
+            if(classes[i].indexOf('col-')!=-1){
+                delete classes[i];
             }
         }
+
+        var bootstrapClasses = core.components.desktop_app.getBootstrapClasses(values);
+        cell.className = classes.concat(bootstrapClasses).join(" ");
 
         desktop.layout.savePage();
 

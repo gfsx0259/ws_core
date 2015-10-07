@@ -1,8 +1,11 @@
 <tpl name="admin_app_controls">
     <div class="admin_overlay" id="admin_overlay" events="onclick=onAdminOverlayClick;ondblclick=onAdminOverlayDblClick">
+        <div id="overlay_hints" class="overlay_hints">
+            <div class="parentElement"  id="parentElement"></div>
+            <div class="devicesList" id="devicesList"></div>
+        </div>
         <div id="overlay_hover" class="overlay_hover"></div>
         <div id="overlay_drag" class="overlay_drag"></div>
-
         <div class="drag_control"></div>
     </div>
     

@@ -143,14 +143,12 @@ core.apps.layout_columns.extendPrototype({
                     var cell = {
                         tag: "div",
                         wid: "cell",
-                        id: "target_cell",
                         style: { width: node.width + "%" },
                         className: "layout_cell"
                     };
 
                     if(node.bootstrap instanceof Object){
-                        console.log("isObject!!!");
-                        cell.data_bootstrap = JSON.stringify(node.bootstrap);
+                        cell.data_bootstrap = node.bootstrap;
                         cell.className= cell.className+' '+core.components.desktop_app.getBootstrapClasses(node.bootstrap);
                         cell.style.width = '';
                     }
@@ -162,27 +160,16 @@ core.apps.layout_columns.extendPrototype({
                     break;
 
                 case "app":
-                    var isTarget = false;
+                    var bootstrapClasses = false;
                     if(typeof(desktop.layout.profiles[node.id])!='undefined' && typeof(desktop.layout.profiles[node.id].bootstrap)!='undefined'){
-                        var bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
-                        // TODO need apply bootstrap options to apps and cell correctly
-                        // if app in cell
-                        if(parent_element.className == 'layout_cell' && bootstrapClasses){
-                          //  parent_element.className= parent_element.className+' '+bootstrapClasses;
-                           // parent_element.style.width = '';
-                        }
-                 //       console.log(parent_elementparent_element.length,parent_element.className.indexOf("layout_row"));
-                        //if app without cell
-                       // if(parent_element.length && parent_element.className.indexOf("layout_row")!=-1){
-                         //   isTarget = bootstrapClasses;
-                      //  }
+                        bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
                     }
 
                     var p = {
                         appName: node.app_name,
                         parentElement: parent_element,
                         id: node.id,
-                        isTarget: isTarget
+                        isTarget: bootstrapClasses
                     };
                     if(node.childs) {
                         if(node.multiple_childs) {

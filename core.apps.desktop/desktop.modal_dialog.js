@@ -66,7 +66,6 @@ core.apps.desktop.prototype.modal_dialog = {
         var p = {
             title: title,
             form: form,
-            message: "1",
             labelForSelect: true,
             buttons: [
                 { title: "Ok",
