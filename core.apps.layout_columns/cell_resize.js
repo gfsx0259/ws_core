@@ -183,9 +183,13 @@ core.objects.layout_row.extendPrototype({
 
         for(var i in core.components.desktop_app.bootstrapDevices){
             var device = core.components.desktop_app.bootstrapDevices[i];
+            var value = 0;
+            if(bootstrapData && typeof(bootstrapData[device])!='undefined'){
+                value = bootstrapData[device];
+            }
             selects.push(
                 {name: "bootstrap-" + device + "-option", type: "select",
-                    value: bootstrapData[device],
+                    value: value,
                     label: 'Please set specific width for '+labels[i]+' devices',
                 options: options
             }
