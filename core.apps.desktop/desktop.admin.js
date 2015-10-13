@@ -17,7 +17,9 @@ core.apps.desktop.extendPrototype({
 
         if(!core.values.is_page_preview) {
             this.admin_slider = new core.apps.admin_slider();
-            this.admin_toolbars = new core.apps.admin_toolbars();
+            if(typeof(core.apps.admin_toolbars)!='undefined'){
+                this.admin_toolbars = new core.apps.admin_toolbars();
+            }
         }
 
         this.initPopupApps(this.autorun_popups);

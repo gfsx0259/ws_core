@@ -323,6 +323,9 @@ class api_site_menu
         } else if ($type != "external") {
             $url = "/" . $url;
         }
+        if($_COOKIE['is_mobile_viewer']){
+            return $url."#mobile";
+        }
         return $url;
     }
 

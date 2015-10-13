@@ -126,8 +126,9 @@ core.apps.desktop.prototype = {
     // Common
 
     loadURL: function(url) {
+        url=url||"";
         url = url.trim();
-        if(url == "" || url == "http://" || url == "http:///") return;
+        if(url == "http://" || url == "http:///") return;
 
         if(url.indexOf("http") == -1) {
             url = "http://" + core.data.http_host + url;

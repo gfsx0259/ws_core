@@ -1,7 +1,7 @@
 core.apps.admin_toolbars = function() {
 
     this.objects = {};
-    if(core.usertype < USERTYPE_ADMIN) return;
+    if(core.usertype < USERTYPE_ADMIN || core.data.is_mobile_viewer) return;
 
 
     // order is important

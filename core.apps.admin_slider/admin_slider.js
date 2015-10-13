@@ -329,8 +329,15 @@ core.apps.admin_slider.prototype = {
     },
 
 
-    onSetLayoutModeResponse: function(r) {
-        if(r && r.status == "ok") desktop.loadURL(location.href);
+    onSetLayoutModeResponse: function(mode,r) {
+        if(r && r.status == "ok") {
+            if(mode == 'mobile'){
+                desktop.loadURL("?dialog=mobile");
+            }else{
+                core.browser.cookies.set('is_mobile_viewer',1,0);
+                desktop.loadURL();
+            }
+        }
     }
 
 

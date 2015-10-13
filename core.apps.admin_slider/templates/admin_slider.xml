@@ -7,7 +7,7 @@
         </div>
 
         <div class="left_buttons" id="header_left">
-            <a events="onclick=onClearMobileDataClick">Cancel mobile site version</a>
+            <!--<a events="onclick=onClearMobileDataClick">Cancel mobile site version</a>-->
         </div>
 
         <div class="right_buttons">
@@ -21,7 +21,7 @@
     <div id="window" class="admin_slider">
         <div id="slider" class="slider">
             <div id="content" class="content"></div>
-            
+
 
             <div id="footer" class="footer">
                 <div class="bolts_wrapper" id="bolts_wrapper"></div>
