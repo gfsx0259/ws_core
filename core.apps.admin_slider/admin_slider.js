@@ -325,7 +325,7 @@ core.apps.admin_slider.prototype = {
             act: "set",
             mode: e.target.mode
         };
-        core.transport.send("/controller.php", p, this.onSetLayoutModeResponse.bind(this));        
+        core.transport.send("/controller.php", p, this.onSetLayoutModeResponse.bind(this,e.target.mode));
     },
 
 
