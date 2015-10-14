@@ -1,0 +1,33 @@
+
+
+    .bootstrap_manager .lists {
+        padding: 5px;
+        overflow: auto;
+    }
+
+    .bootstrap_manager .lists > div{
+        display: inline-block;
+    }
+
+    .bootstrap_manager .bootstrap_file_section div{
+        display: inline-block;
+    }
+
+    #css_files {
+        background: #fff;
+        width: 200px;
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .bootstrap_manager .bootstrap_file_section{
+        border-bottom: 1px solid #ccc;
+        padding: 5px;
+    }
+
+    .bootstrap_manager .bootstrap_file_section  .bootstrap_file_actions{
+        float:right;
+        cursor: pointer;
+    }
+    
+    

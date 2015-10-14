@@ -1,0 +1,26 @@
+<tpl name="bootstrap_manager">
+    <div class="bootstrap_manager">
+
+        <div id="lists" class="lists">
+
+            <div id="css_files">
+
+            </div>
+            <div id="bootstrap_themes">
+
+            </div>
+        </div>
+
+        <div id="msg_loading" class="loading" style="display: none"></div>
+        <div id="msg_error" class="message_error" style="display: none">Data loading error</div>
+
+    </div>
+
+
+    <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_create" class="float_left" title=" Create " events="onclick=onCreateClick"/>
+        <wsc_button id="btn_install" class="float_left" title=" Install " events="onclick=onLoadClick"/>
+        <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
+    </div></div>
+
+</tpl>

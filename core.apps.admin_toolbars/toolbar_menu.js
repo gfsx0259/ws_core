@@ -17,6 +17,10 @@ core.apps.admin_toolbar_menu.prototype = {
         desktop.showPopupApp("themes_manager");
     },
 
+    showBootstrapManager: function() {
+        desktop.showPopupApp("bootstrap_manager");
+    },
+
     openTextsManager: function() {
         desktop.openTextsManager();
     },
