@@ -1,7 +1,8 @@
 
 
-    .bootstrap_manager .lists {
-        padding: 5px;
+    .bootstrap_manager .lists,.bootstrap_manager .lists .instruction {
+        padding: 20px;
+        box-sizing: border-box;
         overflow: auto;
     }
 
@@ -9,25 +10,70 @@
         display: inline-block;
     }
 
-    .bootstrap_manager .bootstrap_file_section div{
+    .bootstrap_manager .lists div{
+        vertical-align: top;
+    }
+
+    .bootstrap_manager .bootstrap_file_section div,.bootstrap_manager .bootstrap_theme_section div{
         display: inline-block;
     }
 
-    #css_files {
+    .bootstrap_manager #bootstrap_themes,.bootstrap_manager .instruction{
+        margin-left:25px;
+    }
+
+    #css_files .title,#bootstrap_themes .title{
+        width: 200px;
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    #css_files_content,#bootstrap_themes_content {
+        max-height: 200px;
+        overflow-y: auto;
         background: #fff;
         width: 200px;
         font-size: 13px;
         padding: 5px 10px;
     }
 
-    .bootstrap_manager .bootstrap_file_section{
+    .bootstrap_manager .instruction{
+        width:420px;
+        font-size:14px;
+    }
+
+    .bootstrap_manager #css_files_content > div:last-of-type,.bootstrap_manager #bootstrap_themes_content > div:last-of-type{
+        border:none;
+    }
+
+    .bootstrap_manager .bootstrap_file_section,.bootstrap_manager .bootstrap_theme_section{
         border-bottom: 1px solid #ccc;
         padding: 5px;
     }
 
-    .bootstrap_manager .bootstrap_file_section  .bootstrap_file_actions{
+    .bootstrap_manager .bootstrap_theme_default{
+        margin:5px;
+    }
+
+    .bootstrap_manager .bootstrap_file_actions span{
+        padding: 5px;
+    }
+
+    .bootstrap_manager .bootstrap_file_section  .bootstrap_file_actions,.bootstrap_manager .bootstrap_theme_section  .bootstrap_file_actions{
         float:right;
+        font-size:14px;
         cursor: pointer;
     }
-    
+
+    .theme_file_exists{
+        color:green;
+    }
+
+    .theme_file_not_exists{
+        color:dodgerblue;
+    }
+
+    .markToDelete.active{
+        color:red;
+    }
     

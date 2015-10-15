@@ -3,11 +3,28 @@
 
         <div id="lists" class="lists">
 
-            <div id="css_files">
 
+            <div id="css_files">
+                <div class="title">Please select bootstrap themes:</div>
+                <div class="content" id="css_files_content"></div>
             </div>
             <div id="bootstrap_themes">
-
+                <div class="title">You selected the following themes:</div>
+                <div class="content" id="bootstrap_themes_content"></div>
+            </div>
+            <div class="instruction">
+                <div>
+                    <span class="glyphicon glyphicon-ok-sign theme_file_exists"></span> - file is available, and exists
+                </div>
+                <div>
+                    <span class="glyphicon glyphicon-info-sign theme_file_not_exists"></span> - file is not exists or unavaible
+                </div>
+                <div>
+                    <span>
+                        If the theme does not load, please check its availability. Select another or fix the problem. You can safely remove the links from the list of the saved.
+                        (<span class="glyphicon glyphicon-remove"></span>)
+                    </span>
+                </div>
             </div>
         </div>
 
@@ -18,8 +35,7 @@
 
 
     <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
-        <wsc_button id="btn_create" class="float_left" title=" Create " events="onclick=onCreateClick"/>
-        <wsc_button id="btn_install" class="float_left" title=" Install " events="onclick=onLoadClick"/>
+        <wsc_button id="btn_save" class="float_left" title=" Save " events="onclick=onSaveClick"/>
         <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
     </div></div>
 
