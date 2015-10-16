@@ -75,28 +75,26 @@ class api_site_menu
     // call before getBodyMenuHTML
     function getSiteMenuHTML(&$data, $page_name = null)
     {
-        $html = "<ul>";
+
+        $html = "<nav class=\"navbar navbar-default\">
+                <div class=\"container-fluid\">
+                <div class=\"navbar-header\"></div>
+                <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
+                <ul class=\"nav navbar-nav\">";
 
         $cnt = count($data);
         for ($i = 0; $i < $cnt; $i++) {
             $mi = $data[$i];
-
             if ($mi["default_body_menu"]) $this->body_menu = $mi;
-//                if($mi["published"] == 0 && $mi["type"] != "external") continue;
             if ($mi["visible"] == "0") continue;
             if ($mi["access_mode"] == "admin" && $this->dialog->usertype < USERTYPE_ADMIN) continue;
 
 
             // li
             $html .= "<li ";
-            $li_class = count($mi["childs"]) ? "parent" : "";
-            $li_class .= $mi["url"] == $page_name ? " active" : "";
+            $li_class = $mi["url"] == $page_name ? " active" : "";
 
-            if ($i == 0) {
-                $html .= "class='first " . $li_class . "' ";
-            } else if ($i == $cnt - 1) {
-                $html .= "class='last " . $li_class . "' ";
-            } else if ($li_class) {
+           if ($li_class) {
                 $html .= "class='" . $li_class . "' ";
             }
             $html .= ">";
@@ -112,7 +110,7 @@ class api_site_menu
                     $sub_html .= $this->getSiteMenuItemHTML($mi["childs"][$j], $page_name);
                 }
                 if ($sub_html != "") {
-                    $html .= "<div class='submenu' style='display: none' id='site_submenu" . $this->item_num . "'>" . $sub_html . "</div>";
+                    $html .= "<ul  id='site_submenu' class=\"dropdown-menu submenu\" role=\"menu\"" . $this->item_num . "'>" . $sub_html . "</ul>";
                 }
             }
 
@@ -121,7 +119,7 @@ class api_site_menu
 
             $this->item_num++;
         }
-        return $html . "</ul>";
+        return $html . "</ul></div></div></div></nav>";
     }
 
 
@@ -140,7 +138,7 @@ class api_site_menu
         $title = $mi["title"] . ($mi["hint"] ? "<span class='second_line'>" . $mi["hint"] . "</span>" : "");
 
         if ($url == $page_name) {
-            $html .= "<span class='selected'>" . $title . "</span>";
+            $html .= "<a href='#'>" . $title . "</a>";
             $this->active_item = array(
                 "title" => $mi["title"],
                 "hint" => $mi["hint"]
@@ -148,7 +146,13 @@ class api_site_menu
         } else {
             $url = $this->formatItemURL($mi);
             $target = $mi["blank_page"] == 1 ? "target='_blank'" : "";
-            $html .= "<a href='" . $url . "' " . $target . ">" . $title . "</a>";
+            $dropDownControl = count($mi["childs"])>0 ? "class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"" : "";
+            $a = "<a href='" . $url . "' " . $target . " $dropDownControl>" . $title . "</a>";
+            if(!count($mi["childs"])>0){
+                $html.= "<li>".$a."</li>";
+            }else{
+                $html.= $a;
+            }
         }
 
             $wrapper = '';

@@ -75,6 +75,8 @@ core.apps.menu.prototype = {
         }
 
         this.$["content"].appendChild(menu);
+        //increment z-index for bootstrap menu
+        jQuery(this.$["content"]).closest('.layout_row_box').css('z-index',9999);
 //        menu.style.height = menu.firstChild.offsetHeight + "px";
 //        this.$["content"].style.overflow = "visible";
 //        this.$["window"].style.zIndex = 100;

@@ -16,7 +16,6 @@ html {
 
 
 .layout_cells_container {
-    overflow: auto;
     position: relative;
     zoom: 1;
 }
@@ -27,7 +26,6 @@ html {
         box-sizing: border-box;
         min-height: 20px;
         float: left;
-        overflow: auto;
         position: relative;
     }
 
@@ -45,5 +43,4 @@ html {
 }
 
 .app_content {
-    overflow: hidden;
 }
