@@ -14,12 +14,8 @@ core.apps.menu.prototype = {
 
     onOpen: function() {
         this.setTitle(this.profile["title"]);
-
-        if(core.data.layout_mode == "pc") {
             this.initPC();
-        } else {
-            this.initMobile();
-        }
+
     },
 
 
@@ -32,8 +28,6 @@ core.apps.menu.prototype = {
     },
 
 
-
-
     initPC: function() {
         this.buildModel(
             document.body, 
@@ -41,46 +35,17 @@ core.apps.menu.prototype = {
               className: this.getAppStyleSelector() }
         );
 
-
         var menu = $("site_menu").cloneNode(true);
-        menu.id = "menu" + this.id;
+        var id = "menu" + this.id;
         menu.style.position = "relative";
         menu.style.left = "auto";
         menu.style.top = "auto";
         menu.style.width = "auto";
         menu.style.display = "block";
 
-        this.active_submenu = null;
-
-        var ul = menu.childNodes[0];
-        var item_num = 0;
-        if(ul && ul.childNodes.length > 1) {
-            for(var i=0; i<ul.childNodes.length; i++) {
-                var li = ul.childNodes[i];
-                var submenu = li.childNodes[1];
-                if(!submenu) continue;
-                submenu.id = this.id + item_num;
-
-//                var key = "submenu" + item_num;
-                this.$["submenu" + item_num] = submenu;
-                this.$["item" + item_num] = li;
-                core.browser.event.attach(li, "onmouseover", this._showSubmenu.bindAsEventListener(this, item_num));
-                core.browser.event.attach(li, "onmouseout", this._hideSubmenu.bindAsEventListener(this, item_num));
-
-                core.browser.event.attach(submenu, "onmouseover", this._showSubmenu.bindAsEventListener(this, item_num));
-                core.browser.event.attach(submenu, "onmouseout", this._hideSubmenu.bindAsEventListener(this, item_num));
-
-                item_num++;
-            }
-        }
-
         this.$["content"].appendChild(menu);
         //increment z-index for bootstrap menu
         jQuery(this.$["content"]).closest('.layout_row_box').css('z-index',9999);
-//        menu.style.height = menu.firstChild.offsetHeight + "px";
-//        this.$["content"].style.overflow = "visible";
-//        this.$["window"].style.zIndex = 100;
-        this.submenu_pos_fixed = {};
     },
 
 
