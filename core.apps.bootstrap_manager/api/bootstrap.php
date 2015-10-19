@@ -81,7 +81,7 @@ class api_bootstrap{
         if(!$path){
             return false;
         }elseif($path = $this->is_file_exists($path)){
-            return $path;
+            return '/'.$path;
         }
         return false;
     }
