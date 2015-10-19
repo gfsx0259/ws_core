@@ -144,7 +144,7 @@ class api_site_menu
         $title = $mi["title"] . ($mi["hint"] ? "<span class='second_line'>" . $mi["hint"] . "</span>" : "");
 
         if ($url == $page_name) {
-            $html .= "<a href='#'>" . $title . "</a>";
+            $html .= "<li><a href='#'>" . $title . "</a></li>";
             $this->active_item = array(
                 "title" => $mi["title"],
                 "hint" => $mi["hint"]
