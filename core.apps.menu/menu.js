@@ -44,8 +44,8 @@ core.apps.menu.prototype = {
         menu.style.display = "block";
 
         this.$["content"].appendChild(menu);
-        //increment z-index for bootstrap menu
-        jQuery(this.$["content"]).closest('.layout_row_box').css('z-index',9999);
+        //change overflow value for bootstrap menu
+        jQuery(".menu_priority").find('.app_content').css({overflow:'visible'});
     },
 
 

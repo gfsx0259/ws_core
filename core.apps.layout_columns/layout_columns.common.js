@@ -165,6 +165,16 @@ core.apps.layout_columns.extendPrototype({
                         bootstrapClasses = core.components.desktop_app.getBootstrapClasses(desktop.layout.profiles[node.id].bootstrap);
                     }
 
+                    if(node.app_name == 'menu'){
+                        if(bootstrapClasses){
+                            bootstrapClasses = bootstrapClasses.split(' ');
+                            bootstrapClasses.push('menu_priority');
+                            bootstrapClasses = bootstrapClasses.join(' ');
+                        }else{
+                            bootstrapClasses = 'menu_priority';
+                        }
+                    }
+
                     var p = {
                         appName: node.app_name,
                         parentElement: parent_element,
