@@ -21,6 +21,10 @@ core.apps.admin_toolbar_menu.prototype = {
         desktop.showPopupApp("bootstrap_manager");
     },
 
+    showAppsManager: function() {
+        desktop.showPopupApp("apps_manager");
+    },
+
     openTextsManager: function() {
         desktop.openTextsManager();
     },

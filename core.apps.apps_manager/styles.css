@@ -1,0 +1,42 @@
+.apps_manager{
+    background: #fff;
+    border: 1px solid #e3edfc;
+    border-radius: 5px;
+}
+
+.apps_manager .left{
+    border-right:5px solid #bababa;
+    width:50%;
+}
+
+.apps_manager .left:after{
+    content: "";
+    display: block;
+    float: right;
+    background: #423F3F;
+    width: 3px;
+    height: 20px;
+    position: relative;
+    right: -4px;
+    top: -45%;
+}
+
+.apps_manager .lists{
+    height: 92%;
+    overflow: hidden;
+}
+
+.apps_manager .lists > div{
+    display: inline-block;
+    height: inherit;
+}
+
+.apps_manager #apps_list{
+    overflow-y: auto;
+    height: inherit;
+}
+
+.apps_manager #apps_list .app_section{
+    min-height: 20px;
+    border: 1px solid #eee;
+}

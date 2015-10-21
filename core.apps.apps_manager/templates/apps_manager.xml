@@ -1,0 +1,23 @@
+<tpl name="apps_manager">
+    <div class="apps_manager" id="apps_manager">
+        <div class="categories form_row">
+                <wsc_select id="control_category" events="onchange=onCategoryChanged" class="float_left w250"></wsc_select>
+        </div>
+        <div id="lists" class="lists">
+            <div class="left">
+                <div id="apps_list"></div>
+            </div>
+            <div class="right">2</div>
+        </div>
+
+        <div id="msg_loading" class="loading" style="display: none"></div>
+        <div id="msg_error" class="message_error" style="display: none">Data loading error</div>
+    </div>
+
+
+    <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
+        <wsc_button id="btn_save" class="float_left" title=" Save " events="onclick=onSaveClick"/>
+        <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
+    </div></div>
+
+</tpl>
