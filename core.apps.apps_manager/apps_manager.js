@@ -185,7 +185,7 @@ core.apps.apps_manager.prototype = {
             desktop.modal_dialog.alert("Server error. Can't load data.");
             return;
         }
-        desktop.modal_dialog.confirm("Complete successfully",function(){
+        desktop.modal_dialog.prompt4("Complete successfully","<div class=\"apps_manager_log\">"+r.data+"</div>",function(){
             desktop.loadURL();
         });
 

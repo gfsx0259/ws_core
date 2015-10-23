@@ -78,6 +78,19 @@ core.apps.desktop.prototype.modal_dialog = {
         this.open(p);
     },
 
+    prompt4: function(title, message, callback) {
+        var p = {
+            title: title,
+            message: message,
+            buttons: [
+                { title: "Ok",
+                    ok_button: true,
+                    callback: this.onPromptOkClick.bind(this, callback) },
+                { title: "Cancel" }
+            ]
+        };
+        this.open(p);
+    },
 
     progress: function(title, percents, message) {
         var p = {

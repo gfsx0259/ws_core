@@ -72,7 +72,7 @@ class dialog_controller_apps_manager extends dialog_controller
         }
         $execResult = exec($composerPath.$cmd . ' 2>&1', $out);
         if ($out && is_array($out)) {
-            $this->log = var_export($out,1);
+            $this->log = implode('<br/>',$out);
             return true;
         } else {
             $this->log = 'Unexpected result ('.$cmd."):".$execResult;
