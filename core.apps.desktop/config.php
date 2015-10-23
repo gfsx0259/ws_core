@@ -6,7 +6,7 @@ $config["js_apps"]["core.apps.desktop"] = array(
         'title' => 'Core Widget: Desktop',
         'name' => 'desktop',//should be like 3th part of folder
         'version' => '1.0.0',
-        'description' => 'Core widget (Desktop)',
+        'description' => 'Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)Core widget (Desktop)',
         'depends' => [
             'imagebox'
         ]

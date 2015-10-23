@@ -1,13 +1,19 @@
 <tpl name="apps_manager">
     <div class="apps_manager" id="apps_manager">
         <div class="categories form_row">
-                <wsc_select id="control_category" events="onchange=onCategoryChanged" class="float_left w250"></wsc_select>
+                <wsc_select id="inp_select_category" events="onchange=onCategoryChanged" class="float_left w250"></wsc_select>
+                <div class="action_bar">
+                    <label for="cb_installed">Only installed</label>
+                    <wsc_checkbox id="inp_cb_installed" events="onchange=onShowInstalledChanged" class="float_left"></wsc_checkbox>
+                </div>
         </div>
         <div id="lists" class="lists">
             <div class="left">
                 <div id="apps_list"></div>
             </div>
-            <div class="right">2</div>
+            <div class="right">
+                <div id="app_info"></div>
+            </div>
         </div>
 
         <div id="msg_loading" class="loading" style="display: none"></div>

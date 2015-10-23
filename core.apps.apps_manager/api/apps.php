@@ -7,7 +7,10 @@ class api_apps{
     public $vendorsList = [
         'generdyn'
     ];
+
     public $maxDepth = 4;
+    public $composerAppsPackages = [];
+    public $customVendorsList = [];
 
      function getCategoriesList(){
          return [
@@ -25,7 +28,31 @@ class api_apps{
          ];
      }
 
+    function setComposerAppsPackages(){
+        $this->setCustomVendors();
+        $composerConfig = json_decode(file_get_contents('composer.json'));
+        $requiredList = array_keys(get_object_vars($composerConfig->require));
+        foreach($requiredList as $item){
+            //add custom here
+            $vendorNames = array_merge($this->vendorsList,$this->customVendorsList);
+            foreach($vendorNames as $vendorName){
+                if(strpos($item,$vendorName)!=-1){
+                    list($vendor,$packageName) = explode('/',$item);
+                    if(!empty($packageName) && !in_array($packageName,$this->composerAppsPackages[$vendor])){
+                        $this->composerAppsPackages[$vendor][] = $packageName;
+                    }
+                }
+            }
+        }
+    }
+
+    function setCustomVendors(){
+        //TODO get it from interface (maybe widget profile)
+        $this->customVendorsList[] = 'xenium';
+    }
+
     function getData(){
+        $this->setComposerAppsPackages();
         return [
             'categories' => $this->getCategoriesList(),
             'list' => $this->getDataFromConfig()
@@ -34,39 +61,67 @@ class api_apps{
 
     function getDataFromConfig(){
         global $config;
-        foreach($config['packages'] as $packageName => &$package){
-            foreach($package as $appName => &$app){
-                list($name,$category) = explode('/',$app);
-                $config['packages'][$packageName][$appName] = [
-                    'name'=>$name,
-                    'category'=>$category
-                ];
+        $installedData = $this->getInstalledAppsData();
+        $appsData = [];
+        foreach($config['apps_manager_data'] as $vendorName => &$vendor){
+            foreach($vendor as $packageName => &$package){
+                foreach($package as &$app){
+                    list($name,$category) = explode('/',$app);
+                    if(!$name || !$category){
+                        continue;
+                    }
+                    $item = [
+                        'name'=>$name,
+                        'category'=>$category,
+                        'title'=> ucfirst(str_replace('_',' ',$name)),
+                        'vendorName' => $vendorName,
+                        'packageName' => $packageName,
+                        'packageAvailable' => in_array($packageName,$this->composerAppsPackages[$vendorName]) ? 1 : 0,
+                        'configData' => $this->getAppConfig($vendorName,$packageName,$name),
+                        'installedData' => isset($installedData[$name]) ? $installedData[$name] : false
+                    ];
+
+                    if($item['installedData']['version'] && $item['configData']['version']){
+                        //if first greater that second
+                        if(version_compare($item['configData']['version'],$item['installedData']['version'])==1){
+                            $item['isUpdateAllowed'] = true;
+                        }else{
+                            $item['isUpdateAllowed'] = false;
+                        }
+                    }
+                    $appsData[$name] = $item;
+                }
             }
         }
-        return $config['packages'];
+
+        return $appsData;
     }
 
+    function getAppConfig($vendorName,$packageName,$appName)
+    {
+        $config = [];
+        $fullAppName = 'core.apps.' . $appName;
+        $fullPath = $this->getAppPath($vendorName,$packageName,$fullAppName);
+        if(!file_exists($fullPath . '/config.php')){
+            return false;
+        }else{
+            include $fullPath . '/config.php';
+        }
+        return $config['js_apps'][$fullAppName]['general'];
+    }
+
+    function getAppPath($vendorName,$packageName,$appName){
+        return 'vendor/'.$vendorName.'/'.$packageName.'/'.$appName;
+    }
 
     function getInstalledAppsData()
     {
         $sql = "SELECT * FROM {$this->table}";
-        $result = $this->db->get_list($sql);
-        varp($result);
-        return "test";
+        $result = $this->db->get_key_list($sql,null,'name');
+
+        return $result;
     }
 
-    function getAllowedAppsData(){
-        $structure = $this->getAppsByVendors();
-        varp($structure);
-    }
-
-    function getAppsByVendors(){
-        $data = [];
-        foreach($this->vendorsList as $vendorName){
-            $data[$vendorName] = $this->fillArrayWithFileNodes(new DirectoryIterator(realpath('vendor/'.$vendorName)));
-        }
-        return $data;
-    }
 
     function fillArrayWithFileNodes(DirectoryIterator $dir ,$depth=0)
     {
@@ -84,47 +139,4 @@ class api_apps{
         }
         return $data;
     }
-
-    function test(){
-
-        $path = realpath('vendor');
-        $directory = new \RecursiveDirectoryIterator($path, \FilesystemIterator::FOLLOW_SYMLINKS);
-        $filter = new \RecursiveCallbackFilterIterator($directory, function ($current, $key, $iterator) {
-            // Skip hidden files and directories.
-            $ignoredDirectories = ['.git','composer'];
-            if ($current->getFilename() === '.') {
-                return FALSE;
-            }
-            if ($current->isDir()) {
-                foreach($ignoredDirectories as $item){
-                    $fn = $current->getFileName();
-                    if(strpos($fn,$item)>0){
-                        return false;
-                        continue;
-                    }
-                }
-                // Only recurse into intended subdirectories.
-                return true;
-            }
-          return false;
-        });
-        $iterator = new \RecursiveIteratorIterator($filter);
-        $files = array();
-        foreach ($iterator as $info) {
-            $files[] = $info->getPathname();
-        }
-        varp($files);
-    }
-
-
-
-    function glob_recursive($pattern, $flags = 0){
-
-        $files = glob($pattern, $flags);
-        foreach (glob(dirname($pattern).'/*', GLOB_ONLYDIR|GLOB_NOSORT) as $dir) {
-            $files = array_merge($files, $this->glob_recursive($dir.'/'.basename($pattern), $flags));
-        }
-        return $files;
-    }
-
 }

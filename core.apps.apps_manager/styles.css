@@ -5,38 +5,110 @@
 }
 
 .apps_manager .left{
-    border-right:5px solid #bababa;
+    border-right:5px solid #e4e4e4;
     width:50%;
 }
 
 .apps_manager .left:after{
-    content: "";
+    content: "\e235";
+    font-family: 'Glyphicons Halflings';
+    font-size: 20px;
     display: block;
     float: right;
-    background: #423F3F;
     width: 3px;
+    color:#777;
     height: 20px;
     position: relative;
-    right: -4px;
-    top: -45%;
+    right: 4px;
+    top: -50%;
 }
 
 .apps_manager .lists{
-    height: 92%;
+    background: #fff;
+    height: 100%;
     overflow: hidden;
 }
 
 .apps_manager .lists > div{
     display: inline-block;
+    height:100%;
+    vertical-align: top;
     height: inherit;
 }
 
+.apps_manager .categories > div{
+    display: inline-block;
+}
 .apps_manager #apps_list{
     overflow-y: auto;
     height: inherit;
 }
 
 .apps_manager #apps_list .app_section{
-    min-height: 20px;
+    min-height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
     border: 1px solid #eee;
+}
+
+.apps_manager #apps_list .app_section:nth-child(even){
+    background: #f7f7f9;
+}
+
+.apps_manager #apps_list .app_section:before{
+    content: "\e010";
+    font-family: 'Glyphicons Halflings';
+    font-size: 14px;
+    display: inline;
+    margin-right: 10px;
+}
+
+.apps_manager #apps_list .app_section.installed:before{
+    color:#5cb85c;
+}
+
+.apps_manager .categories{
+    position: absolute;
+    overflow: auto;
+    top: 0;
+    left: 143px;
+    margin: 10px 15px;
+}
+
+.apps_manager .lists .right{
+    overflow: auto;
+}
+
+.apps_manager #app_info h2{
+    padding: 0 10px;
+}
+
+.apps_manager #app_info .content{
+    padding: 0 15px;
+}
+
+.apps_manager #app_info .content .version{
+    display: block;
+    font-size: 11px;
+}
+
+.apps_manager .categories .action_bar label{
+    width:80px;
+    margin-left:10px;
+}
+
+.apps_manager .actions{
+    text-align: center;
+    margin: 5px;
+}
+
+.apps_manager .actions .btn{
+    padding: 8px 16px;
+    margin: 5px!important;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.apps_manager .hide_btn{
+    display: none!important;
 }
