@@ -92,8 +92,14 @@
     font-size: 11px;
 }
 
+.apps_manager #app_info .content .descr{
+    min-height: 40px;
+    margin-top: 15px;
+}
+
+
 .apps_manager .categories .action_bar label{
-    width:80px;
+    width:100px;
     margin-left:10px;
 }
 
@@ -119,4 +125,22 @@
     overflow: auto;
     background: black;
     color: white;
+}
+
+.apps_manager .depends{
+    margin: 10px 0;
+}
+
+.apps_manager .depends span{
+    display:block;
+}
+
+.apps_manager .depends_status_unavailable{
+    color:#b84250;
+}
+.apps_manager .depends_status_available{
+color: #3e53b8;
+}
+.apps_manager .depends_status_installed{
+ color:#5cb85c;
 }

@@ -70,7 +70,7 @@ core.apps.apps_manager.prototype = {
             core.data.apps_categories.push(r.data.categories[i]);
         }
         core.data.apps_config = r.data.list;
-
+        this.$['custom_vendors'].value = r.data.vendors;
         this.$['inp_select_category'].setOptions(core.data.apps_categories);
         //for(var i in core.data.apps_categories){
         //    var category = core.data.apps_categories[i];
@@ -138,6 +138,8 @@ core.apps.apps_manager.prototype = {
             }
         }
 
+        var depends = this.getDependsModel(app.configData.depends);
+
         jQuery(this.$['app_info']).empty();
         this.buildModel(this.$['app_info'],[
                 {
@@ -151,22 +153,63 @@ core.apps.apps_manager.prototype = {
                 { tag: "div",
                     className: 'content',
             childs: [
-                { tag: "span", className: app.installedData && typeof(app.installedData.version) != 'undefined' ? "version" : 'hide_btn', innerHTML: 'Installed version is: '+app.installedData.version },
+                { tag: "span", className: app.installedData && typeof(app.installedData.version) != 'undefined' && app.installedData.version ? "version" : 'hide_btn', innerHTML: 'Installed version is: '+app.installedData.version },
                 { tag: "span", className: typeof(app.configData.version) != 'undefined' ? "version" : 'hide_btn', innerHTML: 'Available version is: '+app.configData.version },
                 {tag : "div", childs:[
                     {tag: "span",  className: !app.packageAvailable ? "" : 'hide_btn', innerHTML: "Package with this widget is not available and will be downloaded before installation."}
                 ]},
+                { tag: "table", className: "depends table", childs:depends.model},
                 { tag: "div", className: "actions", childs:[
-                    { tag: "button", events: {onclick: ["runCommand", {type:'install', app:app}]}, className: buttons.install.active ? ['btn',buttons.install.className].join(' ') : 'hide_btn', innerHTML: "Install", id: "btn_install" },
+                    { tag: "button", events: {onclick: ["runCommand", {type:'install', app:app}]}, disabled:depends.isUnavailableAppsExist, className: buttons.install.active ? ['btn',buttons.install.className].join(' ') : 'hide_btn', innerHTML: "Install", id: "btn_install" },
                     { tag: "button", events: {onclick: ["runCommand", {type:'remove', app:app}]}, className: buttons.remove.active ? ['btn',buttons.remove.className].join(' ') : 'hide_btn', innerHTML: "Remove", id: "btn_update" },
                     { tag: "button", events: {onclick: ["runCommand", {type:'update', app:app}]}, className: buttons.update.active ? ['btn',buttons.update.className].join(' ') : 'hide_btn', innerHTML: "Update", id: "btn_remove" },
                 ] },
+
+
+
             { tag: "div", className: "descr", innerHTML: typeof(app.configData.description) != 'undefined' && app.configData.description.length ? app.configData.description : 'Description is empty.' }
         ]}
 
     ]
         );
 
+    },
+
+    getDependsModel: function(list){
+        if(!list){
+            return false;
+        }
+        var model = [{tag:"tr",childs:[{tag:"th",innerHTML:"Depends:"}]}];
+        var isUnavailableAppsExist = false;
+        for(var i in list){
+            var item = list[i];
+            var status = '';
+            if(item.indexOf('/')!=-1){
+                item = item.split('/')[1];
+            }
+            var depApp = core.data.apps_config[item];
+            //if installed
+            if(depApp.installedData){
+                status = 'installed';
+            }else{
+                //if not installed, but can be installed
+                if(depApp.packageAvailable){
+                   status = 'available';
+                }else{
+                    //if package unavailable
+                    isUnavailableAppsExist = true;
+                    status = 'unavailable';
+                }
+            }
+            model.push(
+                {tag:"tr",childs:[{tag:"td",innerHTML:item+' ('+status+')', className: "depends_status_"+status}]}
+                );
+        }
+        if(isUnavailableAppsExist){
+            model.push({tag:"tr",childs:[{tag:"td",innerHTML:"Some of depends apps are not available, please install them before"}]});
+        }
+
+        return {model:model,isUnavailableAppsExist:isUnavailableAppsExist};
     },
 
     runCommand:function(e,data){
@@ -203,8 +246,17 @@ core.apps.apps_manager.prototype = {
 
     },
 
-    onSaveResponse:function(data){
+    onSaveVendorsListClick:function(){
+        desktop.setState("loading");
+        var p = {
+            dialog: "apps_manager",
+            act: "save_vendors_list",
+            vendors: this.$['custom_vendors'].value
+        };
+        core.transport.send("/controller.php", p, this.onSaveResponse.bind(this));
+    },
 
+    onSaveResponse:function(data){
         desktop.setState("normal");
     },
 

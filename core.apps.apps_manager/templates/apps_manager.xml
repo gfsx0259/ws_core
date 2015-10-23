@@ -22,8 +22,9 @@
 
 
     <div class="popup_buttons"  id="bottom_buttons"><div class="popup_buttons_wrapper">
-        <wsc_button id="btn_save" class="float_left" title=" Save " events="onclick=onSaveClick"/>
-        <wsc_button class="float_right" title=" Close " events="onclick=onCancelClick"/>
+        <wsc_text id="custom_vendors" class="float_left w200"></wsc_text>
+        <wsc_button class="float_left" title="Save vendors" events="onclick=onSaveVendorsListClick"/>
+        <wsc_button class="float_right" title="Close" events="onclick=onCancelClick"/>
     </div></div>
 
 </tpl>

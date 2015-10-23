@@ -27,6 +27,21 @@ class dialog_controller_apps_manager extends dialog_controller
                 return $res;
                 break;
 
+            case "save_vendors_list":
+                if(isset($_REQUEST['vendors'])){
+                    $vendors = explode(',',$_REQUEST['vendors']);
+                    $this->apps->setCustomVendorsList($vendors);
+                    $res = array(
+                        "status" => "ok"
+                    );
+                }else{
+                    $res = array(
+                        "status" => "error"
+                    );
+                }
+                return $res;
+                break;
+
             case "run_command":
                 $data = json_decode($_REQUEST['data']);
                 if(!$data->type || !$data->app){
